@@ -1,0 +1,15 @@
+@mixin white-bordered-link($border: 2px) {
+  border-bottom: $border solid rgba($white, .2);
+  transition: border .2s cubic-bezier(0, 0, 0, 1);
+
+  &:hover {
+    color: $white;
+    border-bottom-color: rgba($white, .5);
+  }
+}
+
+@mixin has-white-bordered-links($border: 2px) {
+  a {
+    @include white-bordered-link($border);
+  }
+}

@@ -1,0 +1,20 @@
+body.error404 {
+  background: $red;
+}
+
+.page_404 {
+  padding: 3rem 0 1rem;
+  color: $white;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    font-size: 1.5em;
+    display: inline-block;
+  }
+}

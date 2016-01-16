@@ -1,0 +1,10 @@
+.btn {
+  padding: 0.30em 0.5em .25em;
+  background: rgba($black, .1);
+  border-radius: 3px;
+  transition: background .4s cubic-bezier(0, 0, 0, 1);
+
+  &:hover {
+    background: rgba($black, .2);
+  }
+}
