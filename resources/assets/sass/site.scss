@@ -1,14 +1,12 @@
-@import "bootstrap/scss/bootstrap-grid";
-@import "highlight.js/styles/github-gist";
+@import "vendor.bootstrap";
+@import "vendor.highlightjs";
+@import "vendor.reset";
 
-@import "settings.colors";
-@import "settings.layout";
-@import "settings.typography";
+@import "settings";
 
 @import "tools.breakpoint";
-@import "tools.layout";
-
-@import "generic.reset";
+@import "tools.functions";
+@import "tools.mixins";
 
 @import "base.document";
 @import "base.inline";
@@ -16,5 +14,9 @@
 @import "components.btn";
 
 @import "views.404";
+@import "views.article";
 @import "views.home";
-@import "views.post";
+
+@import "utilities.colors";
+@import "utilities.layout";
+@import "utilities.typography";

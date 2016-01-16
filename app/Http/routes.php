@@ -1,8 +1,4 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('draft/{url}', 'PostController@draft');
-Route::get('{year}/{url}', 'PostController@post');
+Route::get('/', 'HomeController@home');
+Route::get('{slug}', 'ArticleController@article')->where('slug', '(.*)');

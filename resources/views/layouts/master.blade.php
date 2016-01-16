@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        <title>SDD</title>
+        <title>{{ isset($article) ? "{$article->title} — Sebastian De Deyne" :  "Sebastian De Deyne" }}</title>
 
         <meta charset="utf-8">
         <meta name="description" content="content">
@@ -15,7 +15,7 @@
 
         <script src="/js/site.js" defer></script>
     </head>
-    <body>
+    <body class="@yield('body_classes')">
         @yield('content')
     </body>
 </html>

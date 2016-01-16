@@ -1,10 +1,10 @@
 body.error404 {
-  background: $red;
+  background: color(red);
 }
 
 .page_404 {
   padding: 3rem 0 1rem;
-  color: $white;
+  color: color(white);
   text-align: center;
 
   h1 {

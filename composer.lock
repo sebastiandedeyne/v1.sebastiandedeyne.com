@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "69424f23b6f5cef23d1a0dad59681066",
-    "content-hash": "de60a5889374e68cb934d0d4c6721781",
+    "hash": "76406ed44cb63dd1118a0d1f0f30176e",
+    "content-hash": "ed61c14c5b0877a41a9dc115edb2d4d4",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -3079,7 +3079,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/yaml-front-matter/zipball/7392c772a654f451328abdbca01e2991cc1a6a60",
+                "url": "https://api.github.com/repos/spatie/yaml-front-matter/zipball/89a30b9eb4e7756e528d179533eeb9cf9bd6b095",
                 "reference": "7392c772a654f451328abdbca01e2991cc1a6a60",
                 "shasum": ""
             },

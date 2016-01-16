@@ -1,84 +1,21 @@
 .v-home {
-  color: $white;
-  padding: 1rem 0 1rem;
-
-  @include breakpoint(sm) {
-    padding: 3rem 0 3rem;
-  }
-
-  > ._inner {
-    padding: 0 20px;
-  }
+    margin-top: 4*$line-height;
+    margin-bottom: $line-height;
+    color: color(white);
 }
 
-.home_title {
-  margin-bottom: 8px;
+.v-home__intro {
 
-  h1 {
-    line-height: 1;
-    color: $white;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: .06em;
-    font-size: 25px;
-  }
-}
-
-.home_intro {
-  margin-bottom: 1rem;
-
-  @include breakpoint(sm) {
-    margin-bottom: 2rem;
-  }
-
-  p {
-    letter-spacing: .03em;
-    font-size: 28px;
-    line-height: 1.4rem;
-  }
-}
-
-.home_content {
-  margin-bottom: 1rem;
-
-  @include breakpoint(sm) {
-    margin-bottom: 2rem;
-  }
-}
-
-.home_listing {
-  margin-bottom: 1rem;
-
-  h2 {
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 17px;
-
-    @include breakpoint(sm) {
-      margin-bottom: 0;
+    a {
+        border-bottom: 4px solid white(.2);
+        @include transition;
     }
-  }
-
-  a {
-    font-size: 17px;
-  }
-
-  aside {
-    display: block;
-    margin: 0 0 3px;
-    opacity: .6;
-    font-size: 14px;
-
-    @include breakpoint(sm) {
-      display: inline-block;
-      margin: 0;
-    }
-  }
 }
 
-.home_footer a {
-  font-size: 25px;
-  display: inline-block;
-  margin-right: 6px;
+.v-home__toc {
+
+    a {
+        border-bottom: 2px solid white(.2);
+        @include transition;
+    }
 }

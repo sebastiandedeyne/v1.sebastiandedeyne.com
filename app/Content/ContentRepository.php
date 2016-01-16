@@ -13,26 +13,21 @@ class ContentRepository
         $this->frontMatterParser = new YamlFrontMatterParser();
     }
 
-    public function getPost(string $year, string $slug)
+    public function article(string $slug)
     {
-        $post = $this->get("posts/{$year}/{$slug}.md");
-
-        if (! $post) {
-            return null;
-        }
-
-        return Post::create($post);
-    }
-
-    protected function get($path)
-    {
-        $rawFile = $this->getRawFile($path);
+        $rawFile = $this->getRawFile("$slug.md");
 
         if (! $rawFile) {
             return null;
         }
 
-        return $this->frontMatterParser->parse($rawFile);
+        $article = $this->frontMatterParser->parse($rawFile);
+
+        if (! $article) {
+            return null;
+        }
+
+        return Article::create($article);
     }
 
     protected function getRawFile($path)

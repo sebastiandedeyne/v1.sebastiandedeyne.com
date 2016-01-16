@@ -1,8 +1,7 @@
 @mixin breakpoint($breakpoint) {
-  @if ($breakpoint = 'sm') {
-    @media (min-width: 480px) { @content; }
-  }
-  @else {
-    @media (min-width: $breakpoint) { @content; }
-  }
+    @if (map-has-key($breakpoints, $breakpoint)) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) { @content; }
+    } @else {
+        @media ($breakpoint) { @content; }
+    }
 }
