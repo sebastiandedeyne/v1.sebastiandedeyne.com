@@ -1,9 +1,11 @@
 @extends('layouts.master')
 
+@section('title', "{$article->title} — Sebastian De Deyne")
+
 @section('content')
 <main class=container>
     <header class="fw:xbold fs:20 col:red mb:1 mt:1/2">
-        <a href="{{ url('/') }}">SDD</a>
+        <a href="{{ url('/') }}" class=logotype>SDD</a>
     </header>
     <article class=v-article>
         <header class="mb:1">

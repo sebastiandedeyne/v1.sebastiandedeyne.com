@@ -1,5 +1,14 @@
 .v-article__body {
 
+    a {
+        border-bottom: 2px solid color(gray-light);
+        @include transition;
+
+        &:hover {
+            border-bottom: 2px solid color(gray-lighter);
+        }
+    }
+
     > * {
         margin-bottom: $line-height;
     }
@@ -64,5 +73,14 @@
         width: 25px;
         height: 1px;
         background-color: color(gray);
+    }
+
+    a {
+        text-decoration: underline;
+        @include transition;
+
+        &:hover {
+            color: color(gray-dark);
+        }
     }
 }

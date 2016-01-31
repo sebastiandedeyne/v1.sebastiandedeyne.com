@@ -13,4 +13,4 @@ In my spare time I enjoy playing video games, watching good TV like The Wire, co
 
 ## Colophon
 
-This website is powered by Laravel and hosted by Digital Ocean.
+This website is powered by [Laravel](https://laravel.com/) and served from a [Forge](https://forge.laravel.com)-provisioned server on [Digital Ocean](https://www.digitalocean.com/).

@@ -8,7 +8,7 @@
         <header class="mb:1/4 fs:25 ls:06 tt:upper fw:bold">
             <h1>Sebastian De Deyne</h1>
         </header>
-        <section class="v-home__intro mb:3/2 fs:28 lh:1.25 ls:03">
+        <section class="v-home__intro mb:3/2 fs:27 lh:1.25 ls:03">
             <p>I'm a full-stack developer working at <a href="https://spatie.be" target="_blank">Spatie</a> in Antwerp, Belgium.</p>
         </section>
         <section class="v-home__toc mb:2 fs:17">
@@ -30,10 +30,13 @@
             </ul>
             @endforeach
         </section>
-        <footer class="fs:25">
-            <a class=btn href="https://twitter.com/sebdedeyne" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
-            <a class=btn href="https://github.com/sebastiandedeyne" target="_blank" title="Github"><i class="fa fa-github"></i></a>
-            {{-- <a class=btn href="#" target="_blank" title="RSS"><i class="fa fa-rss"></i></a> --}}
+        <footer class="v-home__footer fs:25">
+            <a href="https://twitter.com/sebdedeyne" target="_blank" title="Twitter">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="https://github.com/sebastiandedeyne" target="_blank" title="Github">
+                <i class="fa fa-github"></i>
+            </a>
         </footer>
     </div>
 </section>

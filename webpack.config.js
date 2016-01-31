@@ -1,28 +1,34 @@
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
     entry: {
-        'css/site.css': './resources/assets/sass/site.scss',
-        'js/site.js': './resources/assets/js/site.js',
+        'style': './resources/assets/sass/site.scss',
+        'app': './resources/assets/js/site.js',
     },
     output: {
-        path: 'public',
-        filename: '[name]',
+        path: 'public/build',
+        filename: '[name].js',
     },
     module: {
         loaders: [
             {
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract('style', 'css!sass!postcss'),
-            }
-        ]
+            },
+            {
+                test: /\.svg$/,
+                loader: 'url',
+            },
+        ],
     },
     resolve: {
         extensions: ['', '.js', '.css', '.scss'],
     },
     plugins: [
-        new ExtractTextPlugin('css/site.css'),
+        new ManifestPlugin({ fileName: 'rev-manifest.json' }),
+        new ExtractTextPlugin('style.css'),
     ],
     sassLoader: {
         includePaths: ['node_modules'],

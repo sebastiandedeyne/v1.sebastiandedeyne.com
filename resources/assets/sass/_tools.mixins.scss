@@ -1,3 +1,21 @@
 @mixin transition {
-    transition: border .2s cubic-bezier(0,0,0,1);
+    transition: all .2s cubic-bezier(0,0,0,1);
+}
+
+@mixin hide-text {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin block($width, $height: $width, $scale: 1) {
+    display: block;
+    width: $width * $scale;
+    height: $height * $scale;
+}
+
+@mixin inline-block($width, $height: $width) {
+  display: inline-block;
+  width: $width * $scale;
+  height: $height * $scale;
 }

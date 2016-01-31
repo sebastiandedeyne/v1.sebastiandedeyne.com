@@ -1,0 +1,5 @@
+.logotype {
+    background: url('../svg/logotype.svg');
+    @include block(100px, 40px, .4);
+    @include hide-text;
+}
