@@ -12,7 +12,7 @@
                 <p>I'm a full-stack developer working at <a href="https://spatie.be" target="_blank">Spatie</a> in Antwerp, Belgium.</p>
             </section>
             <section class="v-home__toc mb:2 fs:17">
-                <h2 class="tt:upper fw:bold">More</h2>
+                <h2 class="tt:upper fw:bold">Blog</h2>
                 <ul class="mb:1">
                     @foreach($posts as $post)
                         <li>
