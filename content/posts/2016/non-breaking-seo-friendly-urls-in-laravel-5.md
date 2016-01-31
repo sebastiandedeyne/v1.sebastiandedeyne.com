@@ -27,7 +27,7 @@ An incrementing ID says a lot though. It makes it easy for someone to crawl thro
 https://laravelbuddies.com/user/cndjfomj/sebastian-de-deyne
 ```
 
-If we want to obfuscate your ID's, we could either use a library which encodes integers like [Jens Seger's  Optimus](#), or we could generate a random string on model creation. [Here](https://github.com/jenssegers/optimus)'s a quick snippet illustrating the latter.
+If we want to obfuscate your ID's, we could either use a library which encodes integers like [Jens Segers' Optimus](#), or we could generate a random string on model creation. [Here](https://github.com/jenssegers/optimus)'s a quick snippet illustrating the latter.
 
 ```php
 trait HasObfuscatedId
@@ -119,7 +119,7 @@ public function detail(NewsItemRepository $newsItemRepository, $seoUrl)
 }
 ```
 
-An alternative would be to not redirect on invalid URL's, but add a `rel=canonical` `link` tag to your page.
+An alternative would be to not redirect on invalid URL's, but add a `rel=canonical` `<link>` tag to your page.
 
 ## That's it!
 
