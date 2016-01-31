@@ -10,10 +10,12 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $index = (new Yaml())->parse(
+        $posts = app(ContentRepository::class)->posts()->toArray();
+
+        $more = (new Yaml())->parse(
             app(ContentRepository::class)->raw('index.yml')
         );
 
-        return view('home', compact('index'));
+        return view('home', compact('posts', 'more'));
     }
 }

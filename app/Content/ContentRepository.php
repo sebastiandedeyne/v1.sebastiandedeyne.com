@@ -51,7 +51,7 @@ final class ContentRepository
                 return $contents ?
                     Article::create(
                         $this->frontMatterParser->parse($contents),
-                        url($item['path'])
+                        url("{$item['dirname']}/{$item['filename']}")
                     ) :
                     null;
             })

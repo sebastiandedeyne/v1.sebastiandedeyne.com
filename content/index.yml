@@ -1,19 +1,12 @@
-Blog:
-    -
-        - Non-breaking, SEO Friendly URL's in Laravel 5
-        - /posts/2016/non-breaking-seo-friendly-urls-in-laravel-5
-        - Jan. 2016
-
-More:
-    -
-        - Unix Commands That Just Work
-        - /references/unix-commands-that-just-work
-        - A collection of unix recipes
-    -
-        - Git Commands I Always Forget
-        - /references/git-commands-i-always-forget
-        - A collection of unix recipes
-    -
-        - About
-        - /about
-        - About me and this site
+-
+    - Unix Commands That Just Work
+    - /references/unix-commands-that-just-work
+    - A collection of unix recipes
+-
+    - Git Commands I Always Forget
+    - /references/git-commands-i-always-forget
+    - A collection of unix recipes
+-
+    - About
+    - /about
+    - About me and this site
