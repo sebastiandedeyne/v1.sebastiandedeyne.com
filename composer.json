@@ -9,13 +9,16 @@
         "laravel/framework": "5.2.*",
         "league/commonmark": "^0.12.0",
         "phpspec/phpspec": "^2.4",
-        "symfony/yaml": "^3.0"
+        "spatie/yaml-front-matter": "^1.0",
+        "symfony/yaml": "^3.0",
+        "roumen/feed": "^2.9",
+        "league/flysystem": "^1.0",
+        "spatie/string": "^2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
-        "spatie/yaml-front-matter": "dev-master",
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*"
     },

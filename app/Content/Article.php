@@ -3,15 +3,16 @@
 namespace App\Content;
 
 use Carbon\Carbon;
-use Spatie\YamlFrontMatter\YamlFrontMatterObject;
+use Spatie\YamlFrontMatter\Document;
 
 class Article
 {
     public $title;
     public $contents;
     public $date = null;
+    public $url;
 
-    public static function create(YamlFrontMatterObject $data) : Article
+    public static function create(Document $data, string $url) : Article
     {
         $article = new static();
 
@@ -20,6 +21,8 @@ class Article
 
         if ($data->matter('date'))
             $article->date = Carbon::createFromFormat('d/m/Y', $data->matter('date'));
+
+        $article->url = $url;
 
         return $article;
     }

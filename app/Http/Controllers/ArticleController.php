@@ -7,10 +7,22 @@ use App\Foundation\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 {
-    public function article(string $slug)
+    public function page(string $slug)
     {
-        $article = app(ContentRepository::class)->article($slug);
+        return $this->renderArticle(
+            app(ContentRepository::class)->page($slug)
+        );
+    }
 
+    public function post(string $slug)
+    {
+        return $this->renderArticle(
+            app(ContentRepository::class)->post($slug)
+        );
+    }
+
+    private function renderArticle($article)
+    {
         if (! $article) {
             abort(404);
         }
