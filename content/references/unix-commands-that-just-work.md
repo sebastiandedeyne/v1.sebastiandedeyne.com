@@ -6,11 +6,6 @@ My personal unix cookbook.
 
 ## Filesystem
 
-Find a file with specific contents
-```bash
-grep 'string' /lo/ca/tion -s
-```
-
 Create a symlink
 ```bash
 ln -s <source> <target>
