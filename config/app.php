@@ -151,6 +151,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Roumen\Feed\FeedServiceProvider::class,
+        Spatie\ResponseCache\ResponseCacheServiceProvider::class,
     ],
 
     /*
