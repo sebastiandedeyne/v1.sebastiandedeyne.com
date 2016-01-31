@@ -37,12 +37,15 @@
                     @endforeach
                 </ul>
             </section>
-            <footer class="v-home__footer fs:25">
-                <a href="https://twitter.com/sebdedeyne" target="_blank" title="Twitter">
+            <footer class="v-home__footer fs:20">
+                <a href="https://twitter.com/sebdedeyne" class=btn target="_blank" title="Twitter">
                     <i class="fa fa-twitter"></i>
                 </a>
-                <a href="https://github.com/sebastiandedeyne" target="_blank" title="Github">
+                <a href="https://github.com/sebastiandedeyne" class=btn target="_blank" title="Github">
                     <i class="fa fa-github"></i>
+                </a>
+                <a href="mailto:sebastiandedeyne@gmail.com" class=btn title="E-mail">
+                    <i class="fa fa-at"></i>
                 </a>
             </footer>
         </div>

@@ -5,7 +5,7 @@
 @section('content')
 <main class=container>
     <header class="fw:xbold fs:20 col:red mb:1 mt:1/2">
-        <a href="{{ url('/') }}" class=logotype>SDD</a>
+        <a href="{{ url('/') }}" class=logotype>Sebastian De Deyne</a>
     </header>
     <article class=v-article>
         <header class="mb:1">
