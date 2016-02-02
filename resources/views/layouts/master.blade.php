@@ -21,6 +21,9 @@
         <script src="{{ elixir('app.js') }}" defer></script>
     </head>
     <body class="@yield('body_classes')">
+        @if(app()->environment('production'))
+            @include('partials.analytics')
+        @endif
         @yield('content')
     </body>
 </html>
