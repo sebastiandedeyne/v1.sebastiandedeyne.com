@@ -18,4 +18,4 @@ I'm a full-stack developer from Ghent, working at Spatie in Antwerp, where I bui
 
 ### Colophon
 
-This website is powered by [Laravel](https://laravel.com/) and served from a [Forge](https://forge.laravel.com)-provisioned server on [Digital Ocean](https://www.digitalocean.com/).
+This website is powered by [Laravel](https://laravel.com/) and served from [Digital Ocean](https://www.digitalocean.com/). The source code is hosted on [Github](https://github.com/sebastiandedeyne/sebastiandedeyne.com).
