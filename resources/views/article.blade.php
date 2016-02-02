@@ -15,17 +15,25 @@
             @if($article->date)
             <aside class="fs:14 col:text--lighter mb:1">
                 Published {{ $article->date->format('j F Y') }}
+                @if($article->era)
+                    — <em>{{ $article->era }}</em>
+                @endif
             </aside>
             @endif
         </header>
         <section class=v-article__body>
             {!! $article->contents !!}
         </section>
+        @if($article->commentable)
+        <section class="v-article__comments mt:2">
+            @include('partials.disqus')
+        </section>
+        @endif
         <section class="v-article__footer fs:14 lh:1.5 mt:2">
-            <p class="mb:1/2">© {{ now()->format('Y') }} <a href="{{ url('/') }}">Sebastian De Deyne</a></p>
+            <p class="mb:1/2">© {{ now()->format('Y') }} <a href="{{ url('/') }}">Sebastian De Deyne</a> <span class="col:text--lighter fs:12">【ツ】</span></p>
             <p class="mb:1">
                 I'm a full-stack developer working at <a href="https://spatie.be" target="_blank">Spatie</a> in Antwerp, Belgium.
-                If you've got any comments or feedback I'm always up for a talk on <a href="https://twitter.com/sebdedeyne" target="_blank">Twitter</a> or via <a href="mailto:sebastiandedeyne@gmail.com">email</a>.
+                If you've got any comments, feedback or just want to chat you can contact me on <a href="https://twitter.com/sebdedeyne" target="_blank">Twitter</a> or via <a href="mailto:sebastiandedeyne@gmail.com">email</a>.
             </p>
         </section>
     </article>

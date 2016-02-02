@@ -1,11 +1,11 @@
 .v-article__body {
 
     a {
-        border-bottom: 2px solid color(gray-light);
+        border-bottom: 3px solid color(gray-lighter);
         @include transition;
 
         &:hover {
-            border-bottom: 2px solid color(gray-lighter);
+            border-bottom-color: color(gray-light);
         }
     }
 
@@ -17,6 +17,13 @@
         font-weight: bold;
         font-size: 20px;
         margin-bottom: .75*$line-height;
+    }
+
+    h3 {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: color(gray-dark);
+        margin-bottom: 0;
     }
 
     p code {

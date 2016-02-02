@@ -9,8 +9,10 @@ class Article
 {
     public $title;
     public $contents;
-    public $date = null;
+    public $date;
+    public $era;
     public $url;
+    public $commentable;
 
     public static function create(Document $data, string $url) : Article
     {
@@ -19,8 +21,12 @@ class Article
         $article->title = $data->matter('title');
         $article->contents = markdown($data->body());
 
-        if ($data->matter('date'))
-            $article->date = Carbon::createFromFormat('d/m/Y', $data->matter('date'));
+        $article->date = $data->matter('date') ?
+            Carbon::createFromFormat('d/m/Y', $data->matter('date')) :
+            null;
+
+        $article->era = $data->matter('era', null);
+        $article->commentable = $data->matter('comments', true);
 
         $article->url = $url;
 

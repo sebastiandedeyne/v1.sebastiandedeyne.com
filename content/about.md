@@ -1,16 +1,23 @@
 ---
 title: About
+comments: false
 ---
 
-I'm a full-stack developer working at Spatie in Antwerp, Belgium. I spend most of my time writing PHP and javascript.
+I'm a full-stack developer from Ghent, Belgium, working at Spatie in Antwerp. I spend most of my time writing php and javascript.
 
-In my spare time I enjoy playing video games, watching good TV like The Wire, cooking good food (anything with pasta!), and listening to good music while cherishing my vinyl collection.
+In my spare time I work on some (open source) side projects, rewatch The Wire, and improve my cooking skills.
+
+<i class="fa fa-github mr:1/2"></i> [sebastiandedeyne](https://github.com/sebastiandedeyne)  
+<i class="fa fa-twitter mr:1/2"></i> [@sebdedeyne](https://twitter.com/sebdedeyne)  
+<i class="fa fa-at mr:1/2"></i> [sebastiandedeyne@gmail.com](mailto:sebastiandedeyne@gmail.com)
 
 - Developer at Spatie, Antwerp (2015- <span class="donger">¯\\\_(ツ)_/¯</span> )
 - Freelance design & dev as 1/3 of Made By Monkey, Ghent (2012-2015)
 - Internship at SumoCoders, Ghent (2014)
 - Bachelor's degree in graphical and digital media<br> (Arteveldehogeschool 2015)
 
-## Colophon
+<div class=mb:2></div>
+
+### Colophon
 
 This website is powered by [Laravel](https://laravel.com/) and served from a [Forge](https://forge.laravel.com)-provisioned server on [Digital Ocean](https://www.digitalocean.com/).

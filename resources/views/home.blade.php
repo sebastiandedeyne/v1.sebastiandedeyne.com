@@ -4,7 +4,7 @@
 
 @section('content')
     <section class="v-home container">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-9">
             <header class="mb:1/4 fs:25 ls:06 tt:upper fw:bold">
                 <h1>Sebastian De Deyne</h1>
             </header>
@@ -14,12 +14,15 @@
             <section class="v-home__toc mb:2 fs:17">
                 <h2 class="tt:upper fw:bold">Blog</h2>
                 <ul class="mb:1">
+                    <li>Almost! <aside class="d:i fs:14 o:1/2">(for real)</aside></li>
+                    {{--
                     @foreach($posts as $post)
                         <li>
                             <a href="{{ $post->url }}">{{ $post->title }}</a>
                             <aside class="d:i fs:14 o:1/2">{{ $post->date->format('m/Y') }}</aside>
                         </li>
                     @endforeach
+                    --}}
                 </ul>
                 <h2 class="tt:upper fw:bold">More</h2>
                 <ul class="mb:1">
