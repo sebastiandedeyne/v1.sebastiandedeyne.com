@@ -29,7 +29,7 @@
             @include('partials.disqus')
         </section>
         @endif
-        <section class="v-article__footer fs:14 lh:1.5 mt:2">
+        <section class="v-article__footer fs:14 lh:150 mt:2">
             <p class="mb:1/2">© {{ now()->format('Y') }} <a href="{{ url('/') }}">Sebastian De Deyne</a> <span class="col:text--lighter fs:12">【ツ】</span></p>
             <p class="mb:1">
                 I'm a full-stack developer working at <a href="https://spatie.be" target="_blank">Spatie</a> in Antwerp, Belgium.
