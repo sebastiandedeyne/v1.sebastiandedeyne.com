@@ -152,6 +152,7 @@ return [
 
         Roumen\Feed\FeedServiceProvider::class,
         Spatie\ResponseCache\ResponseCacheServiceProvider::class,
+        Spatie\Tail\TailServiceProvider::class,
     ],
 
     /*
