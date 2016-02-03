@@ -36,6 +36,6 @@ class Handler extends ExceptionHandler
             return response()->view("errors.{$status}", ['exception' => $e], $status, $e->getHeaders());
         }
 
-        return response()->view("errors.generic}", ['exception' => $e], $status, $e->getHeaders());
+        return response()->view('errors.generic', ['exception' => $e], $status, $e->getHeaders());
     }
 }
