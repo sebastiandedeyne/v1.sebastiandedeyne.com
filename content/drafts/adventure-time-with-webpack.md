@@ -2,6 +2,8 @@
 title: Adventure Time With Webpack
 date: 03/02/2016
 era: Webpack ~1.12
+
+description: 'Over the past few weeks I''ve been migrating our asset pipeline at Spatie from Laravel Elixir (a gulp wrapper) to webpack. Between having endless possibilities, the occational incomplete section in the docs, and the fact that everyone has slightly different needs for their asset pipeline (which makes examples hard), it has surely been an adventure. I''m going to do a quick summary of my goals, and how I achieved them with webpack. Hopefully there will be some useful snippets in here for when you''re setting up your own webpack configuration.'
 ---
 
 Over the past few weeks I've been migrating our asset pipeline at [Spatie](https://spatie.be) from Laravel Elixir (a gulp wrapper) to webpack. Between having endless possibilities, the occational incomplete section in the docs, and the fact that everyone has slightly different needs for their asset pipeline (which makes examples hard), it has surely been an adventure. I'm going to do a quick summary of my goals, and how I achieved them with webpack. Hopefully there will be some useful snippets in here for when you're setting up your own webpack configuration.

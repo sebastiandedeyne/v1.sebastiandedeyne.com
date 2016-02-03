@@ -8,7 +8,7 @@
         <title>@yield('title', 'Sebastian De Deyne')</title>
 
         <meta charset="utf-8">
-        <meta name="description" content="content">
+        <meta name="description" content="@yield('meta', 'I\'m a full-stack developer working at Spatie in Antwerp, Belgium.')">
 
         @include('partials.favicons')
 

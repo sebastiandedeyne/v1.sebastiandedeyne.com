@@ -1,6 +1,7 @@
 ---
 title: About
 comments: false
+description: 'I''m a full-stack developer working at Spatie in Antwerp, Belgium.'
 ---
 
 I'm a full-stack developer from Ghent, working at Spatie in Antwerp, where I build stuff with Laravel and React. In my spare time I work on some (open source) side projects, rewatch The Wire, and improve my cooking skills.

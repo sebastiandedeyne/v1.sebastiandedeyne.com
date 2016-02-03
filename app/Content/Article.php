@@ -9,6 +9,7 @@ class Article
 {
     public $title;
     public $contents;
+    public $description;
     public $date;
     public $era;
     public $url;
@@ -20,6 +21,7 @@ class Article
 
         $article->title = $data->matter('title');
         $article->contents = markdown($data->body());
+        $article->description = $data->matter('description');
 
         $article->date = $data->matter('date') ?
             Carbon::createFromFormat('d/m/Y', $data->matter('date')) :

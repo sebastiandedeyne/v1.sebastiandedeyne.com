@@ -25,17 +25,27 @@ class Handler extends ExceptionHandler
 
     public function render($request, Exception $e)
     {
-        return parent::render($request, $e);
-    }
-
-    protected function renderHttpException(HttpException $e)
-    {
-        $status = $e->getStatusCode();
-
-        if (view()->exists("errors.{$status}")) {
-            return response()->view("errors.{$status}", ['exception' => $e], $status, $e->getHeaders());
+        if (config('app.debug')) {
+            return parent::render($request, $e);
         }
 
-        return response()->view('errors.generic', ['exception' => $e], $status, $e->getHeaders());
+        $status = $e instanceof HttpException ?
+            $e->getStatusCode() :
+            500;
+
+        $headers = $e instanceof HttpException ?
+            $e->getHeaders() :
+            [];
+
+        $data = [
+            'exception' => $e,
+            'status' => $status
+        ];
+
+        if (view()->exists("errors.{$status}")) {
+            return response()->view("errors.{$status}", $data, $status, $headers);
+        }
+
+        return response()->view('errors.generic', $data, $status, $headers);
     }
 }

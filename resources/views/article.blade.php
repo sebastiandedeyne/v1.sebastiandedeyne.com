@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('title', "{$article->title} — Sebastian De Deyne")
+@section('meta', $article->description)
 
 @section('content')
 <main class=container>
