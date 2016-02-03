@@ -24,11 +24,7 @@ final class FeedController extends Controller
     {
         $feed = app('feed')->make();
 
-        $feed->setCache(60);
-
-        if (! $feed->isCached()) {
-            $this->fillFeed($feed);
-        }
+        $this->fillFeed($feed);
 
         return $feed;
     }
