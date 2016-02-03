@@ -41,7 +41,7 @@ final class FeedController extends Controller
         $feed->description = 'Full-stack developer working at Spatie in Antwerp, Belgium';
         $feed->link = request()->url();
         $feed->setDateFormat('datetime');
-        $feed->pubdate = $posts ? $posts->first()->date : Carbon::now();
+        $feed->pubdate = $posts->first() ? $posts->first()->date : Carbon::now();
         $feed->lang = 'en';
         $feed->setShortening(false);
 
