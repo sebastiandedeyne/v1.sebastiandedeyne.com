@@ -9,6 +9,8 @@
 
         <meta charset="utf-8">
         <meta name="description" content="@yield('meta', 'I\'m a full-stack developer working at Spatie in Antwerp, Belgium.')">
+        
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ url('feed') }}" />
 
         @include('partials.favicons')
 
