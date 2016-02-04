@@ -39,7 +39,7 @@ const config = {
 module.exports = config;
 ```
 
-We'll populate `(a)` with most of our configuration, and `(b)` for some environment specific configuration (like minification in production). For a less abstract example, [this](https://github.com/spatie-custom/blender-gulp/blob/f2b09cde73b2d18e296eb20e686166c5dcdc6de3/config/webpack.js) is what our final base configuration looks like (some minor differences with the examples that will follow, but the gist of it is the same).
+We'll populate `(a)` with most of our configuration, and `(b)` with some environment specific configuration (like minification in production). For a less abstract example, [this](https://github.com/spatie-custom/blender-gulp/blob/f2b09cde73b2d18e296eb20e686166c5dcdc6de3/config/webpack.js) is what our final base configuration looks like (some minor differences with the examples that will follow, but the gist of it is the same).
 
 Before we set up compilation, bundling, or other fancy stuff we need to tell webpack where to look for everything, and where to save our build.
 

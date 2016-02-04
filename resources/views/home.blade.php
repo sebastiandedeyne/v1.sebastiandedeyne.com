@@ -14,15 +14,12 @@
             <section class="v-home__toc mb:2 fs:17">
                 <h2 class="tt:upper fw:bold">Blog</h2>
                 <ul class="mb:1">
-                    <li>Almost! <aside class="d:i fs:14 o:1/2">(for real)</aside></li>
-                    {{--
                     @foreach($posts as $post)
                         <li>
                             <a href="{{ $post->url }}">{{ $post->title }}</a>
                             <aside class="d:i fs:14 o:1/2">{{ $post->date->format('m/Y') }}</aside>
                         </li>
                     @endforeach
-                    --}}
                 </ul>
                 <h2 class="tt:upper fw:bold">More</h2>
                 <ul class="mb:1">
