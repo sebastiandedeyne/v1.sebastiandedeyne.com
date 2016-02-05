@@ -17,6 +17,7 @@
 body {
     font-size: $font-size;
     line-height: $line-height;
+    letter-spacing: -.1px;
     color: color(black);
     font-family: font(meta);
 }
