@@ -63,7 +63,7 @@ const config = {
         path: path.resolve(process.cwd(), 'public/build'),
 
         // A filename pattern for the output files. This would create 
-        // `front.app.js` and `style.js`.
+        // `front.app.js` and `front.style.js`.
         filename: '[name].js',
 
         // A filename pattern for generated chunks.
