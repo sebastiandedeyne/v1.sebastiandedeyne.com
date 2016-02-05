@@ -221,13 +221,11 @@ if (PRODUCTION) {
     config.plugins = config.plugins.concat([
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false,
+                compress: {
+                    warnings: false,
+                },
+                mangle: true,
                 screw_ie8: true,
-            },
-            mangle: {
-                screw_ie8: true,
-            },
         }),
     ]);
 }
