@@ -25,7 +25,7 @@ class Handler extends ExceptionHandler
 
     public function render($request, Exception $e)
     {
-        if (config('app.debug')) {
+        if (config('app.debug') || $request->isJson()) {
             return parent::render($request, $e);
         }
 
