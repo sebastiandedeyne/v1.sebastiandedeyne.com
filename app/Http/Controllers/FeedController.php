@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Content\Article;
 use App\Content\ContentRepository;
-use App\Foundation\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Roumen\Feed\Feed;
 

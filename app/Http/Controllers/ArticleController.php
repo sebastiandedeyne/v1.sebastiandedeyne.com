@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Content\ContentRepository;
-use App\Foundation\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 {
