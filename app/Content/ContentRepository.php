@@ -41,7 +41,6 @@ final class ContentRepository
             ->filter(function (array $item) {
                 return $item['type'] === 'dir';
             })
-            ->sortBy('path', SORT_REGULAR, true)
             ->flatMap(function (array $item) {
                 return $this->filesystem->listContents($item['path']);
             })
@@ -57,6 +56,9 @@ final class ContentRepository
             })
             ->filter(function ($item) {
                 return $item !== null;
+            })
+            ->sort(function (Article $articleA, Article $articleB) {
+                return $articleA->date->getTimeStamp() < $articleB->date->getTimeStamp();
             });
     }
 

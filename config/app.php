@@ -150,7 +150,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Roumen\Feed\FeedServiceProvider::class,
+        Spatie\Feed\FeedServiceProvider::class,
         Spatie\ResponseCache\ResponseCacheServiceProvider::class,
         Spatie\Tail\TailServiceProvider::class,
     ],

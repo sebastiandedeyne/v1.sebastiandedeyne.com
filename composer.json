@@ -11,11 +11,11 @@
         "phpspec/phpspec": "^2.4",
         "spatie/yaml-front-matter": "^1.0",
         "symfony/yaml": "^3.0",
-        "roumen/feed": "^2.9",
         "league/flysystem": "^1.0",
         "spatie/string": "^2.1",
         "spatie/laravel-responsecache": "^1.1",
-        "spatie/laravel-tail": "^1.1"
+        "spatie/laravel-tail": "^1.1",
+        "spatie/laravel-feed": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

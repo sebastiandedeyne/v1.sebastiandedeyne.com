@@ -3,9 +3,10 @@
 namespace App\Content;
 
 use Carbon\Carbon;
+use Spatie\Feed\FeedItem;
 use Spatie\YamlFrontMatter\Document;
 
-class Article
+class Article implements FeedItem
 {
     public $title;
     public $contents;
@@ -33,5 +34,30 @@ class Article
         $article->url = $url;
 
         return $article;
+    }
+
+    public function getFeedItemId()
+    {
+        return $this->url;
+    }
+
+    public function getFeedItemTitle() : string
+    {
+        return $this->title;
+    }
+
+    public function getFeedItemUpdated() : Carbon
+    {
+        return $this->date;
+    }
+
+    public function getFeedItemSummary() : string
+    {
+        return $this->description ?? '';
+    }
+
+    public function getFeedItemLink() : string
+    {
+        return url("posts/{$this->url}");
     }
 }
