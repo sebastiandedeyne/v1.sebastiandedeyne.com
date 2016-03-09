@@ -51,7 +51,11 @@ class HtmlClasses
 
     public function toArray() : array
     {
-        is_array($this->classes) ? $this->classes : [$this->classes];
+        if (! is_array($this->classes)) {
+            return [$this->classes];
+        }
+
+        return $this->classes;
     }
 }
 ```
