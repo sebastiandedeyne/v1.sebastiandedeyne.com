@@ -22,13 +22,13 @@ class Article implements FeedItem
 
         $article->title = $data->matter('title');
         $article->contents = markdown($data->body());
-        $article->description = $data->matter('description');
+        $article->description = $data->matter('description', '');
 
         $article->date = $data->matter('date') ?
             Carbon::createFromFormat('d/m/Y', $data->matter('date')) :
             null;
 
-        $article->era = $data->matter('era', null);
+        $article->era = $data->matter('era', '');
         $article->commentable = $data->matter('comments', true);
 
         $article->url = $url;
@@ -53,11 +53,16 @@ class Article implements FeedItem
 
     public function getFeedItemSummary() : string
     {
-        return $this->description ?? '';
+        return $this->contents ?? '';
     }
 
     public function getFeedItemLink() : string
     {
         return url("posts/{$this->url}");
+    }
+
+    public function getFeedItemAuthor() : string
+    {
+        return 'Sebastian De Deyne';
     }
 }

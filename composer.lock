@@ -1588,12 +1588,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-feed.git",
-                "reference": "7910f721cc619c9c04b75f69ba8025144611f5d9"
+                "reference": "0f9b9468fb4a54de263288d4dad7f5847680cb01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/7910f721cc619c9c04b75f69ba8025144611f5d9",
-                "reference": "7910f721cc619c9c04b75f69ba8025144611f5d9",
+                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/0f9b9468fb4a54de263288d4dad7f5847680cb01",
+                "reference": "0f9b9468fb4a54de263288d4dad7f5847680cb01",
                 "shasum": ""
             },
             "require": {
@@ -1635,7 +1635,7 @@
                 "laravel-feed",
                 "spatie"
             ],
-            "time": "2016-03-09 20:51:55"
+            "time": "2016-03-10 13:30:25"
         },
         {
             "name": "spatie/laravel-responsecache",
