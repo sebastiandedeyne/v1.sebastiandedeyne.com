@@ -82,7 +82,7 @@ class HtmlClasses
     public function toString() : string
     {
         if (! is_string($this->classes)) {
-            return explode(' ', $this->classes);
+            return implode(' ', $this->classes);
         }
 
         return $this->classes;
@@ -120,7 +120,7 @@ class HtmlClasses
 
     public function toString() : string
     {
-        return explode(' ', $this->classes);
+        return implode(' ', $this->classes);
     }
 
     public function toArray() : array
