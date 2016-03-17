@@ -103,7 +103,17 @@ class HtmlClasses
      */
     public function __construct($classes)
     {
-        $this->classes = is_array($classes) ? $classes : [$classes];
+        if (is_array($classes)) {
+            $this->classes = $classes;
+            return;
+        }
+
+        if (is_string($classes)) {
+            $this->classes = explode(' ', $classes);
+            return;
+        }
+
+        throw new InvalidArgumentException();
     }
 }
 ```
