@@ -20,13 +20,11 @@ class Article implements FeedItem
     {
         $article = new static();
 
-        $article->title = $data->matter('title');
+        $article->title = $data->matter('title', '');
         $article->contents = markdown($data->body());
         $article->description = $data->matter('description', '');
 
-        $article->date = $data->matter('date') ?
-            Carbon::createFromFormat('d/m/Y', $data->matter('date')) :
-            null;
+        $article->date = Carbon::createFromFormat('d/m/Y', $data->matter('date', '01/02/1992'));
 
         $article->era = $data->matter('era', '');
         $article->commentable = $data->matter('comments', true);
