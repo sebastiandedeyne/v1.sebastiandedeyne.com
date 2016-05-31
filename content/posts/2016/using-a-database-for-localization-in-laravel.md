@@ -73,7 +73,7 @@ We're all set, time to add our first translation to the database:
 
 ```php
 $fragment = new App\Models\Fragment();
-$fragment->key = 'greet';
+$fragment->key = 'home.greet';
 $fragment->setTranslation('text', 'en', 'Hello world!');
 $fragment->save();
 ```
