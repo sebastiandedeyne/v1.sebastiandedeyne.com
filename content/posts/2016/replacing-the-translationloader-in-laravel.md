@@ -1,57 +1,151 @@
 ---
 title: Using a Database for Localization in Laravel
-date: 30/03/2016
+date: 31/05/2016
+era: Laravel 5.2
+
+description: "When building a website for a client that wants to be able to manage content, Laravel's language files aren't ideal since you can't edit them without diving into a bundle of text files. We recently decided to drop all the lang files in our custom CMS in favor of persisting translations in the database, which allows us to build a custom interface for managing them. This post is a quick overview on overwriting Laravel's default translation loader, which means you can keep using the `lang` method while fetching the translations from a database. Writing a custom loader is easier than it sounds. First we'll set up our translation models, then we'll write our loader, and finally register it in our application."
 ---
 
-When building a website for a client that wants to be able to manage the content, Laravel's language files aren't ideal since you can't really edit them without diving into a bundle of text files. We recently decided to drop all the lang files in favor of saving translations in the database, which allows us to build a pretty interface for managing them.
+When building a website for a client that wants to be able to manage content, Laravel's language files aren't ideal since you can't edit them without diving into a bundle of text files. We recently decided to drop all the lang files in our custom CMS in favor of persisting translations in the database, which allows us to build a custom interface for managing them.
 
-Overwriting Laravel's default translation loader is actually quite easy. First we'll set up out translation models, then we'll write our custom loader, and finally register it in our application.
+This post is a quick overview on overwriting Laravel's default translation loader, which means you can keep using the `lang` method while fetching the translations from a database. Writing a custom loader is easier than it sounds. First we'll set up our translation models, then we'll write our loader, and finally register it in our application.
 
 ## The Translation Model
 
-> There are a few good packages that handle translatable models, I'm just going to use some simple examples for this post
+> There are a few good packages that handle translatable models, I'll be using our home grown [`spatie/laravel-translatable`](https://github.com/spatie/laravel-translatable) in this post.
+
+First off, we need to create a model that represents a fragment of text in our application. Let's call it `Fragment`. It'll need a migration and a model that implements `Spatie\Translatable\HasTranslations`. Our required fields are a `key`, which we'll use to identify the translation, and `text`, which will store the translations.
 
 ```php
-namespace App;
+<?php
 
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateFragmentsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('fragments', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('key');
+            $table->text('text');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('fragments');
+    }
+}
+```
+
+In the model, we'll declare the `text` attribute as a translatable property.
+
+```php
+<?php
+
+namespace App\Models;
+
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Spatie\Translatable\Translatable;
 
-/**
- * @property int $id
- * @property string $group
- * @property string $key
- * @property \Illuminate\Database\Eloquent\Collection $translations
- */
 class Fragment extends Model
 {
-    public function translations() : HasMany
-    {
-        return $this->hasMany(FragmentTranslation::class);
-    }
-    
-    public function translate(string $locale) : string
-    {
-        $translation = $this->translations
-            ->where('locale', $locale)
-            ->first();
+    use Translatable;
 
-        return $translation ? 
-            $translation->text : 
-            "{$this->group}.{$this->key}";
-    }
-    
-    public static function getGroup(string $group, string $locale) : array
+    protected $translatable = ['text'];
+}
+```
+
+We're all set, time to add our first translation to the database:
+
+```php
+$fragment = new App\Models\Fragment();
+$fragment->key = 'greet';
+$fragment->setTranslation('text', 'en', 'Hello world!');
+$fragment->save();
+```
+
+## Writing Our Own Translation Loader
+
+We're not going to write a loader from scratch, but instead extend Laravel's `FileLoader`. This will ensure we're maintaining compatibility with namespaced translations provided by packages.
+
+First we'll check if there's a namespace in the `load` call, and if not we'll fall back to our `Fragment`. Laravel loads translations by group, which means if you'd call `trans('foo.bar.baz')`, the `foo` group would be loaded and `bar.baz` key would be fetched and returned.
+
+In our case, that means we'd have to return a group of fragments in a certain locale. Let's hide that process in a `getGroup` method for now, and revisit it later. Lastly, let's cache the result since translations aren't that prone to change.
+
+```php
+<?php
+
+namespace App\Services\Locale;
+
+use App\Models\Fragment;
+use Cache;
+use Illuminate\Translation\FileLoader;
+
+class TranslationLoader extends FileLoader
+{
+    /**
+     * Load the messages for the given locale.
+     *
+     * @param string $locale
+     * @param string $group
+     * @param string $namespace
+     *
+     * @return array
+     */
+    public function load($locale, $group, $namespace = null)
     {
-        return static::with('translations')
-            ->where('group', $group)
-            ->get()
+        if ($namespace !== null && $namespace !== '*') {
+            return $this->loadNamespaced($locale, $group, $namespace);
+        }
+
+        return Cache::remember("locale.fragments.{$locale}.{$group}", 60,
+            function () use ($group, $locale) {
+                return Fragment::getGroup($group, $locale);
+            });
+    }
+}
+```
+
+A translation group is an associative array with a `key => text` format. To create this group, we'll need to retrieve all relevant fragments with `like`, and extract their keys and texts. The key will have it's group in it too, we'll need to strip that with a regular expression.
+
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\Translatable;
+
+class Fragment extends Model
+{
+    use Translatable;
+
+    protected $translatable = ['text'];
+
+    public static function getGroup(string $group, string $locale): array
+    {
+        return static::query()->where('key', 'LIKE', "{$group}.%")->get()
             ->map(function (Fragment $fragment) use ($locale, $group) {
-                return [
-                    'key' => $fragment->key,
-                    'text' => $fragment->translate($locale)->text,
-                ];
+
+                $key = preg_replace("/{$group}\\./", '', $fragment->key, 1);
+                $text = $fragment->translate('text', $locale);
+
+                return compact('key', 'text');
+
             })
             ->pluck('text', 'key')
             ->toArray();
@@ -59,57 +153,17 @@ class Fragment extends Model
 }
 ```
 
-```php
-namespace App;
+> Alternatively you could store the `group` and `key` separately in the database for a simpler query.
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+## Registering Our Custom Loader
 
-/**
- * @property int $id
- * @property string $text
- * @property \App\Fragment $fragment
- */
-class FragmentTranslation extends Model
-{
-    public function fragment() : BelongsTo
-    {
-        return $this->belongsTo(Fragment::class);
-    }
-}
-```
-
-## Writing Our Own TranslationLoader
-
-We're not going to start from scratch, so we can keep using namespaced lang files provided by packages.
+To change the source of our translated strings, we don't need to reimplement the entire translator, just the translation loader. In the base `TranslationServiceProvider` the loader registration happens in it's own method, so we can just extend that class and overwrite it. The method will look exactly the same as the one in the base provider, but the `TranslationLoader` is loaded from a different namespace.
 
 ```php
-namespace App;
+<?php
 
-use Cache;
-use Illuminate\Translation\FileLoader;
+namespace App\Services\Locale;
 
-class TranslationLoader extends FileLoader
-{
-    public function load($locale, $group, $namespace = null) : array
-    {
-        if ($namespace !== null && $namespace !== '*') {
-            return $this->loadNamespaced($locale, $group, $namespace);
-        }
-        
-        return Fragment::getGroup($group, $locale);
-    }
-}
-```
-
-## Registering Our New Loader
-
-To change the source of our translated strings, we don't need to reimplement the entire translator, just the translation loader. In the base `TranslationServiceProvider` the loader registration happens in it's own method, so we can just extend that class, and overwrite it.
-
-```php
-namespace App\Providers;
-
-use App\Locale\TranslationLoader;
 use Illuminate\Translation\TranslationServiceProvider as ServiceProvider;
 
 class TranslationServiceProvider extends ServiceProvider
@@ -123,4 +177,34 @@ class TranslationServiceProvider extends ServiceProvider
 }
 ```
 
-Overwrite config...
+Lastly, we'll need to register the provider. In `config/app.php`, remove the original provider, and add our custom implementation to the `providers` array.
+
+```php
+return [
+    // ...
+
+    'providers' => [
+        // ...
+
+        // --Illuminate\Translation\TranslationServiceProvider::class,
+
+        App\Services\Locale\TranslationServiceProvider::class,
+    ],
+
+    // ...
+];
+```
+
+## Give it a Spin!
+
+That's it! We're now loading our translations from the database. Let's verify with a dummy route:
+
+```php
+Route::get('/', function () {
+    return trans('home.greeting');
+});
+
+// => Hello world!
+```
+
+By storing translations in the database, we've built a foundation for a CRUD interface that allows clients to edit the application's content to their heart's content.
