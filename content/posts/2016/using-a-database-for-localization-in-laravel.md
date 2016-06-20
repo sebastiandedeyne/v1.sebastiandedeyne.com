@@ -59,11 +59,11 @@ In the model, we'll declare the `text` attribute as a translatable property.
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Translatable\Translatable;
+use Spatie\Translatable\HasTranslations;
 
 class Fragment extends Model
 {
-    use Translatable;
+    use HasTranslations;
 
     protected $translatable = ['text'];
 }
