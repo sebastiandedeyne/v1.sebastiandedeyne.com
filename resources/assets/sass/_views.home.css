@@ -1,22 +1,22 @@
 .v-home {
     margin-top: 4*$line-height;
     margin-bottom: $line-height;
-    color: color(white);
+    color: $color-white;
 }
 
 .v-home__intro {
 
     a {
-        border-bottom: 4px solid white(.2);
-        @include transition;
+        border-bottom: 4px solid color($color-white a(.2));
+        @mixin transition;
     }
 }
 
 .v-home__toc {
 
     a {
-        border-bottom: 3px solid white(.2);
-        @include transition;
+        border-bottom: 3px solid color($color-white a(.2));
+        @mixin transition;
     }
 }
 

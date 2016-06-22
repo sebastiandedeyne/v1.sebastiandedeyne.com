@@ -1,11 +1,11 @@
 .v-article__body {
 
     a {
-        border-bottom: 3px solid color(gray-lighter);
-        @include transition;
+        border-bottom: 3px solid $color-gray--lighter;
+        @mixin transition;
 
         &:hover {
-            border-bottom-color: color(gray-light);
+            border-bottom-color: $color-gray--light;
         }
     }
 
@@ -22,14 +22,14 @@
     h3 {
         font-weight: bold;
         text-transform: uppercase;
-        color: color(gray-dark);
+        color: $color-gray--dark;
         margin-bottom: 0;
     }
 
     p code {
         font-size: 15px;
-        font-family: font(hack);
-        background: color(gray-lightest);
+        font-family: $font-hack;
+        background: $color-gray--lightest;
     }
 
     p + pre {
@@ -38,13 +38,13 @@
 
     .hljs {
         border-radius: 2px;
-        background: color(gray-lightest);
-        box-shadow: 0 2px 0 color(gray-lighter);
+        background: $color-gray--lightest;
+        box-shadow: 0 2px 0 $color-gray--lighter;
         padding: .5em 1em;
         font-size: 14px;
         margin-left: -.3em;
         margin-right: -.3em;
-        font-family: font(hack);
+        font-family: $font-hack;
         line-height: 1.5;
     }
 
@@ -68,8 +68,8 @@
         padding: 1em;
         margin-left: -.3em;
         margin-right: -.3em;
-        background: color(gray-lightest);
-        border-left: 3px solid color(red);
+        background: $color-gray--lightest;
+        border-left: 3px solid $color-red;
         border-radius: 0 2px 2px 0;
     }
 
@@ -89,15 +89,15 @@
         top: -25px;
         width: 25px;
         height: 1px;
-        background-color: color(gray);
+        background-color: $color-gray;
     }
 
     a {
         text-decoration: underline;
-        @include transition;
+        @mixin transition;
 
         &:hover {
-            color: color(gray-dark);
+            color: $color-gray--dark;
         }
     }
 }

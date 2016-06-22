@@ -5,19 +5,19 @@
 }
 
 ::selection {
-    color: color(white);
-    background-color: color(red);
+    color: $color-white;
+    background-color: $color-red;
 }
 
 ::-moz-selection {
-    color: color(white);
-    background-color: color(red);
+    color: $color-white;
+    background-color: $color-red;
 }
 
 body {
     font-size: $font-size;
     line-height: $line-height;
     letter-spacing: -.1px;
-    color: color(black);
-    font-family: font(meta);
+    color: $color-black;
+    font-family: $font-meta;
 }
