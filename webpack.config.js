@@ -1,4 +1,3 @@
-const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
@@ -14,8 +13,8 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('style', 'css!sass!postcss'),
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract('style', 'css!postcss'),
             },
             {
                 test: /\.svg$/,
@@ -24,16 +23,23 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['', '.js', '.css', '.scss'],
+        extensions: ['', '.js', '.css'],
     },
     plugins: [
         new ManifestPlugin({ fileName: 'rev-manifest.json' }),
         new ExtractTextPlugin('style.css'),
     ],
-    sassLoader: {
-        includePaths: ['node_modules'],
-    },
     postcss() {
-        return [autoprefixer];
+        return {
+            plugins: [
+                require('autoprefixer')(),
+                require('postcss-easy-import')({ glob: true }),
+                require('postcss-mixins')(),
+                require('postcss-simple-vars')(),
+                require('postcss-nested')(),
+                require('postcss-color-function')(),
+            ],
+            parser: require('postcss-scss'),
+        };
     },
 };
