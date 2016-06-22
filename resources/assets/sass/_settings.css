@@ -14,6 +14,7 @@ $font-meta: 'ff-meta-web-pro', -apple-system, BlinkMacSystemFont, sans-serif;
 $font-hack: 'Hack', 'Lucida Console', 'Lucida Sans Typewriter', monospace;
 
 $breakpoint-sm: 576px;
-$breakpoint-md: 720px;
 $breakpoint-lg: 720px;
-$breakpoint-xl: 720px;
+
+$grid-gutter: 30px;
+$grid-container: 720px;

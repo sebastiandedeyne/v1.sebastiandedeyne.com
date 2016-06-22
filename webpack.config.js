@@ -3,7 +3,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
     entry: {
-        'style': './resources/assets/sass/site.scss',
+        'style': './resources/assets/sass/site.css',
         'app': './resources/assets/js/site.js',
     },
     output: {
@@ -35,9 +35,10 @@ module.exports = {
                 require('autoprefixer')(),
                 require('postcss-easy-import')({ glob: true }),
                 require('postcss-mixins')(),
-                require('postcss-simple-vars')(),
+                require('postcss-advanced-variables')(),
                 require('postcss-nested')(),
                 require('postcss-color-function')(),
+                require('postcss-calc')(),
             ],
             parser: require('postcss-scss'),
         };

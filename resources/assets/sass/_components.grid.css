@@ -1,0 +1,14 @@
+.grid {
+    @mixin grid-container;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+@media(min-width: $breakpoint-sm) {
+    @mixin make-columns 2;
+    @mixin make-columns 4;
+}
