@@ -1,5 +1,5 @@
 .v-home {
-    margin-top: 4*$line-height;
+    margin-top: calc(4 * $line-height);
     margin-bottom: $line-height;
     color: $color-white;
 }
@@ -7,16 +7,18 @@
 .v-home__intro {
 
     a {
-        border-bottom: 4px solid color($color-white a(.2));
         @mixin transition;
+
+        border-bottom: 4px solid color($color-white a(.2));
     }
 }
 
 .v-home__toc {
 
     a {
-        border-bottom: 3px solid color($color-white a(.2));
         @mixin transition;
+
+        border-bottom: 3px solid color($color-white a(.2));
     }
 }
 
