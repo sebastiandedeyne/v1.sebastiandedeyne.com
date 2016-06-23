@@ -9,6 +9,5 @@
 }
 
 @media(min-width: $breakpoint-sm) {
-    @mixin make-columns 2;
     @mixin make-columns 4;
 }
