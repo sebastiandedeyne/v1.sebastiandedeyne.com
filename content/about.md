@@ -4,7 +4,7 @@ comments: false
 description: 'I''m a full-stack developer working at Spatie in Antwerp, Belgium.'
 ---
 
-I'm a full-stack developer from Ghent, working at Spatie in Antwerp, where I build stuff with Laravel and React. In my spare time I work on some (open source) side projects, rewatch The Wire, and improve my cooking skills.
+I'm a full-stack developer from Ghent, working at Spatie in Antwerp, where I mainly build stuff with Laravel and Vue. In my spare time I work on some (open source) side projects, rewatch The Wire, and improve my cooking skills.
 
 <i class="fa fa-github mr:1/2"></i> [sebastiandedeyne](https://github.com/sebastiandedeyne)  
 <i class="fa fa-twitter mr:1/2"></i> [@sebdedeyne](https://twitter.com/sebdedeyne)  
