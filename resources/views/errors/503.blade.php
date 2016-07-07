@@ -3,11 +3,11 @@
 @section('body_classes', 'bg:red')
 
 @section('content')
-    <section class="col:white ta:c mt:3 mb:1">
-        <h1 class="fs:27 fw:bold lh:100 mb:1/2">
+    <section class="v-error">
+        <h1 class="v-error__title">
             Be Right Back!
         </h1>
-        <p class="mb:1">
+        <p class="v-error__message">
             Just doing some quick maintenance.
         </p>
     </section>
