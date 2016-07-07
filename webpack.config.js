@@ -3,7 +3,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
     entry: {
-        'style': './resources/assets/sass/site.css',
+        'style': './resources/assets/css/site.css',
         'app': './resources/assets/js/site.js',
     },
     output: {
