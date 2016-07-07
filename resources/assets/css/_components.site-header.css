@@ -1,0 +1,13 @@
+.site-header {
+    font-weight: 900;
+    font-size: 20px;
+    color: $color-red;
+    margin-top: calc($base * .5);
+    margin-bottom: $base;
+}
+
+.site-header__logotype {
+    background: url('../svg/logotype.svg');
+    @mixin block 100px, 40px, .4;
+    @mixin hide-text;
+}

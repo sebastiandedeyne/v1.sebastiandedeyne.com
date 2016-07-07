@@ -1,3 +1,19 @@
+.v-article__header {
+    margin-bottom: $base;
+}
+
+.v-article__header__title {
+    font-size: 33px;
+    font-weight: 900;
+    margin-bottom: calc($base * .125);
+}
+
+.v-article__header__meta {
+    font-size: 14px;
+    color: $color-gray--dark;
+    margin-bottom: $base;
+}
+
 .v-article__body {
 
     a {
@@ -78,8 +94,15 @@
     }
 }
 
+.v-article__comments {
+    margin-top: calc($base * 2);
+}
+
 .v-article__footer {
     position: relative;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: calc($base * 2);
 
     &:before {
         content: "";
@@ -100,4 +123,12 @@
             color: $color-gray--dark;
         }
     }
+}
+
+.v-article__footer__credits {
+    margin-bottom: calc($base * .5);
+}
+
+.v-article__footer__about {
+    margin-bottom: $base;
 }

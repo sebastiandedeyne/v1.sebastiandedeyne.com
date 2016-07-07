@@ -4,7 +4,19 @@
     color: $color-white;
 }
 
+.v-home__title {
+    margin-bottom: calc($base * .25);
+    font-size: 25px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .v-home__intro {
+    margin-bottom: calc($base * 1.5);
+    font-size: 27px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
 
     a {
         @mixin transition;
@@ -14,6 +26,8 @@
 }
 
 .v-home__toc {
+    margin-bottom: calc($base * 2);
+    font-size: 17px;
 
     a {
         @mixin transition;
@@ -22,7 +36,23 @@
     }
 }
 
+.v-home__toc__title {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.v-home__toc__list {
+    margin-bottom: $base;
+}
+
+.v-home__toc__list__aside {
+    display: inline;
+    font-size: 14px;
+    opacity: .5;
+}
+
 .v-home__footer {
+    font-size: 20px;
 
     .btn {
         margin-right: .33em;

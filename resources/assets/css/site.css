@@ -6,4 +6,5 @@
 @import "_base.*";
 @import "_components.*";
 @import "_views.*";
-@import "_utilities.*";
+
+@import "_utilities";

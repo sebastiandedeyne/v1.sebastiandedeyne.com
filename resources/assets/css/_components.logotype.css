@@ -1,5 +1,0 @@
-.logotype {
-    background: url('../svg/logotype.svg');
-    @mixin block 100px, 40px, .4;
-    @mixin hide-text;
-}
