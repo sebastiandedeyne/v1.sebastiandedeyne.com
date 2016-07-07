@@ -15,9 +15,15 @@
 }
 
 body {
-    font-size: $font-size;
-    line-height: $line-height;
+    line-height: $base;
     letter-spacing: -.1px;
     color: $color-black;
+    font-size: 18px;
     font-family: $font-meta;
+    font-size: 18px;
+
+    html:not(.wf-active) & {
+        font-family: Arial, sans-serif;
+        font-size: 17.5px;
+    }
 }

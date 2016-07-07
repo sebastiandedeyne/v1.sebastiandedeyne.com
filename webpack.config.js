@@ -4,7 +4,8 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 module.exports = {
     entry: {
         'style': './resources/assets/css/site.css',
-        'app': './resources/assets/js/site.js',
+        'head': './resources/assets/js/head.js',
+        'app': './resources/assets/js/app.js',
     },
     output: {
         path: 'public/build',

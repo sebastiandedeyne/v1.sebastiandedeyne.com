@@ -20,5 +20,8 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.12.12",
     "webpack-manifest-plugin": "^0.5.0"
+  },
+  "dependencies": {
+    "webfontloader": "^1.6.25"
   }
 }

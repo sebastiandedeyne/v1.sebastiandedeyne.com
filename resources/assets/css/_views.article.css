@@ -26,13 +26,13 @@
     }
 
     > * {
-        margin-bottom: $line-height;
+        margin-bottom: $base;
     }
 
     h2 {
         font-weight: bold;
         font-size: 20px;
-        margin-bottom: calc(.75 * $line-height);
+        margin-bottom: calc(.75 * $base);
     }
 
     h3 {
@@ -49,7 +49,7 @@
     }
 
     p + pre {
-        margin-top: calc(-.5 * $line-height);
+        margin-top: calc(-.5 * $base);
     }
 
     .hljs {
@@ -65,7 +65,7 @@
     }
 
     ul > li {
-        padding-left: calc(.6 * $line-height);
+        padding-left: calc(.6 * $base);
         position: relative;
 
         &:before {

@@ -1,6 +1,6 @@
 .v-home {
-    margin-top: calc(4 * $line-height);
-    margin-bottom: $line-height;
+    margin-top: calc(4 * $base);
+    margin-bottom: $base;
     color: $color-white;
 }
 
