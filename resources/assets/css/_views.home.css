@@ -10,6 +10,10 @@
     letter-spacing: .06em;
     text-transform: uppercase;
     font-weight: bold;
+
+    @mixin no-webfont {
+        font-size: 22.5px;
+    }
 }
 
 .v-home__intro {
@@ -20,7 +24,6 @@
 
     a {
         @mixin transition;
-
         border-bottom: 4px solid color($color-white a(.2));
     }
 }
@@ -30,8 +33,7 @@
     font-size: 17px;
 
     a {
-        @mixin transition;
-
+        @mixin transition border;
         border-bottom: 3px solid color($color-white a(.2));
     }
 }
@@ -43,12 +45,20 @@
 
 .v-home__toc__list {
     margin-bottom: $base;
+
+    @mixin no-webfont {
+        font-size: 15.5px;
+    }
 }
 
 .v-home__toc__list__aside {
     display: inline;
     font-size: 14px;
     opacity: .5;
+
+    @mixin no-webfont {
+        font-size: 12.5px;
+    }
 }
 
 .v-home__footer {
