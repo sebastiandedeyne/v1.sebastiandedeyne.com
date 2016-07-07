@@ -1,14 +1,11 @@
-@define-mixin clearfix {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
+@define-mixin no-webfont {
+    html:not(.wf-active) & {
+        @mixin-content;
+    }
 }
 
-@define-mixin transition {
-    transition: all .2s cubic-bezier(0, 0, 0, 1);
+@define-mixin transition $property: all {
+    transition: $property .2s cubic-bezier(0, 0, 0, 1);
 }
 
 @define-mixin hide-text {

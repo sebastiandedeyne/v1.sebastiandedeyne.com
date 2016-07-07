@@ -22,8 +22,7 @@ body {
     font-family: $font-meta;
     font-size: 18px;
 
-    html:not(.wf-active) & {
-        font-family: Arial, sans-serif;
+    @mixin no-webfont {
         font-size: 17.5px;
     }
 }

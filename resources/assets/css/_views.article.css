@@ -6,19 +6,27 @@
     font-size: 33px;
     font-weight: 900;
     margin-bottom: calc($base * .125);
+
+    @mixin no-webfont {
+        font-size: 30px;
+    }
 }
 
 .v-article__header__meta {
     font-size: 14px;
     color: $color-gray--dark;
     margin-bottom: $base;
+
+    @mixin no-webfont {
+        font-size: 13.5px;
+    }
 }
 
 .v-article__body {
 
     a {
         border-bottom: 3px solid $color-gray--lighter;
-        @mixin transition;
+        @mixin transition border;
 
         &:hover {
             border-bottom-color: $color-gray--light;
@@ -117,7 +125,7 @@
 
     a {
         text-decoration: underline;
-        @mixin transition;
+        @mixin transition color;
 
         &:hover {
             color: $color-gray--dark;
