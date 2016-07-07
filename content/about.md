@@ -6,9 +6,9 @@ description: 'I''m a full-stack developer working at Spatie in Antwerp, Belgium.
 
 I'm a full-stack developer from Ghent, working at Spatie in Antwerp, where I mainly build stuff with Laravel and Vue. In my spare time I work on some (open source) side projects, rewatch The Wire, and improve my cooking skills.
 
-<i class="fa fa-github mr:1/2"></i> [sebastiandedeyne](https://github.com/sebastiandedeyne)  
-<i class="fa fa-twitter mr:1/2"></i> [@sebdedeyne](https://twitter.com/sebdedeyne)  
-<i class="fa fa-at mr:1/2"></i> [sebastiandedeyne@gmail.com](mailto:sebastiandedeyne@gmail.com)
+<i class="fa fa-github v-about__icon"></i> [sebastiandedeyne](https://github.com/sebastiandedeyne)  
+<i class="fa fa-twitter v-about__icon"></i> [@sebdedeyne](https://twitter.com/sebdedeyne)  
+<i class="fa fa-at v-about__icon"></i> [sebastiandedeyne@gmail.com](mailto:sebastiandedeyne@gmail.com)
 
 - Developer at Spatie, Antwerp (2015- <span class="donger">¯\\\_(ツ)_/¯</span> )
 - Freelance design & dev as 1/3 of Made By Monkey, Ghent (2012-2015)
