@@ -23,6 +23,6 @@ body {
     font-size: 18px;
 
     @mixin no-webfont {
-        font-size: 15px;
+        font-size: 17px;
     }
 }
