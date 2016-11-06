@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('_layouts.master')
 
 @section('title', "{$article->title} — Sebastian De Deyne")
 @section('meta', $article->description)
@@ -30,7 +30,7 @@
             </section>
             @if($article->commentable)
             <section class="v-article__comments">
-                @include('partials.disqus')
+                @include('_partials.disqus')
             </section>
             @endif
             <section class="v-article__footer">

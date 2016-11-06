@@ -1,1 +1,3 @@
-.bg\:red { background-color: $color-red !important; }
+.bg\:red {
+    background-color: var(--color-red) !important;
+}

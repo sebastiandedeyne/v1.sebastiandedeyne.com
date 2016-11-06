@@ -4,7 +4,6 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 module.exports = {
     entry: {
         'style': './resources/assets/css/site.css',
-        'head': './resources/assets/js/head.js',
         'app': './resources/assets/js/app.js',
     },
     output: {
@@ -23,9 +22,6 @@ module.exports = {
             },
         ],
     },
-    resolve: {
-        extensions: ['', '.js', '.css'],
-    },
     plugins: [
         new ManifestPlugin({ fileName: 'rev-manifest.json' }),
         new ExtractTextPlugin('style.css'),
@@ -35,13 +31,10 @@ module.exports = {
             plugins: [
                 require('autoprefixer')(),
                 require('postcss-easy-import')({ glob: true }),
-                require('postcss-mixins')(),
-                require('postcss-advanced-variables')(),
-                require('postcss-nested')(),
+                require('postcss-css-variables')(),
                 require('postcss-color-function')(),
                 require('postcss-calc')(),
             ],
-            parser: require('postcss-scss'),
         };
     },
 };

@@ -1,5 +1,12 @@
 .grid {
-    @mixin grid-container;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(var(--grid-gutter) / 2);
+    padding-right: calc(var(--grid-gutter) / 2);
+    width: 100%;
+    max-width: var(--grid-container);
 }
 
 .grid__row {
@@ -8,6 +15,18 @@
     width: 100%;
 }
 
-@media(min-width: $breakpoint-sm) {
-    @mixin make-columns 4;
+.grid__col--1\/4 {
+    flex: 0 0 calc(100% / 4);
+}
+
+.grid__col--2\/4 {
+    flex: 0 0 calc(100% / 4 * 2);
+}
+
+.grid__col--3\/4 {
+    flex: 0 0 calc(100% / 4 * 3);
+}
+
+.grid__col--2\/4 {
+    flex: 0 0 100%;
 }

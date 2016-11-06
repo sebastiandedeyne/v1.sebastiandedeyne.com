@@ -4,24 +4,18 @@
     "autoprefixer": "^6.3.6",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.8.5",
     "postcss": "^5.0.19",
-    "postcss-advanced-variables": "^1.2.2",
     "postcss-calc": "^5.2.1",
     "postcss-color-function": "^2.0.1",
+    "postcss-css-variables": "^0.6.0",
     "postcss-easy-import": "^1.0.1",
     "postcss-loader": "^0.9.0",
-    "postcss-mixins": "^4.0.2",
-    "postcss-nested": "^1.0.0",
-    "postcss-scss": "^0.1.8",
-    "precss": "^1.4.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.12",
+    "webpack": "^1.13.3",
     "webpack-manifest-plugin": "^0.5.0"
   },
   "dependencies": {
-    "highlight.js": "^9.1.0",
-    "webfontloader": "^1.6.25"
+    "highlight.js": "^9.1.0"
   }
 }

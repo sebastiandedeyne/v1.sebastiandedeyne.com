@@ -12,18 +12,17 @@
 
         <link rel="alternate" type="application/rss+xml" title="Sebastian De Deyne — Posts" href="{{ url('feed') }}" />
 
-        @include('partials.favicons')
+        @include('_partials.favicons')
 
         <link rel="stylesheet" href="{{ elixir('style.css') }}">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
 
-        <script src="{{ elixir('head.js') }}"></script>
         <script src="{{ elixir('app.js') }}" defer></script>
     </head>
     <body class="@yield('body_classes')">
-        @if(app()->environment('production'))
-            @include('partials.analytics')
-        @endif
         @yield('content')
+        @if(app()->environment('production'))
+            @include('_partials.analytics')
+        @endif
     </body>
 </html>

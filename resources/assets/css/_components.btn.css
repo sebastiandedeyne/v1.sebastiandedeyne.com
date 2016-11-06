@@ -1,11 +1,16 @@
 .btn {
     display: inline-block;
-    padding: 0.3em 0.7em .4em;
-    background: color($color-black a(.05));
+    padding: .3em .7em .4em;
+    background: color(var(--color-black) a(.05));
     border-radius: 3px;
     transition: background .4s cubic-bezier(0, 0, 0, 1);
+}
 
-    &:hover {
-        background: color($color-black a(.1));
-    }
+.btn:hover {
+    background: color(var(--color-black) a(.1));
+}
+
+.btn--icon {
+    padding: .5em .7em .5em;
+    line-height: 1;
 }

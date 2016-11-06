@@ -5,24 +5,20 @@
 }
 
 ::selection {
-    color: $color-white;
-    background-color: $color-red;
+    color: var(--color-white);
+    background-color: var(--color-red);
 }
 
 ::-moz-selection {
-    color: $color-white;
-    background-color: $color-red;
+    color: var(--color-white);
+    background-color: var(--color-red);
 }
 
 body {
-    line-height: $base;
+    line-height: var(--baseline);
     letter-spacing: -.1px;
-    color: $color-black;
+    color: var(--color-black);
     font-size: 18px;
-    font-family: $font-meta;
+    font-family: var(--font-main);
     font-size: 18px;
-
-    @mixin no-webfont {
-        font-size: 16.38px;
-    }
 }

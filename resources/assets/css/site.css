@@ -1,7 +1,6 @@
 @import "_vendor.*";
 
-@import "_settings";
-@import "_mixins";
+@import "_variables";
 
 @import "_base.*";
 @import "_components.*";

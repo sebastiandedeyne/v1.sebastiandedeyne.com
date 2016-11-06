@@ -1,19 +1,19 @@
 .v-error {
-    color: $color-white;
+    color: var(--color-white);
     text-align: center;
-    margin-top: calc($base * 3);
-    margin-bottom: $base;
+    margin-top: calc(var(--baseline) * 3);
+    margin-bottom: var(--baseline);
 }
 
 .v-error__title {
     font-size: 27px;
     font-weight: bold;
     line-height: 1;
-    margin-bottom: calc($base * .5);
+    margin-bottom: calc(var(--baseline) * .5);
 }
 
 .v-error__message {
-    margin-bottom: $base;
+    margin-bottom: var(--baseline);
 }
 
 .v-error__return {

@@ -1,41 +1,37 @@
 .v-home {
-    margin-top: calc(4 * $base);
-    margin-bottom: $base;
-    color: $color-white;
+    margin-top: calc(4 * var(--baseline));
+    margin-bottom: var(--baseline);
+    color: var(--color-white);
 }
 
 .v-home__title {
-    margin-bottom: calc($base * .25);
+    margin-bottom: calc(var(--baseline) * .25);
     font-size: 25px;
     letter-spacing: .06em;
     text-transform: uppercase;
     font-weight: bold;
-
-    @mixin no-webfont {
-        font-size: 22.5px;
-    }
 }
 
 .v-home__intro {
-    margin-bottom: calc($base * 1.5);
+    margin-bottom: calc(var(--baseline) * 1.5);
     font-size: 27px;
-    line-height: 1.25;
+    line-height: 1.35;
     letter-spacing: 0.03em;
+}
 
-    a {
-        @mixin transition;
-        border-bottom: 4px solid color($color-white a(.2));
-    }
+.v-home__intro a {
+    border-bottom: 4px solid color(var(--color-white) a(.2));
+    transition: all .2s var(--transition-curve);
 }
 
 .v-home__toc {
-    margin-bottom: calc($base * 2);
+    margin-bottom: calc(var(--baseline) * 2);
     font-size: 17px;
+}
 
-    a {
-        @mixin transition border;
-        border-bottom: 3px solid color($color-white a(.2));
-    }
+.v-home__toc a {
+    border-bottom: 3px solid color(var(--color-white) a(.2));
+    transition: border .2s var(--transition--curve);
 }
 
 .v-home__toc__title {
@@ -44,27 +40,19 @@
 }
 
 .v-home__toc__list {
-    margin-bottom: $base;
-
-    @mixin no-webfont {
-        font-size: 15.5px;
-    }
+    margin-bottom: var(--baseline);
 }
 
 .v-home__toc__list__aside {
     display: inline;
     font-size: 14px;
     opacity: .5;
-
-    @mixin no-webfont {
-        font-size: 12.5px;
-    }
 }
 
 .v-home__footer {
     font-size: 20px;
+}
 
-    .btn {
-        margin-right: .33em;
-    }
+.v-home__footer .btn {
+    margin-right: .33em;
 }

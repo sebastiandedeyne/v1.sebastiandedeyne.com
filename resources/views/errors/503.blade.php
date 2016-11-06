@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('_layouts.master')
 
 @section('body_classes', 'bg:red')
 

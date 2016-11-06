@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('_layouts.master')
 
 @section('body_classes', 'bg:red')
 
@@ -44,14 +44,14 @@
     </div>
     <div class="grid__row">
         <footer class="v-home__footer">
-            <a href="https://twitter.com/sebdedeyne" class=btn target="_blank" title="Twitter">
-                <i class="fa fa-twitter"></i>
+            <a href="https://twitter.com/sebdedeyne" class="btn btn--icon" target="_blank" title="Twitter">
+                @include('_partials.icons.twitter', ['size' => 20])
             </a>
-            <a href="https://github.com/sebastiandedeyne" class=btn target="_blank" title="Github">
-                <i class="fa fa-github"></i>
+            <a href="https://github.com/sebastiandedeyne" class="btn btn--icon" target="_blank" title="Github">
+                @include('_partials.icons.github', ['size' => 20])
             </a>
-            <a href="mailto:sebastiandedeyne@gmail.com" class=btn title="E-mail">
-                <i class="fa fa-at"></i>
+            <a href="mailto:sebastiandedeyne@gmail.com" class="btn btn--icon" title="E-mail">
+                @include('_partials.icons.email', ['size' => 20])
             </a>
         </footer>
     </div>
