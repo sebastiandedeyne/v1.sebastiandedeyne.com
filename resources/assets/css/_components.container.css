@@ -5,4 +5,7 @@
     padding-right: calc(var(--container-padding));
     width: 100%;
     max-width: var(--container-size);
+    
+    /* IE workaround for `main` element */
+    display: block;
 }
