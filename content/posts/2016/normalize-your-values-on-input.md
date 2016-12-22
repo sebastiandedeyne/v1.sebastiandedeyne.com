@@ -140,7 +140,7 @@ class HtmlClasses
 }
 ```
 
-## Named Constructors
+## Named constructors
 
 On a closing note, if you want to avoid dynamic parameters alltogether, you could resort to named constructors by creating a dedicated factory method per type.
 

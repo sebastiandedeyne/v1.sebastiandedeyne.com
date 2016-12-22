@@ -1,7 +1,7 @@
 ---
 title: Adventure Time With Webpack
 date: 04/02/2016
-era: Webpack ~1.12
+era: Webpack 1.12
 
 description: 'Over the past few weeks I''ve been migrating our asset pipeline at Spatie from Laravel Elixir (a gulp wrapper) to webpack. Between having endless possibilities, the occasional incomplete section in the docs, and the fact that everyone has slightly different needs for their asset pipeline (which makes examples hard), it has surely been an adventure. I''m going to do a quick summary of my goals, and how I achieved them with webpack. Hopefully there will be some useful snippets in here for when you''re setting up your own webpack configuration.'
 ---
@@ -25,7 +25,7 @@ This all boiled down to the following we-want-these-features list:
 
 An extra webpack-specific caveat: by default css files are saved as js files, for now we wanted to stay with the traditional single(ish) css-file in the page's `<head>`.
 
-## The Basics
+## The basics
 
 First off, a bird's eye view of what our webpack's config file looks like:
 
@@ -81,7 +81,7 @@ const config = {
 
 In short: we'll be saving our raw assets in `/resources/assets`, and compiling them to `/public/build`.
 
-## Transpiling & Bundling Javascript
+## Transpiling & bundling Javascript
 
 Since we occasionally use React, we'll need to transpile both plain `js` files and `jsx` files. The `react-hot` loader will convert the latter to plain javascript, and enable hot module replacement for React components. Since everything we import from external packages is already transpiled to es5, the `node_modules` file gets excluded.
 
@@ -96,7 +96,7 @@ loaders: [
 ],
 ```
 
-## Compiling Sass & Autoprefixing the Output
+## Compiling sass & autoprefixing the output
 
 Our sites consist of two completely seperate sections, a front site and an admin area. This means we'll need two instances of the `ExtractTextPlugin` (by default webpack bundles css in a js file) to handle these independently.
 
@@ -173,7 +173,7 @@ const config = {
 };
 ```
 
-## Getting Ready For Production
+## Getting ready for production
 
 We prefer full control over our production build, so we set our own production flag instead of using the out of the box `webpack -p` command. Using the `NODE_ENV` variable to check for production is considered a best practice since some webpack plugins behave differently when it's set. (declaring the environment variable happens via gulp, which is explained in the next section)
 
@@ -231,7 +231,7 @@ if (PRODUCTION) {
 }
 ```
 
-## Calling Webpack Through Gulp
+## Calling webpack through gulp
 
 Since we want to keep our workflow consistent between older and newer projects, we spin up a webpack process through gulp instead of calling the `webpack` command. The added benefit is that we still have gulp in our project for some less common tasks, like favicon generation.
 
@@ -265,7 +265,7 @@ gulp.task('default', callback => {
 
 Setting up your first webpack config file can be pretty rough, but once you're used to it, you can set it up in a fresh project in ~10 minutes. If your stuck or just want some extra explanation, feel free to drop a comment!
 
-## More Resources
+## More resources
 
 - The webpack docs — [webpack.github.io](https://webpack.github.io/docs/tutorials/getting-started/)
 - Webpack Your Bags: A getting started post by madewithlove — [madewithlove.be](http://blog.madewithlove.be/post/webpack-your-bags/)

@@ -1,9 +1,9 @@
 :root {
-    --baseline: 30px;
+    --baseline: 25px;
 
     --color-white: #fff;
     --color-black: #222;
-    --color-gray--dark: #8d8d8d;
+    --color-gray--dark: #8c8b8b;
     --color-gray: #d0d0d0;
     --color-gray--light: #e2e2e2;
     --color-gray--lighter: #efefef;
@@ -13,11 +13,10 @@
     --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     --font-mono: 'Source Code Pro', 'Lucida Console', 'Lucida Sans Typewriter', monospace;
 
-    --breakpoint-sm: 576px;
-    --breakpoint-lg: 720px;
+    --breakpoint-sm: 480px;
 
-    --grid-gutter: 30px;
-    --grid-container: 720px;
+    --container-padding: 15px;
+    --container-size: 720px;
 
     --transition-curve: cubic-bezier(0, 0, 0, 1);
 }

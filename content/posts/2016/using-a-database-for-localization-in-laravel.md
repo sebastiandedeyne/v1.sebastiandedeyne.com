@@ -10,7 +10,7 @@ When building a website for a client that wants to be able to manage content, La
 
 This post is a quick overview on overwriting Laravel's default translation loader, which means you can keep using the `lang` method while fetching the translations from a database. Writing a custom loader is easier than it sounds. First we'll set up our translation models, then we'll write our loader, and finally register it in our application.
 
-## The Translation Model
+## The translation model
 
 > There are a few good packages that handle translatable models, I'll be using our home grown [`spatie/laravel-translatable`](https://github.com/spatie/laravel-translatable) in this post.
 
@@ -78,7 +78,7 @@ $fragment->setTranslation('text', 'en', 'Hello world!');
 $fragment->save();
 ```
 
-## Writing Our Own Translation Loader
+## Writing our own translation loader
 
 We're not going to write a loader from scratch, but instead extend Laravel's `FileLoader`. This will ensure we're maintaining compatibility with namespaced translations provided by packages.
 
@@ -155,7 +155,7 @@ class Fragment extends Model
 
 > Alternatively you could store the `group` and `key` separately in the database for a simpler query.
 
-## Registering Our Custom Loader
+## Registering our custom loader
 
 To change the source of our translated strings, we don't need to reimplement the entire translator, just the translation loader. In the base `TranslationServiceProvider` the loader registration happens in it's own method, so we can just extend that class and overwrite it. The method will look exactly the same as the one in the base provider, but the `TranslationLoader` is loaded from a different namespace.
 
@@ -195,7 +195,7 @@ return [
 ];
 ```
 
-## Give it a Spin!
+## Give it a spin!
 
 That's it! We're now loading our translations from the database. Let's verify with a dummy route:
 
