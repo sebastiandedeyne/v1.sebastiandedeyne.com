@@ -10,8 +10,8 @@
     <p class="v-error__message">
         A wild {{ $status }} error appeared.
     </p>
-    <a href="/" title="Home" class="btn v-error__return">
-        <i class="fa fa-long-arrow-left"></i>
+    <a href="/" class="btn">
+        Go home
     </a>
 </section>
 @endsection

@@ -15,7 +15,3 @@
 .v-error__message {
     margin-bottom: var(--baseline);
 }
-
-.v-error__return {
-    font-size: 20px;
-}
