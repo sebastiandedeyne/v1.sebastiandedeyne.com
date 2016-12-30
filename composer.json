@@ -5,7 +5,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=7.0",
         "laravel/framework": "5.2.*",
         "league/commonmark": "^0.12.0",
         "phpspec/phpspec": "^2.4",
@@ -29,7 +29,7 @@
             "App\\": "app/"
         },
         "files": [
-            "app/Foundation/helpers.php"
+            "app/helpers.php"
         ]
     },
     "scripts": {

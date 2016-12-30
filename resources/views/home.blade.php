@@ -24,18 +24,10 @@
             @endforeach
         </ul>
         <ul class="v-home__toc__list">
-            @foreach($more as $item)
-                <li class="v-home__toc__list__item">
-                    @if(isset($item[2]))
-                        <aside class="v-home__toc__list__item__aside">{{ $item[2] }}</aside>
-                    @endif
-                    @if(isset($item[1]))
-                        <a href="{{ $item[1] }}">{{ $item[0] }}</a>
-                    @else
-                        {{ $item[0] }}
-                    @endif
-                </li>
-            @endforeach
+            <li class="v-home__toc__list__item">
+                <aside class="v-home__toc__list__item__aside">Meta</aside>
+                <a href="{{ url('about') }}">About me</a>
+            </li>
         </ul>
     </section>
     <footer class="v-home__footer">

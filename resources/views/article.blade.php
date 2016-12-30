@@ -28,7 +28,7 @@
             {!! $article->contents !!}
         </section>
         <section class="v-article__footer">
-            <p class="v-article__footer__credits">© {{ now()->format('Y') }} <a href="{{ url('/about') }}">Sebastian De Deyne</a> <span class="col:text--lighter fs:12">【ツ】</span></p>
+            <p class="v-article__footer__credits">© {{ carbon()->format('Y') }} <a href="{{ url('about') }}">Sebastian De Deyne</a> <span class="col:text--lighter fs:12">【ツ】</span></p>
             <p class="v-article__footer__about">
                 I'm a full-stack developer working at <a href="https://spatie.be" target="sebastiandedeyne.com">Spatie</a> in Antwerp, Belgium.
                 If you've got any comments, feedback or just want to chat you can get in touch via <a href="https://twitter.com/sebdedeyne" target="sebastiandedeyne.com">Twitter</a> or <a href="mailto:sebastiandedeyne@gmail.com">email</a>.
