@@ -25,14 +25,18 @@ class ContentRepository
         $this->frontMatterParser = new Parser();
     }
 
-    public function page(string $slug)
+    public function article(string $slug): Article
     {
-        return $this->article("{$slug}.md");
-    }
+        $rawFile = $this->readFile($slug.'.md');
 
-    public function post(string $slug)
-    {
-        return $this->article("posts/{$slug}.md");
+        if (! $rawFile) {
+            throw ArticleNotFound::withSlug($slug);
+        }
+
+        return Article::create(
+            $this->frontMatterParser->parse($rawFile),
+            url($slug)
+        );
     }
 
     public function posts(): Collection
@@ -46,9 +50,10 @@ class ContentRepository
             })
             ->pluck('path')
             ->map(function(string $path) {
-                return $this->article($path);
+                $slug = str_replace_last('.md', '', $path);
+
+                return $this->article($slug);
             })
-            ->filter()
             ->sort(function (Article $articleA, Article $articleB) {
                 return $articleA->date->getTimeStamp() < $articleB->date->getTimeStamp();
             });
@@ -61,23 +66,12 @@ class ContentRepository
         });
     }
 
-    private function article(string $path)
-    {
-        $rawFile = $this->readFile($path);
-
-        if ($rawFile === null) {
-            return null;
-        }
-
-        $slug = str_replace_last('.md', '', $path);
-
-        return Article::create(
-            $this->frontMatterParser->parse($rawFile),
-            url($slug)
-        );
-    }
-
-    private function readFile($path)
+    /**
+     * @param string $path
+     *
+     * @return string|null
+     */
+    private function readFile(string $path)
     {
         try {
             return $this->filesystem->read($path);
