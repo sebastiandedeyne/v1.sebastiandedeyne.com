@@ -18,27 +18,20 @@ class Handler extends ExceptionHandler
         ValidationException::class,
     ];
 
-    public function report(Exception $e)
-    {
-        parent::report($e);
-    }
-
-    public function render($request, Exception $e)
+    public function render($request, Exception $exception)
     {
         if (config('app.debug') || $request->isJson()) {
-            return parent::render($request, $e);
+            return parent::render($request, $exception);
         }
 
-        $status = $e instanceof HttpException ?
-            $e->getStatusCode() :
-            500;
+        $status = $this->determineStatusCodeForException($exception);
 
-        $headers = $e instanceof HttpException ?
-            $e->getHeaders() :
+        $headers = $exception instanceof HttpException ?
+            $exception->getHeaders() :
             [];
 
         $data = [
-            'exception' => $e,
+            'exception' => $exception,
             'status' => $status
         ];
 
@@ -47,5 +40,18 @@ class Handler extends ExceptionHandler
         }
 
         return response()->view('errors.generic', $data, $status, $headers);
+    }
+
+    private function determineStatusCodeForException(Exception $exception): int
+    {
+        if ($exception instanceof HttpException) {
+            return $exception->getStatusCode();
+        }
+
+        if ($exception instanceof ModelNotFoundException) {
+            return 404;
+        }
+
+        return 500;
     }
 }
