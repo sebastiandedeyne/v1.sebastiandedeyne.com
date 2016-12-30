@@ -8,7 +8,7 @@ use League\Flysystem\Filesystem;
 use League\Flysystem\Adapter\Local;
 use Spatie\YamlFrontMatter\Parser;
 
-final class ContentRepository
+class ContentRepository
 {
     /** @var \League\Flysystem\Filesystem */
     private $filesystem;
@@ -27,15 +27,15 @@ final class ContentRepository
 
     public function page(string $slug)
     {
-        return $this->article($slug);
+        return $this->article("{$slug}.md");
     }
 
     public function post(string $slug)
     {
-        return $this->article("posts/{$slug}");
+        return $this->article("posts/{$slug}.md");
     }
 
-    public function posts() : Collection
+    public function posts(): Collection
     {
         return collect($this->filesystem->listContents('posts'))
             ->filter(function (array $item) {
@@ -44,36 +44,32 @@ final class ContentRepository
             ->flatMap(function (array $item) {
                 return $this->filesystem->listContents($item['path']);
             })
-            ->map(function(array $item) {
-                $contents = $this->getFile($item['path']);
-
-                return $contents ?
-                    Article::create(
-                        $this->frontMatterParser->parse($contents),
-                        url("{$item['dirname']}/{$item['filename']}")
-                    ) :
-                    null;
+            ->pluck('path')
+            ->map(function(string $path) {
+                return $this->article($path);
             })
-            ->filter(function ($item) {
-                return $item !== null;
-            })
+            ->filter()
             ->sort(function (Article $articleA, Article $articleB) {
                 return $articleA->date->getTimeStamp() < $articleB->date->getTimeStamp();
             });
     }
 
-    public function raw(string $file)
+    public function feed(): Collection
     {
-        return $this->getFile($file);
+        return $this->posts()->map(function (Article $article) {
+            return FeedItem::fromArticle($article);
+        });
     }
 
-    private function article(string $slug)
+    private function article(string $path)
     {
-        $rawFile = $this->getFile("$slug.md");
+        $rawFile = $this->readFile($path);
 
         if ($rawFile === null) {
             return null;
         }
+
+        $slug = str_replace_last('.md', '', $path);
 
         return Article::create(
             $this->frontMatterParser->parse($rawFile),
@@ -81,7 +77,7 @@ final class ContentRepository
         );
     }
 
-    private function getFile($path)
+    private function readFile($path)
     {
         try {
             return $this->filesystem->read($path);

@@ -1,16 +1,11 @@
 <?php
 
-function content_path(string $path = '') : string
+function carbon(): \Carbon\Carbon
 {
-    return base_path("content/{$path}");
+    return new \Carbon\Carbon();
 }
 
-function now()
-{
-    return \Carbon\Carbon::now();
-}
-
-function locale()
+function locale(): string
 {
     return app()->getLocale();
 }

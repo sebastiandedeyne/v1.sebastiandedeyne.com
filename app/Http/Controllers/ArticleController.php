@@ -6,17 +6,25 @@ use App\Content\ContentRepository;
 
 class ArticleController extends Controller
 {
+    /** @var \App\Content\ContentRepository */
+    private $contentRepository;
+
+    public function __construct(ContentRepository $contentRepository)
+    {
+        $this->contentRepository = $contentRepository;
+    }
+
     public function page(string $slug)
     {
         return $this->renderArticle(
-            app(ContentRepository::class)->page($slug)
+            $this->contentRepository->page($slug)
         );
     }
 
     public function post(string $slug)
     {
         return $this->renderArticle(
-            app(ContentRepository::class)->post($slug)
+            $this->contentRepository->post($slug)
         );
     }
 

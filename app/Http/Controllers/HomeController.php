@@ -3,18 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Content\ContentRepository;
-use Symfony\Component\Yaml\Yaml;
 
 class HomeController extends Controller
 {
+    /** @var \App\Content\ContentRepository */
+    private $contentRepository;
+
+    public function __construct(ContentRepository $contentRepository)
+    {
+        $this->contentRepository = $contentRepository;
+    }
+
     public function home()
     {
-        $posts = app(ContentRepository::class)->posts()->toArray();
+        $posts = $this->contentRepository->posts();
 
-        $more = (new Yaml())->parse(
-            app(ContentRepository::class)->raw('index.yml')
-        );
-
-        return view('home', compact('posts', 'more'));
+        return
+            view('home')->withPosts($posts);
     }
 }
