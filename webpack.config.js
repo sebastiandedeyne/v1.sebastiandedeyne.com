@@ -15,6 +15,11 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.js$/,
+                loader: 'babel',
+                exclude: /node_modules/,
+            },
+            {
                 test: /\.css$/,
                 loader: extractCss.extract('style', 'css!postcss'),
             },
