@@ -1,3 +1,5 @@
+require('es6-symbol/implement');
+
 const Turbolinks = require('turbolinks')
 const WebfontLoader = require('webfontloader')
 const { highlight } = require('./modules/hljs')

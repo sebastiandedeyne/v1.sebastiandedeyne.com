@@ -155,7 +155,7 @@ babel-code-frame@^6.20.0:
     esutils "^2.0.2"
     js-tokens "^2.0.0"
 
-babel-core@^6.18.0, babel-core@^6.9.0:
+babel-core@^6.18.0, babel-core@^6.21.0, babel-core@^6.9.0:
   version "6.21.0"
   resolved "https://npm.spatie.be/babel-core/-/babel-core-6.21.0.tgz#75525480c21c803f826ef3867d22c19f080a3724"
   dependencies:
@@ -1166,7 +1166,7 @@ es6-iterator@2:
     es5-ext "^0.10.7"
     es6-symbol "3"
 
-es6-symbol@3, es6-symbol@~3.1:
+es6-symbol@3, es6-symbol@^3.1.0, es6-symbol@~3.1:
   version "3.1.0"
   resolved "https://npm.spatie.be/es6-symbol/-/es6-symbol-3.1.0.tgz#94481c655e7a7cad82eba832d97d5433496d7ffa"
   dependencies:
