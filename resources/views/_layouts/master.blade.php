@@ -18,7 +18,7 @@
             {!! file_get_contents(public_path('build/css/site.css')) !!}
         </style>
 
-        <script src="{{ public_path('build/js/app.js') }}" defer></script>
+        <script src="/build/js/app.js" defer></script>
     </head>
     <body class="@yield('body_classes')">
         @yield('content')
