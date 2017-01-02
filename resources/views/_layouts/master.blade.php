@@ -14,6 +14,9 @@
 
         @include('_partials.favicons')
 
+        <!--[if lt IE 8]>
+            <link rel="stylesheet" type="text/css" href="/build/css/site.css">
+        <![endif]-->
         <style type="text/css">
             {!! file_get_contents(public_path('build/css/site.css')) !!}
         </style>
