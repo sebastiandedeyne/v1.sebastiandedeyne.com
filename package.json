@@ -16,6 +16,7 @@
     "postcss-loader": "^1.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
+    "webfontloader": "^1.6.27",
     "webpack": "^1.13.3",
     "webpack-manifest-plugin": "^0.5.0"
   }

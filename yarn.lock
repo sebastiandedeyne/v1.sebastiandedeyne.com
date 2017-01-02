@@ -2914,6 +2914,10 @@ watchpack@^0.2.1:
     chokidar "^1.0.0"
     graceful-fs "^4.1.2"
 
+webfontloader@^1.6.27:
+  version "1.6.27"
+  resolved "https://npm.spatie.be/webfontloader/-/webfontloader-1.6.27.tgz#c3899649b0653aa57d0a23388f82409e0df224ba"
+
 webpack-core@~0.6.9:
   version "0.6.9"
   resolved "https://npm.spatie.be/webpack-core/-/webpack-core-0.6.9.tgz#fc571588c8558da77be9efb6debdc5a3b172bdc2"

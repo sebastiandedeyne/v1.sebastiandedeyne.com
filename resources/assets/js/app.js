@@ -12,3 +12,11 @@ hljs.registerLanguage('sql', require('highlight.js/lib/languages/sql'));
 hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'));
 
 hljs.initHighlighting();
+
+var WebFont = require('webfontloader');
+
+WebFont.load({
+    google: {
+        families: ['Source Code Pro:400,700']
+    }
+});

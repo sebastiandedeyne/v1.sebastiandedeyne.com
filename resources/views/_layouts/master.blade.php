@@ -17,7 +17,6 @@
         <style type="text/css">
             {!! file_get_contents(public_path(elixir('css/site.css'))) !!}
         </style>
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
 
         <script src="{{ elixir('js/app.js') }}" defer></script>
     </head>
