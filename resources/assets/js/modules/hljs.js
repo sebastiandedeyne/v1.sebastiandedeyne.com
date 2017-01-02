@@ -1,4 +1,4 @@
-const hljs = require('highlight.js/lib/highlight')
+var hljs = require('highlight.js/lib/highlight')
 
 hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'))
 hljs.registerLanguage('bash', require('highlight.js/lib/languages/bash'))
@@ -12,7 +12,9 @@ hljs.registerLanguage('sql', require('highlight.js/lib/languages/sql'))
 hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'))
 
 export function highlight() {
-    for (let block of document.querySelectorAll('pre code')) {
-        hljs.highlightBlock(block)
+    var blocks = document.querySelectorAll('pre code')
+
+    for (var i = 0; i < blocks.length; ++i) {
+        hljs.highlightBlock(blocks[i])
     }
 }
