@@ -111,15 +111,13 @@
     margin-bottom: calc(.75 * var(--baseline));
 }
 
-.v-article__body .hljs {
+.v-article__body pre code {
     border-radius: 2px;
-    background: var(--color-gray--lightest);
     box-shadow: 0 2px 0 var(--color-gray--lighter);
     padding: .5em 1em;
     font-size: 14px;
     margin-left: -.3em;
     margin-right: -.3em;
-    font-family: var(--font-mono);
     line-height: 1.5;
     display: block;
 }

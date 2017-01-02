@@ -1,5 +1,4 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
 
 const extractCss = new ExtractTextPlugin('[name]', '[name].css');
 
@@ -30,7 +29,6 @@ module.exports = {
         ],
     },
     plugins: [
-        new ManifestPlugin({ fileName: 'rev-manifest.json' }),
         extractCss,
     ],
     postcss() {

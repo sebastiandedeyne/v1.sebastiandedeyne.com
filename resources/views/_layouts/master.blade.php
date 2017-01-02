@@ -15,10 +15,10 @@
         @include('_partials.favicons')
 
         <style type="text/css">
-            {!! file_get_contents(public_path(elixir('css/site.css'))) !!}
+            {!! file_get_contents(public_path('build/css/site.css')) !!}
         </style>
 
-        <script src="{{ elixir('js/app.js') }}" defer></script>
+        <script src="{{ public_path('build/js/app.js') }}" defer></script>
     </head>
     <body class="@yield('body_classes')">
         @yield('content')
