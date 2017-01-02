@@ -121,6 +121,7 @@
     margin-right: -.3em;
     font-family: var(--font-mono);
     line-height: 1.5;
+    display: block;
 }
 
 .v-article__body ul > li {

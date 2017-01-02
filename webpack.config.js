@@ -1,10 +1,12 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
+const extractCss = new ExtractTextPlugin('[name]', '[name].css');
+
 module.exports = {
     entry: {
-        'style': './resources/assets/css/site.css',
-        'app': './resources/assets/js/app.js',
+        'css/site': './resources/assets/css/site.css',
+        'js/app': './resources/assets/js/app.js',
     },
     output: {
         path: 'public/build',
@@ -14,7 +16,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract('style', 'css!postcss'),
+                loader: extractCss.extract('style', 'css!postcss'),
             },
             {
                 test: /\.svg$/,
@@ -24,7 +26,7 @@ module.exports = {
     },
     plugins: [
         new ManifestPlugin({ fileName: 'rev-manifest.json' }),
-        new ExtractTextPlugin('style.css'),
+        extractCss,
     ],
     postcss() {
         return {
