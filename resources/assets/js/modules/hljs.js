@@ -11,10 +11,12 @@ hljs.registerLanguage('php', require('highlight.js/lib/languages/php'))
 hljs.registerLanguage('sql', require('highlight.js/lib/languages/sql'))
 hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'))
 
-export function highlight() {
-    var blocks = document.querySelectorAll('pre code')
+module.exports = {
+    highlight: function() {
+        var blocks = document.querySelectorAll('pre code')
 
-    for (var i = 0; i < blocks.length; ++i) {
-        hljs.highlightBlock(blocks[i])
+        for (var i = 0; i < blocks.length; ++i) {
+            hljs.highlightBlock(blocks[i])
+        }
     }
 }
