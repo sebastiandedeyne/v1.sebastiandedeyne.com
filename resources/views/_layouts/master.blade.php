@@ -14,7 +14,7 @@
 
         @include('_partials.favicons')
 
-        <!--[if lt IE 8]>
+        <!--[if lt IE 9]>
             <link rel="stylesheet" type="text/css" href="/build/css/site.css">
         <![endif]-->
         <style type="text/css">
