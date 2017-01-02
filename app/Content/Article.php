@@ -13,13 +13,14 @@ class Article
     public $date;
     public $era;
     public $url;
+    public $slug;
     public $commentable;
 
     private function __construct()
     {
     }
 
-    public static function create(Document $document, string $url): Article
+    public static function create(Document $document, string $slug): Article
     {
         $article = new static();
 
@@ -31,7 +32,8 @@ class Article
 
         $article->era = $document->matter('era', '');
 
-        $article->url = $url;
+        $article->slug = $slug;
+        $article->url = url($slug);
 
         return $article;
     }

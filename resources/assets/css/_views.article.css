@@ -176,6 +176,10 @@
     transition: color .2s var(--transition-curve);
 }
 
+.v-article__footer p {
+    margin-bottom: calc(var(--baseline) * .5);
+}
+
 .v-article__footer a:hover {
     color: var(--color-gray--dark);
 } 

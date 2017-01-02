@@ -35,7 +35,7 @@ class ContentRepository
 
         return Article::create(
             $this->frontMatterParser->parse($rawFile),
-            url($slug)
+            $slug
         );
     }
 
