@@ -1,3 +1,15 @@
+var Turbolinks = require('turbolinks');
+
+Turbolinks.start();
+
+var WebFont = require('webfontloader');
+
+WebFont.load({
+    google: {
+        families: ['Source Code Pro:400,700']
+    }
+});
+
 var hljs = require('highlight.js/lib/highlight');
 
 hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'));
@@ -11,12 +23,12 @@ hljs.registerLanguage('php', require('highlight.js/lib/languages/php'));
 hljs.registerLanguage('sql', require('highlight.js/lib/languages/sql'));
 hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'));
 
-hljs.initHighlighting();
+function highlight() {
+    [...document.querySelectorAll('pre code')]
+        .forEach(block => hljs.highlightBlock(block));
+}
 
-var WebFont = require('webfontloader');
-
-WebFont.load({
-    google: {
-        families: ['Source Code Pro:400,700']
-    }
+document.addEventListener('turbolinks:load', function() {
+    console.log('turbooo');
+    highlight();
 });
