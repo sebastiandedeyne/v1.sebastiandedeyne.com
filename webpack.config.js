@@ -8,7 +8,7 @@ module.exports = {
         'js/app': './resources/assets/js/app.js',
     },
     output: {
-        path: 'public/build',
+        path: 'public',
         filename: '[name].js',
     },
     module: {

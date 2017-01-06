@@ -14,11 +14,9 @@
 
         @include('_partials.favicons')
 
-        <style type="text/css">
-            {!! file_get_contents(public_path('build/css/site.css')) !!}
-        </style>
+        <link rel="stylesheet" type="text/css" href="/css/site.css">
 
-        <script src="/build/js/app.js" defer></script>
+        <script src="/js/app.js" defer></script>
     </head>
     <body class="@yield('body_classes')">
         @yield('content')
