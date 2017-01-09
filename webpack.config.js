@@ -29,11 +29,8 @@ module.exports = {
     postcss() {
         return {
             plugins: [
-                require('autoprefixer')(),
                 require('postcss-easy-import')({ glob: true }),
-                require('postcss-css-variables')(),
-                require('postcss-color-function')(),
-                require('postcss-calc')(),
+                require('postcss-cssnext')(),
             ],
         };
     },
