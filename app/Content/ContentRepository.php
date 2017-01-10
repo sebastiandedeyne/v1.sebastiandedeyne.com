@@ -3,10 +3,11 @@
 namespace App\Content;
 
 use Illuminate\Support\Collection;
+use League\Flysystem\Adapter\Local;
 use League\Flysystem\FileNotFoundException;
 use League\Flysystem\Filesystem;
-use League\Flysystem\Adapter\Local;
 use Spatie\YamlFrontMatter\Parser;
+use Symfony\Component\Yaml\Yaml;
 
 class ContentRepository
 {
@@ -16,6 +17,9 @@ class ContentRepository
     /** @var \Spatie\YamlFrontMatter\Parser */
     private $frontMatterParser;
 
+    /** @var \Symfony\Component\Yaml\Yaml */
+    private $yamlParser;
+
     public function __construct()
     {
         $this->filesystem = new Filesystem(
@@ -23,11 +27,12 @@ class ContentRepository
         );
 
         $this->frontMatterParser = new Parser();
+        $this->yamlParser = new Yaml();
     }
 
     public function article(string $slug): Article
     {
-        $rawFile = $this->readFile($slug.'.md');
+        $rawFile = $this->read($slug.'.md');
 
         if (! $rawFile) {
             throw ArticleNotFound::withSlug($slug);
@@ -61,17 +66,17 @@ class ContentRepository
 
     public function feed(): Collection
     {
-        return $this->posts()->map(function (Article $article) {
-            return FeedItem::fromArticle($article);
-        });
+        return $this->posts()->map([FeedItem::class, 'fromArticle']);
     }
 
-    /**
-     * @param string $path
-     *
-     * @return string|null
-     */
-    private function readFile(string $path)
+    public function projects(): Collection
+    {
+        return collect($this->yamlParser->parse(
+            $this->read('open-source.yaml')
+        ))->map([Project::class, 'create']);
+    }
+
+    private function read(string $path): ?string
     {
         try {
             return $this->filesystem->read($path);

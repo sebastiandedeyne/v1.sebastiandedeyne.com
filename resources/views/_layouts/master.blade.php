@@ -23,5 +23,8 @@
         @if(app()->environment('production'))
             @include('_partials.analytics')
         @endif
+        @if(app()->environment('local'))
+            @include('_partials.livereload')
+        @endif
     </body>
 </html>

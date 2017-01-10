@@ -9,6 +9,11 @@ Route::get('/', function (ContentRepository $contentRepository) {
         ->withPosts($contentRepository->posts());
 });
 
+Route::get('/open-source', function (ContentRepository $contentRepository) {
+    return view('openSource')
+        ->withProjects($contentRepository->projects());
+});
+
 Route::get('/{slug}', function (string $slug, ContentRepository $contentRepository) {
     return view('article')
         ->withArticle($contentRepository->article($slug));

@@ -1,17 +1,17 @@
-.v-error {
+.error {
     color: var(--color-white);
     text-align: center;
     margin-top: calc(var(--baseline) * 3);
     margin-bottom: var(--baseline);
 }
 
-.v-error__title {
+.error__title {
     font-size: 27px;
     font-weight: bold;
     line-height: 1;
     margin-bottom: calc(var(--baseline) * .5);
 }
 
-.v-error__message {
+.error__message {
     margin-bottom: var(--baseline);
 }

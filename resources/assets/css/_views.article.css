@@ -1,4 +1,4 @@
-.v-article__site-header {
+.article__site-header {
     font-weight: 900;
     font-size: 20px;
     color: var(--color-red);
@@ -8,12 +8,12 @@
 
 @media only screen and (max-width: 480px) {
 
-    .v-article__site-header {
+    .article__site-header {
         margin-top: var(--baseline);
     }
 }
 
-.v-article__site-header__logotype {
+.article__site-header__logotype {
     background: url('../svg/logotype.svg');
     display: block;
     width: calc(100px * .4);
@@ -25,12 +25,12 @@
     white-space: nowrap;
 }
 
-.v-article__header {
+.article__header {
     position: relative;
     margin-bottom: calc(var(--baseline) * 4);
 }
 
-.v-article__header:after {
+.article__header:after {
     content: '';
     position: absolute;
     bottom: calc(var(--baseline) * -1.5);
@@ -42,16 +42,16 @@
 
 @media only screen and (max-width: 480px) {
     
-    .v-article__header {
+    .article__header {
         margin-bottom: calc(var(--baseline) * 2);
     }
 
-    .v-article__header:after {
+    .article__header:after {
         bottom: calc(var(--baseline) * -.5);
     }
 }
 
-.v-article__header__title {
+.article__header__title {
     font-size: 45px;
     font-weight: 900;
     line-height: 1.1;
@@ -60,58 +60,58 @@
 }
 
 @media only screen and (max-width: 480px) {
-    .v-article__header__title {
+    .article__header__title {
         width: 100%;
     }
 }
 
-.v-article__header__meta {
+.article__header__meta {
     font-size: 14px;
     color: var(--color-gray--dark);
 }
 
-.v-article__body a {
+.article__body a {
     border-bottom: 3px solid var(--color-gray--lighter);
     transition: border .2s var(--transition-curve);
 }
 
-.v-article__body a:hover {
+.article__body a:hover {
     border-bottom-color: var(--color-gray--light);
 }
 
-.v-article__body > * {
+.article__body > * {
     margin-bottom: var(--baseline);
 }
 
-.v-article__body h2 {
+.article__body h2 {
     font-weight: bold;
     font-size: 24px;
     margin-top: calc(var(--baseline) * 2);
     margin-bottom: var(--baseline);
 }
 
-.v-article__body h3 {
+.article__body h3 {
     font-weight: bold;
     font-size: 1em;
     margin-top: calc(var(--baseline) * 2);
     margin-bottom: calc(var(--baseline) * .5);
 }
 
-.v-article__body code {
+.article__body code {
     font-family: var(--font-mono);
     background: var(--color-gray--lightest);
 }
 
-.v-article__body p code {
+.article__body p code {
     font-size: .95em;
 }
 
-.v-article__body p + pre {
+.article__body p + pre {
     margin-top: calc(-.25 * var(--baseline));
     margin-bottom: calc(.75 * var(--baseline));
 }
 
-.v-article__body pre code {
+.article__body pre code {
     border-radius: 2px;
     box-shadow: 0 2px 0 var(--color-gray--lighter);
     padding: .5em 1em;
@@ -122,23 +122,23 @@
     display: block;
 }
 
-.v-article__body ul > li {
+.article__body ul > li {
     padding-left: calc(.6 * var(--baseline));
     position: relative;
 }
 
-.v-article__body ul > li:before {
+.article__body ul > li:before {
     content: "•";
     position: absolute;
     left: 0;
 }
 
-.v-article__body ol {
+.article__body ol {
     list-style-type: decimal;
     list-style-position: inside;
 }
 
-.v-article__body blockquote {
+.article__body blockquote {
     padding: 1em;
     margin-left: -.3em;
     margin-right: -.3em;
@@ -147,11 +147,11 @@
     border-radius: 0 2px 2px 0;
 }
 
-.v-article__body .donger {
+.article__body .donger {
     font-size: 14px;
 }
 
-.v-article__footer {
+.article__footer {
     position: relative;
     font-size: 13px;
     line-height: 1.4;
@@ -160,7 +160,7 @@
     margin-top: calc(var(--baseline) * 3);
 }
 
-.v-article__footer:before {
+.article__footer:before {
     content: "";
     display: block;
     position: absolute;
@@ -171,23 +171,23 @@
     background-color: --color-gray;
 }
 
-.v-article__footer a {
+.article__footer a {
     text-decoration: underline;
     transition: color .2s var(--transition-curve);
 }
 
-.v-article__footer p {
+.article__footer p {
     margin-bottom: calc(var(--baseline) * .5);
 }
 
-.v-article__footer a:hover {
+.article__footer a:hover {
     color: var(--color-gray--dark);
 } 
 
-.v-article__footer__credits {
+.article__footer__credits {
     margin-bottom: calc(var(--baseline) * .5);
 }
 
-.v-article__footer__about {
+.article__footer__about {
     margin-bottom: var(--baseline);
 }
