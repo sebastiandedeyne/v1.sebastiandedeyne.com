@@ -14,6 +14,10 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.ts$/,
+                loader: 'ts',
+            },
+            {
                 test: /\.css$/,
                 loader: extractCss.extract('style', 'css!postcss'),
             },
@@ -22,6 +26,9 @@ module.exports = {
                 loader: 'url',
             },
         ],
+    },
+    resolve: {
+        extensions: ['', '.js', '.ts', '.css', '.svg'],
     },
     plugins: [
         extractCss,

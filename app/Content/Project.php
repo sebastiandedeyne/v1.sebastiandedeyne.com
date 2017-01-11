@@ -7,7 +7,7 @@ class Project
     public $name;
     public $url;
     public $description;
-    public $tags;
+    public $icon;
 
     private function __construct()
     {
@@ -20,7 +20,7 @@ class Project
         $project->name = $data['name'];
         $project->url = $data['url'];
         $project->description = $data['description'];
-        $project->tags = $data['tags'];
+        $project->icon = $data['icon'];
 
         return $project;
     }

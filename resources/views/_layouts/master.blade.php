@@ -24,7 +24,7 @@
             @include('_partials.analytics')
         @endif
         @if(app()->environment('local'))
-            @include('_partials.livereload')
+            {{--@include('_partials.livereload')--}}
         @endif
     </body>
 </html>

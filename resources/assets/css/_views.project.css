@@ -1,8 +1,34 @@
 .projects {
     display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
 }
 
 .projects__project {
-    width: 50%;
-    flex-grow: 1;
+    width: calc(50% - 40px);
+    margin: 20px;
+    position: relative;
+    border-radius: 1px;
+    padding: 1em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow .1s linear;
+}
+
+.projects__project:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.projects__project__link__text {
+    top: -4px;
+    position: relative;
+}
+
+.projects__project__description {
+    font-size: .8em;
+    line-height: 1.4;
 }

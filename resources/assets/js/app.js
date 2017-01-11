@@ -11,3 +11,5 @@ document.addEventListener('turbolinks:load', function() {
 WebfontLoader.load({
     google: { families: ['Source Code Pro:400,700'] }
 })
+
+require('./shadows')

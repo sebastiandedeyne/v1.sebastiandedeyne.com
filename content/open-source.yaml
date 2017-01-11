@@ -2,35 +2,29 @@
   name: menu
   url: https://github.com/spatie/menu
   description: A fluent html menu generator for PHP applications
-  tags:
-    - php
+  icon: php
 -
   name: laravel-menu
   url: https://github.com/spatie/laravel-menu
   description: Laravel wrapper for spatie/menu
-  tags:
-    - php
+  icon: laravel
 - 
   name: opening-hours
   url: https://github.com/spatie/opening-hours
   description: A library to define a set of business hours that can be formatted or queried
-  tags:
-    - php
+  icon: php
 - 
   name: regex
   url: https://github.com/spatie/regex
   description: A sane interface for php's built in preg functions
-  tags:
-    - php
+  icon: php
 -
   name: schema-org
   url: https://github.com/spatie/schema-org
   description: A fluent Schema.org json+ld builder that gets generated from the spec
-  tags:
-    - php
+  icon: php
 -
   name: yaml_front_matter
   url: https://github.com/sebastiandedeyne/yaml_front_matter
   description: A front matter parser in Elixir
-  tags:
-    - elixir
+  icon: elixir
