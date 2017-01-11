@@ -1,5 +1,5 @@
-import { getContainer, getCenter, raf, query, queryAll, MousePosition, State } from './lib/dom'
-import { shadowOffsetInContainer } from './lib/space'
+import { getContainer, getCenter, raf, query, queryAll, MousePosition, State } from '../lib/dom'
+import { shadowOffsetInContainer } from '../lib/space'
 
 const updateShadows = 
     (subjects: HTMLElement[], container: HTMLElement, mouse: MousePosition) => 
@@ -17,9 +17,14 @@ const updateShadow =
         subject.style.boxShadow = `${x}px ${y}px 20px rgba(0, 0, 0, .3)`
     }
 
-queryAll('.js-shadows-container').forEach((container: HTMLElement) => {
-    const subjects = 
-        <HTMLElement[]> queryAll('.js-shadows-item', container)
-
-    raf(({ mouse }: State) => updateShadows(subjects, container, mouse))
-})
+export const shadows =
+    (containerSelector: string, subjectSelector: string) =>
+        queryAll(containerSelector).forEach((container: HTMLElement) =>
+            raf(({ mouse }: State) => 
+                updateShadows(
+                    <HTMLElement[]> queryAll(subjectSelector, container),
+                    container,
+                    mouse
+                )
+            )
+        )
