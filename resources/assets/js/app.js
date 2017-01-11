@@ -7,7 +7,13 @@ Turbolinks.start()
 
 document.addEventListener('turbolinks:load', () => {
     highlight()
-    shadows('.js-shadows-container', '.js-shadows-item')
+    
+    shadows({
+        container: '.js-shadows-container', 
+        subjects: '.js-shadows-item', 
+        strength: 8, 
+        spread: 20
+    })
 })
 
 WebfontLoader.load({
