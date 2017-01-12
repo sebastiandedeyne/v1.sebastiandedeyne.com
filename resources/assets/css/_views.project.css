@@ -10,8 +10,8 @@
     position: relative;
     border-radius: 1px;
     padding: 1em;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    transition: box-shadow .1s linear;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    transition: box-shadow .3s ease-in-out;
 }
 
 .projects__project:before {
