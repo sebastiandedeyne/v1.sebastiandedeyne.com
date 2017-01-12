@@ -28,3 +28,8 @@
   url: https://github.com/sebastiandedeyne/yaml_front_matter
   description: A front matter parser in Elixir
   icon: elixir
+-
+  name: lightbulb
+  url: https://github.com/sebastiandedeyne/lightbulb
+  description: Project natural shadows under elements based on the position of a light source
+  icon: typescript
