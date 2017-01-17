@@ -1,0 +1,33 @@
+body {
+    color: #f2ecec;
+}
+
+.opening {
+    position: relative;
+    margin-bottom: 30px;
+    color: var(--color-white);
+    padding-top: 80px;
+    padding-bottom: 150px;
+}
+
+.opening:after {
+    @apply --pseudo-block;
+
+    width: 200%;
+    left: -50%;
+    z-index: -1;
+    background-color: #c3bebe;
+    transform: rotate(2.5deg);
+    transform-origin: bottom right;
+}
+
+.opening__title {
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+.opening__text {
+
+}

@@ -33,13 +33,13 @@
     </section>
     <footer class="home__footer">
         <a href="https://twitter.com/sebdedeyne" class="btn btn--icon" target="_blank" title="Twitter">
-            @include('_partials.icons.twitter', ['size' => 20])
+            {!! svg('twitter') !!}
         </a>
         <a href="https://github.com/sebastiandedeyne" class="btn btn--icon" target="_blank" title="Github">
-            @include('_partials.icons.github', ['size' => 20])
+            {!! svg('github') !!}
         </a>
         <a href="mailto:sebastiandedeyne@gmail.com" class="btn btn--icon" title="E-mail">
-            @include('_partials.icons.email', ['size' => 20])
+            {!! svg('email') !!}
         </a>
     </footer>
 </main>

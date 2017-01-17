@@ -1,35 +1,40 @@
 -
+  name: color
+  url: https://github.com/spatie/color
+  description: A little library to deal with color conversions
+  type: php
+-
   name: menu
   url: https://github.com/spatie/menu
   description: A fluent html menu generator for PHP applications
-  icon: php
+  type: php
 -
   name: laravel-menu
   url: https://github.com/spatie/laravel-menu
-  description: Laravel wrapper for spatie/menu
-  icon: laravel
+  description: Html menu generator for Laravel
+  type: laravel
 - 
   name: opening-hours
   url: https://github.com/spatie/opening-hours
   description: A library to define a set of business hours that can be formatted or queried
-  icon: php
+  type: php
 - 
   name: regex
   url: https://github.com/spatie/regex
   description: A sane interface for php's built in preg functions
-  icon: php
+  type: php
 -
   name: schema-org
   url: https://github.com/spatie/schema-org
   description: A fluent Schema.org json+ld builder that gets generated from the spec
-  icon: php
--
-  name: yaml_front_matter
-  url: https://github.com/sebastiandedeyne/yaml_front_matter
-  description: A front matter parser in Elixir
-  icon: elixir
+  type: php
 -
   name: lightbulb
   url: https://github.com/sebastiandedeyne/lightbulb
-  description: Project natural shadows under elements based on the position of a light source
-  icon: typescript
+  description: Project natural shadows under elements
+  type: typescript
+-
+  name: yaml_front_matter
+  url: https://github.com/sebastiandedeyne/yaml_front_matter
+  description: A parser for documents with yaml front matter in Elixir
+  type: elixir
