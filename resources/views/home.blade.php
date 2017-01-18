@@ -13,10 +13,10 @@
         <nav class="nav">
             <ul>
                 <li class="nav__item">
-                    <a class="nav__item__contents" href="{{ route('about') }}">about</a>
+                    <a class="nav__item__contents" href="{{ url('about') }}">about</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__item__contents" href="{{ route('open-source') )}">open source projects</a>
+                    <a class="nav__item__contents" href="{{ url('open-source') }}">open source projects</a>
                 </li>
             </ul>
         </nav>
