@@ -1,46 +1,35 @@
 @extends('_layouts.master')
 
-@section('body_classes', 'bg:red')
-
 @section('content')
-<main class="home container">
-    <section class="home__header">
-        <header class="home__header__title">
-            <h1>Sebastian De Deyne</h1>
-        </header>
-        <section class="home__header__intro">
-            <p>I'm a full-stack developer working at <a href="https://spatie.be" target="_blank">Spatie</a> in Antwerp, Belgium.</p>
-        </section>
-    </section>
-    <section class="home__toc">
-        <ul class="home__toc__list">
-            @foreach($posts as $post)
-                <li class="home__toc__list__item">
-                    <aside class="home__toc__list__item__aside">
-                        {{ $post->date->format('d/m/Y') }}
-                    </aside>
-                    <a class="home__toc__list__item__link" href="{{ $post->url }}">{{ $post->title }}</a>
+<div class="container">
+    <section class="welcome">
+        <h1 class="welcome__name">
+            Sebastian De Deyne
+        </h1>
+        <p class="welcome__text">
+            I'm a full-stack developer from Ghent <br>
+            working at Spatie in Antwerp, Belgium.
+        </p>
+        <nav class="nav">
+            <ul>
+                <li class="nav__item">
+                    <a class="nav__item__contents" href="{{ route('about') }}">about</a>
                 </li>
-            @endforeach
-        </ul>
-        <ul class="home__toc__list">
-            <li class="home__toc__list__item">
-                <aside class="home__toc__list__item__aside">More</aside>
-                <a class="home__toc__list__item__link" href="{{ url('about') }}">About me</a>
-                <a class="home__toc__list__item__link" href="{{ url('open-source') }}">Open Source Work</a>
-            </li>
-        </ul>
+                <li class="nav__item">
+                    <a class="nav__item__contents" href="{{ route('open-source') )}">open source projects</a>
+                </li>
+            </ul>
+        </nav>
     </section>
-    <footer class="home__footer">
-        <a href="https://twitter.com/sebdedeyne" class="btn btn--icon" target="_blank" title="Twitter">
-            {!! svg('twitter') !!}
-        </a>
-        <a href="https://github.com/sebastiandedeyne" class="btn btn--icon" target="_blank" title="Github">
-            {!! svg('github') !!}
-        </a>
-        <a href="mailto:sebastiandedeyne@gmail.com" class="btn btn--icon" title="E-mail">
-            {!! svg('email') !!}
-        </a>
-    </footer>
-</main>
+    <div class="row">
+        <a href="#" class="card column column--half">
+            <h2 class="card__title">lightbulb</h2>
+            <p class="card__text">Project natural shadows under elements</p>
+        </a href="#">
+        <a href="#" class="card column column--half">
+            <h2 class="card__title">menu</h2>
+            <p class="card__text">A fluent html menu generator for PHP applications</p>
+        </a href="#">                
+    </div>
+</div>
 @endsection

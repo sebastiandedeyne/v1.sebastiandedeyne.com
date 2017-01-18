@@ -1,0 +1,15 @@
+:root {
+    --baseline: 1.4;
+    
+    --color-body: #fdfbfb;       
+    --color-red: #df6d6d;
+    --color-text: #666;
+    --color-text--light: #a5a5a5;
+    --color-ui-gray--light: #e8e8e8;
+
+    --font-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --font-alegreya: 'Alegreya';
+
+    --grid-width: 800px;
+    --grid-gutter: 30px;
+}

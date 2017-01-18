@@ -1,0 +1,32 @@
+.welcome {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.welcome:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100px;
+    background-color: var(--color-ui-gray--light);
+}
+
+.welcome__name {
+    color: var(--color-red);
+    text-transform: lowercase;
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.welcome__text {
+    font-family: var(--font-alegreya);
+    font-size: 30px;
+    margin-bottom: 40px;
+    line-height: 1.25;
+}

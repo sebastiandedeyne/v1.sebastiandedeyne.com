@@ -18,7 +18,7 @@
 
         <script src="/js/app.js" defer></script>
     </head>
-    <body class="@yield('body_classes')">
+    <body>
         @yield('content')
         @if(app()->environment('production'))
             @include('_partials.analytics')
