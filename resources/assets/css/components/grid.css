@@ -21,3 +21,7 @@
 .column--half {
     width: calc(50% - var(--grid-gutter));
 }
+
+.column--two-thirds {
+    width: calc(66.66% - var(--grid-gutter));
+}

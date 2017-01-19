@@ -16,7 +16,7 @@
 - 
   name: opening-hours
   url: https://github.com/spatie/opening-hours
-  description: A library to define a set of business hours that can be formatted or queried
+  description: A library to define a set of business hours
   type: php
 - 
   name: regex

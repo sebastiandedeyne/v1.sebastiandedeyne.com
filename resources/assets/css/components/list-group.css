@@ -1,0 +1,30 @@
+.list-group {
+    margin-bottom: 20px;
+}
+
+.list-group__title {
+    color: var(--color-text--light);
+    font-size: 14px;
+}
+
+.list-group__item {
+    display: block;
+}
+
+.list-group__item__text {
+    font-family: var(--font-alegreya);
+    font-size: 26px;
+}
+
+.list-group__item__text:after {
+    content: '...';
+    display: inline-block;
+    color: color(var(--color-text) tint(80%));
+    opacity: 0;
+    transition: all .2s;
+}
+
+.list-group__item__text:hover:after {
+    transform: translateX(3px);
+    opacity: 1;
+}

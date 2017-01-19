@@ -2,34 +2,45 @@
 
 @section('content')
 <div class="container">
-    <section class="welcome">
-        <h1 class="welcome__name">
-            Sebastian De Deyne
-        </h1>
-        <p class="welcome__text">
-            I'm a full-stack developer from Ghent <br>
-            working at Spatie in Antwerp, Belgium.
-        </p>
-        <nav class="nav">
-            <ul>
-                <li class="nav__item">
-                    <a class="nav__item__contents" href="{{ url('about') }}">about</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__item__contents" href="{{ url('open-source') }}">open source projects</a>
-                </li>
-            </ul>
-        </nav>
-    </section>
     <div class="row">
-        <a href="#" class="card column column--half">
-            <h2 class="card__title">lightbulb</h2>
-            <p class="card__text">Project natural shadows under elements</p>
-        </a href="#">
-        <a href="#" class="card column column--half">
-            <h2 class="card__title">menu</h2>
-            <p class="card__text">A fluent html menu generator for PHP applications</p>
-        </a href="#">                
+        <div class="column column--two-thirds">
+            <section class="intro">
+                <a href="{{ url('/') }}" class="intro__logotype logotype"></a>
+                <h1 class="intro__title">
+                    Sebastian De Deyne
+                </h1>
+                <p class="intro__text">
+                    I'm a full-stack developer from Ghent working at Spatie in Antwerp, Belgium.
+                </p>
+                <nav class="nav">
+                    <ul>
+                        <li class="nav__item">
+                            <a class="nav__item__contents" href="{{ url('about') }}">about</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__item__contents" href="{{ url('open-source') }}">open source projects</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </div>
+    <section class="article-list">
+        <h2 class="article-list__title">articles</h2>
+        @foreach($posts as $month => $posts)
+            <section class="list-group">
+                <h2 class="list-group__title">
+                    {{ $month }}
+                </h2>
+                @foreach($posts as $post)
+                    <article class="list-group__item">
+                        <a class="list-group__item__text" href="{{ $post->url }}">
+                            {{ $post->title }}
+                        </a>
+                    </article>
+                @endforeach
+            </section>
+        @endforeach
     </div>
 </div>
 @endsection

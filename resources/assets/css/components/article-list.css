@@ -1,0 +1,14 @@
+.article-list {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.article-list:after {
+    @apply --little-seperator;
+}
+
+.article-list__title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 25px;
+}

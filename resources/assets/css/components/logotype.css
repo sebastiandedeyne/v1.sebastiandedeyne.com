@@ -1,0 +1,7 @@
+.logotype {
+    display: inline-block;
+    width: 50px;
+    height: 80px;
+    background-image: url('../svg/logotype');
+    background-size: contain;
+}

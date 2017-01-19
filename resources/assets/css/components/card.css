@@ -1,18 +1,26 @@
 .card {
+    position: relative;
     background-color: white;
-    padding: calc(var(--grid-gutter));
-    border: 1px solid var(--color-ui-gray--light);
+    padding: 18px 23px 23px;
+    margin-bottom: var(--grid-gutter);
     border-radius: 1px;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    transition: box-shadow .3s ease-out, transform .2s ease-out;
+    border: 1px solid var(--color-ui-gray--light);
+    transition: all .2s ease-out;
 }
 
 .card:hover {
     transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .07);
+    border-color: color(var(--color-ui-gray--light) shade(5%));
+}
+
+.card__icon {
+    position: relative;
+    top: 7px;
+    margin-right: 5px;
 }
 
 .card__title {
     font-weight: 500;
-    margin-bottom: 6px;
+    margin-bottom: 11px;
 }
