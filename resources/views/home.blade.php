@@ -1,7 +1,7 @@
 @extends('_layouts.master')
 
 @section('content')
-<main class="container">
+<div class="container">
     <div class="row">
         <div class="column column--two-thirds">
             <section class="intro">
@@ -41,8 +41,8 @@
                 @endforeach
             </section>
         @endforeach
-    </div>
-</main>
+    </section>
+</div>
 <footer class="footer">
     <div class="container">
         © {{ carbon()->format('Y') }} Sebastian De Deyne

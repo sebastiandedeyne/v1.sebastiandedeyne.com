@@ -1,7 +1,7 @@
 .article__header {
     text-align: center;
     margin-top: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 .article__header__logotype {
@@ -23,7 +23,9 @@
 }
 
 .article__body {
+    background-color: white;
     color: var(--color-text--dark);
+    padding: 60px 0 40px;
 }
 
 
@@ -89,4 +91,18 @@
 
 .article__body blockquote p {
     margin-bottom: 0;
+}
+
+.article__footer {
+    font-size: 14px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.article__footer a {
+    text-decoration: underline;
+}
+
+.article__footer__credits {
+    margin-bottom: calc(14px * var(--baseline));
 }

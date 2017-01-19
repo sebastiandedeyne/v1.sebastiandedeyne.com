@@ -17,7 +17,11 @@
             <nav class="nav">
                 <ul>
                     <li class="nav__item">
-                        <a class="nav__item__contents" href="https://github.com/sebastiandedeyne">more on github</a>
+                        <a
+                            href="https://github.com/sebastiandedeyne"
+                            target="sebdd"
+                            class="nav__item__contents" 
+                        >more on github</a>
                     </li>
                 </ul>
             </nav>
@@ -25,7 +29,11 @@
     </div>
     <div class="row">
         @foreach($projects as $project)
-            <a href="{{ $project->url }}" class="card column column--half">
+            <a
+                href="{{ $project->url }}" 
+                target="sebdd"
+                class="card column column--half"
+            >
                 <h2 class="card__title">
                     <span class="card__icon icon icon--{{ $project->type }}"></span>
                     {{ $project->name }}
