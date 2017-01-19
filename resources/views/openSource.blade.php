@@ -35,4 +35,9 @@
         @endforeach
     </div>
 </div>
+<footer class="footer">
+    <div class="container">
+        © {{ carbon()->format('Y') }} Sebastian De Deyne
+    </div>
+</footer>
 @endsection

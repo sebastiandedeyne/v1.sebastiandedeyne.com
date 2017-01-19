@@ -6,6 +6,10 @@
     padding-right: var(--grid-gutter);
 }
 
+.container--narrow {
+    max-width: var(--grid-width--narrow);
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;

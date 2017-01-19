@@ -4,26 +4,24 @@
 @section('meta', $article->description)
 
 @section('content')
-<main class="container">
-    <article class="article">
-        <section class="article__site-header">
-            <a href="{{ url('/') }}" class="article__site-header__logotype">
-                Sebastian De Deyne
-            </a>
-        </section>
+<article class="article">
+    <div class="container">
         <header class="article__header">
+            <a href="{{ url('/') }}" class="article__header__logotype logotype"></a>
             <h1 class="article__header__title">
                 {{ $article->title }}
             </h1>
             @if($article->date)
-            <aside class="article__header__meta">
-                Published {{ $article->date->format('j F Y') }}
-                @if($article->era)
-                    — <em>{{ $article->era }}</em>
-                @endif
-            </aside>
+                <aside class="article__header__meta">
+                    Published on {{ $article->date->format('j F Y') }} by Sebastian De Deyne
+                    @if($article->era)
+                        — <em>{{ $article->era }}</em>
+                    @endif
+                </aside>
             @endif
         </header>
+    </div>
+    <div class="container container--narrow">
         <section class="article__body">
             {!! $article->contents !!}
         </section>

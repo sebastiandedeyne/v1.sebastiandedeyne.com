@@ -23,10 +23,5 @@
         @if(app()->environment('production'))
             @include('_partials.analytics')
         @endif
-        <footer class="footer">
-            <div class="container">
-                © {{ carbon()->format('Y') }} Sebastian De Deyne
-            </div>
-        </footer>
     </body>
 </html>

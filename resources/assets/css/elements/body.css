@@ -2,7 +2,7 @@ body {
     line-height: var(--baseline);
     letter-spacing: -.1px;
     color: var(--color-text);
-    font-size: 17px;
+    font-size: var(--font-size);
     font-family: var(--font-default);
     background-color: var(--color-body);
 }

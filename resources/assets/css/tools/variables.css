@@ -1,15 +1,23 @@
 :root {
-    --baseline: 1.4;
-    
+    --font-size: 17px;
+    --baseline: 1.55;
+
+    --baseline-space: calc(var(--font-size) * var(--baseline));
+
     --color-body: #fdfbfb;       
     --color-red: #df6d6d;
     --color-text: #666;
     --color-text--light: #a5a5a5;
-    --color-ui-gray--light: #e8e8e8;
+    --color-text--dark: #444;
+    --color-gray--light: #e8e8e8;
 
     --font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     --font-alegreya: 'Alegreya';
+    --font-mono: 'Source Code Pro', 'Lucida Console', 'Lucida Sans Typewriter', monospace;
 
     --grid-width: 800px;
+    --grid-width--narrow: 696px;
     --grid-gutter: 30px;
+
+    --transition-curve: cubic-bezier(0, 0, 0, 1);
 }
