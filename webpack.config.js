@@ -22,7 +22,7 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['', '.js', '.css', '.svg'],
+        extensions: ['.js', '.css', '.svg'],
     },
     plugins: [
         new ExtractTextPlugin('[name].css'),
