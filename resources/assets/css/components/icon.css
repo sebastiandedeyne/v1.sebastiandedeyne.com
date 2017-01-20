@@ -1,8 +1,18 @@
 .icon {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
     background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon--faded {
+    opacity: .7;
+}
+
+.icon--small {
+    width: 20px;
+    height: 20px;
 }
 
 .icon--elixir { background-image: url('../svg/elixir'); }

@@ -12,6 +12,20 @@
         <p class="intro__text intro__text--small">
             I'm a full-stack developer from Ghent, working at Spatie in Antwerp, where I mainly build stuff with Laravel and Vue.js. In my spare time I work on some (open source) side projects, and improve my cooking skills.
         </p>
+        <p>
+            <a class="button" href="https://twitter.com/sebastiandedeyne" target="sebdd">
+                <span class="icon icon--faded icon--small icon--twitter"></span>
+                Twitter
+            </a>
+            <a class="button" href="https://github.com/sebastiandedeyne" target="sebdd">
+                <span class="icon icon--faded icon--small icon--github"></span>
+                GitHub
+            </a>
+            <a class="button" href="mailto:sebastiandedeyne@gmail.com">
+                <span class="icon icon--faded icon--small icon--email"></span>
+                E-mail
+            </a>
+        </p>
     </section>
     <section class="textblock">
         <h2 class="textblock__subtitle">Experience</h2>
