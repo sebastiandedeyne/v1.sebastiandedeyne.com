@@ -3,6 +3,10 @@
 @section('title', "{$article->title} — Sebastian De Deyne")
 @section('meta', $article->description)
 
+@push('head')
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+@endpush
+
 @section('content')
 <article class="article">
     <header class="article__header">

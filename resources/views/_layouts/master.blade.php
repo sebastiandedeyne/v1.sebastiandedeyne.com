@@ -14,9 +14,12 @@
 
         @include('_partials.favicons')
 
+        <link href="https://fonts.googleapis.com/css?family=Alegreya|Source+Sans+Pro:600"   rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/css/site.css">
 
         <script src="/js/app.js" defer></script>
+
+        @stack('head')
     </head>
     <body>
         @yield('content')
