@@ -24,7 +24,7 @@ I've divided the different ways to define templates in three different categorie
 
 ## Using uncompiled templates
 
-Vue templates don't necesarrily need to be precompiled. If you're [using the runtime version of Vue.js](https://vuejs.org/v2/guide/installation.html#Standalone-vs-Runtime-only-Build), templates can be compiled in the browser. This solution offers simplicity—no special build steps or file formats—while sacrificing performance. The first render of a component will take longer because the template needs to be compiled to JavaScript first.
+Vue templates don't necessarily need to be precompiled. If you're [using the runtime version of Vue.js](https://vuejs.org/v2/guide/installation.html#Standalone-vs-Runtime-only-Build), templates can be compiled in the browser. This solution offers simplicity—no special build steps or file formats—while sacrificing performance. The first render of a component will take longer because the template needs to be compiled to JavaScript first.
 
 ### Defining templates in a component
 
