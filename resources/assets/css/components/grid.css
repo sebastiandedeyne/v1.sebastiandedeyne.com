@@ -1,5 +1,6 @@
 .container {
-    max-width: var(--grid-width);
+    width: 100%;
+    max-width: var(--grid-container);
     margin-left: auto;
     margin-right: auto;
     padding-left: var(--grid-gutter);
@@ -7,7 +8,7 @@
 }
 
 .container--narrow {
-    max-width: var(--grid-width--narrow);
+    max-width: var(--grid-container--narrow);
 }
 
 .row {
@@ -28,4 +29,17 @@
 
 .column--two-thirds {
     width: calc(66.66% - var(--grid-gutter));
+}
+
+@media (--medium) {
+    .column {
+        width: 100%;
+    }
+}
+
+@media (--small) {
+    .container {
+        padding-left: calc(var(--grid-gutter) / 2);
+        padding-right: calc(var(--grid-gutter) / 2);
+    }
 }

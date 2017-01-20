@@ -1,0 +1,18 @@
+.textblock__subtitle {
+    font-weight: bold;
+    margin-bottom: var(--baseline-space);
+}
+
+.textblock ul {
+    list-style: disc;
+    margin-left: 1em;
+    margin-bottom: var(--baseline-space);
+}
+
+.textblock p {
+    margin-bottom: var(--baseline-space);
+}
+
+.textblock a {
+    border-bottom: 1px solid var(--color-text--light);
+}

@@ -28,9 +28,8 @@
     padding: 60px 0 40px;
 }
 
-
 .article__body a {
-    background-color: var(--color-gray--light);
+    border-bottom: 1px solid var(--color-text--light);
 }
 
 .article__body h2 {

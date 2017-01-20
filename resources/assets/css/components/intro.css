@@ -25,8 +25,17 @@
 .intro__text {
     font-family: var(--font-alegreya);
     font-size: 30px;
-    margin-bottom: 40px;
     line-height: 1.25;
+}
+
+@media (--medium) {
+    .intro__text {
+        font-size: 25px;
+    }
+}
+
+.intro__text + * {
+    margin-top: 40px;
 }
 
 .intro__text--small {

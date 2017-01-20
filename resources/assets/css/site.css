@@ -1,6 +1,7 @@
 @import "tools/reset";
 @import "tools/variables";
 @import "tools/mixins";
+@import "tools/media";
 
 @import "elements/**/*.css";
 @import "components/**/*.css";

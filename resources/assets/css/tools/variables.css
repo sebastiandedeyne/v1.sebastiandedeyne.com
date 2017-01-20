@@ -15,8 +15,9 @@
     --font-alegreya: 'Alegreya';
     --font-mono: 'Source Code Pro', 'Lucida Console', 'Lucida Sans Typewriter', monospace;
 
-    --grid-width: 800px;
-    --grid-width--narrow: 696px;
+    --grid-container: 800px;
+    --grid-container--narrow: 696px;
+
     --grid-gutter: 30px;
 
     --transition-curve: cubic-bezier(0, 0, 0, 1);
