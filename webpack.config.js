@@ -1,7 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const extractCss = new ExtractTextPlugin('[name]', '[name].css');
-
 module.exports = {
     entry: {
         'css/site': './resources/assets/css/site.css',
@@ -15,11 +13,11 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: extractCss.extract('style', 'css!postcss'),
+                loader: ExtractTextPlugin.extract(['css-loader', 'postcss-loader']),
             },
             {
                 test: /\.svg$/,
-                loader: 'url',
+                loader: 'url-loader',
             },
         ],
     },
@@ -27,14 +25,6 @@ module.exports = {
         extensions: ['', '.js', '.css', '.svg'],
     },
     plugins: [
-        extractCss,
+        new ExtractTextPlugin('[name].css'),
     ],
-    postcss() {
-        return {
-            plugins: [
-                require('postcss-easy-import')({ glob: true }),
-                require('postcss-cssnext')(),
-            ],
-        };
-    },
 };
