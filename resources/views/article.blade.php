@@ -38,7 +38,7 @@
                     I'm a full-stack developer from Ghent working at <a href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, Belgium.
                 </p>
                 <p>
-                    If you've got any comments, feedback or just want to chat you can get in touch via <a href="https://twitter.com/sebdedeyne" target="sebdd">Twitter</a> or <a href="mailto:sebastiandedeyne@gmail.com">email</a>. If you catch a mistake or notice something that could be improved, feel free to edit this article by <a target="sebdd" href="https://github.com/sebastiandedeyne/sebastiandedeyne.com/edit/master/content/{{ $article->slug }}.md">sending a PR on GitHub</a>.
+                    If you've got any comments, feedback or just want to chat you can get in touch via <a href="https://twitter.com/sebdedeyne" target="sebdd">Twitter</a> or <a href="mailto:sebastiandedeyne@gmail.com">email</a>. If you catch a mistake or notice something that could be improved, feel free to <a target="sebdd" href="https://github.com/sebastiandedeyne/sebastiandedeyne.com/edit/master/content/{{ $article->slug }}.md">send a PR on GitHub</a>.
                 </p>
             </div>
         </div>

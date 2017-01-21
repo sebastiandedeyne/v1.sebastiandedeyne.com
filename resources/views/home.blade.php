@@ -22,6 +22,20 @@
                         </li>
                     </ul>
                 </nav>
+                <section class="intro__buttons">
+                    <a class="button" href="https://twitter.com/sebastiandedeyne" target="sebdd">
+                        <span class="button__icon icon icon--faded icon--small icon--twitter"></span>
+                        Twitter
+                    </a>
+                    <a class="button" href="https://github.com/sebastiandedeyne" target="sebdd">
+                        <span class="button__icon icon icon--faded icon--small icon--github"></span>
+                        GitHub
+                    </a>
+                    <a class="button" href="mailto:sebastiandedeyne@gmail.com">
+                        <span class="button__icon icon icon--faded icon--small icon--email"></span>
+                        E-mail
+                    </a>
+                </section>
             </section>
         </div>
     </div>

@@ -14,20 +14,20 @@
         <p class="intro__text intro__text--small">
             In my spare time I work on some open source side projects, and improve my cooking skills.
         </p>
-        <p>
+        <section class="intro__buttons">
             <a class="button" href="https://twitter.com/sebastiandedeyne" target="sebdd">
-                <span class="icon icon--faded icon--small icon--twitter"></span>
+                <span class="button__icon icon icon--faded icon--small icon--twitter"></span>
                 Twitter
             </a>
             <a class="button" href="https://github.com/sebastiandedeyne" target="sebdd">
-                <span class="icon icon--faded icon--small icon--github"></span>
+                <span class="button__icon icon icon--faded icon--small icon--github"></span>
                 GitHub
             </a>
             <a class="button" href="mailto:sebastiandedeyne@gmail.com">
-                <span class="icon icon--faded icon--small icon--email"></span>
+                <span class="button__icon icon icon--faded icon--small icon--email"></span>
                 E-mail
             </a>
-        </p>
+        </section>
     </section>
     <section class="textblock">
         <h2 class="textblock__subtitle">Experience</h2>

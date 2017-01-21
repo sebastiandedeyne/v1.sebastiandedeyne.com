@@ -1,10 +1,11 @@
 .button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     background-color: white;
     border-radius: 5px;
-    padding: .5em .66em;
+    padding: .45em .66em .5em;
     border: 1px solid var(--color-gray--light);
-    margin-right: 1em;
+    margin-right: .66em;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .05);
     transition: all .2s var(--transition-curve);
 }
@@ -13,4 +14,8 @@
     transform: translateY(-1px);
     border-color: color(var(--color-gray--light) shade(5%));
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.button__icon {
+    margin-right: .33em;
 }

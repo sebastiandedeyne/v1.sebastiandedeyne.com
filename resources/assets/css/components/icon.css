@@ -1,5 +1,5 @@
 .icon {
-    display: inline-block;
+    display: inline-blox;
     width: 18px;
     height: 18px;
     background-size: contain;
@@ -7,8 +7,8 @@
 }
 
 .icon--small {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 }
 
 .icon--elixir { background-image: url('../svg/elixir'); }
