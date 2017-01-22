@@ -1,6 +1,7 @@
 .card {
     @apply --white-box;
-    
+
+    display: block;
     position: relative;
     padding: 18px 23px 23px;
     margin-bottom: var(--grid-gutter);
