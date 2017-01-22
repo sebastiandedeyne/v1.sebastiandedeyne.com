@@ -3,7 +3,7 @@
 @section('content')
 <section class="error">
     <h1 class="error__title">
-        Whoops!
+        {{ $title }}
     </h1>
     <p class="error__message">
         A wild {{ $status }} error appeared.
