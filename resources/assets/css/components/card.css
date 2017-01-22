@@ -14,13 +14,13 @@
     border-color: color(var(--color-gray--light) shade(5%));
 }
 
-.card__icon {
-    position: relative;
-    top: 7px;
-    margin-right: 5px;
-}
-
 .card__title {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     margin-bottom: 11px;
+}
+
+.card__title__icon {
+    margin-right: 10px;
 }
