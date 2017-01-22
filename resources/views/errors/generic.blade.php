@@ -6,7 +6,7 @@
         {{ $title }}
     </h1>
     <p class="error__message">
-        A wild {{ $status }} error appeared.
+        {{ $message }}
     </p>
     <a href="{{ url('/') }}" class="button">
         Go home

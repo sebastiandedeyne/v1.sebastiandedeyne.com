@@ -8,13 +8,30 @@ class ErrorComposer
 {
     public function compose(View $view)
     {
-        $view->with('title', collect([
+        [$title, $message] = $this->errorText($view->status);
+
+        $view
+            ->withTitle($title)
+            ->withMessage($message);
+    }
+
+    private function errorText(int $status): array
+    {
+        $title = collect([
+            '¯\_(ツ)_/¯',
             'Awkward.',
+            'Bantha fodder.',
             'Hmmm...',
             'Oh no!',
             'Peculiar.',
             'Uh oh.',
             'Whoops!',
-        ])->random());
+        ])->random();
+
+        $message = $status === 404 ?
+            'Looks like this page doesn\'t exist.' :
+            'This page doesn\'t work.';
+
+        return [$title, $message];
     }
 }
