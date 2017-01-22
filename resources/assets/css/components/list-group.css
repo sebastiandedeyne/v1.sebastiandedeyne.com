@@ -16,14 +16,12 @@
     font-size: 26px;
 }
 
-
 @media (--small) {
     .list-group__item__text {
         font-size: 24px;
         line-height: 1.3
     }
 }
-
 
 .list-group__item__text:after {
     content: '...';
