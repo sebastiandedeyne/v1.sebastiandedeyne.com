@@ -14,7 +14,7 @@ class RobotsController extends Controller
             'Disallow: ' . (env('ALLOW_ROBOTS', false) ? '' : '/'),
         ]);
 
-        return response($contents, 500, [
+        return response($contents, 200, [
             'Content-Type' => 'text/plain',
         ]);
     }
