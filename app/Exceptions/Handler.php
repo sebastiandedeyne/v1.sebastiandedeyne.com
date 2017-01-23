@@ -3,6 +3,8 @@
 namespace App\Exceptions;
 
 use Exception;
+use HttpException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
