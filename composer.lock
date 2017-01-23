@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f20345bcbb7e6748cfd181142fc747e7",
-    "content-hash": "f46532dcaf522adb27d90403ca55ef07",
+    "hash": "fff6a9e6e885f61931383e1558bf46bf",
+    "content-hash": "3813016cc05dc690b8ce1f9ede3bdc47",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1050,6 +1050,122 @@
                 "uuid"
             ],
             "time": "2016-11-22 19:21:44"
+        },
+        {
+            "name": "spatie/laravel-feed",
+            "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-feed.git",
+                "reference": "25673ae3330bd9161b66070f19693180803c0e8d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/25673ae3330bd9161b66070f19693180803c0e8d",
+                "reference": "25673ae3330bd9161b66070f19693180803c0e8d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.1",
+                "nesbot/carbon": "^1.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.0",
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Feed\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Jolita Grazyte",
+                    "email": "jolita@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Generates rss feed",
+            "homepage": "https://github.com/spatie/laravel-feed",
+            "keywords": [
+                "laravel",
+                "laravel-feed",
+                "rss",
+                "spatie"
+            ],
+            "time": "2016-08-22 07:28:40"
+        },
+        {
+            "name": "spatie/laravel-responsecache",
+            "version": "1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-responsecache.git",
+                "reference": "2b76ce21302f91b7e3d1b735008043b7d28937eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-responsecache/zipball/2b76ce21302f91b7e3d1b735008043b7d28937eb",
+                "reference": "2b76ce21302f91b7e3d1b735008043b7d28937eb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/cache": "^5.1",
+                "illuminate/config": "^5.1",
+                "illuminate/console": "^5.1",
+                "illuminate/http": "^5.1",
+                "illuminate/support": "^5.1",
+                "nesbot/carbon": "~1.19",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "orchestra/testbench": "^3.0",
+                "phpunit/phpunit": "^4",
+                "scrutinizer/ocular": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\ResponseCache\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Speed up a Laravel application by caching the entire response",
+            "homepage": "https://github.com/spatie/laravel-responsecache",
+            "keywords": [
+                "cache",
+                "laravel",
+                "laravel-responsecache",
+                "performance",
+                "response",
+                "spatie"
+            ],
+            "time": "2016-08-06 22:29:13"
         },
         {
             "name": "spatie/yaml-front-matter",

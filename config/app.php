@@ -167,6 +167,8 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        // Spatie\Feed\FeedServiceProvider::class,
+        Spatie\ResponseCache\ResponseCacheServiceProvider::class,
 
         /*
          * Application Service Providers...

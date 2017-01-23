@@ -10,6 +10,8 @@
         "laravel/tinker": "~1.0",
         "league/commonmark": "^0.15.0",
         "league/flysystem": "^1.0",
+        "spatie/laravel-feed": "^1.0",
+        "spatie/laravel-responsecache": "^1.1",
         "spatie/yaml-front-matter": "^1.0"
     },
     "require-dev": {
