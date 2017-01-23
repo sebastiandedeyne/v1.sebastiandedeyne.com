@@ -55,7 +55,7 @@ class Handler extends ExceptionHandler
 
         $data = [
             'exception' => $exception,
-            'status' => $status
+            'status' => $status,
         ];
 
         if (view()->exists("errors.{$status}")) {

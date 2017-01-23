@@ -8,8 +8,10 @@
         <p class="error__message">
             {{ $message }}
         </p>
-        <a href="{{ url('/') }}" class="button">
-            Go home
-        </a>
+        @unless(Route::currentRouteName() === 'home')
+            <a href="{{ url('/') }}" class="button">
+                Go home
+            </a>
+        @endunless
     </section>
 @endcomponent
