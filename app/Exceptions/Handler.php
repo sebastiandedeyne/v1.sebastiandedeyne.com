@@ -6,6 +6,7 @@ use Exception;
 use HttpException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Foundation\Http\Exceptions\MaintenanceModeException;
 
 class Handler extends ExceptionHandler
 {
@@ -75,6 +76,10 @@ class Handler extends ExceptionHandler
 
         if ($exception instanceof ModelNotFoundException) {
             return 404;
+        }
+
+        if ($exception instanceof MaintenanceModeException) {
+            return 503;
         }
 
         return 500;
