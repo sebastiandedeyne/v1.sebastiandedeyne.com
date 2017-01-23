@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "webpack --watch --hide-modules --progress",
-    "build": "webpack -p --hide-modules"
+    "dev": "webpack --hide-modules --progress",
+    "watch": "webpack --watch --hide-modules --progress",
+    "production": "webpack -p --hide-modules"
   },
   "dependencies": {
     "css-loader": "^0.26.1",

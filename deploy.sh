@@ -3,7 +3,7 @@ php artisan down
 composer install --no-interaction --no-dev --prefer-dist
 
 yarn
-./node_modules/.bin/webpack -p
+yarn run production
 
 php artisan optimize
 php artisan config:cache
