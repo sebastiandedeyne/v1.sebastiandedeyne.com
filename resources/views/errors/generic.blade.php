@@ -8,7 +8,7 @@
         <p class="error__message">
             {{ $message }}
         </p>
-        @unless(Route::currentRouteName() === 'home')
+        @unless(Request::path() === '/')
             <a href="{{ url('/') }}" class="button">
                 Go home
             </a>
