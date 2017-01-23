@@ -11,7 +11,7 @@ class RobotsController extends Controller
     {
         $contents = implode(PHP_EOL, [
             'User-agent: *',
-            'Disallow: ' . (env('ALLOW_ROBOTS', false) ? '' : '/'),
+            'Disallow: ' . (env('ALLOW_ROBOTS', true) ? '' : '/'),
         ]);
 
         return response($contents, 200, [
