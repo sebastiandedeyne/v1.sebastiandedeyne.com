@@ -3,7 +3,7 @@
 @endpush
 
 @component('layouts.page', [
-    'title' => 'Sebastian De Deyne',
+    'title' => $article->title,
     'meta' => $article->description,
 ])
     <article class="article">
