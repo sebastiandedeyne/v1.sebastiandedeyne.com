@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "webpack --hide-modules --progress",
     "watch": "webpack --watch --hide-modules --progress",
-    "production": "webpack -p --hide-modules"
+    "build": "webpack -p --hide-modules"
   },
   "dependencies": {
     "css-loader": "^0.26.1",
