@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c7698a22618cbebe8eb256c94e4ce63a",
-    "content-hash": "ea2ed1986376963a68dc9494f13467dd",
+    "hash": "d532308c03b2d746f3d95ab8b753c7a8",
+    "content-hash": "35b1ca82b69a35e76d771fde156ccb1c",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1216,6 +1216,53 @@
                 "spatie"
             ],
             "time": "2016-01-12 12:28:05"
+        },
+        {
+            "name": "spatie/laravel-tail",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-tail.git",
+                "reference": "472c21f1f30b4ddc16b643abb860cb0b9ae70c42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-tail/zipball/472c21f1f30b4ddc16b643abb860cb0b9ae70c42",
+                "reference": "472c21f1f30b4ddc16b643abb860cb0b9ae70c42",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "~5.4.0",
+                "illuminate/support": "~5.4.0",
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Tail\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://murze.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easily tail the application log in Laravel applications",
+            "homepage": "https://github.com/spatie/laravel-tail",
+            "keywords": [
+                "laravel 5",
+                "laravel-tail",
+                "log",
+                "tail"
+            ],
+            "time": "2017-01-20 08:30:31"
         },
         {
             "name": "spatie/yaml-front-matter",
@@ -3562,53 +3609,6 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03 07:35:21"
-        },
-        {
-            "name": "spatie/laravel-tail",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-tail.git",
-                "reference": "472c21f1f30b4ddc16b643abb860cb0b9ae70c42"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-tail/zipball/472c21f1f30b4ddc16b643abb860cb0b9ae70c42",
-                "reference": "472c21f1f30b4ddc16b643abb860cb0b9ae70c42",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/console": "~5.4.0",
-                "illuminate/support": "~5.4.0",
-                "php": ">=5.6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\Tail\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://murze.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Easily tail the application log in Laravel applications",
-            "homepage": "https://github.com/spatie/laravel-tail",
-            "keywords": [
-                "laravel 5",
-                "laravel-tail",
-                "log",
-                "tail"
-            ],
-            "time": "2017-01-20 08:30:31"
         },
         {
             "name": "webmozart/assert",
