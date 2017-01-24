@@ -1,3 +1,4 @@
+rm bootstrap/cache/*
 php artisan down
 
 composer install --no-interaction --no-dev --prefer-dist
