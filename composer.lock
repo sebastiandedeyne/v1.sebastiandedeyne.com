@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fff6a9e6e885f61931383e1558bf46bf",
-    "content-hash": "3813016cc05dc690b8ce1f9ede3bdc47",
+    "hash": "c7698a22618cbebe8eb256c94e4ce63a",
+    "content-hash": "ea2ed1986376963a68dc9494f13467dd",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1053,25 +1053,25 @@
         },
         {
             "name": "spatie/laravel-feed",
-            "version": "1.0.8",
+            "version": "1.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-feed.git",
-                "reference": "25673ae3330bd9161b66070f19693180803c0e8d"
+                "reference": "d00936e0f4903b9af96c1ece2b41594f9f33681e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/25673ae3330bd9161b66070f19693180803c0e8d",
-                "reference": "25673ae3330bd9161b66070f19693180803c0e8d",
+                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/d00936e0f4903b9af96c1ece2b41594f9f33681e",
+                "reference": "d00936e0f4903b9af96c1ece2b41594f9f33681e",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^5.1",
+                "illuminate/support": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
                 "nesbot/carbon": "^1.0",
                 "php": "^7.0"
             },
             "require-dev": {
-                "orchestra/testbench": "^3.0",
+                "orchestra/testbench": "~3.3.0|~3.4.0",
                 "phpunit/phpunit": "5.*"
             },
             "type": "library",
@@ -1106,7 +1106,7 @@
                 "rss",
                 "spatie"
             ],
-            "time": "2016-08-22 07:28:40"
+            "time": "2017-01-23 23:46:32"
         },
         {
             "name": "spatie/laravel-responsecache",
@@ -1166,6 +1166,56 @@
                 "spatie"
             ],
             "time": "2016-08-06 22:29:13"
+        },
+        {
+            "name": "spatie/laravel-robots-middleware",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-robots-middleware.git",
+                "reference": "843d09705a581b1efb9377605381a439bacb3ad5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-robots-middleware/zipball/843d09705a581b1efb9377605381a439bacb3ad5",
+                "reference": "843d09705a581b1efb9377605381a439bacb3ad5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^5.1",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.2",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\RobotsMiddleware\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add an `all` or `none` robots header to your requests via a middleware in Laravel",
+            "homepage": "https://github.com/spatie/laravel-robots-middleware",
+            "keywords": [
+                "index",
+                "robots",
+                "seo",
+                "spatie"
+            ],
+            "time": "2016-01-12 12:28:05"
         },
         {
             "name": "spatie/yaml-front-matter",
@@ -3512,6 +3562,53 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03 07:35:21"
+        },
+        {
+            "name": "spatie/laravel-tail",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-tail.git",
+                "reference": "472c21f1f30b4ddc16b643abb860cb0b9ae70c42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-tail/zipball/472c21f1f30b4ddc16b643abb860cb0b9ae70c42",
+                "reference": "472c21f1f30b4ddc16b643abb860cb0b9ae70c42",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "~5.4.0",
+                "illuminate/support": "~5.4.0",
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Tail\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://murze.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easily tail the application log in Laravel applications",
+            "homepage": "https://github.com/spatie/laravel-tail",
+            "keywords": [
+                "laravel 5",
+                "laravel-tail",
+                "log",
+                "tail"
+            ],
+            "time": "2017-01-20 08:30:31"
         },
         {
             "name": "webmozart/assert",

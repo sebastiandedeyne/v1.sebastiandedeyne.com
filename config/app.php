@@ -167,8 +167,8 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
-        // Spatie\Feed\FeedServiceProvider::class,
         Spatie\ResponseCache\ResponseCacheServiceProvider::class,
+        Spatie\Tail\TailServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -180,6 +180,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Special cases...
+         */
+
+        // Needs to come after the RouteServiceProvider
+        Spatie\Feed\FeedServiceProvider::class,
     ],
 
     /*

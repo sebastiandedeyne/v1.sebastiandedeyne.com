@@ -1,7 +1,6 @@
 <?php
 
-// Route::feeds();
-Route::get('robots.txt', 'RobotsController@index');
+Route::feeds();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/about', 'AboutController@index');
