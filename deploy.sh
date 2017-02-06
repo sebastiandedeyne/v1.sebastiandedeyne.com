@@ -1,4 +1,4 @@
-rm bootstrap/cache/*
+rm -f bootstrap/cache/*
 php artisan down
 
 composer install --no-interaction --no-dev --prefer-dist
@@ -8,6 +8,7 @@ yarn run build
 
 php artisan optimize
 php artisan config:cache
+php artisan route:cache
 php artisan responsecache:clear
 
 php artisan up

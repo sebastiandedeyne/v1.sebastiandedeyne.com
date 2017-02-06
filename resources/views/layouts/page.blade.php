@@ -10,7 +10,7 @@
         <meta charset="utf-8">
         <meta name="description" content="{{ $meta ?? 'I\'m a full-stack developer working at Spatie in Antwerp, Belgium.' }}">
 
-        <link rel="alternate" type="application/rss+xml" title="Sebastian De Deyne — Posts" href="{{ url('feed') }}" />
+        @include('laravel-feed::feed-links')
 
         @include('layouts.partials.favicons')
 
