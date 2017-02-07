@@ -6,7 +6,7 @@
 
 .article__header__logotype {
     margin-left: auto;
-    right: auto;
+    margin-right: auto;
     margin-bottom: 30px;
 }
 
@@ -74,7 +74,7 @@
 .article__body pre code {
     @apply --pull-out;
     @apply --white-box;
-    
+
     padding: calc(var(--baseline-space) * .5);
     line-height: 1.5;
     display: block;
@@ -98,7 +98,7 @@
     padding-bottom: 40px;
 }
 
-.article__footer a {
+.article__footer__link {
     text-decoration: underline;
 }
 

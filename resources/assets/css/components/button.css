@@ -11,9 +11,12 @@
 }
 
 .button:hover {
-    transform: translateY(-1px);
     border-color: color(var(--color-gray--light) shade(5%));
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.button:active {
+    transform: translateY(-1px);
 }
 
 .button__icon {

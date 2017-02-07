@@ -9,7 +9,9 @@
     <article class="article">
         <header class="article__header">
             <div class="container">
-                <a href="{{ url('/') }}" class="article__header__logotype logotype"></a>
+                <div class="article__header__logotype">
+                    <a href="{{ url('/') }}" class="logotype"></a>
+                </div>
                 <h1 class="article__header__title">
                     {{ $article->title }}
                 </h1>
@@ -30,13 +32,13 @@
         </section>
         <footer class="article__footer">
             <div class="container container--narrow">
-                <p class="article__footer__credits">© {{ carbon()->format('Y') }} <a href="{{ url('about') }}">Sebastian De Deyne</a> <span class="col:text--lighter fs:12">【ツ】</span></p>
+                <p class="article__footer__credits">© {{ carbon()->format('Y') }} <a class="article__footer__link" href="{{ url('about') }}">Sebastian De Deyne</a> 【ツ】</p>
                 <div class="article__footer__about">
                     <p>
-                        I'm a full-stack developer from Ghent working at <a href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, Belgium.
+                        I'm a full-stack developer from Ghent working at <a class="article__footer__link" href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, Belgium.
                     </p>
                     <p>
-                        If you've got any comments, feedback or just want to chat you can get in touch via <a href="https://twitter.com/sebdedeyne" target="sebdd">Twitter</a> or <a href="mailto:sebastiandedeyne@gmail.com">email</a>. If you catch a mistake or notice something that could be improved, feel free to <a target="sebdd" href="https://github.com/sebastiandedeyne/sebastiandedeyne.com/edit/master/content/{{ $article->slug }}.md">send a PR on GitHub</a>.
+                        If you've got any comments, feedback or just want to chat you can get in touch via <a class="article__footer__link" href="https://twitter.com/sebdedeyne" target="sebdd">Twitter</a> or <a class="article__footer__link" href="mailto:sebastiandedeyne@gmail.com">email</a>. If you catch a mistake or notice something that could be improved, feel free to <a class="article__footer__link" target="sebdd" href="https://github.com/sebastiandedeyne/sebastiandedeyne.com/edit/master/content/{{ $article->slug }}.md">send a PR on GitHub</a>.
                     </p>
                 </div>
             </div>

@@ -1,8 +1,7 @@
 body {
-    line-height: var(--baseline);
-    letter-spacing: -.1px;
     color: var(--color-text);
     font-size: var(--font-size);
+    line-height: var(--baseline);
     font-family: var(--font-default);
     background-color: var(--color-body);
 }

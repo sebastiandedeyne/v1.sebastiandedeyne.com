@@ -24,7 +24,7 @@
 }
 
 .list-group__item__text:after {
-    content: '...';
+    content: '…';
     display: inline-block;
     color: color(var(--color-text) tint(80%));
     opacity: 0;
