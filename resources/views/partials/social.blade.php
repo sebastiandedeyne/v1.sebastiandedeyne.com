@@ -1,5 +1,5 @@
 @foreach([
-    ['Twitter', 'twitter', 'https://twitter.com/sebastiandedeyne'],
+    ['Twitter', 'twitter', 'https://twitter.com/sebdedeyne'],
     ['GitHub', 'github', 'https://github.com/sebastiandedeyne'],
     ['E-mail', 'email', 'mailto:sebastiandedeyne@gmail.com'],
 ] as [$name, $icon, $url])
