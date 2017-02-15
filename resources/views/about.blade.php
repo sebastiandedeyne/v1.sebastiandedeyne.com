@@ -35,10 +35,10 @@
                 </section>
             </div>
         </div>
-    </div>
-    <footer class="footer">
-        <div class="container">
-            © {{ carbon()->format('Y') }} Sebastian De Deyne
+        <div class="row">
+            <div class="column">
+                @include('partials.footer')
+            </div>
         </div>
-    </footer>
+    </div>
 @endcomponent

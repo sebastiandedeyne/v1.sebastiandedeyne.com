@@ -17,7 +17,7 @@
                                     <a class="nav__item__contents" href="{{ url('about') }}">about</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a class="nav__item__contents" href="{{ url('open-source') }}">open source projects</a>
+                                    <a class="nav__item__contents" href="{{ url('open-source') }}">open source</a>
                                 </li>
                             </ul>
                         </nav>
@@ -45,10 +45,6 @@
                 </section>
             @endforeach
         </section>
+        @include('partials.footer')
     </div>
-    <footer class="footer">
-        <div class="container">
-            © {{ carbon()->format('Y') }} Sebastian De Deyne
-        </div>
-    </footer>
 @endcomponent

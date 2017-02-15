@@ -33,7 +33,8 @@
 
 @media (--medium) {
     .column {
-        width: 100%;
+        /* We need to override the grid modifiers' specificity */
+        width: 100% !important;
     }
 }
 

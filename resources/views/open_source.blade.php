@@ -32,7 +32,7 @@
                     <a href="{{ $project->url }}" target="sebdd" class="card">
                         <h2 class="card__title">
                             <span class="card__title__icon">
-                                <span class="icon--{{ $project->type }}"></span>
+                                <span class="icon -{{ $project->type }}"></span>
                             </span>
                             {{ $project->name }}
                         </h2>
@@ -41,10 +41,6 @@
                 </div>
             @endforeach
         </div>
+        @include('partials.footer')
     </div>
-    <footer class="footer">
-        <div class="container">
-            © {{ carbon()->format('Y') }} Sebastian De Deyne
-        </div>
-    </footer>
 @endcomponent

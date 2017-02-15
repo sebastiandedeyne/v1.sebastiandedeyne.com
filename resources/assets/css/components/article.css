@@ -102,6 +102,6 @@
     text-decoration: underline;
 }
 
-.article__footer__credits {
+.article__footer__p {
     margin-bottom: calc(14px * var(--baseline));
 }
