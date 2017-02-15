@@ -23,5 +23,10 @@
 }
 
 .button__icon {
-    margin-right: .33em;
+    margin-right: .4em;
+    line-height: 0; /* Required to vertically align the icon and the title */
+}
+
+.button.-faded .button__icon {
+    opacity: .85;
 }

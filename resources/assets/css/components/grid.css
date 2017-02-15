@@ -7,7 +7,7 @@
     padding-right: var(--grid-gutter);
 }
 
-.container--narrow {
+.container.-narrow {
     max-width: var(--grid-container--narrow);
 }
 
@@ -23,11 +23,11 @@
     margin-right: calc(var(--grid-gutter) / 2);
 }
 
-.column--half {
+.column.-half {
     width: calc(50% - var(--grid-gutter));
 }
 
-.column--two-thirds {
+.column.-two-thirds {
     width: calc(66.66% - var(--grid-gutter));
 }
 

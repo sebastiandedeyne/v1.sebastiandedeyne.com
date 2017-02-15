@@ -1,7 +1,7 @@
 @component('layouts.page')
     <div class="container">
         <div class="row">
-            <div class="column column--two-thirds">
+            <div class="column -two-thirds">
                 <section class="intro">
                     <a href="{{ url('/') }}" class="intro__logotype logotype"></a>
                     <h1 class="intro__title">
@@ -10,35 +10,20 @@
                     <p class="intro__text">
                         I'm a full-stack developer from Ghent working at Spatie in Antwerp, Belgium.
                     </p>
-                    <nav class="nav">
-                        <ul>
-                            <li class="nav__item">
-                                <a class="nav__item__contents" href="{{ url('about') }}">about</a>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__item__contents" href="{{ url('open-source') }}">open source projects</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <section class="intro__nav">
+                        <nav class="nav">
+                            <ul>
+                                <li class="nav__item">
+                                    <a class="nav__item__contents" href="{{ url('about') }}">about</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__item__contents" href="{{ url('open-source') }}">open source projects</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </section>
                     <section class="intro__buttons">
-                        <a class="button" href="https://twitter.com/sebastiandedeyne" target="sebdd">
-                            <span class="button__icon">
-                                <span class="icon--twitter -small"></span>
-                            </span>
-                            Twitter
-                        </a>
-                        <a class="button" href="https://github.com/sebastiandedeyne" target="sebdd">
-                            <span class="button__icon">
-                                <span class="icon--github -small"></span>
-                            </span>
-                            GitHub
-                        </a>
-                        <a class="button" href="mailto:sebastiandedeyne@gmail.com">
-                            <span class="button__icon">
-                                <span class="icon--email -small"></span>
-                            </span>
-                            E-mail
-                        </a>
+                        @include('partials.social')
                     </section>
                 </section>
             </div>

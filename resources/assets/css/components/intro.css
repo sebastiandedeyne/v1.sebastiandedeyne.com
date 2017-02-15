@@ -26,6 +26,11 @@
     font-family: var(--font-alegreya);
     font-size: 1.7rem;
     line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.intro__text:last-of-type {
+    margin-bottom: 30px;
 }
 
 .intro__text.-small {
@@ -34,21 +39,16 @@
     line-height: var(--baseline);
 }
 
+.intro__nav {
+    margin-bottom: 30px;
+}
+
 @media (--medium) {
     .intro__text {
         font-size: 1.4rem;
     }
 }
 
-.intro__text + * {
-    margin-top: 40px;
-}
-
-.intro__text + .intro__text {
-    margin-top: 20px;
-}
-
 .intro__buttons {
-    margin-top: 30px;
     font-size: .9rem;
 }

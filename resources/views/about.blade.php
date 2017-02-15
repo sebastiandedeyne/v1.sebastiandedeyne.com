@@ -3,33 +3,19 @@
 ])
     <div class="container">
         <div class="row">
-            <div class="column column--two-thirds">
+            <div class="column">
                 <section class="intro">
                     <a href="{{ url('/') }}" class="intro__logotype logotype"></a>
                     <h1 class="intro__title">
                         About
                     </h1>
                     <p class="intro__text -small">
-                        I'm a full-stack developer from Ghent, working at Spatie in Antwerp, where I mainly build stuff with Laravel and Vue.js.
-                    <p class="intro__text -small">
-                        In my spare time I work on some open source side projects, and improve my cooking skills.
+                        I'm a full-stack developer from Ghent, working at Spatie in Antwerp, where
+                        I mainly build stuff with Laravel and Vue.js. In my spare time I work on
+                        some open source side projects, and improve my cooking skills.
                     </p>
                     <section class="intro__buttons">
-                        <a class="button" href="https://twitter.com/sebastiandedeyne" target="sebdd">
-                            <span class="button__icon">
-                                <span class="icon--twitter -small"></span>
-                            Twitter
-                        </a>
-                        <a class="button" href="https://github.com/sebastiandedeyne" target="sebdd">
-                            <span class="button__icon">
-                                <span class="icon--github -small"></span>
-                            GitHub
-                        </a>
-                        <a class="button" href="mailto:sebastiandedeyne@gmail.com">
-                            <span class="button__icon">
-                                <span class="icon--email -small"></span>
-                            E-mail
-                        </a>
+                        @include('partials.social')
                     </section>
                 </section>
             </div>
