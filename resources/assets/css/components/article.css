@@ -12,7 +12,7 @@
 
 .article__header__title {
     font-family: var(--font-alegreya);
-    font-size: 36px;
+    font-size: 2rem;
     margin-bottom: 10px;
     line-height: 1.25;
 }
@@ -33,7 +33,7 @@
 }
 
 .article__body h2 {
-    font-size: 24px;
+    font-size: 1.4rem;
     font-family: var(--font-alegreya);
     margin-top: calc(var(--baseline-space) * 2);
     margin-bottom: var(--baseline-space);
@@ -62,7 +62,7 @@
 }
 
 .article__body code {
-    font-size: .8em;
+    font-size: .8rem;
     font-family: var(--font-mono);
     background: white;
 }
@@ -93,7 +93,7 @@
 }
 
 .article__footer {
-    font-size: 14px;
+    font-size: .8rem;
     padding-top: 60px;
     padding-bottom: 40px;
 }

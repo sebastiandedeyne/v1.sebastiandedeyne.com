@@ -2,7 +2,7 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
-    font-size: calc(var(--font-size) * var(--baseline));
+    font-size: var(--font-size);
 }
 
 *,

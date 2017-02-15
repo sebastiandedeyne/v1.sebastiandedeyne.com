@@ -18,19 +18,24 @@
     text-transform: lowercase;
     font-family: var(--font-source-sans-pro);
     font-weight: 600;
-    font-size: 25px;
+    font-size: 1.4rem;
     margin-bottom: 30px;
 }
 
 .intro__text {
     font-family: var(--font-alegreya);
-    font-size: 30px;
+    font-size: 1.7rem;
     line-height: 1.25;
+}
+
+.intro__text--small {
+    font-size: 1.4rem;
+    line-height: var(--baseline);
 }
 
 @media (--medium) {
     .intro__text {
-        font-size: 25px;
+        font-size: 1.4rem;
     }
 }
 
@@ -42,12 +47,7 @@
     margin-top: 20px;
 }
 
-.intro__text--small {
-    font-size: 24px;
-    line-height: var(--baseline);
-}
-
 .intro__buttons {
     margin-top: 30px;
-    font-size: 15px;
+    font-size: .9rem;
 }
