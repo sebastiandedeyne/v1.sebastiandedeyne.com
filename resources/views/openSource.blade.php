@@ -32,7 +32,9 @@
                     class="card column column--half"
                 >
                     <h2 class="card__title">
-                        <span class="card__title__icon icon icon--{{ $project->type }}"></span>
+                        <span class="card__title__icon">
+                            <span class="icon--{{ $project->type }}"></span>
+                        </span>
                         {{ $project->name }}
                     </h2>
                     <p class="card__text">{{ $project->description }}</p>

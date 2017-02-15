@@ -9,6 +9,12 @@
 }
 
 .card:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .07);
+    border-color: color(var(--color-gray--light) shade(5%));
+}
+
+.card:focus {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, .07);
     border-color: color(var(--color-gray--light) shade(5%));
@@ -23,4 +29,5 @@
 
 .card__title__icon {
     margin-right: 10px;
+    line-height: 0; /* Required to vertically align the icon and the title */
 }

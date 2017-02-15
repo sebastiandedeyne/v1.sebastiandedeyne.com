@@ -22,15 +22,21 @@
                     </nav>
                     <section class="intro__buttons">
                         <a class="button" href="https://twitter.com/sebastiandedeyne" target="sebdd">
-                            <span class="button__icon icon icon--faded icon--small icon--twitter"></span>
+                            <span class="button__icon">
+                                <span class="icon--twitter -small"></span>
+                            </span>
                             Twitter
                         </a>
                         <a class="button" href="https://github.com/sebastiandedeyne" target="sebdd">
-                            <span class="button__icon icon icon--faded icon--small icon--github"></span>
+                            <span class="button__icon">
+                                <span class="icon--github -small"></span>
+                            </span>
                             GitHub
                         </a>
                         <a class="button" href="mailto:sebastiandedeyne@gmail.com">
-                            <span class="button__icon icon icon--faded icon--small icon--email"></span>
+                            <span class="button__icon">
+                                <span class="icon--email -small"></span>
+                            </span>
                             E-mail
                         </a>
                     </section>

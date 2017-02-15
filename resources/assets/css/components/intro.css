@@ -28,8 +28,9 @@
     line-height: 1.25;
 }
 
-.intro__text--small {
-    font-size: 1.4rem;
+.intro__text.-small {
+    font-family: var(--font-default);
+    font-size: 1rem;
     line-height: var(--baseline);
 }
 

@@ -1,14 +1,15 @@
-.icon {
+.icon--elixir,
+.icon--email,
+.icon--github,
+.icon--laravel,
+.icon--php,
+.icon--twitter,
+.icon--typescript {
     display: inline-block;
     width: 25px;
     height: 25px;
     background-size: contain;
     background-repeat: no-repeat;
-}
-
-.icon--small {
-    width: 18px;
-    height: 18px;
 }
 
 .icon--elixir { background-image: url('../svg/elixir'); }
@@ -17,8 +18,3 @@
 .icon--laravel { background-image: url('../svg/laravel'); }
 .icon--php { background-image: url('../svg/php'); }
 .icon--twitter { background-image: url('../svg/twitter'); }
-.icon--typescript { background-image: url('../svg/typescript'); }
-
-.icon svg {
-    width: 100%;
-}
