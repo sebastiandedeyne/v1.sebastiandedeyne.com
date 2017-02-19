@@ -1,13 +1,13 @@
 .article__header {
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 3.6rem;
+    margin-bottom: 3.6rem;
 }
 
 .article__header__logotype {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 1.8rem;
 }
 
 .article__header__title {
@@ -25,7 +25,7 @@
 .article__body {
     background-color: white;
     color: var(--color-text--dark);
-    padding: 60px 0 40px;
+    padding: 3.6rem 0 2.4rem;
 }
 
 .article__body a {
@@ -94,8 +94,8 @@
 
 .article__footer {
     font-size: .8rem;
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-top: 3.6rem;
+    padding-bottom: 2.4rem;
 }
 
 .article__footer__link {
@@ -103,5 +103,5 @@
 }
 
 .article__footer__p {
-    margin-bottom: calc(14px * var(--baseline));
+    margin-bottom: calc(.8rem * var(--baseline));
 }

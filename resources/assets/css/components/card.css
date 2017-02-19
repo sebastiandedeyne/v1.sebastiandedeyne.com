@@ -3,7 +3,7 @@
 
     display: block;
     position: relative;
-    padding: 18px 23px 23px;
+    padding: 1rem 1.4rem 1.4rem;
     margin-bottom: var(--grid-gutter);
     transition: all .2s ease-out;
 }
@@ -24,10 +24,10 @@
     display: flex;
     align-items: center;
     font-weight: 500;
-    margin-bottom: 11px;
+    margin-bottom: .6rem;
 }
 
 .card__title__icon {
-    margin-right: 10px;
+    margin-right: .6rem;
     line-height: 0; /* Required to vertically align the icon and the title */
 }

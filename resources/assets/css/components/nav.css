@@ -1,14 +1,14 @@
 .nav__item {
     display: inline;
     font-weight: 500;
-    margin-right: 23px;
+    margin-right: 1.4rem;
     position: relative;
 }
 
 .nav__item:after {
     content: '';
     position: absolute;
-    right: -12px;
+    right: -.7em;
     bottom: 6px;
     width: 4px;
     height: 4px;
