@@ -62,7 +62,7 @@
 }
 
 .article__body code {
-    font-size: .8em;
+    font-size: .9em;
     font-family: var(--font-mono);
     background: white;
 }
