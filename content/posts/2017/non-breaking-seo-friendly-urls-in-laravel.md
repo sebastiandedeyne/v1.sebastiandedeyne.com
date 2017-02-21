@@ -1,7 +1,9 @@
 ---
-title: Non-breaking, SEO Friendly url's in Laravel
+title: Non-breaking, SEO Friendly Url's in Laravel
 date: 21/02/2017
 era: Laravel 5.4
+
+description: "When admins create or update an news item—or any other entity—in our homegrown CMS, a url slug is generated based on it's title. The downside here is that when the title changes, the old url would break. On the other hand, if we wouldn't regenerate the url on updates, titles that were edited later on would still have an old slug in the url, which isn't an ideal situation either."
 ---
 
 When admins create or update an news item—or any other entity—in [our homegrown CMS](https://github.com/spatie/blender), a url slug is generated based on it's title. The downside here is that when the title changes, the old url would break. On the other hand, if we wouldn't regenerate the url on updates, titles that were edited later on would still have an old slug in the url, which isn't an ideal situation either.
