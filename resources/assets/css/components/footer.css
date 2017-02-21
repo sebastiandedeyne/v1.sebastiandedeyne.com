@@ -1,0 +1,13 @@
+.footer {
+    position: relative;
+    padding: 1.2rem 0;
+    font-size: .7rem;
+    color: var(--color-text--light);
+}
+
+.footer:before {
+    @apply --little-seperator;
+
+    bottom: auto;
+    top: 0;
+}

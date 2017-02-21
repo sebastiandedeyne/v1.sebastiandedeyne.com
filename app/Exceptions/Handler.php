@@ -3,21 +3,47 @@
 namespace App\Exceptions;
 
 use Exception;
-use Illuminate\Auth\Access\AuthorizationException;
+use HttpException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Symfony\Component\HttpKernel\Exception\HttpException;
-use Illuminate\Foundation\Validation\ValidationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Foundation\Http\Exceptions\MaintenanceModeException;
 
 class Handler extends ExceptionHandler
 {
+    /**
+     * A list of the exception types that should not be reported.
+     *
+     * @var array
+     */
     protected $dontReport = [
-        AuthorizationException::class,
-        HttpException::class,
-        ModelNotFoundException::class,
-        ValidationException::class,
+        \Illuminate\Auth\AuthenticationException::class,
+        \Illuminate\Auth\Access\AuthorizationException::class,
+        \Symfony\Component\HttpKernel\Exception\HttpException::class,
+        \Illuminate\Database\Eloquent\ModelNotFoundException::class,
+        \Illuminate\Session\TokenMismatchException::class,
+        \Illuminate\Validation\ValidationException::class,
     ];
 
+    /**
+     * Report or log an exception.
+     *
+     * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
+     *
+     * @param  \Exception  $exception
+     * @return void
+     */
+    public function report(Exception $exception)
+    {
+        parent::report($exception);
+    }
+
+    /**
+     * Render an exception into an HTTP response.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Exception  $exception
+     * @return \Illuminate\Http\Response
+     */
     public function render($request, Exception $exception)
     {
         if (config('app.debug') || $request->isJson()) {
@@ -32,7 +58,7 @@ class Handler extends ExceptionHandler
 
         $data = [
             'exception' => $exception,
-            'status' => $status
+            'status' => $status,
         ];
 
         if (view()->exists("errors.{$status}")) {
@@ -42,7 +68,7 @@ class Handler extends ExceptionHandler
         return response()->view('errors.generic', $data, $status, $headers);
     }
 
-    private function determineStatusCodeForException(Exception $exception): int
+    protected function determineStatusCodeForException(Exception $exception): int
     {
         if ($exception instanceof HttpException) {
             return $exception->getStatusCode();
@@ -50,6 +76,10 @@ class Handler extends ExceptionHandler
 
         if ($exception instanceof ModelNotFoundException) {
             return 404;
+        }
+
+        if ($exception instanceof MaintenanceModeException) {
+            return 503;
         }
 
         return 500;

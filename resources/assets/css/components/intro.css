@@ -1,0 +1,54 @@
+.intro {
+    padding-top: 1.8rem;
+    padding-bottom: 2.4rem;
+    margin-bottom: 2.4rem;
+    position: relative;
+}
+
+.intro:after {
+    @apply --little-seperator;
+}
+
+.intro__logotype {
+    margin-bottom: 3rem;
+}
+
+.intro__title {
+    color: var(--color-red);
+    text-transform: lowercase;
+    font-family: var(--font-source-sans-pro);
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 1.8rem;
+}
+
+.intro__text {
+    font-family: var(--font-alegreya);
+    font-size: 1.7rem;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+}
+
+.intro__text:last-of-type {
+    margin-bottom: 1.8rem;
+}
+
+.intro__text.-small {
+    font-family: var(--font-default);
+    font-size: 1rem;
+    line-height: var(--baseline);
+}
+
+.intro__nav {
+    margin-bottom: 1.8rem;
+}
+
+@media (--medium) {
+    .intro__text {
+        font-size: 1.4rem;
+    }
+}
+
+.intro__buttons {
+    font-size: .9rem;
+}

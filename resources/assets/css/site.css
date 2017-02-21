@@ -1,9 +1,9 @@
-@import "_vendor.*";
+@import "tools/reset";
+@import "tools/variables";
+@import "tools/mixins";
+@import "tools/media";
 
-@import "_variables";
+@import "elements/**/*.css";
+@import "components/**/*.css";
 
-@import "_base.*";
-@import "_components.*";
-@import "_views.*";
-
-@import "_utilities";
+@import "vendor/**/*.css";

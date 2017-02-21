@@ -1,0 +1,20 @@
+.icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon.-small {
+    width: 18px;
+    height: 18px;
+}
+
+.icon.-elixir { background-image: url('../svg/elixir'); }
+.icon.-email { background-image: url('../svg/email'); }
+.icon.-github { background-image: url('../svg/github'); }
+.icon.-laravel { background-image: url('../svg/laravel'); }
+.icon.-php { background-image: url('../svg/php'); }
+.icon.-twitter { background-image: url('../svg/twitter'); }
+.icon.-typescript { background-image: url('../svg/typescript'); }

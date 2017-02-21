@@ -22,7 +22,7 @@ class Article
 
     public static function create(Document $document, string $slug): Article
     {
-        $article = new static();
+        $article = new self();
 
         $article->title = $document->matter('title', '');
         $article->contents = markdown($document->body());

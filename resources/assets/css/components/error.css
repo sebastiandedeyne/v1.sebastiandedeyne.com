@@ -1,0 +1,14 @@
+.error {
+    margin-top: 20vh;
+    text-align: center;
+}
+
+.error__title {
+    font-family: var(--font-alegreya);
+    font-size: 3rem;
+    margin-bottom: .3rem;
+}
+
+.error__message {
+    margin-bottom: 1.2rem;
+}

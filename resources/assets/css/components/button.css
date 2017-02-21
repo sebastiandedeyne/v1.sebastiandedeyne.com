@@ -1,0 +1,32 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: .45em .66em .5em;
+    border: 1px solid var(--color-gray--light);
+    margin-right: .5em;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .05);
+    transition: all .2s var(--transition-curve);
+}
+
+.button:hover {
+    border-color: color(var(--color-gray--light) shade(5%));
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.button:focus {
+    outline: none;
+    transform: translateY(-1px);
+    border-color: color(var(--color-gray--light) shade(5%));
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.button__icon {
+    margin-right: .4em;
+    line-height: 0; /* Required to vertically align the icon and the title */
+}
+
+.button.-faded .button__icon {
+    opacity: .85;
+}

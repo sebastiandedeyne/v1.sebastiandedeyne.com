@@ -1,43 +1,45 @@
-@extends('_layouts.master')
+@push('head')
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+@endpush
 
-@section('title', "{$article->title} — Sebastian De Deyne")
-@section('meta', $article->description)
-
-@section('content')
-<main class="container">
-    <article class="v-article">
-        <section class="v-article__site-header">
-            <a href="{{ url('/') }}" class="v-article__site-header__logotype">
-                Sebastian De Deyne
-            </a>
-        </section>
-        <header class="v-article__header">
-            <h1 class="v-article__header__title">
-                {{ $article->title }}
-            </h1>
-            @if($article->date)
-            <aside class="v-article__header__meta">
-                Published {{ $article->date->format('j F Y') }}
-                @if($article->era)
-                    — <em>{{ $article->era }}</em>
+@component('layouts.page', [
+    'title' => $article->title,
+    'meta' => $article->description,
+])
+    <article class="article">
+        <header class="article__header">
+            <div class="container">
+                <div class="article__header__logotype">
+                    <a href="{{ url('/') }}" class="logotype"></a>
+                </div>
+                <h1 class="article__header__title">
+                    {{ $article->title }}
+                </h1>
+                @if($article->date)
+                    <aside class="article__header__meta">
+                        Published on {{ $article->date->format('j F Y') }} by Sebastian De Deyne
+                        @if($article->era)
+                            — <em>{{ $article->era }}</em>
+                        @endif
+                    </aside>
                 @endif
-            </aside>
-            @endif
+            </div>
         </header>
-        <section class="v-article__body">
-            {!! $article->contents !!}
-        </section>
-        <section class="v-article__footer">
-            <p class="v-article__footer__credits">© {{ carbon()->format('Y') }} <a href="{{ url('about') }}">Sebastian De Deyne</a> <span class="col:text--lighter fs:12">【ツ】</span></p>
-            <div class="v-article__footer__about">
-                <p>
-                    I'm a full-stack developer working at <a href="https://spatie.be" target="sebastiandedeyne.com">Spatie</a> in Antwerp, Belgium.
-                </p>
-                <p>
-                    If you've got any comments, feedback or just want to chat you can get in touch via <a href="https://twitter.com/sebdedeyne" target="sebastiandedeyne.com">Twitter</a> or <a href="mailto:sebastiandedeyne@gmail.com">email</a>. If you catch a mistake or notice something that could be improved, feel free to edit this article by <a target="edit" href="https://github.com/sebastiandedeyne/sebastiandedeyne.com/edit/master/content/{{ $article->slug }}.md">sending a PR on GitHub</a>.
-                </p>
+        <section class="article__body">
+            <div class="container container--narrow">
+                {!! $article->contents !!}
             </div>
         </section>
+        <footer class="article__footer">
+            <div class="container container--narrow">
+                <p class="article__footer__p">© {{ carbon()->format('Y') }} <a class="article__footer__link" href="{{ url('about') }}">Sebastian De Deyne</a> 【ツ】</p>
+                <p class="article__footer__p">
+                    I'm a full-stack developer from Ghent working at <a class="article__footer__link" href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, Belgium.
+                </p>
+                <p class="article__footer__p">
+                    If you've got any comments, feedback or just want to chat you can get in touch via <a class="article__footer__link" href="https://twitter.com/sebdedeyne" target="sebdd">Twitter</a> or <a class="article__footer__link" href="mailto:sebastiandedeyne@gmail.com">email</a>. If you catch a mistake or notice something that could be improved, feel free to <a class="article__footer__link" target="sebdd" href="https://github.com/sebastiandedeyne/sebastiandedeyne.com/edit/master/content/{{ $article->slug }}.md">send a PR on GitHub</a>.
+                </p>
+            </div>
+        </footer>
     </article>
-</main>
-@endsection
+@endcomponent

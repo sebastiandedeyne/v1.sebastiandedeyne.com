@@ -18,13 +18,13 @@ This article isn't about Vue's template syntax, but about where and how to defin
 
 I've divided the different ways to define templates in three different categories, each with their own drawbacks:
 
-- Writing templates that compile at runtime (lesser performance)
+- Writing templates that get compiled in the browser (lesser performance)
 - Using single file `.vue` components (requires a build step)
 - Manually writing `render` functions (pure JavaScript, no html-like template syntax)
 
 ## Using uncompiled templates
 
-Vue templates don't necesarrily need to be precompiled. If you're [using the runtime version of Vue.js](https://vuejs.org/v2/guide/installation.html#Standalone-vs-Runtime-only-Build), templates can be compiled in the browser. This solution offers simplicity—no special build steps or file formats—while sacrificing performance. The first render of a component will take longer because the template needs to be compiled to JavaScript first.
+Vue templates don't necessarily need to be precompiled. If you're [using the standalone version of Vue.js](https://vuejs.org/v2/guide/installation.html#Standalone-vs-Runtime-only-Build), templates can be compiled in the browser. This solution offers simplicity—no special build steps or file formats—while sacrificing performance. The first render of a component will take longer because the template needs to be compiled to JavaScript first.
 
 ### Defining templates in a component
 
@@ -186,7 +186,7 @@ Note that since you're using a special file type, it becomes harder to add other
 
 ### Writing raw render functions
 
-Writing render functions is the bare metal programming of Vue templates. When using a different templating strategy (runtime compilation or single-file components), string templates are compiled to render functions under the hood.
+Writing render functions is the bare metal programming of Vue templates. When using a different templating strategy (compilation in the browser or single-file components), string templates are compiled to render functions under the hood.
 
 Writing your own render functions give you maximum performance without build step, the drawback being that they don't look like html making them harder to reason about.
 
@@ -232,6 +232,6 @@ Note that most built-in Vue directives aren't available using JSX, but they gene
 
 ## Conclusion
 
-If you're building a larger, performance-critical application (generally SPA's) or are interested in features scoped css, Vue single-file components seem to be the way to go. 
+If you're building a larger, performance-critical application (generally SPA's) or are interested in features scoped css, Vue single-file components seem to be the way to go.
 
-If you don't mind the initial performance penalty and are willing to use the runtime build (cases that simply enhance pages), I'd recommend using JavaScript template literals in the component's `template` option. This doesn't introduce any foreign concepts in your build pipeline, and keeps your template together with the component.
+If you don't mind the initial performance penalty and are willing to use the standalone build (cases that simply enhance pages), I'd recommend using JavaScript template literals in the component's `template` option. This doesn't introduce any foreign concepts in your build pipeline, and keeps your template together with the component.

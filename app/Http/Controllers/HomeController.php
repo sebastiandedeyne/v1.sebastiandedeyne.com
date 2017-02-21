@@ -9,7 +9,10 @@ class HomeController extends Controller
 {
     public function index(ContentRepository $contentRepository)
     {
-        return view('home')
-            ->withPosts($contentRepository->posts());
+        $posts = $contentRepository->posts()->groupBy(function ($post) {
+            return $post->date->format('F Y');
+        });
+
+        return view('home')->withPosts($posts);
     }
 }

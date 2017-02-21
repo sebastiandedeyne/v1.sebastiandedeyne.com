@@ -1,0 +1,113 @@
+.article__header {
+    text-align: center;
+    margin-top: 3.6rem;
+    margin-bottom: 3.6rem;
+}
+
+.article__header__logotype {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.8rem;
+}
+
+.article__header__title {
+    font-family: var(--font-alegreya);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    line-height: 1.25;
+}
+
+.article__header__meta {
+    font-family: var(--font-alegreya);
+    color: var(--color-text--light);
+}
+
+.article__body {
+    background-color: white;
+    color: var(--color-text--dark);
+    padding: 3.6rem 0 2.4rem;
+}
+
+.article__body a {
+    border-bottom: 1px solid var(--color-text--light);
+}
+
+.article__body h2 {
+    font-size: 1.4rem;
+    font-family: var(--font-alegreya);
+    margin-top: calc(var(--baseline-space) * 2);
+    margin-bottom: var(--baseline-space);
+    color: var(--color-text);
+}
+
+.article__body h3 {
+    font-weight: bold;
+    margin-top: calc(var(--baseline-space) * 2);
+    margin-bottom: var(--baseline-space);
+}
+
+.article__body p {
+    margin-bottom: var(--baseline-space);
+}
+
+.article__body strong {
+    font-weight: bold;
+}
+
+.article__body ul {
+    margin-bottom: var(--baseline-space);
+    list-style: disc;
+    margin-left: 1em;
+}
+
+.article__body ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.article__body code {
+    font-size: .9em;
+    font-family: var(--font-mono);
+    background: var(--color-gray--light);
+    padding: 0 .2em;
+}
+
+.article__body pre {
+    margin-bottom: var(--baseline-space);
+}
+
+.article__body pre code {
+    @apply --pull-out;
+    @apply --white-box;
+
+    padding: calc(var(--baseline-space) * .5);
+    line-height: 1.5;
+    display: block;
+    background: white;
+}
+
+.article__body blockquote {
+    @apply --pull-out;
+    @apply --white-box;
+
+    padding: var(--baseline-space);
+    margin-bottom: var(--baseline-space);
+}
+
+.article__body blockquote p {
+    margin-bottom: 0;
+}
+
+.article__footer {
+    font-size: .8rem;
+    padding-top: 3.6rem;
+    padding-bottom: 2.4rem;
+}
+
+.article__footer__link {
+    text-decoration: underline;
+}
+
+.article__footer__p {
+    margin-bottom: calc(.8rem * var(--baseline));
+}

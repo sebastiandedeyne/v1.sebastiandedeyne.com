@@ -1,17 +1,17 @@
-@extends('_layouts.master')
-
-@section('body_classes', 'bg:red')
-
-@section('content')
-<section class="v-error">
-    <h1 class="v-error__title">
-        Whoops!
-    </h1>
-    <p class="v-error__message">
-        A wild {{ $status }} error appeared.
-    </p>
-    <a href="/" class="btn">
-        Go home
-    </a>
-</section>
-@endsection
+@component('layouts.page', [
+    'title' => $title,
+])
+    <section class="error">
+        <h1 class="error__title">
+            {{ $title }}
+        </h1>
+        <p class="error__message">
+            {{ $message }}
+        </p>
+        @unless(Request::path() === '/')
+            <a href="{{ url('/') }}" class="button">
+                Go home
+            </a>
+        @endunless
+    </section>
+@endcomponent

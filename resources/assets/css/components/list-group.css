@@ -1,0 +1,41 @@
+.list-group {
+    margin-bottom: 1.8rem;
+}
+
+.list-group__title {
+    color: var(--color-text--light);
+    font-size: .8rem;
+}
+
+.list-group__item {
+    display: block;
+}
+
+.list-group__item__text {
+    font-family: var(--font-alegreya);
+    font-size: 1.5rem;
+}
+
+.list-group__item__text:after {
+    content: '…';
+    display: inline-block;
+    color: color(var(--color-text) tint(80%));
+    opacity: 0;
+    transition: all .2s;
+}
+
+.list-group__item__text:hover:after {
+    transform: translateX(3px);
+    opacity: 1;
+}
+
+@media (--medium) {
+    .list-group__item__text {
+        font-size: 1.4rem;
+        line-height: 1.3
+    }
+
+    .list-group__item__text:after {
+        content: normal;
+    }
+}

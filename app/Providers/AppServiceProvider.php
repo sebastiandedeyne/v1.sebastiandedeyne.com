@@ -2,21 +2,19 @@
 
 namespace App\Providers;
 
-use App\Content\ContentRepository;
-use Blade;
+use App\Http\ViewComposers\ErrorComposer;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use League\CommonMark\CommonMarkConverter;
 
 class AppServiceProvider extends ServiceProvider
 {
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
     public function boot()
     {
-        //
-    }
-
-    public function register()
-    {
-        $this->app->singleton(ContentRepository::class);
-        $this->app->singleton(CommonMarkConverter::class);
+        View::composer('errors.generic', ErrorComposer::class);
     }
 }
