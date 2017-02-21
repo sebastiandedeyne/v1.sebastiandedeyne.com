@@ -3,6 +3,7 @@
 
     display: block;
     position: relative;
+    height: calc(100% - 1.4rem);
     padding: 1rem 1.4rem 1.4rem;
     margin-bottom: var(--grid-gutter);
     transition: all .2s ease-out;
