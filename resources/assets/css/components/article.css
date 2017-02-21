@@ -50,6 +50,10 @@
     margin-bottom: var(--baseline-space);
 }
 
+.article__body strong {
+    font-weight: bold;
+}
+
 .article__body ul {
     margin-bottom: var(--baseline-space);
     list-style: disc;
@@ -64,7 +68,8 @@
 .article__body code {
     font-size: .9em;
     font-family: var(--font-mono);
-    background: white;
+    background: var(--color-gray--light);
+    padding: 0 .2em;
 }
 
 .article__body pre {
@@ -78,6 +83,7 @@
     padding: calc(var(--baseline-space) * .5);
     line-height: 1.5;
     display: block;
+    background: white;
 }
 
 .article__body blockquote {
