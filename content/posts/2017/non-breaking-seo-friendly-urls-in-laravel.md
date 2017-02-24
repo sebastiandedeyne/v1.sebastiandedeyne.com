@@ -1,5 +1,5 @@
 ---
-title: Non-breaking, SEO Friendly Url's in Laravel
+title: Non-breaking, SEO Friendly Urls in Laravel
 date: 21/02/2017
 era: Laravel 5.4
 
@@ -22,7 +22,7 @@ Our gameplan:
 
 - Determine our identifier
 - Retrieve models via their identifier—ignoring the slug
-- Redirect invariant url's
+- Redirect invariant urls
 
 ## Determining the Identifier
 
@@ -119,7 +119,7 @@ Route::get('/article/{id}/{slug?}', 'ArticleController@detail')
 
 ## Avoiding Duplicate Content
 
-Links to your old pages won't break anymore, but having multiple url's pointing to the same piece of content isn't a good idea either since that creates duplicate content. To prevent this, old links should respond with a redirect to the correct url.
+Links to your old pages won't break anymore, but having multiple urls pointing to the same piece of content isn't a good idea either since that creates duplicate content. To prevent this, old links should respond with a redirect to the correct url.
 
 Let's revisit our controller's `detail` method. This time, we'll need to pull in the slug to find out if it represent's the latest revision of the article's title.
 
@@ -204,6 +204,6 @@ class ArticleController
 
 We've achieved our two goals!
 
-We can safely change the article's title without worrying about breaking old links and the url's have a human readable slug.
+We can safely change the article's title without worrying about breaking old links and the urls have a human readable slug.
 
 There are various ways to achieve a similar setup—like storing slugs in the database—but it's up to you to decide on the best fit for your application.
