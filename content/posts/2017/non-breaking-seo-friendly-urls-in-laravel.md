@@ -3,10 +3,10 @@ title: Non-breaking, SEO Friendly Urls in Laravel
 date: 21/02/2017
 era: Laravel 5.4
 
-description: "When admins create or update a news item—or any other entity—in our homegrown CMS, a url slug is generated based on it's title. The downside here is that when the title changes, the old url would break. On the other hand, if we wouldn't regenerate the url on updates, titles that were edited later on would still have an old slug in the url, which isn't an ideal situation either."
+description: "When admins create or update a news item—or any other entity—in our homegrown CMS, a url slug is generated based on it's title. The downside here is that when the title changes, the old url would break. If we wouldn't regenerate the url on updates, edited titles would still have an old slug in the url, which isn't an ideal situation either."
 ---
 
-When admins create or update a news item—or any other entity—in [our homegrown CMS](https://github.com/spatie/blender), a url slug is generated based on it's title. The downside here is that when the title changes, the old url would break. On the other hand, if we wouldn't regenerate the url on updates, titles that were edited later on would still have an old slug in the url, which isn't an ideal situation either.
+When admins create or update a news item—or any other entity—in [our homegrown CMS](https://github.com/spatie/blender), a url slug is generated based on it's title. The downside here is that when the title changes, the old url would break. If we wouldn't regenerate the url on updates, edited titles would still have an old slug in the url, which isn't an ideal situation either.
 
 Our solution: add a unique identifier to the url that will never change, while keeping the slug intact. This creates links that are both readable and unbreakable.
 
@@ -32,17 +32,17 @@ Assuming we're using a relational database like MySQL, the simplest form of an i
 https://thelaraveltimes.com/articles/24/laravel-5-4-new-features
 ```
 
-An incrementing ID can expose a lot though. It makes it easy for someone or something to crawl through an entire dataset, and it provides an indication it's size.
+An incrementing ID can expose a lot though. It makes it easy for someone or something to crawl through an entire dataset, and it provides an indication of it's size.
 
-This doesn't really matter for public data like blog posts, but we probably don't want any malicious crawlers scraping our user profiles. Phil Sturgeon has a nice writeup about the importance of obfuscated ID's [on his blog](https://philsturgeon.uk/http/2015/09/03/auto-incrementing-to-destruction/).
+This doesn't matter for public data like blog posts, but we probably don't want any malicious crawlers scraping our user profiles. Phil Sturgeon has a nice writeup about the importance of obfuscated ID's [on his blog](https://philsturgeon.uk/http/2015/09/03/auto-incrementing-to-destruction/).
 
 ```md
 https://laravelbuddies.com/user/12dj4om7/sebastiandedeyne
 ```
 
-We'll just use the model's ID for this article. If we'd want to obfuscate our ID's, we could either use a library to hash the existing ID like [Jens Segers' Optimus](https://github.com/jenssegers/optimus), or we could generate a random string when the model's created (in that case, don't forget to make ensure it's unique!).
+We'll use the model's ID for this article. If we'd want to obfuscate our ID's, we could either use a library to hash the existing ID like [Jens Segers' Optimus](https://github.com/jenssegers/optimus), or we could generate a random string when the model's created (in that case, don't forget to make ensure it's unique!).
 
-We'll be working with a simple `Article` model, which has an `id` and `title` field. The article's slug will just be a sluggified version of it's `title`, which we'll generate via an accessor.
+We'll be working with a simple `Article` model, which has an `id` and `title` field. The article's slug will be a sluggified version of it's `title`, which we'll generate via an accessor.
 
 Since the concept of an article maps to a single url, we'll also add a computed `url` attribute which returns an url to the article's detail page.
 
@@ -72,7 +72,7 @@ As a Laravel route, that would translate to:
 Route::get('/article/{id}/{slug}', 'ArticleController@detail')
 ```
 
-In our controller, we only need the ID to retrieve the article item, the slug only exists to make the url human-readable (and in turn, SEO-friendlier).
+In our controller, we need the ID to retrieve the article item, the slug only exists to make the url human-readable (and in turn, SEO-friendlier).
 
 ```php
 use App\Models\Article;
@@ -109,7 +109,7 @@ class Article extends Model
 
 Neat! Now we can link to our article using `$article->url`.
 
-One more thing, since we really don't care about the slug, we might as well make it optional.
+One more thing, since we don't care about the slug, we might as well make it optional.
 
 ```php
 // routes/web.php
@@ -167,7 +167,7 @@ class ArticleController
 
 If we wouldn't want an actual redirect—or if we don't want that pesky conditional logic in our controller—we could use a canonical `link` tag insteaddd.
 
-Let's add a `link` tag in our layout file, but only if we've explicitly provided one.
+Let's add a `link` tag in our layout file if we've explicitly provided one.
 
 ```html
 <html>
@@ -182,7 +182,7 @@ Let's add a `link` tag in our layout file, but only if we've explicitly provided
 </body>
 ```
 
-Then we don't have to handle redirects in our controller anymore, but we need to share the canonical link (which is simply the article's url) with the view.
+Then we don't have to handle redirects in our controller anymore, but we need to share the canonical link (which is the article's url) with the view.
 
 ```php
 use App\Models\Article;
@@ -204,6 +204,6 @@ class ArticleController
 
 We've achieved our two goals!
 
-We can safely change the article's title without worrying about breaking old links and the urls have a human readable slug.
+We can change the article's title without worrying about breaking old links and the urls have a human readable slug.
 
-There are various ways to achieve a similar setup—like storing slugs in the database—but it's up to you to decide on the best fit for your application.
+With different ways to achieve a similar setup, like storing slugs in the database, it's up to you to decide on the best fit for your application.
