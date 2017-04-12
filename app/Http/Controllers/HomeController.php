@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function index(ContentRepository $contentRepository)
     {
         $posts = $contentRepository->posts()->groupBy(function ($post) {
-            return $post->date->format('F Y');
+            return $post->date->format('Y');
         });
 
         return view('home')->withPosts($posts);

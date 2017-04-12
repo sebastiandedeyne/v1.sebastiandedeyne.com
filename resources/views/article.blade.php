@@ -4,7 +4,8 @@
 
 @component('layouts.page', [
     'title' => $article->title,
-    'meta' => $article->description,
+    'meta_description' => $article->description,
+    'canonical_url' => $article->canonical_url,
 ])
     <article class="article">
         <header class="article__header">
@@ -17,7 +18,12 @@
                 </h1>
                 @if($article->date)
                     <aside class="article__header__meta">
-                        Published on {{ $article->date->format('j F Y') }} by Sebastian De Deyne
+                        @if($article->canonical_name && $article->canonical_url)
+                            Originally published on {{ $article->date->format('j F Y') }} by Sebastian De Deyne
+                            on <a href="{{ $article->canonical_url }}" class="article__header__meta__link">{{ $article->canonical_name }}</a>
+                        @else
+                            Published on {{ $article->date->format('j F Y') }} by Sebastian De Deyne
+                        @endif
                         @if($article->era)
                             — <em>{{ $article->era }}</em>
                         @endif

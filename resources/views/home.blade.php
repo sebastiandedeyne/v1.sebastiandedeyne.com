@@ -30,18 +30,23 @@
         </div>
         <section class="article-list">
             <h2 class="article-list__title">articles</h2>
-            @foreach($posts as $month => $posts)
+            @foreach($posts as $year => $posts)
                 <section class="list-group">
                     <h2 class="list-group__title">
-                        {{ $month }}
+                        {{ $year }}
                     </h2>
-                    @foreach($posts as $post)
-                        <article class="list-group__item">
-                            <a class="list-group__item__text" href="{{ $post->url }}">
-                                {{ $post->title }}
-                            </a>
-                        </article>
-                    @endforeach
+                    <ul>
+                        @foreach($posts as $post)
+                            <li class="list-group__item">
+                                <a href="{{ $post->url }}">
+                                    {{ $post->title }}
+                                </a>
+                                <span class="list-group__item__meta">
+                                    {{ $post->date->format('d/m') }}
+                                </span>
+                            </li>
+                        @endforeach
+                    </ul>
                 </section>
             @endforeach
         </section>

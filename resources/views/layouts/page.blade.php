@@ -5,10 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        <title>{{ isset($title) ? $title.' — Sebastian De Deyne' : 'Sebastian De Deyne' }}</title>
+        <title>{{ isset($title) ? ($title . ' — Sebastian De Deyne') : 'Sebastian De Deyne' }}</title>
 
         <meta charset="utf-8">
-        <meta name="description" content="{{ $meta ?? 'I\'m a full-stack developer working at Spatie in Antwerp, Belgium.' }}">
+        <meta name="description" content="{{ $meta_description ?? 'I\'m a full-stack developer working at Spatie in Antwerp, Belgium.' }}">
+        @if(isset($canonical_url) && $canonical_url)
+            <link rel="canonical" href="{{ $canonical_url }}">
+        @endif
 
         @include('laravel-feed::feed-links')
 

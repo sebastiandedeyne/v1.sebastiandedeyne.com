@@ -22,6 +22,10 @@
     color: var(--color-text--light);
 }
 
+.article__header__meta__link {
+    text-decoration: underline;
+}
+
 .article__body {
     background-color: white;
     color: var(--color-text--dark);
@@ -33,7 +37,7 @@
 }
 
 .article__body h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-family: var(--font-alegreya);
     margin-top: calc(var(--baseline-space) * 2);
     margin-bottom: var(--baseline-space);
@@ -52,6 +56,10 @@
 
 .article__body strong {
     font-weight: bold;
+}
+
+.article__body em {
+    font-style: italic;
 }
 
 .article__body ul {
@@ -96,6 +104,14 @@
 
 .article__body blockquote p {
     margin-bottom: 0;
+}
+
+.article__body hr {
+    @apply --pull-out;
+    margin-top: calc(var(--baseline-space) * 2);
+    margin-bottom: calc(var(--baseline-space) * 2);
+    border: none;
+    border-bottom: 1px solid var(--color-gray--light);
 }
 
 .article__footer {

@@ -12,6 +12,8 @@ class Article
     public $description;
     public $date;
     public $era;
+    public $canonical_name;
+    public $canonical_url;
     public $url;
     public $slug;
     public $commentable;
@@ -31,6 +33,8 @@ class Article
         $article->date = Carbon::createFromFormat('d/m/Y', $document->matter('date', '01/02/1992'));
 
         $article->era = $document->matter('era', '');
+        $article->canonical_name = $document->matter('canonical_name', '');
+        $article->canonical_url = $document->matter('canonical_url', '');
 
         $article->slug = $slug;
         $article->url = url($slug);
