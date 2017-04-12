@@ -9,6 +9,16 @@
   description: A fluent html menu generator for PHP applications
   type: php
 -
+  name: laravel/framework
+  url: https://github.com/laravel/framework/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Amerged%20author%3Asebastiandedeyne%20
+  description: Various contributions to the Laravel framework
+  type: laravel
+-
+  name: laravel-html
+  url: https://github.com/spatie/laravel-html
+  description: Fluent alternative to the Laravel Collective package
+  type: laravel
+-
   name: laravel-menu
   url: https://github.com/spatie/laravel-menu
   description: Html menu generator for Laravel
