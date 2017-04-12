@@ -31,7 +31,7 @@
                         <li>Bachelor's degree in graphical and digital media<br> (Arteveldehogeschool 2015)</li>
                     </ul>
                     <h2 class="textblock__subtitle">Colophon</h2>
-                    <p>This website is powered by <a href="https://laravel.com/" target="sebdd">Laravel</a> and served from <a href="https://www.digitalocean.com/" target="sebdd">Digital Ocean</a>. The source code is hosted on <a href="https://github.com/sebastiandedeyne/sebastiandedeyne.com" target="sebdd">Github</a>.</p>
+                    <p>This website is powered by <a href="https://laravel.com/" target="sebdd">Laravel</a> and served from <a href="https://www.digitalocean.com/" target="sebdd">Digital Ocean</a>. The source code is hosted on <a href="https://github.com/sebastiandedeyne/sebastiandedeyne.com" target="sebdd">GitHub</a>.</p>
                 </section>
             </div>
         </div>
