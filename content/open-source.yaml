@@ -1,10 +1,10 @@
 -
-  name: color
+  name: spatie/color
   url: https://github.com/spatie/color
   description: A little library to deal with color conversions
   type: php
 -
-  name: menu
+  name: spatie/menu
   url: https://github.com/spatie/menu
   description: A fluent html menu generator for PHP applications
   type: php
@@ -14,27 +14,27 @@
   description: Various contributions to the Laravel framework
   type: laravel
 -
-  name: laravel-html
+  name: spatie/laravel-html
   url: https://github.com/spatie/laravel-html
   description: Fluent alternative to the Laravel Collective package
   type: laravel
 -
-  name: laravel-menu
+  name: spatie/laravel-menu
   url: https://github.com/spatie/laravel-menu
   description: Html menu generator for Laravel
   type: laravel
 - 
-  name: opening-hours
+  name: spatie/opening-hours
   url: https://github.com/spatie/opening-hours
   description: A library to define a set of business hours
   type: php
 - 
-  name: regex
+  name: spatie/regex
   url: https://github.com/spatie/regex
   description: A sane interface for php's built in preg functions
   type: php
 -
-  name: schema-org
+  name: spatie/schema-org
   url: https://github.com/spatie/schema-org
   description: A fluent Schema.org json+ld builder that gets generated from the spec
   type: php
