@@ -18,9 +18,9 @@
                 </h1>
                 @if($article->date)
                     <aside class="article__header__meta">
-                        @if($article->canonical_name && $article->canonical_url)
+                        @if($article->canonical_source && $article->canonical_url)
                             Originally published on {{ $article->date->format('j F Y') }} by Sebastian De Deyne
-                            on <a href="{{ $article->canonical_url }}" class="article__header__meta__link">{{ $article->canonical_name }}</a>
+                            on <a href="{{ $article->canonical_url }}" class="article__header__meta__link">{{ $article->canonical_source }}</a>
                         @else
                             Published on {{ $article->date->format('j F Y') }} by Sebastian De Deyne
                         @endif

@@ -12,7 +12,7 @@ class Article
     public $description;
     public $date;
     public $era;
-    public $canonical_name;
+    public $canonical_source;
     public $canonical_url;
     public $url;
     public $slug;
@@ -33,7 +33,7 @@ class Article
         $article->date = Carbon::createFromFormat('d/m/Y', $document->matter('date', '01/02/1992'));
 
         $article->era = $document->matter('era', '');
-        $article->canonical_name = $document->matter('canonical_name', '');
+        $article->canonical_source = $document->matter('canonical_source', '');
         $article->canonical_url = $document->matter('canonical_url', '');
 
         $article->slug = $slug;

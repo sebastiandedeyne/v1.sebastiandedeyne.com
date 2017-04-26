@@ -2,8 +2,8 @@
 title: A Package for Snapshot Testing in PHPUnit
 date: 27/03/2017
 era: PHPUnit 5.7 & 6.0
-canonical_name: Hacker Noon
-canonical_url: https://hackernoon.com/a-package-for-snapshot-testing-in-phpunit
+canonical_source: Hacker Noon
+canonical_url: https://hackernoon.com/a-package-for-snapshot-testing-in-phpunit-2e4558c07fe3
 
 description: "The gist of snapshot testing is asserting that a set of data hasn't changed compared to a previous version, which is a snapshot of the data, to prevent regressions. The difference between a classic assertEquals and an assertMatchesSnapshot is that you don't write the expectation yourself when snapshot testing. When a snapshot assertion happens for the first time, it creates a snapshot file with the actual output, and marks the test as incomplete. Every subsequent run will compare the output with the existing snapshot file to check for regressions."
 ---
