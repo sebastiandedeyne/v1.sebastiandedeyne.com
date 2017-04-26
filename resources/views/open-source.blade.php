@@ -19,7 +19,7 @@
                                     href="https://github.com/sebastiandedeyne"
                                     target="sebdd"
                                     class="nav__item__contents"
-                                >more on github</a>
+                                >More on GitHub</a>
                             </li>
                         </ul>
                     </nav>

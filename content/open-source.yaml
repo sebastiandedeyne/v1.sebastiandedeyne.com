@@ -6,7 +6,7 @@
 -
   name: spatie/menu
   url: https://github.com/spatie/menu
-  description: A fluent html menu generator for PHP applications
+  description: Fluent html menu generator for PHP applications
   type: php
 -
   name: laravel/framework
@@ -26,7 +26,7 @@
 - 
   name: spatie/opening-hours
   url: https://github.com/spatie/opening-hours
-  description: A library to define a set of business hours
+  description: Define and query a set of business hours
   type: php
 - 
   name: spatie/regex
@@ -36,7 +36,7 @@
 -
   name: spatie/schema-org
   url: https://github.com/spatie/schema-org
-  description: A fluent Schema.org json+ld builder that gets generated from the spec
+  description: Fluent Schema.org json+ld builder that gets generated from the spec
   type: php
 -
   name: lightbulb
@@ -48,3 +48,14 @@
   url: https://github.com/sebastiandedeyne/yaml_front_matter
   description: A parser for documents with yaml front matter in Elixir
   type: elixir
+-
+  name: spatie/phpunit-snapshot-assertions
+  url: https://github.com/spatie/phpunit-snapshot-assertions
+  description: Test without writing actual test cases
+  type: php
+-
+  name: spatie/spatie-dom
+  url: https://github.com/spatie/spatie-dom
+  description: A small DOM querying and manipulation library
+  type: javascript
+
