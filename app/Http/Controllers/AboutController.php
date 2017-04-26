@@ -7,7 +7,7 @@ use Illuminate\Routing\Controller;
 
 class AboutController extends Controller
 {
-    public function index()
+    public function __invoke()
     {
         return view('about');
     }

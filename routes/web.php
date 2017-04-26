@@ -2,7 +2,7 @@
 
 Route::feeds();
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/about', 'AboutController@index');
-Route::get('/open-source', 'OpenSourceController@index');
-Route::get('/{slug}', 'ArticleController@detail')->where('slug', '(.*)');
+Route::get('/', 'HomeController')->name('home');
+Route::get('/about', 'AboutController');
+Route::get('/open-source', 'OpenSourceController');
+Route::get('/{slug}', 'ArticleController')->where('slug', '(.*)');

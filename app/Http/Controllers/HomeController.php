@@ -7,7 +7,7 @@ use Illuminate\Routing\Controller;
 
 class HomeController extends Controller
 {
-    public function index(ContentRepository $contentRepository)
+    public function __invoke(ContentRepository $contentRepository)
     {
         $posts = $contentRepository->posts()->groupBy(function ($post) {
             return $post->date->format('Y');
