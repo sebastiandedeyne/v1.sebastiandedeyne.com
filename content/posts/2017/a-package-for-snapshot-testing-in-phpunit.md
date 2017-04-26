@@ -169,7 +169,7 @@ Despite not having a stable version number, there most likely won't be any large
 
 ---
 
-*Thanks to [@AlexVanderbist](https://twitter.com/alexvanderbist) for helping out with the integration tests for this package!*
+*Thanks [@AlexVanderbist](https://twitter.com/alexvanderbist) for helping out with the integration tests for this package!*
 
 - [spatie/phpunit-snapshot-assertions on GitHub](https://github.com/spatie/phpunit-snapshot-assertions)
 - [spatie/phpunit-snapshot-assertions on Packagist](https://packagist.org/packages/spatie/phpunit-snapshot-assertions)
