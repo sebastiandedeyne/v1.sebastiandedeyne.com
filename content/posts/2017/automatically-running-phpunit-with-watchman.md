@@ -8,7 +8,11 @@ canonical_url: https://hackernoon.com/automatically-running-phpunit-with-watchma
 description: "A little bash script to run tests when a file has been changed"
 ---
 
+![](/media/automatically-running-phpunit-with-watchman.gif)
+
 ## A little bash script to run tests when a file has been changed
+
+If you just want a *tl:dr*, here's the script you can plop in whatever `.bashrc` file you're using—explanation follows.
 
 ```bash
 #!/usr/bin/env bash
@@ -24,8 +28,6 @@ function pw {
         -t "$args" 
 }
 ```
-
-If you just want a *tl:dr*, here's the script you can plop in whatever `.bashrc` file you're using—explanation follows.
 
 The `pw` function runs your tests once by calling `phpunit tests`, watches every php file in `src` and `tests`, and runs the tests again when a watched file changes.
 

@@ -106,6 +106,12 @@
     margin-bottom: 0;
 }
 
+.article__body img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
 .article__body hr {
     @apply --pull-out;
     margin-top: calc(var(--baseline-space) * 2);
