@@ -21,7 +21,7 @@
 -
   name: spatie/laravel-menu
   url: https://github.com/spatie/laravel-menu
-  description: Html menu generator for Laravel
+  description: Fluent html menu generator for Laravel applications
   type: laravel
 - 
   name: spatie/opening-hours
