@@ -14,10 +14,10 @@
                         <nav class="nav">
                             <ul>
                                 <li class="nav__item">
-                                    <a class="nav__item__contents" href="{{ url('about') }}">about</a>
+                                    <a class="nav__item__contents" href="{{ url('about') }}">About</a>
                                 </li>
                                 <li class="nav__item">
-                                    <a class="nav__item__contents" href="{{ url('open-source') }}">open source</a>
+                                    <a class="nav__item__contents" href="{{ url('open-source') }}">Open Source</a>
                                 </li>
                             </ul>
                         </nav>
@@ -29,7 +29,7 @@
             </div>
         </div>
         <section class="article-list">
-            <h2 class="article-list__title">articles</h2>
+            <h2 class="article-list__title">Articles</h2>
             @foreach($posts as $year => $posts)
                 <section class="list-group">
                     <h2 class="list-group__title">

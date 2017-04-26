@@ -15,7 +15,6 @@
 
 .intro__title {
     color: var(--color-red);
-    text-transform: lowercase;
     font-family: var(--font-source-sans-pro);
     font-weight: 600;
     font-size: 1.4rem;
