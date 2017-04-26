@@ -9,7 +9,7 @@ class OpenSourceController extends Controller
 {
     public function index(ContentRepository $contentRepository)
     {
-        return view('open_source')
+        return view('open-source')
             ->withProjects($contentRepository->projects());
     }
 }
