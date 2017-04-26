@@ -6,8 +6,3 @@
     color: var(--color-text--light);
     font-size: .8rem;
 }
-
-.list-group__item__meta {
-    font-size: .7rem;
-    color: var(--color-text--light);
-}

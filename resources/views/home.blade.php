@@ -41,9 +41,6 @@
                                 <a href="{{ $post->url }}">
                                     {{ $post->title }}
                                 </a>
-                                <span class="list-group__item__meta">
-                                    {{ $post->date->format('d/m') }}
-                                </span>
                             </li>
                         @endforeach
                     </ul>
