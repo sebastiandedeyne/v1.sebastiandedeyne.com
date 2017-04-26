@@ -71,9 +71,13 @@ class ContentRepository
 
     public function projects(): Collection
     {
-        return collect($this->yamlParser->parse(
+        $data = $this->yamlParser->parse(
             $this->read('open-source.yaml')
-        ))->map([Project::class, 'create']);
+        );
+        
+        return collect($data)
+            ->map([Project::class, 'create'])
+            ->sortBy('name');
     }
 
     private function read(string $path): ?string
