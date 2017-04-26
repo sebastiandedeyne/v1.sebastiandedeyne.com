@@ -8,7 +8,7 @@
                         Sebastian De Deyne
                     </h1>
                     <p class="intro__text">
-                        I'm a full-stack developer from Ghent working at Spatie in Antwerp, Belgium.
+                        I'm a web developer from Ghent working at <a href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, Belgium.
                     </p>
                     <section class="intro__nav">
                         <nav class="nav">

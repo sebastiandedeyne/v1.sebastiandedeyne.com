@@ -10,9 +10,7 @@
                         About
                     </h1>
                     <p class="intro__text -small">
-                        I'm a full-stack developer from Ghent, working at Spatie in Antwerp, where
-                        I mainly build stuff with Laravel and Vue.js. In my spare time I work on
-                        some open source side projects, and improve my cooking skills.
+                        I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, where I mainly build stuff with Laravel and Vue.js. In my spare time I work on some open source side projects, and improve my cooking skills.
                     </p>
                     <section class="intro__buttons">
                         @include('partials.social')
