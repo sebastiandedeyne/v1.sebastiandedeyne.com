@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Tests\Smoke;
 
 class SmokeTest extends TestCase
 {

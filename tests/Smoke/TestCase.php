@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Tests\Smoke;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Tests\CreatesApplication;
