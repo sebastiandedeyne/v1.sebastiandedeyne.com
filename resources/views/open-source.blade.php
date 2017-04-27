@@ -3,14 +3,14 @@
 ])
     <div class="container">
         <div class="row">
-            <div class="column -two-thirds">
+            <div class="column">
                 <section class="intro">
                     <a href="{{ url('/') }}" class="intro__logotype logotype"></a>
                     <h1 class="intro__title">
                         Open Source
                     </h1>
                     <p class="intro__text">
-                        A selection of open source projects I've authored or actively contributed to.
+                        A selection of my favorite open source projects I've authored or actively contributed to.
                     </p>
                     <nav class="nav">
                         <ul>

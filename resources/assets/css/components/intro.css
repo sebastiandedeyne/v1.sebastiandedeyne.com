@@ -28,6 +28,14 @@
     margin-bottom: 1.2rem;
 }
 
+.intro__text__link {
+    transition: color .2s var(--transition-curve);
+}
+
+.intro__text__link:hover {
+    color: var(--color-red);
+}
+
 .intro__text:last-of-type {
     margin-bottom: 1.8rem;
 }
