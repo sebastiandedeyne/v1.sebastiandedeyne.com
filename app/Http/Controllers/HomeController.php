@@ -9,6 +9,8 @@ class HomeController extends Controller
 {
     public function __invoke(ContentRepository $contentRepository)
     {
+        abort(500);
+
         $posts = $contentRepository->posts()->groupBy(function ($post) {
             return $post->date->format('Y');
         });
