@@ -14,29 +14,30 @@ const offlineFundamentals = [
 ];
 
 const offlinePage = `
-    <html>
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <meta http-equiv="x-ua-compatible" content="ie=edge">
-            
-            <link rel="stylesheet" type="text/css" href="/css/site.css">
-            <script src="/js/site.js" defer></script>
-        </head>
-        <body>
-            <section class="error">
-                <h1 class="error__title">
-                    You've left the information superhighway
-                </h1>
-                <p class="error__message">
-                    Luckily some pages are available offline.
-                </p>
-                <a href="/" class="button">Home</a>
-                <a href="/about" class="button">About</a>
-                <a href="/open-source" class="button">Open Source</a>
-            </section>
-        </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        
+        <link rel="stylesheet" type="text/css" href="/css/site.css">
+        <script src="/js/site.js" defer></script>
+    </head>
+    <body>
+        <section class="error">
+            <h1 class="error__title">
+                You've left the information superhighway
+            </h1>
+            <p class="error__message">
+                Luckily some pages are available offline.
+            </p>
+            <a href="/" class="button">Home</a>
+            <a href="/about" class="button">About</a>
+            <a href="/open-source" class="button">Open Source</a>
+        </section>
+    </body>
+</html>
 `;
 
 const noop = () => {};
