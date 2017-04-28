@@ -1,4 +1,4 @@
-RELEASE_DIR := shell echo `pwd`/releases/`date +%Y-%m-%d-%H%M%S`
+RELEASE_DIR := $(shell echo `pwd`/releases/`date +%Y-%m-%d-%H%M%S`)
 BRANCH ?= "master"
 
 deploy:
@@ -28,5 +28,5 @@ deploy:
 		php artisan route:cache
 
 	# Bless
-	rm -f $(RELEASE_DIR)/../current
+	rm -f current
 	ln -s $(RELEASE_DIR) current
