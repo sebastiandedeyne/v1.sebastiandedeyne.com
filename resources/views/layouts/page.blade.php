@@ -20,7 +20,7 @@
         <link href="https://fonts.googleapis.com/css?family=Alegreya|Source+Sans+Pro:600"   rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/css/site.css">
 
-        <script src="/js/app.js" defer></script>
+        <script src="/js/site.js" defer></script>
 
         @stack('head')
     </head>

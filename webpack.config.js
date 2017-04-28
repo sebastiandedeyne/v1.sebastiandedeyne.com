@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
     entry: {
         'css/site': './resources/assets/css/site.css',
-        'js/app': './resources/assets/js/app.js',
+        'js/site': './resources/assets/js/site.js',
     },
     output: {
         path: path.resolve(__dirname, 'public'),
@@ -12,6 +12,11 @@ module.exports = {
     },
     module: {
         loaders: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+            },
             {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract(['css-loader', 'postcss-loader']),
