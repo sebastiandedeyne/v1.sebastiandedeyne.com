@@ -1,36 +1,32 @@
-RELEASE_DIR := $(shell echo `pwd`/releases/`date +%Y-%m-%d-%H%M%S`)
+RELEASE_DIR := shell echo `pwd`/releases/`date +%Y-%m-%d-%H%M%S`
+BRANCH ?= "master"
 
 deploy:
-	@echo "Deploying new release: RELEASE_DIR"
-	@$(MAKE) checkout
-	@$(MAKE) composer
-	@$(MAKE) yarn
-	@$(MAKE) optimize
-	@$(MAKE) bless
+	@echo "Deploying new release: $(RELEASE_DIR)"
 
-checkout:
+ 	# Clone & checkout
 	mkdir -p releases
-	git clone git@github.com:sebastiandedeyne/sebastiandedeyne.com.git RELEASE_DIR
+	git clone -b $(BRANCH) git@github.com:sebastiandedeyne/sebastiandedeyne.com.git $(RELEASE_DIR)
 
-composer:
-	cd RELEASE_DIR && \
+	# Composer
+	cd $(RELEASE_DIR) && \
 		composer install --no-interaction --prefer-dist
 
-yarn:
-	cd RELEASE_DIR && \
+	# Yarn
+	cd $(RELEASE_DIR) && \
 		yarn && \
 		yarn run build
 
-test:
-	cd RELEASE_DIR && \
+	# Test
+	cd $(RELEASE_DIR) && \
 		./vendor/bin/phpunit
 
-optimize:
-	cd RELEASE_DIR && \
+	# Optimize
+	cd $(RELEASE_DIR) && \
 		php artisan optimize && \
 		php artisan config:cache && \
 		php artisan route:cache
 
-bless:
-	rm -f RELEASE_DIR/../current
-	ln -s RELEASE_DIR current
+	# Bless
+	rm -f $(RELEASE_DIR)/../current
+	ln -s $(RELEASE_DIR) current
