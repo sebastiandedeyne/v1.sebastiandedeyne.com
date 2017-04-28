@@ -14,12 +14,16 @@ checkout:
 
 composer:
 	cd RELEASE_DIR && \
-		composer install --no-interaction --no-dev --prefer-dist
+		composer install --no-interaction --prefer-dist
 
 yarn:
 	cd RELEASE_DIR && \
 		yarn && \
 		yarn run build
+
+test:
+	cd RELEASE_DIR && \
+		./vendor/bin/phpunit
 
 optimize:
 	cd RELEASE_DIR && \
