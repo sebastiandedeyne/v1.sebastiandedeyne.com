@@ -15,7 +15,7 @@ deploy:
 	# Yarn
 	cd $(RELEASE_DIR) && \
 		yarn && \
-		yarn run build
+		yarn build
 
 	# Test
 	cd $(RELEASE_DIR) && \

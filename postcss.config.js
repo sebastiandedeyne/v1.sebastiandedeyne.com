@@ -3,6 +3,8 @@ module.exports = {
         require('postcss-easy-import')({
             glob: true,
         }),
-        require('postcss-cssnext')(),
+        require('postcss-cssnext')({
+            browsers: 'last 2 versions',
+        }),
     ],
 };
