@@ -19,7 +19,7 @@ deploy:
 
 	# Test
 	cd $(RELEASE_DIR) && \
-		./vendor/bin/phpunit
+		./vendor/bin/phpunit --testsuite "Smoke Tests"
 
 	# Optimize
 	cd $(RELEASE_DIR) && \
