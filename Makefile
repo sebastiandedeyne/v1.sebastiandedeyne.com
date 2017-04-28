@@ -15,7 +15,7 @@ deploy:
 	# Yarn
 	cd $(RELEASE_DIR) && \
 		yarn && \
-		yarn run build
+		yarn build
 
 	# Test
 	cd $(RELEASE_DIR) && \
@@ -23,6 +23,8 @@ deploy:
 
 	# Optimize
 	cd $(RELEASE_DIR) && \
+		php artisan cache:clear && \
+		php artisan responsecache:clear && \
 		php artisan optimize && \
 		php artisan config:cache && \
 		php artisan route:cache
