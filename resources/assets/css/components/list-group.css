@@ -6,3 +6,8 @@
     color: var(--color-text--light);
     font-size: .8rem;
 }
+
+.list-group__title,
+.list-group__item {
+    margin-bottom: .33rem;
+}
