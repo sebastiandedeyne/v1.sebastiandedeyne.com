@@ -2,7 +2,7 @@
 
 🔗 https://sebastiandedeyne.com
 
-My personal website! I'm open sourcing it because I don't see any reason not to.
+I'm open sourcing this because I don't see any reason not to.
 
 ## Specs & Features
 
