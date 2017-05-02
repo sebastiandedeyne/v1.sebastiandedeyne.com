@@ -32,3 +32,4 @@ deploy:
 	# Bless
 	rm -f current
 	ln -s $(RELEASE_DIR) current
+	sudo service php7.1-fpm restart
