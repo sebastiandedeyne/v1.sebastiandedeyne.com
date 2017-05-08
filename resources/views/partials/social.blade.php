@@ -1,7 +1,7 @@
 @foreach([
-    ['Twitter', 'twitter', 'https://twitter.com/sebdedeyne'],
-    ['GitHub', 'github', 'https://github.com/sebastiandedeyne'],
-    ['E-mail', 'email', 'mailto:sebastiandedeyne@gmail.com'],
+    ['@sebdedeyne', 'twitter', 'https://twitter.com/sebdedeyne'],
+    ['@sebastiandedeyne', 'github', 'https://github.com/sebastiandedeyne'],
+    ['sebastiandedeyne@gmail.com', 'email', 'mailto:sebastiandedeyne@gmail.com'],
 ] as [$name, $icon, $url])
     <a class="button -faded" href="{{ $url }}" target="sebdd">
         <span class="button__icon">

@@ -1,6 +1,6 @@
 .intro {
     padding-top: 1.8rem;
-    padding-bottom: 2.4rem;
+    padding-bottom: .6rem;
     margin-bottom: 2.4rem;
     position: relative;
 }
@@ -57,5 +57,10 @@
 }
 
 .intro__buttons {
+    margin-bottom: .95rem;
     font-size: .9rem;
+}
+
+.intro__buttons .button {
+    margin-bottom: .85rem;
 }

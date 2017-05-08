@@ -1,33 +1,29 @@
 @component('layouts.page')
     <div class="container">
-        <div class="row">
-            <div class="column -two-thirds">
-                <section class="intro">
-                    <a href="{{ url('/') }}" class="intro__logotype logotype"></a>
-                    <h1 class="intro__title">
-                        Sebastian De Deyne
-                    </h1>
-                    <p class="intro__text">
-                        I'm a web developer from Ghent working at <a href="https://spatie.be" target="sebdd" class="intro__text__link">Spatie</a> in Antwerp, Belgium.
-                    </p>
-                    <section class="intro__nav">
-                        <nav class="nav">
-                            <ul>
-                                <li class="nav__item">
-                                    <a class="nav__item__contents" href="{{ url('about') }}">About</a>
-                                </li>
-                                <li class="nav__item">
-                                    <a class="nav__item__contents" href="{{ url('open-source') }}">Open Source</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </section>
-                    <section class="intro__buttons">
-                        @include('partials.social')
-                    </section>
-                </section>
-            </div>
-        </div>
+        <section class="intro">
+            <a href="{{ url('/') }}" class="intro__logotype logotype"></a>
+            <h1 class="intro__title">
+                Sebastian De Deyne
+            </h1>
+            <p class="intro__text h-width-two-thirds">
+                I'm a web developer from Ghent working at <a href="https://spatie.be" target="sebdd" class="intro__text__link">Spatie</a> in Antwerp, Belgium.
+            </p>
+            <section class="intro__nav">
+                <nav class="nav">
+                    <ul>
+                        <li class="nav__item">
+                            <a class="nav__item__contents" href="{{ url('about') }}">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__item__contents" href="{{ url('open-source') }}">Open Source</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="intro__buttons">
+                @include('partials.social')
+            </section>
+        </section>
         <section class="article-list">
             <h2 class="article-list__title">Articles</h2>
             @foreach($posts as $year => $posts)

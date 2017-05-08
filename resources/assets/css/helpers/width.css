@@ -1,0 +1,7 @@
+.h-width-one-third {
+    width: calc(100% / 3) !important;
+}
+
+.h-width-two-thirds {
+    width: calc(100% / 3 * 2) !important;
+}

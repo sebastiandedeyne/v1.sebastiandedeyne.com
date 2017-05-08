@@ -12,17 +12,19 @@
                     <p class="intro__text">
                         A selection of my favorite open source projects I've authored or actively contributed to.
                     </p>
-                    <nav class="nav">
-                        <ul>
-                            <li class="nav__item">
-                                <a
-                                    href="https://github.com/sebastiandedeyne"
-                                    target="sebdd"
-                                    class="nav__item__contents"
-                                >More on GitHub</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <section class="intro__nav">
+                        <nav class="nav">
+                            <ul>
+                                <li class="nav__item">
+                                    <a
+                                        href="https://github.com/sebastiandedeyne"
+                                        target="sebdd"
+                                        class="nav__item__contents"
+                                    >More on GitHub</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </section>
                 </section>
             </div>
         </div>
