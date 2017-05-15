@@ -8,6 +8,7 @@ hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascri
 hljs.registerLanguage('json', require('highlight.js/lib/languages/json'));
 hljs.registerLanguage('nginx', require('highlight.js/lib/languages/nginx'));
 hljs.registerLanguage('php', require('highlight.js/lib/languages/php'));
+hljs.registerLanguage('go', require('highlight.js/lib/languages/go'));
 hljs.registerLanguage('sql', require('highlight.js/lib/languages/sql'));
 hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'));
 

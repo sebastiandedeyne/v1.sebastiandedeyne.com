@@ -76,6 +76,7 @@
 .article__body code {
     font-size: .9em;
     font-family: var(--font-mono);
+    font-style: normal !important;
     background: var(--color-gray--light);
     padding: 0 .2em;
 }
