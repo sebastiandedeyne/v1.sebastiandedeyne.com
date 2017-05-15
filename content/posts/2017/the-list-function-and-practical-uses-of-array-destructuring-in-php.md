@@ -146,8 +146,10 @@ $produce = [
 Using the index to access the values requires us to reason about the array contents on every statement. Though process: *"This is `$item[0]`, which means is the first item in the array. Next is `$item[1]`, which means it's the second item, etc."*
 
 ```php
+$mappedProduce = [];
+
 foreach ($produce as $produce) {
-    return [
+    $mappedProduce[] = [
         'id' => $produce[0],
         'name' => $produce[1],
         'type' => $produce[2],
@@ -158,8 +160,10 @@ foreach ($produce as $produce) {
 By destructuring, we can immediately assign the values to a variable, making the contents of the loop clearer. Thought process: *"I have an array containing entries that have an id, a name and a type."*
 
 ```php
+$mappedProduce = [];
+
 foreach ($produce as [$id, $name, $type]) {
-    return [
+    $mappedProduce[] = [
         'id' => $id,
         'name' => $name,
         'type' => $type,
@@ -170,8 +174,10 @@ foreach ($produce as [$id, $name, $type]) {
 Bonus snippet: we could use compact to create the array with a single statement *(although I don't like compact because it's just as ugly as `list()`)*.
 
 ```php
+$mappedProduce = [];
+
 foreach ($produce as [$id, $name, $type]) {
-    return compact('id', 'name', 'type');
+    $mappedProduce[] = compact('id', 'name', 'type');
 }
 ```
 
