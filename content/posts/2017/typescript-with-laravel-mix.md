@@ -3,16 +3,16 @@ title: TypeScript With Laravel Mix
 date: 16/05/2017
 era: Laravel 5.4
 
-description: 
+description: In a recent Spatie project we decided to give TypeScript a shot for the business critical part of a new application. TypeScript provides static analysis to reduce the chance of introducing bugs, to have self-documenting code, and to improve our tooling (autocompletion!)
 ---
 
-In a recent [Spatie](https://spatie.be) project we decided to try [TypeScript](https://typescriptlang.org) for the business critical part of a new application. TypeScript gives static analysis to reduce the chance of introducing bugs and to provide our code with better documentation and tooling (autocompletion!)
+In a recent [Spatie](https://spatie.be) project we decided to give [TypeScript](https://typescriptlang.org) a shot for the business critical part of a new application. TypeScript provides static analysis to reduce the chance of introducing bugs, to have self-documenting code, and to improve our tooling (autocompletion!)
 
-*I've created an [example repository on GitHub](https://github.com/sebastiandedeyne/laravel-mix-typescript-example). The readme contains a concise step-by-step checklist for adding TypeScript support to Laravel Mix if you prefer a quick reference over this guide.*
+We've been happily using [Laravel Mix](https://laravel.com/docs/5.4/mix) since it's release with Laravel 5.4. Luckily, extending Mix isn't too hard with some webpack knowledge. One of my favorite features of webpack is the ability to import a module in your application without caring about what kind of file it actually is. As long as you've configured an appropriate loader, you could import anything from a plain old JavaScript file to an animated gif. This means that if we want to support TypeScript with Laravel Mix, we don't need to change any configuration, we only need to add the ability to bundle TypeScript files.
+
+*I've created an [example repository on GitHub](https://github.com/sebastiandedeyne/laravel-mix-typescript-example). The readme contains a concise [step-by-step checklist](https://github.com/sebastiandedeyne/laravel-mix-typescript-example#adding-typescript-support-to-laravel-mix) for adding TypeScript support to Laravel Mix if you prefer a quick reference over a more detailed guide.*
 
 *This post assumes you know the basic concepts Laravel Mix, you know the basic concepts of webpack, and that you're using a somewhat standard Laravel 5.4 installation.*
-
-We've been happily using Laravel Mix since it's release with Laravel 5.4. Luckily, extending mix isn't too hard with some webpack knowledge. One of my favorite features of webpack is the ability to import a file in your application without caring about which type it actually is. As long as you've configured an appropriate loader, you could import anything from a plain old JavaScript file to an animated gif. This means that if we want to support TypeScript with Laravel Mix, we don't need to change any configuration, we need to add the ability to bundle TypeScript files.
 
 Adding TypeScript support is pretty straight forward and is done in three steps: install the necessary dependencies, configure TypeScript, and finally configure Laravel Mix.
 
@@ -122,7 +122,7 @@ export function helloWorld(): string {
 }
 ```
 
-We can require the TypeScript hello world file in our `app.js` file without needing to specify the extension, since we added it to webpack's `resolve.extensions` option.
+We can require the `hello-world.ts` file in our `app.js` file without needing to specify the extension, since we added it to webpack's `resolve.extensions` option.
 
 ```js
 const helloWorld = require('./hello-world').helloWorld();
@@ -132,4 +132,4 @@ console.log(helloWorld);
 
 When we open our browser, `Hello world!` appears in the console. Success!
 
-That's it! I've created an [example repository on GitHub](https://github.com/sebastiandedeyne/laravel-mix-typescript-example). The readme contains a concise step-by-step checklist for adding TypeScript support to Laravel Mix if you prefer a quick reference over this guide.
+That's it! I've created an [example repository on GitHub](https://github.com/sebastiandedeyne/laravel-mix-typescript-example). The readme contains a concise [step-by-step checklist](https://github.com/sebastiandedeyne/laravel-mix-typescript-example#adding-typescript-support-to-laravel-mix) for adding TypeScript support to Laravel Mix if you prefer a quick reference over a more detailed guide.
