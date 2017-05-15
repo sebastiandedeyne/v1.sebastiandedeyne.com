@@ -62,7 +62,7 @@ $person = [
 
 list('job' => $job) = $person;
 
-echo $person; // "Developer"
+echo $job; // "Developer"
 ```
 
 Fun fact: since `list()` is an assignment operator, you could also assign things in arrays. Not saying this is particularly useful, but it's possible!
