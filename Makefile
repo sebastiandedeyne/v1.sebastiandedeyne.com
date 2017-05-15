@@ -32,5 +32,5 @@ deploy:
 	# Bless
 	rm -f current
 	ln -s $(RELEASE_DIR) current
-	ln -s ./.env current/.env
+	ln -s $(RELEASE_DIR)/../../.env $(RELEASE_DIR)/.env
 	sudo service php7.1-fpm restart
