@@ -28,9 +28,11 @@
                 </section>
             </div>
         </div>
+    </div>
+    <div class="container -wide">
         <div class="row">
             @foreach($projects as $project)
-                <div class="column -half">
+                <div class="column -third">
                     <a href="{{ $project->url }}" target="sebdd" class="card">
                         <h2 class="card__title">
                             <span class="card__title__icon">
@@ -43,6 +45,8 @@
                 </div>
             @endforeach
         </div>
+    </div>
+    <div class="container">
         @include('partials.footer')
     </div>
 @endcomponent
