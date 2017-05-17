@@ -132,4 +132,33 @@ console.log(helloWorld);
 
 When we open our browser, `Hello world!` appears in the console. Success!
 
+## Bonus Step: Configure Mix to Use TypeScript in Vue Components
+
+If we want TypeScript to compile `script` contents in Vue components too, we need to tell `ts-loader` to deal with `.vue` files too. There's a special option for that: `appendTsSuffixTo`. Here's what our new loader configuration looks like:
+
+```js
+{
+    test: /\.tsx?$/,
+    loader: 'ts-loader',
+    options: { appendTsSuffixTo: [/\.vue$/] },
+    exclude: /node_modules/,
+}
+```
+
+Now we can use TypeScript in our components, as long as we specify the language in the `script` tags.
+
+```html
+<template>
+    <div></div>
+</template>
+
+<script lang="ts">
+    export default {
+        mounted(): void {
+            console.log('Component mounted.');
+        },
+    }
+</script>
+```
+
 That's it! I've created an [example repository on GitHub](https://github.com/sebastiandedeyne/laravel-mix-typescript-example). The readme contains a concise [step-by-step checklist](https://github.com/sebastiandedeyne/laravel-mix-typescript-example#adding-typescript-support-to-laravel-mix) for adding TypeScript support to Laravel Mix if you prefer a quick reference over a more detailed guide.
