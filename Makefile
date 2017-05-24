@@ -34,3 +34,6 @@ deploy:
 	ln -s $(RELEASE_DIR) current
 	ln -s $(RELEASE_DIR)/../../.env $(RELEASE_DIR)/.env
 	sudo service php7.1-fpm restart
+
+	# Cleanup
+	ls -dt releases/* | tail -n +3 | xargs -d "\n" rm -rf;
