@@ -155,7 +155,7 @@ If you're interested in a detailed explanation on writing custom drivers, they h
 
 ## Road To v1.0
 
-There are a some tidbits that require polishing before releasing a first major version.
+<strike>There are a some tidbits that require polishing before releasing a first major version.</strike> We've decided to tag v1.0 already since we're using this package without issues in a fex projects already. The missing features can be added in a a later release.
 
 ### Cleaning Up Unused Snapshots ([#17](https://github.com/spatie/phpunit-snapshot-assertions/issues/17))
 
