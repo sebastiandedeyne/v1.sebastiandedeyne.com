@@ -9,7 +9,7 @@
                     <h1 class="intro__title">
                         Open Source
                     </h1>
-                    <p class="intro__text">
+                    <p class="intro__text h-width-two-thirds">
                         A selection of my favorite open source projects I've authored or actively contributed to.
                     </p>
                     <section class="intro__nav">
