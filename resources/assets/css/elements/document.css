@@ -13,5 +13,5 @@ html {
 
 ::selection {
     color: white;
-    background-color: var(--color-red);
+    background-color: var(--red);
 }

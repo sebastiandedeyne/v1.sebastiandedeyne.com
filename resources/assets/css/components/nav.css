@@ -13,11 +13,16 @@
     width: 4px;
     height: 4px;
     border-radius: 4px;
-    background-color: var(--color-gray--light);
+    background-color: var(--light-gray);
 }
 
 .nav__item:last-child:after {
     display: none;
+}
+
+.nav__item__contents {
+    color: inherit;
+    text-decoration: none;
 }
 
 .nav__item__contents:after {
@@ -29,7 +34,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: var(--color-gray--light);
+    background-color: var(--light-gray);
     transform-origin: left center;
     transform: scaleX(0);
     transition: transform .2s ease-out;

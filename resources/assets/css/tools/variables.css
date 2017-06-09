@@ -1,26 +1,32 @@
 :root {
-    --font-size: 17px;
-    --baseline: 1.55;
+    --typographic-scale: 1.5;
+    --font-size: 18px;
+    --font-size-l: 27px;
+    --font-size-xl: 40px;
+    --font-size-s: 14px;
+    --baseline: 32px;
+    --double-baseline: calc(var(--baseline) * 2);
+    --triple-baseline: calc(var(--baseline) * 3);
+    --half-baseline: calc(var(--baseline) * .5);
+    --quarter-baseline: calc(var(--baseline) * .25);
+    --one-and-a-half-baseline: calc(var(--baseline) * 1.5);
+    --dot-seventy-five-baseline: calc(var(--baseline) * .75);
 
-    --baseline-space: calc(var(--font-size) * var(--baseline));
+    --body-background: #fdfbfb;
+    --red: #df6d6d;
+    --text-color: #555;
+    --light-text-color: #a5a5a5;
+    --dark-text-color: #444;
+    --light-gray: #e8e8e8;
 
-    --color-body: #fdfbfb;
-    --color-red: #df6d6d;
-    --color-text: #555;
-    --color-text--light: #a5a5a5;
-    --color-text--dark: #444;
-    --color-gray--light: #e8e8e8;
+    --body-font: 'Fira Sans', system, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    --header-font: 'Alegreya', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    --mono-font: 'Source Code Pro', 'Lucida Console', 'Lucida Sans Typewriter', monospace;
 
-    --font-default: system, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    --font-alegreya: 'Alegreya', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    --font-source-sans-pro: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    --font-mono: 'Source Code Pro', 'Lucida Console', 'Lucida Sans Typewriter', monospace;
+    --grid-container: 760px;
+    --wide-grid-container: 1200px;
 
-    --grid-container: 800px;
-    --grid-container--narrow: 696px;
-    --grid-container--wide: 1200px;
-
-    --grid-gutter: 30px;
+    --grid-gutter: var(--baseline);
 
     --transition-curve: cubic-bezier(0, 0, 0, 1);
 }

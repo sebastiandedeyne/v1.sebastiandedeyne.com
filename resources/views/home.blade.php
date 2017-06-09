@@ -34,7 +34,7 @@
                     <ul>
                         @foreach($posts as $post)
                             <li class="list-group__item">
-                                <a href="{{ $post->url }}">
+                                <a class="list-group__link" href="{{ $post->url }}">
                                     {{ $post->title }}
                                 </a>
                             </li>

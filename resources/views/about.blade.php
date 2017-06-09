@@ -8,7 +8,10 @@
                 About
             </h1>
             <p class="intro__text -small">
-                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd" class="intro__text__link">Spatie</a> in Antwerp, where I mainly build stuff with PHP (Laravel) and JavaScript (Vue.js & React). In my spare time I like to tinker on open source side projects, play around with other languages like Elixir and Go, and improve my cooking skills.
+                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd" class="intro__text__link">Spatie</a> in Antwerp, where I mainly build stuff with PHP (Laravel) and JavaScript (Vue.js & React).
+            </p>
+            <p class="intro__text -small">
+                In my spare time I like to tinker on open source side projects, play around with other languages like Elixir and Go, and improve my cooking skills.
             </p>
             <section class="intro__buttons">
                 @include('partials.social')

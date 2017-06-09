@@ -3,22 +3,24 @@
 
     display: block;
     position: relative;
-    height: calc(100% - 1.4rem);
-    padding: 1rem 1.4rem 1.4rem;
+    height: calc(100% - var(--grid-gutter));
+    padding: var(--half-baseline) 1.4rem var(--half-baseline);
+    text-decoration: none;
+    color: inherit;
     margin-bottom: var(--grid-gutter);
     transition: all .2s ease-out;
 }
 
 .card:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .07);
-    border-color: color(var(--color-gray--light) shade(5%));
+    border-color: color(var(--light-gray) shade(5%));
 }
 
 .card:focus {
     outline: none;
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, .07);
-    border-color: color(var(--color-gray--light) shade(5%));
+    border-color: color(var(--light-gray) shade(5%));
 }
 
 .card__title {
@@ -31,4 +33,9 @@
 .card__title__icon {
     margin-right: .6rem;
     line-height: 0; /* Required to vertically align the icon and the title */
+}
+
+.card__text {
+    font-size: var(--font-size-s);
+    line-height: var(--dot-seventy-five-baseline);
 }
