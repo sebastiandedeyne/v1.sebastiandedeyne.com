@@ -46,12 +46,6 @@
     text-decoration: underline;
 }
 
-@media (--medium) {
-    .intro__text {
-        font-size: var(--font-size);
-    }
-}
-
 .intro__nav {
     margin-bottom: var(--baseline);
 }

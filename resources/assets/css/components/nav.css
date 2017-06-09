@@ -43,3 +43,7 @@
 .nav__item__contents:hover:after {
     transform: scaleX(1);
 }
+
+html.touch .nav__item__contents:hover:after {
+    transform: scaleX(0);
+}
