@@ -25,25 +25,24 @@
                             Published on {{ $article->date->format('j F Y') }} by Sebastian De Deyne
                         @endif
                         @if($article->era)
-                            — <em>{{ $article->era }}</em>
+                            <br>Written for {{ $article->era }}
                         @endif
                     </aside>
                 @endif
             </div>
         </header>
         <section class="article__body">
-            <div class="container container--narrow">
+            <div class="container">
                 {!! $article->contents !!}
             </div>
         </section>
         <footer class="article__footer">
             <div class="container container--narrow">
-                <p class="article__footer__p">© {{ carbon()->format('Y') }} <a class="article__footer__link" href="{{ url('about') }}">Sebastian De Deyne</a> 【ツ】</p>
+                <p class="article__footer__p">© {{ carbon()->format('Y') }} <a class="article__footer__link" href="{{ url('about') }}">Sebastian De Deyne</a></p>
                 <p class="article__footer__p">
                     I'm a web developer from Ghent working at <a class="article__footer__link" href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, Belgium.
-                </p>
-                <p class="article__footer__p">
-                    If you've got any comments, feedback or just want to chat you can get in touch on <a class="article__footer__link" href="https://twitter.com/sebdedeyne" target="sebdd">Twitter</a> or via <a class="article__footer__link" href="mailto:sebastiandedeyne@gmail.com">e-mail</a>. If you catch a mistake or notice something that could be improved, feel free to <a class="article__footer__link" target="sebdd" href="https://github.com/sebastiandedeyne/sebastiandedeyne.com/edit/{{ is_staging() ? 'dev' : 'master' }}/content/{{ $article->slug }}.md">send a PR on GitHub</a>.
+                    <br>
+                    If you've got any comments, feedback or just want to chat you can get in touch on <a class="article__footer__link" href="https://twitter.com/sebdedeyne" target="sebdd">Twitter</a> or via <a class="article__footer__link" href="mailto:sebastiandedeyne@gmail.com">e-mail</a>. If you catch a mistake or notice something that could be improved, feel free to <a class="article__footer__link" target="sebdd" href="https://github.com/sebastiandedeyne/sebastiandedeyne.com/edit/{{ is_staging() ? 'dev' : 'master' }}/content/{{ $article->slug }}.md">edit this article on GitHub</a>.
                 </p>
             </div>
         </footer>

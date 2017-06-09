@@ -7,12 +7,8 @@
     padding-right: var(--grid-gutter);
 }
 
-.container.-narrow {
-    max-width: var(--grid-container--narrow);
-}
-
 .container.-wide {
-    max-width: var(--grid-container--wide);
+    max-width: var(--wide-grid-container);
 }
 
 .row {
@@ -31,14 +27,20 @@
     width: calc(50% - var(--grid-gutter));
 }
 
+@media (--medium) {
+    .column.-half { width: 100%; }
+}
+
 .column.-third {
     width: calc(33.33% - var(--grid-gutter));
 }
 
-@media (--large) {
-    .column.-third {
-        width: calc(50% - var(--grid-gutter));
-    }
+@media (--medium) {
+    .column.-third { width: calc(50% - var(--grid-gutter)); }
+}
+
+@media (--small) {
+    .column.-third { width: 100%; }
 }
 
 .column.-two-thirds {
@@ -46,10 +48,7 @@
 }
 
 @media (--medium) {
-    .column {
-        /* We need to override the grid modifiers' specificity */
-        width: 100% !important;
-    }
+    .column.-two-thirds { width: 100%; }
 }
 
 @media (--small) {

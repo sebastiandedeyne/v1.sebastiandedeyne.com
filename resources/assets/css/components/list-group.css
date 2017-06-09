@@ -1,13 +1,18 @@
 .list-group {
-    margin-bottom: 1.8rem;
+    margin-bottom: var(--baseline);
 }
 
 .list-group__title {
-    color: var(--color-text--light);
-    font-size: .8rem;
+    color: var(--light-text-color);
+    font-size: var(--font-size-s);
 }
 
 .list-group__title,
 .list-group__item {
-    margin-bottom: .33rem;
+    margin-bottom: var(--quarter-baseline);
+}
+
+.list-group__link {
+    color: inherit;
+    text-decoration: none;
 }

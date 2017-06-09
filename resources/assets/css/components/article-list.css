@@ -1,10 +1,9 @@
 .article-list {
     position: relative;
-    padding-bottom: 1.8rem;
+    padding-bottom: var(--baseline);
 }
 
 .article-list__title {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    font-weight: 500;
+    margin-bottom: var(--baseline);
 }

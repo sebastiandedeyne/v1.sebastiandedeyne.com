@@ -4,7 +4,7 @@
 }
 
 .error__title {
-    font-family: var(--font-alegreya);
+    font-family: var(--header-font);
     font-size: 3rem;
     margin-bottom: .3rem;
 }

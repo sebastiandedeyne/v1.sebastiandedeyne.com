@@ -1,24 +1,28 @@
 .button {
     display: inline-flex;
+    height: var(--one-and-a-half-baseline);
     align-items: center;
     background-color: white;
     border-radius: 5px;
-    padding: .45em .66em .5em;
-    border: 1px solid var(--color-gray--light);
+    padding: 0 .66em;
+    border: 1px solid var(--light-gray);
     margin-right: .5em;
+    margin-bottom: var(--half-baseline);
+    text-decoration: none;
+    color: inherit;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .05);
     transition: all .2s var(--transition-curve);
 }
 
 .button:hover {
-    border-color: color(var(--color-gray--light) shade(5%));
+    border-color: color(var(--light-gray) shade(5%));
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
 }
 
 .button:focus {
     outline: none;
     transform: translateY(-1px);
-    border-color: color(var(--color-gray--light) shade(5%));
+    border-color: color(var(--light-gray) shade(5%));
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
 }
 

@@ -1,10 +1,10 @@
 -
-  name: spatie/color
+  name: color
   url: https://github.com/spatie/color
   description: A little library to deal with color conversions
   type: php
 -
-  name: spatie/menu
+  name: menu
   url: https://github.com/spatie/menu
   description: Fluent html menu generator for PHP applications
   type: php
@@ -14,27 +14,27 @@
   description: Various contributions to the Laravel framework
   type: laravel
 -
-  name: spatie/laravel-html
+  name: laravel-html
   url: https://github.com/spatie/laravel-html
   description: Fluent alternative to the Laravel Collective package
   type: laravel
 -
-  name: spatie/laravel-menu
+  name: laravel-menu
   url: https://github.com/spatie/laravel-menu
   description: Fluent html menu generator for Laravel applications
   type: laravel
 - 
-  name: spatie/opening-hours
+  name: opening-hours
   url: https://github.com/spatie/opening-hours
   description: Define and query a set of business hours
   type: php
 - 
-  name: spatie/regex
+  name: regex
   url: https://github.com/spatie/regex
   description: A sane interface for php's built in preg functions
   type: php
 -
-  name: spatie/schema-org
+  name: schema-org
   url: https://github.com/spatie/schema-org
   description: Fluent Schema.org json+ld builder that gets generated from the spec
   type: php
@@ -49,12 +49,12 @@
   description: A parser for documents with yaml front matter in Elixir
   type: elixir
 -
-  name: spatie/phpunit-snapshot-assertions
+  name: phpunit-snapshot-assertions
   url: https://github.com/spatie/phpunit-snapshot-assertions
   description: Test without writing actual test cases
   type: php
 -
-  name: spatie/spatie-dom
+  name: spatie-dom
   url: https://github.com/spatie/spatie-dom
   description: A small DOM querying and manipulation library
   type: javascript
