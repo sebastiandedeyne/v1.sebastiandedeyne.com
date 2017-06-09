@@ -1,7 +1,7 @@
 -
-  name: color
-  url: https://github.com/spatie/color
-  description: A little library to deal with color conversions
+  name: email-concealer-cli
+  url: https://github.com/spatie/email-concealer-cli
+  description: CLI tool for concealing e-mails in a file by replacing their domain
   type: php
 -
   name: menu
