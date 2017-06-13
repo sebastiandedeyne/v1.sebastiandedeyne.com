@@ -95,7 +95,9 @@
     padding-right: var(--half-baseline);
     display: block;
     border-radius: 1px;
+    border: 1px solid color(var(--light-gray) blackness(5%));
     background: var(--body-background);
+    box-shadow: 1px 2px 0 #fbf8f8;
 }
 
 .article__body blockquote {
