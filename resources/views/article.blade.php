@@ -42,7 +42,7 @@
                 <p class="article__footer__p">
                     I'm a web developer from Ghent working at <a class="article__footer__link" href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, Belgium.
                     <br>
-                    If you've got any comments, feedback or just want to chat you can get in touch on <a class="article__footer__link" href="https://twitter.com/sebdedeyne" target="sebdd">Twitter</a> or via <a class="article__footer__link" href="mailto:sebastiandedeyne@gmail.com">e-mail</a>. If you catch a mistake or notice something that could be improved, feel free to <a class="article__footer__link" target="sebdd" href="https://github.com/sebastiandedeyne/sebastiandedeyne.com/edit/{{ is_staging() ? 'dev' : 'master' }}/content/{{ $article->slug }}.md">edit this article on GitHub</a>.
+                    If you've got any comments, feedback or just want to chat you can get in touch on <a class="article__footer__link" href="https://twitter.com/sebdedeyne" target="sebdd">Twitter</a> or via <a class="article__footer__link" href="mailto:sebastiandedeyne@gmail.com">e-mail</a>. If you catch a mistake or notice something that could be improved, feel free to <a class="article__footer__link" target="sebdd" href="https://github.com/sebastiandedeyne/sebastiandedeyne.com/edit/{{ config('app.branch') }}/content/{{ $article->slug }}.md">edit this article on GitHub</a>.
                 </p>
             </div>
         </footer>
