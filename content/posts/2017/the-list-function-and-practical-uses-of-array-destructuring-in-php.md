@@ -1,9 +1,9 @@
 ---
 title: The List Function & Practical Uses of Array Destructuring in PHP
-date: 15/05/2017
+date: 2017-05-15
 era: PHP 7.1
 
-description: PHP 7.1 introduced a new syntax for the `list()` function. I've never really seen too much `list()` calls in the wild, but it enables you to write some pretty neat stuff. This post is a primer of `list()` and it's PHP 7.1 short notation, and an overview of some use cases I've been applying them to.
+description: "PHP 7.1 introduced a new syntax for the `list()` function. I've never really seen too much `list()` calls in the wild, but it enables you to write some pretty neat stuff. This post is a primer of `list()` and it's PHP 7.1 short notation, and an overview of some use cases I've been applying them to."
 ---
 
 PHP 7.1 introduced a [new syntax](https://wiki.php.net/rfc/short_list_syntax) for [the `list()` function](http://www.php.net/list). I've never really seen too much `list()` calls in the wild, but it enables you to write some pretty neat stuff.

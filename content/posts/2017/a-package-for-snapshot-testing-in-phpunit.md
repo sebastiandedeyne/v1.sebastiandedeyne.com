@@ -1,6 +1,6 @@
 ---
 title: A Package for Snapshot Testing in PHPUnit
-date: 27/03/2017
+date: 2017-03-27
 era: PHPUnit 5.7+
 canonical_source: Hacker Noon
 canonical_url: https://hackernoon.com/a-package-for-snapshot-testing-in-phpunit-2e4558c07fe3

@@ -80,7 +80,9 @@
     font-size: .9em;
     font-family: var(--mono-font);
     font-style: normal !important;
+    border-radius: 1px;
     background: var(--body-background);
+    border: 1px solid color(var(--light-gray) blackness(5%));
     padding: 0 .2em;
 }
 
@@ -124,6 +126,14 @@
     margin-bottom: var(--double-baseline);
     border: none;
     border-bottom: 1px solid var(--light-gray);
+}
+
+.article__body aside {
+    font-size: var(--font-size-s);
+    line-height: var(--dot-seventy-five-baseline);
+    font-style: italic;
+    color: var(--light-text-color);
+    margin-bottom: var(--baseline);
 }
 
 .article__footer {

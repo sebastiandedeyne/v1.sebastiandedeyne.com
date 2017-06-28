@@ -1,6 +1,6 @@
 ---
 title: Normalize Your Values on Input
-date: 09/03/2016
+date: 2016-03-09
 era: PHP 7.0
 
 description: "Dynamic languages allow us to pass anything as a parameter without requiring a specific type. In turn, this means we often need to handle some extra validation for the data that comes in to our objects. This is a lightweight post on handling your incoming values effectively by normalizing them as soon as possible. It's a simple guideline worth keeping in mind which will help you keep your code easier to reason about."

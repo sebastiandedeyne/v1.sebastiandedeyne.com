@@ -30,7 +30,9 @@ class Article
         $article->contents = markdown($document->body());
         $article->description = $document->matter('description', '');
 
-        $article->date = Carbon::createFromFormat('d/m/Y', $document->matter('date', '01/02/1992'));
+        $article->date = $document->matter('date') ?
+            Carbon::createFromTimestamp($document->matter('date')) :
+            Carbon::parse('1992-02-01');
 
         $article->era = $document->matter('era', '');
         $article->canonical_source = $document->matter('canonical_source', '');

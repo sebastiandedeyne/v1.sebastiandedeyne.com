@@ -1,7 +1,6 @@
 ---
 title: Automatically Running PHPUnit With Watchman
-
-date: 12/04/2017
+date: 2017-04-12
 canonical_source: Hacker Noon
 canonical_url: https://hackernoon.com/automatically-running-phpunit-with-watchman-e02757e733e7
 
@@ -104,5 +103,7 @@ function pw {
         -t "$args" 
 }
 ```
+
+---
 
 *This post builds further on *[a Coffee and Code article](http://blog.coffeeandcode.com/running-tests-automatically-with-watchman/)* by Jonathan Knapp.*

@@ -1,9 +1,9 @@
 ---
 title: Dealing With Templates in Vue.js 2.0
-date: 21/12/2016
+date: 2016-12-21
 era: Vue 2.0
 
-description: 'Vue 2.0 introduced it''s own virtual DOM implementation. At first sight, this doesn''t seem to have a large effect on the way you write templates. This article isn''t about Vue''s template syntax, but about where and how to define your templates. I wrote this because at the time of writing there aren''t really resources that consolidate all the different manners to manage your templates.'
+description: "Vue 2.0 introduced it's own virtual DOM implementation. At first sight, this doesn't seem to have a large effect on the way you write templates. This article isn't about Vue's template syntax, but about where and how to define your templates. I wrote this because at the time of writing there aren't really resources that consolidate all the different manners to manage your templates."
 ---
 
 Vue 2.0 introduced it's own virtual DOM implementation. At first sight, this doesn't seem to have a large effect on the way you write templates. From the docs:

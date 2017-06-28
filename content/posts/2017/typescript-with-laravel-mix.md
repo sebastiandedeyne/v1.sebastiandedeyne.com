@@ -1,9 +1,9 @@
 ---
 title: TypeScript With Laravel Mix
-date: 16/05/2017
+date: 2017-05-16
 era: Laravel 5.4
 
-description: In a recent Spatie project we decided to give TypeScript a shot for the business critical part of a new application. TypeScript provides static analysis to reduce the chance of introducing bugs, to have self-documenting code, and to improve our tooling (autocompletion!)
+description: "In a recent Spatie project we decided to give TypeScript a shot for the business critical part of a new application. TypeScript provides static analysis to reduce the chance of introducing bugs, to have self-documenting code, and to improve our tooling (autocompletion!)"
 ---
 
 In a recent [Spatie](https://spatie.be) project we decided to give [TypeScript](https://typescriptlang.org) a shot for the business critical part of a new application. TypeScript provides static analysis to reduce the chance of introducing bugs, to have self-documenting code, and to improve our tooling (autocompletion!)
