@@ -142,7 +142,7 @@
 
 .article__body aside {
     font-size: var(--font-size-s);
-    line-height: var(--dot-seventy-five-baseline);
+    line-height: var(--three-quarter-baseline);
     font-style: italic;
     color: var(--light-text-color);
     margin-bottom: var(--baseline);
@@ -150,7 +150,7 @@
 
 .article__footer {
     font-size: var(--font-size-s);
-    line-height: var(--dot-seventy-five-baseline);
+    line-height: var(--three-quarter-baseline);
     padding-top: var(--one-and-a-half-baseline);
     padding-bottom: var(--one-and-a-half-baseline);
 }
@@ -160,5 +160,5 @@
 }
 
 .article__footer__p {
-    margin-bottom: var(--dot-seventy-five-baseline);
+    margin-bottom: var(--three-quarter-baseline);
 }

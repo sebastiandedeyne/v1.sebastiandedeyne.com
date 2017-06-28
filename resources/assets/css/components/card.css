@@ -32,5 +32,5 @@
 
 .card__text {
     font-size: var(--font-size-s);
-    line-height: var(--dot-seventy-five-baseline);
+    line-height: var(--three-quarter-baseline);
 }

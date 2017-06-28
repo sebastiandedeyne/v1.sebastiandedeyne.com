@@ -9,8 +9,8 @@
     --triple-baseline: calc(var(--baseline) * 3);
     --half-baseline: calc(var(--baseline) * .5);
     --quarter-baseline: calc(var(--baseline) * .25);
+    --three-quarter-baseline: calc(var(--baseline) * .75);
     --one-and-a-half-baseline: calc(var(--baseline) * 1.5);
-    --dot-seventy-five-baseline: calc(var(--baseline) * .75);
 
     --body-background: #fdfbfb;
     --red: #df6d6d;
@@ -28,6 +28,7 @@
 
     --grid-gutter: var(--baseline);
     --half-grid-gutter: calc(var(--grid-gutter) / 2);
+    --quarter-grid-gutter: calc(var(--grid-gutter) / 4);
 
     --transition-curve: cubic-bezier(0, 0, 0, 1);
 }
