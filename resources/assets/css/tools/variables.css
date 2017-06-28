@@ -27,6 +27,7 @@
     --wide-grid-container: 1200px;
 
     --grid-gutter: var(--baseline);
+    --half-grid-gutter: calc(var(--grid-gutter) / 2);
 
     --transition-curve: cubic-bezier(0, 0, 0, 1);
 }

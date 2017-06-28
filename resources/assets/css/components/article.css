@@ -102,6 +102,18 @@
     box-shadow: 1px 2px 0 #fbf8f8;
 }
 
+@media(--small) {
+    .article__body pre code {
+        margin-left: calc(var(--half-grid-gutter) * -1);
+        margin-right: calc(var(--half-grid-gutter) * -1);
+        padding: var(--half-grid-gutter);
+        padding-right: calc(var(--half-grid-gutter) / 2);
+        font-size: .8em;
+        border-left: none;
+        border-right: none;
+    }
+}
+
 .article__body blockquote {
     @apply --pull-out;
     @apply --white-box;
