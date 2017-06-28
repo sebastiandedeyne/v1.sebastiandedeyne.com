@@ -187,9 +187,9 @@ return [
          */
         App\Content\ContentServiceProvider::class,
         App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
+        // App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
+        // App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
         /*
