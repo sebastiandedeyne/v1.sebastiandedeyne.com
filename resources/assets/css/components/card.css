@@ -3,11 +3,10 @@
 
     display: block;
     position: relative;
-    height: calc(100% - var(--grid-gutter));
+    height: 100%;
     padding: var(--half-baseline) 1.4rem var(--half-baseline);
     text-decoration: none;
     color: inherit;
-    margin-bottom: var(--grid-gutter);
     transition: all .2s ease-out;
 }
 

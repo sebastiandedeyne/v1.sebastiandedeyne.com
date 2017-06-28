@@ -32,7 +32,7 @@
     <div class="container -wide">
         <div class="row">
             @foreach($projects as $project)
-                <div class="column -third">
+                <div class="column -third h-margin-bottom">
                     <a href="{{ $project->url }}" target="sebdd" class="card">
                         <h2 class="card__title">
                             <span class="card__title__icon">
