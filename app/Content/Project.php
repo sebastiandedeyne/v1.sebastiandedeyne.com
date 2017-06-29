@@ -4,16 +4,9 @@ namespace App\Content;
 
 class Project
 {
-    public $name;
-    public $url;
-    public $description;
-    public $type;
+    public $name, $url, $description, $type;
 
-    private function __construct()
-    {
-    }
-
-    public static function create(array $data): Project
+    public static function create(array $data): self
     {
         $project = new self();
 

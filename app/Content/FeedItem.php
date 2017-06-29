@@ -6,12 +6,7 @@ use Carbon\Carbon;
 
 class FeedItem implements \Spatie\Feed\FeedItem
 {
-    /** @var string */
-    protected $title, $updated, $summary, $url;
-
-    private function __construct()
-    {
-    }
+    private $title, $updated, $summary, $url;
 
     public static function fromArticle(Article $article)
     {

@@ -18,11 +18,7 @@ class Article
     public $slug;
     public $commentable;
 
-    private function __construct()
-    {
-    }
-
-    public static function create(Document $document, string $slug): Article
+    public static function create(Document $document, string $slug): self
     {
         $article = new self();
 

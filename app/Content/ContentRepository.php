@@ -69,7 +69,7 @@ class ContentRepository
         return $this->posts()->map([FeedItem::class, 'fromArticle']);
     }
 
-    public function projects(): Collection
+    public function openSource(): Collection
     {
         $data = $this->yamlParser->parse(
             $this->read('open-source.yaml')
