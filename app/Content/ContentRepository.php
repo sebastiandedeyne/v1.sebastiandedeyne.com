@@ -44,7 +44,7 @@ class ContentRepository
         );
     }
 
-    public function posts(): Collection
+    public function articles(): Collection
     {
         return collect($this->filesystem->listContents('posts'))
             ->filter(function (array $item) {
@@ -59,44 +59,43 @@ class ContentRepository
 
                 return $this->article($slug);
             })
-            ->sort(function (Article $articleA, Article $articleB) {
-                return $articleA->date->getTimeStamp() < $articleB->date->getTimeStamp();
+            ->sort(function (Article $a, Article $b) {
+                return $a->date->getTimeStamp() < $b->date->getTimeStamp();
             });
-    }
-
-    public function feed(): Collection
-    {
-        return $this->posts()->map([FeedItem::class, 'fromArticle']);
     }
 
     public function openSource(): Collection
     {
-        $data = $this->yamlParser->parse(
-            $this->read('open-source.yaml')
-        );
-        
-        return collect($data)
+        return $this->yaml('open-source.yaml')
             ->map([Project::class, 'create'])
             ->sortBy('name');
     }
 
     public function blogroll(): Collection
     {
-        $data = $this->yamlParser->parse(
-            $this->read('blogroll.yaml')
-        );
-        
-        return collect($data)
+        return $this->yaml('blogroll.yaml')
             ->map([BlogrollLink::class, 'create'])
             ->sortBy('name');
     }
 
-    private function read(string $path): ?string
+    public function feed(): Collection
+    {
+        return $this->articles()->map([FeedItem::class, 'fromArticle']);
+    }
+
+    private function yaml(string $path): Collection
+    {
+        return collect($this->yamlParser->parse(
+            $this->read($path)
+        ));
+    }
+
+    private function read(string $path): string
     {
         try {
             return $this->filesystem->read($path);
         } catch (FileNotFoundException $e) {
-            return null;
+            return '';
         }
     }
 }

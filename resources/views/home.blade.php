@@ -29,16 +29,16 @@
         </section>
         <section class="article-list">
             <h2 class="article-list__title">Articles</h2>
-            @foreach($posts as $year => $posts)
+            @foreach($articles as $year => $articles)
                 <section class="list-group">
                     <h2 class="list-group__title">
                         {{ $year }}
                     </h2>
                     <ul>
-                        @foreach($posts as $post)
+                        @foreach($articles as $article)
                             <li class="list-group__item">
-                                <a class="list-group__link" href="{{ $post->url }}">
-                                    {{ $post->title }}
+                                <a class="list-group__link" href="{{ $article->url }}">
+                                    {{ $article->title }}
                                 </a>
                             </li>
                         @endforeach
