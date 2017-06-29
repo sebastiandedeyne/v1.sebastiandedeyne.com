@@ -19,6 +19,7 @@
 }
 
 .column {
+    width: 100%;
     margin-left: calc(var(--grid-gutter) / 2);
     margin-right: calc(var(--grid-gutter) / 2);
 }

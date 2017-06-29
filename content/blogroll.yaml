@@ -1,0 +1,40 @@
+-
+  name: Freek Van der Herten
+  url: https://murze.be
+  category: PHP
+-
+  name: Adam Wathan
+  url: https://adamwathan.me
+  category: PHP
+-
+  name: Michael Dyrynda
+  url: https://dyrynda.com.au
+  category: PHP
+-
+  name: Mohamed Said
+  url: http://themsaid.com
+  category: PHP
+-
+  name: Sara Soueidan
+  url: https://www.sarasoueidan.com
+  category: CSS & Frontend
+-
+  name: CSS-Tricks
+  url: https://css-tricks.com
+  category: CSS & Frontend
+-
+  name: CSS Wizardry
+  url: https://csswizardry.com
+  category: CSS & Frontend
+-
+  name: David Gilbertson
+  url: https://medium.com/@david.gilbertson
+  category: JavaScript
+-
+  name: André Staltz
+  url: https://staltz.com/blog.html
+  category: JavaScript
+-
+  name: Google
+  url: https://google.com
+  category: Other

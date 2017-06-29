@@ -80,6 +80,17 @@ class ContentRepository
             ->sortBy('name');
     }
 
+    public function blogroll(): Collection
+    {
+        $data = $this->yamlParser->parse(
+            $this->read('blogroll.yaml')
+        );
+        
+        return collect($data)
+            ->map([BlogrollLink::class, 'create'])
+            ->sortBy('name');
+    }
+
     private function read(string $path): ?string
     {
         try {
