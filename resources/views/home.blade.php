@@ -12,13 +12,13 @@
                 <nav class="nav">
                     <ul>
                         <li class="nav__item">
-                            <a class="nav__item__contents" href="{{ url('about') }}">About</a>
+                            <a class="slider-link" href="{{ url('about') }}">About</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__item__contents" href="{{ url('open-source') }}">Open Source</a>
+                            <a class="slider-link" href="{{ url('open-source') }}">Open Source</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__item__contents" href="{{ url('blogroll') }}">Blogroll</a>
+                            <a class="slider-link" href="{{ url('blogroll') }}">Blogroll</a>
                         </li>
                     </ul>
                 </nav>

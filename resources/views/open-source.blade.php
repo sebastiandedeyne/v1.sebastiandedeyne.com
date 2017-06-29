@@ -19,7 +19,7 @@
                                     <a
                                         href="https://github.com/sebastiandedeyne"
                                         target="sebdd"
-                                        class="nav__item__contents"
+                                        class="slider-link"
                                     >More on GitHub</a>
                                 </li>
                             </ul>

@@ -74,7 +74,7 @@ class ContentRepository
     public function blogroll(): Collection
     {
         return $this->yaml('blogroll.yaml')
-            ->map([BlogrollLink::class, 'create'])
+            ->map([BlogrollItem::class, 'create'])
             ->sortBy('name');
     }
 

@@ -1,43 +1,90 @@
+/* Flexbox fallback */
+.blogroll {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blogroll__category {
+    margin-left: var(--half-grid-gutter);
+    margin-right: var(--half-grid-gutter);
+    flex-basis: calc(33.33% - var(--grid-gutter));
+}
+
+@media(--medium) {
+    .blogroll__category {
+        margin-left: 0;
+        margin-right: 0;
+        flex-basis: 100%;
+    }
+}
+
+/* Grid layout */
+
 .blogroll {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: var(--grid-gutter);
     grid-template-areas:
-        "php javascript css_frontend"
-        "php javascript other";
-    margin-bottom: var(--one-and-a-half-baseline);
+        "laravel_php javascript css_frontend"
+        "laravel_php javascript other";
+}
+
+@media(--medium) {
+    .blogroll {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "laravel_php javascript"
+            "css_frontend other";
+    }
+}
+
+@media(--small) {
+    .blogroll {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "laravel_php"
+            "javascript"
+            "css_frontend"
+            "other";
+    }
+}
+
+.blogroll__category {
+    margin-bottom: var(--baseline);
 }
 
 .blogroll__title {
-    color: var(--light-text-color);
-    font-size: var(--font-size-s);
-}
-
-.blogroll__link {
     position: relative;
-    color: inherit;
-    text-decoration: none;
+    color: var(--red);
+    font-size: var(--font-size-s);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: var(--baseline);
 }
 
-.blogroll__link:after {
+.blogroll__title:after {
     content: '';
     position: absolute;
-    display: block;
-    top: 0;
+    bottom: -14px;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    width: 2em;
+    height: 1px;
     background-color: var(--light-gray);
-    transform-origin: left center;
-    transform: scaleX(0);
-    transition: transform .2s ease-out;
 }
 
-.blogroll__link:hover:after {
-    transform: scaleX(1);
+.blogroll__item {
+    margin-bottom: var(--half-baseline);
 }
 
-html.touch .blogroll__link:hover:after {
-    transform: scaleX(0);
+.blogroll__item:last-child {
+    margin-bottom: 0;
+}
+
+.blogroll__item__description {
+    display: block;
+    max-width: 20em;
+    font-style: italic;
+    color: var(--light-text-color);
+    font-size: var(--font-size-s);
+    line-height: var(--three-quarter-baseline);
 }

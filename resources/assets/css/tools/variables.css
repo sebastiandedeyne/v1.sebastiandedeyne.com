@@ -29,6 +29,7 @@
     --grid-gutter: var(--baseline);
     --half-grid-gutter: calc(var(--grid-gutter) / 2);
     --quarter-grid-gutter: calc(var(--grid-gutter) / 4);
+    --double-grid-gutter: calc(var(--grid-gutter) * 2);
 
     --transition-curve: cubic-bezier(0, 0, 0, 1);
 }

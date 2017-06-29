@@ -1,40 +1,70 @@
 -
   name: Freek Van der Herten
+  description: You won't miss a thing about Laravel or PHP
   url: https://murze.be
-  category: PHP
+  category: Laravel & PHP
+-
+  name: Laravel News
+  description: If you've missed something Laravel on Freek's blog, you'll find it here
+  url: https://laravel-news.com
+  category: Laravel & PHP
 -
   name: Adam Wathan
+  description: Lots of Laravel TDD & some one-man business tips
   url: https://adamwathan.me
-  category: PHP
+  category: Laravel & PHP
 -
   name: Michael Dyrynda
+  description: Laravel tidbits from down under
   url: https://dyrynda.com.au
-  category: PHP
+  category: Laravel & PHP
 -
   name: Mohamed Said
+  description: 'Insights from Laravel employee #1'
   url: http://themsaid.com
-  category: PHP
+  category: Laravel & PHP
 -
   name: Sara Soueidan
+  description: Frontend guru focussing on SVG & a11y
   url: https://www.sarasoueidan.com
   category: CSS & Frontend
 -
   name: CSS-Tricks
+  description: The OG CSS knowledge base
   url: https://css-tricks.com
   category: CSS & Frontend
 -
   name: CSS Wizardry
+  description: Valuable insights on CSS architecture & performance
   url: https://csswizardry.com
   category: CSS & Frontend
 -
   name: David Gilbertson
+  description: In-depth articles on modern JS in a playful tone
   url: https://medium.com/@david.gilbertson
   category: JavaScript
 -
   name: André Staltz
+  description: Cycle.js author, lots of interesting posts on functional reactive programming
   url: https://staltz.com/blog.html
   category: JavaScript
 -
-  name: Google
-  url: https://google.com
+  name: Wait But Why
+  description: Longform—like, really long—articles on modern society
+  url: https://waitbutwhy.com/
   category: Other
+-
+  name: Sketchplanations
+  description: I've learned a lot of things I don't necessarily need to know here
+  url: http://www.sketchplanations.com/
+  category: Other
+-
+  name: Matt Stauffer
+  description: Practical Laravel goodies
+  url: https://mattstauffer.co/blog
+  category: Laravel & PHP
+-
+  name: Monica Dinculescu
+  description: Light-hearted articles on JavaScript, HTML standards & emoji
+  url: https://meowni.ca/
+  category: JavaScript

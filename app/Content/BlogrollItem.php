@@ -2,15 +2,16 @@
 
 namespace App\Content;
 
-class BlogrollLink
+class BlogrollItem
 {
-    public $name, $url, $category;
+    public $name, $description, $url, $category;
 
     public static function create(array $data): self
     {
         $link = new self();
 
         $link->name = $data['name'];
+        $link->description = $data['description'];
         $link->url = $data['url'];
         $link->category = $data['category'];
 

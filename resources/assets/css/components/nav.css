@@ -19,31 +19,3 @@
 .nav__item:last-child:after {
     display: none;
 }
-
-.nav__item__contents {
-    color: inherit;
-    text-decoration: none;
-}
-
-.nav__item__contents:after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: var(--light-gray);
-    transform-origin: left center;
-    transform: scaleX(0);
-    transition: transform .2s ease-out;
-}
-
-.nav__item__contents:hover:after {
-    transform: scaleX(1);
-}
-
-html.touch .nav__item__contents:hover:after {
-    transform: scaleX(0);
-}
