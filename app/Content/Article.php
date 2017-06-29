@@ -7,16 +7,8 @@ use Spatie\YamlFrontMatter\Document;
 
 class Article
 {
-    public $title;
-    public $contents;
-    public $description;
-    public $date;
-    public $era;
-    public $canonical_source;
-    public $canonical_url;
-    public $url;
-    public $slug;
-    public $commentable;
+    public $title, $contents, $description, $date, $era, 
+        $canonical_source, $canonical_url, $url, $slug;
 
     public static function create(Document $document, string $slug): self
     {
