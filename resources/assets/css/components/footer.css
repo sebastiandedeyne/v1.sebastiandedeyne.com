@@ -11,3 +11,12 @@
     bottom: auto;
     top: 0;
 }
+
+.footer__link {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.footer__link.-subtle {
+    text-decoration: none;
+}
