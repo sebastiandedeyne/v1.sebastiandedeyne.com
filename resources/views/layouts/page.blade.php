@@ -24,6 +24,8 @@
         @stack('head')
     </head>
     <body>
+        @include('layouts.partials.header')
+
         {{ $slot }}
 
         @if(app()->environment('production'))

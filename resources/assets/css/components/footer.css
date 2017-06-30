@@ -1,15 +1,8 @@
 .footer {
     position: relative;
-    padding: 1.2rem 0;
+    padding-bottom: 1.2rem;
     font-size: .7rem;
     color: var(--light-text-color);
-}
-
-.footer:before {
-    @apply --little-seperator;
-
-    bottom: auto;
-    top: 0;
 }
 
 .footer__link {

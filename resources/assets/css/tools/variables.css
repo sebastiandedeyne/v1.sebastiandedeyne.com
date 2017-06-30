@@ -1,8 +1,8 @@
 :root {
     --typographic-scale: 1.5;
     --font-size: 18px;
-    --font-size-l: 27px;
-    --font-size-xl: 40px;
+    --font-size-l: 25px;
+    --font-size-xl: 34px;
     --font-size-s: 14px;
     --baseline: 32px;
     --double-baseline: calc(var(--baseline) * 2);

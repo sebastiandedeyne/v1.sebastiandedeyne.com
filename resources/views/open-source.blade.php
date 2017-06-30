@@ -2,30 +2,15 @@
     'title' => 'Open Source'
 ])
     <div class="container">
-        <div class="row">
-            <div class="column">
-                <section class="intro">
-                    <a href="{{ url('/') }}" class="intro__logotype logotype"></a>
-                    <h1 class="intro__title">
-                        Open Source
-                    </h1>
-                    <p class="intro__text -small">
-                        A selection of open source projects I've authored or actively contributed to.
-                    </p>
-                    <section class="intro__nav">
-                        <nav class="nav">
-                            <ul>
-                                <li class="nav__item">
-                                    <a
-                                        href="https://github.com/sebastiandedeyne"
-                                        target="sebdd"
-                                        class="slider-link"
-                                    >More on GitHub</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </section>
-                </section>
+        <div class="h-double-margin-bottom">
+            <h1 class="h1">
+                Open Source
+            </h1>
+            <div class="textblock">
+                <p>
+                    A selection of open source projects I've authored or actively contributed to.
+                    There's a bigger list on my <a href="https://github.com/sebastiandedeyne">GitHub profile</a>.
+                </p>
             </div>
         </div>
     </div>

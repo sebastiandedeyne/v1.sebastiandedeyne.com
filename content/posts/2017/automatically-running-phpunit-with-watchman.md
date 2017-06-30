@@ -4,7 +4,7 @@ date: 2017-04-12
 canonical_source: Hacker Noon
 canonical_url: https://hackernoon.com/automatically-running-phpunit-with-watchman-e02757e733e7
 
-description: "A little bash script to run tests when a file has been changed"
+description: "A little bash script to run tests when a file has been changed."
 ---
 
 ![](/media/automatically-running-phpunit-with-watchman.gif)
@@ -24,7 +24,7 @@ function pw {
     watchman-make \
         -p 'src/**/*.php' 'tests/**/*.php' \
         --make=$run \
-        -t "$args" 
+        -t "$args"
 }
 ```
 
@@ -100,7 +100,7 @@ function pw {
         # Register files and folders you want to watch here
         -p 'src/**/*.php' 'tests/**/*.php' \
         --make=$run \
-        -t "$args" 
+        -t "$args"
 }
 ```
 

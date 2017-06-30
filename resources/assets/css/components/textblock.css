@@ -1,6 +1,8 @@
 .textblock__subtitle {
-    font-weight: 500;
-    margin-bottom: var(--baseline);
+    font-weight: bold;
+    font-size: var(--font-size-s);
+    text-transform: uppercase;
+    letter-spacing: .04em;
 }
 
 .textblock ul {
@@ -11,6 +13,10 @@
 
 .textblock p {
     margin-bottom: var(--baseline);
+}
+
+.textblock > *:last-child {
+    margin-bottom: 0;
 }
 
 .textblock a {

@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    align-items: flex-start;
+    margin-top: var(--double-baseline);
+    margin-bottom: var(--double-baseline);
+}
+
+.header__logotype {
+    display: inline-block;
+    width: 50px;
+    height: 75px;
+    background-image: url('../svg/logotype');
+    background-size: contain;
+}
+
+.header__nav {
+    margin-left: auto;
+    line-height: 1;
+}
+
+.header__nav__item {
+    display: inline;
+    margin-right: 1.4rem;
+    position: relative;
+    font-weight: 500;
+    font-size: var(--font-size-s);
+    color: var(--light-text-color);
+    transition: .2s ease-in-out color;
+}
+
+.header__nav__item:hover,
+.header__nav__item.-active {
+    color: var(--text-color);
+}

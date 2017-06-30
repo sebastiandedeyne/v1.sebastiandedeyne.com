@@ -31,20 +31,6 @@ class ContentRepository
         $this->yamlParser = new Yaml();
     }
 
-    public function post(string $slug): Post
-    {
-        $rawFile = $this->read($slug.'.md');
-
-        if (! $rawFile) {
-            throw new ModelNotFoundException("Post `{$slug}` not found");
-        }
-
-        return Post::create(
-            $this->frontMatterParser->parse($rawFile),
-            $slug
-        );
-    }
-
     public function posts(): Collection
     {
         return collect($this->filesystem->listContents('posts'))
@@ -56,13 +42,28 @@ class ContentRepository
             })
             ->pluck('path')
             ->map(function(string $path) {
-                $slug = str_replace_last('.md', '', $path);
+                $slug = str_replace_first('posts/', '', $path);
+                $slug = str_replace_last('.md', '', $slug);
 
                 return $this->post($slug);
             })
             ->sort(function (Post $a, Post $b) {
                 return $a->date->getTimeStamp() < $b->date->getTimeStamp();
             });
+    }
+
+    public function post(string $slug): Post
+    {
+        $rawFile = $this->read('posts/'.$slug.'.md');
+
+        if (! $rawFile) {
+            throw new ModelNotFoundException("Post `{$slug}` not found");
+        }
+
+        return Post::create(
+            $this->frontMatterParser->parse($rawFile),
+            $slug
+        );
     }
 
     public function articles(): Collection

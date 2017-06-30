@@ -25,7 +25,7 @@
                             Published on {{ $post->date->format('j F Y') }} by Sebastian De Deyne
                         @endif
                         @if($post->era)
-                            <br>Written for {{ $post->era }}
+                            — Written for {{ $post->era }}
                         @endif
                     </aside>
                 @endif
@@ -33,12 +33,14 @@
         </header>
         <section class="post__body">
             <div class="container">
-                {!! $post->contents !!}
+                <div class="post-contents">
+                    {!! $post->contents !!}
+                </div>
             </div>
         </section>
         <footer class="post__footer">
             <div class="container container--narrow">
-                <p class="post__footer__p">© {{ carbon()->format('Y') }} <a class="post__footer__link" href="{{ url('about') }}">Sebastian De Deyne</a></p>
+                <p class="post__footer__p">© 2014 - {{ carbon()->format('Y') }} <a class="post__footer__link -subtle" href="{{ url('about') }}">Sebastian De Deyne</a></p>
                 <p class="post__footer__p">
                     I'm a web developer from Ghent working at <a class="post__footer__link" href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, Belgium.
                     <br>

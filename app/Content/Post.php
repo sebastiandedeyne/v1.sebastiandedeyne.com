@@ -7,12 +7,14 @@ use Spatie\YamlFrontMatter\Document;
 
 class Post
 {
-    public $title, $contents, $description, $date, $era, 
+    public $type, $title, $contents, $description, $date, $era,
         $canonical_source, $canonical_url, $url, $slug;
 
     public static function create(Document $document, string $slug): self
     {
         $post = new self();
+
+        $post->type = 'article';
 
         $post->title = $document->matter('title', '');
         $post->contents = markdown($document->body());
@@ -27,7 +29,7 @@ class Post
         $post->canonical_url = $document->matter('canonical_url', '');
 
         $post->slug = $slug;
-        $post->url = url($slug);
+        $post->url = action('BlogController@post', $slug);
 
         return $post;
     }

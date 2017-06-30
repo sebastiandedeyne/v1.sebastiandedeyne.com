@@ -2,22 +2,21 @@
     'title' => 'About',
 ])
     <div class="container">
-        <section class="intro">
-            <a href="{{ url('/') }}" class="intro__logotype logotype"></a>
-            <h1 class="intro__title">
-                About
-            </h1>
-            <p class="intro__text -small">
-                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd" class="intro__text__link">Spatie</a> in Antwerp, where I mainly build stuff with PHP (Laravel) and JavaScript (Vue.js & React).
+        <h1 class="h1">
+            About
+        </h1>
+        <section class="textblock h-margin-bottom">
+            <p>
+                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, where I mainly build stuff with PHP (Laravel) JavaScript (Vue.js & React) and CSS.
             </p>
-            <p class="intro__text -small">
+            <p>
                 In my spare time I like to tinker on open source side projects, play around with other languages like Elixir and Go, and improve my cooking skills.
             </p>
-            <section class="intro__buttons">
-                @include('partials.social')
-            </section>
         </section>
-        <section class="textblock">
+        <section class="h-double-margin-bottom">
+            @include('partials.social')
+        </section>
+        <section class="textblock h-double-margin-bottom">
             <h2 class="textblock__subtitle">Experience</h2>
             <ul>
                 <li>Developer at Spatie, Antwerp (2015- <span class="shruggie">¯\_(ツ)_/¯</span>)</li>

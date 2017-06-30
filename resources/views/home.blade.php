@@ -1,31 +1,15 @@
 @component('layouts.page')
     <div class="container">
-        <section class="intro">
-            <a href="{{ url('/') }}" class="intro__logotype logotype"></a>
-            <h1 class="intro__title">
-                Sebastian De Deyne
-            </h1>
-            <p class="intro__text h-width-two-thirds">
-                I'm a web developer from Ghent working at <a href="https://spatie.be" target="sebdd" class="intro__text__link">Spatie</a> in Antwerp, Belgium.
+        <h1 class="h1">
+            Sebastian De Deyne
+        </h1>
+        <section class="textblock h-margin-bottom">
+            <p>
+                I'm a web developer from Ghent working at <a href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, Belgium.
             </p>
-            <section class="intro__nav">
-                <nav class="nav">
-                    <ul>
-                        <li class="nav__item">
-                            <a class="slider-link" href="{{ url('about') }}">About</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="slider-link" href="{{ url('open-source') }}">Open Source</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="slider-link" href="{{ url('blogroll') }}">Blogroll</a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
-            <section class="intro__buttons">
-                @include('partials.social')
-            </section>
+        </section>
+        <section class="h-double-margin-bottom">
+            @include('partials.social')
         </section>
         <section class="article-list">
             <h2 class="article-list__title">Articles</h2>

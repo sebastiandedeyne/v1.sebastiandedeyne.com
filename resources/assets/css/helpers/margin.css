@@ -1,15 +1,23 @@
 .h-margin-top {
-    margin-bottom: var(--grid-gutter);
+    margin-top: var(--baseline);
+}
+
+.h-double-margin-top {
+    margin-top: var(--double-baseline);
 }
 
 .h-margin-right {
-    margin-bottom: var(--grid-gutter);
+    margin-right: var(--grid-gutter);
 }
 
 .h-margin-bottom {
-    margin-bottom: var(--grid-gutter);
+    margin-bottom: var(--baseline);
+}
+
+.h-double-margin-bottom {
+    margin-bottom: var(--double-baseline);
 }
 
 .h-margin-left {
-    margin-bottom: var(--grid-gutter);
+    margin-left: var(--grid-gutter);
 }

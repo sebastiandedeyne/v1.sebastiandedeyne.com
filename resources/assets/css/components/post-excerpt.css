@@ -1,0 +1,26 @@
+.post-excerpt {
+    background-color: white;
+    border-radius: 1px;
+    border: 1px solid var(--light-gray);
+    padding: var(--baseline);
+    margin: 0 calc(var(--baseline) * -1) var(--baseline);
+}
+
+.post-excerpt__date {
+    font-size: var(--font-size-s);
+    color: var(--light-text-color);
+}
+
+.post-excerpt__title {
+    font-family: var(--header-font);
+    font-size: var(--font-size-l);
+    margin-bottom: var(--half-baseline);
+}
+
+.post-excerpt__readmore {
+    display: inline-block;
+    color: var(--red);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: var(--font-size-s);
+}

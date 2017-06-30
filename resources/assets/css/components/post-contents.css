@@ -1,0 +1,114 @@
+.post-contents a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--light-text-color);
+}
+
+.post-contents h2 {
+    font-size: var(--font-size-l);
+    font-family: var(--header-font);
+    margin-top: var(--double-baseline);
+    margin-bottom: var(--baseline);
+    color: var(--text-color);
+}
+
+.post-contents h3 {
+    font-weight: 500;
+    margin-top: var(--double-baseline);
+    margin-bottom: var(--baseline);
+}
+
+.post-contents p {
+    margin-bottom: var(--baseline);
+}
+
+.post-contents strong {
+    font-weight: 500;
+}
+
+.post-contents em {
+    font-style: italic;
+}
+
+.post-contents ul {
+    margin-bottom: var(--baseline);
+    list-style: disc;
+    margin-left: var(--half-baseline);
+}
+
+.post-contents ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.post-contents code {
+    font-size: .9em;
+    font-family: var(--mono-font);
+    font-style: normal !important;
+    border-radius: 1px;
+    background: var(--body-background);
+    border: 1px solid color(var(--light-gray) blackness(5%));
+    padding: 0 .2em;
+}
+
+.post-contents pre {
+    margin-bottom: var(--baseline);
+}
+
+.post-contents pre code {
+    @apply --pull-out;
+
+    padding: var(--baseline);
+    padding-right: var(--half-baseline);
+    display: block;
+    border-radius: 1px;
+    border: 1px solid color(var(--light-gray) blackness(5%));
+    background: var(--body-background);
+    box-shadow: 1px 2px 0 #fbf8f8;
+}
+
+@media(--small) {
+    .post-contents pre code {
+        margin-left: calc(var(--half-grid-gutter) * -1);
+        margin-right: calc(var(--half-grid-gutter) * -1);
+        padding: var(--half-grid-gutter);
+        padding-right: calc(var(--half-grid-gutter) / 2);
+        font-size: .8em;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+.post-contents blockquote {
+    @apply --pull-out;
+    @apply --white-box;
+
+    padding: var(--baseline);
+    margin-bottom: var(--baseline);
+}
+
+.post-contents blockquote p {
+    margin-bottom: 0;
+}
+
+.post-contents img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.post-contents hr {
+    @apply --pull-out;
+    margin-top: var(--double-baseline);
+    margin-bottom: var(--double-baseline);
+    border: none;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.post-contents aside {
+    font-size: var(--font-size-s);
+    line-height: var(--three-quarter-baseline);
+    font-style: italic;
+    color: var(--light-text-color);
+    margin-bottom: var(--baseline);
+}
