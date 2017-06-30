@@ -2,6 +2,7 @@
 
 namespace App\Content;
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Collection;
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\FileNotFoundException;
@@ -30,21 +31,21 @@ class ContentRepository
         $this->yamlParser = new Yaml();
     }
 
-    public function article(string $slug): Article
+    public function post(string $slug): Post
     {
         $rawFile = $this->read($slug.'.md');
 
         if (! $rawFile) {
-            throw ArticleNotFound::withSlug($slug);
+            throw new ModelNotFoundException("Post `{$slug}` not found");
         }
 
-        return Article::create(
+        return Post::create(
             $this->frontMatterParser->parse($rawFile),
             $slug
         );
     }
 
-    public function articles(): Collection
+    public function posts(): Collection
     {
         return collect($this->filesystem->listContents('posts'))
             ->filter(function (array $item) {
@@ -57,11 +58,16 @@ class ContentRepository
             ->map(function(string $path) {
                 $slug = str_replace_last('.md', '', $path);
 
-                return $this->article($slug);
+                return $this->post($slug);
             })
-            ->sort(function (Article $a, Article $b) {
+            ->sort(function (Post $a, Post $b) {
                 return $a->date->getTimeStamp() < $b->date->getTimeStamp();
             });
+    }
+
+    public function articles(): Collection
+    {
+        return $this->posts();
     }
 
     public function openSource(): Collection
@@ -80,7 +86,7 @@ class ContentRepository
 
     public function feed(): Collection
     {
-        return $this->articles()->map([FeedItem::class, 'fromArticle']);
+        return $this->posts()->map([FeedItem::class, 'fromPost']);
     }
 
     private function yaml(string $path): Collection

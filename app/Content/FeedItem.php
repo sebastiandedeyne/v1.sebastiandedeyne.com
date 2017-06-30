@@ -8,14 +8,14 @@ class FeedItem implements \Spatie\Feed\FeedItem
 {
     private $title, $updated, $summary, $url;
 
-    public static function fromArticle(Article $article)
+    public static function fromPost(Post $post)
     {
         $item = new self();
 
-        $item->title = $article->title;
-        $item->updated = $article->date;
-        $item->summary = $article->contents;
-        $item->url = $article->url;
+        $item->title = $post->title;
+        $item->updated = $post->date;
+        $item->summary = $post->contents;
+        $item->url = $post->url;
 
         return $item;
     }

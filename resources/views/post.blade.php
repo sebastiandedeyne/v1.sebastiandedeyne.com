@@ -1,0 +1,50 @@
+@push('head')
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+@endpush
+
+@component('layouts.page', [
+    'title' => $post->title,
+    'meta_description' => $post->description,
+    'canonical_url' => $post->canonical_url,
+])
+    <article class="post">
+        <header class="post__header">
+            <div class="container">
+                <div class="post__header__logotype">
+                    <a href="{{ url('/') }}" class="logotype"></a>
+                </div>
+                <h1 class="post__header__title">
+                    {{ $post->title }}
+                </h1>
+                @if($post->date)
+                    <aside class="post__header__meta">
+                        @if($post->canonical_source && $post->canonical_url)
+                            Originally published on {{ $post->date->format('j F Y') }} by Sebastian De Deyne
+                            on <a href="{{ $post->canonical_url }}" class="post__header__meta__link">{{ $post->canonical_source }}</a>
+                        @else
+                            Published on {{ $post->date->format('j F Y') }} by Sebastian De Deyne
+                        @endif
+                        @if($post->era)
+                            <br>Written for {{ $post->era }}
+                        @endif
+                    </aside>
+                @endif
+            </div>
+        </header>
+        <section class="post__body">
+            <div class="container">
+                {!! $post->contents !!}
+            </div>
+        </section>
+        <footer class="post__footer">
+            <div class="container container--narrow">
+                <p class="post__footer__p">© {{ carbon()->format('Y') }} <a class="post__footer__link" href="{{ url('about') }}">Sebastian De Deyne</a></p>
+                <p class="post__footer__p">
+                    I'm a web developer from Ghent working at <a class="post__footer__link" href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, Belgium.
+                    <br>
+                    If you've got any comments, feedback or just want to chat you can get in touch on <a class="post__footer__link" href="https://twitter.com/sebdedeyne" target="sebdd">Twitter</a> or via <a class="post__footer__link" href="mailto:sebastiandedeyne@gmail.com">e-mail</a>. If you catch a mistake or notice something that could be improved, feel free to <a class="post__footer__link" target="sebdd" href="https://github.com/sebastiandedeyne/sebastiandedeyne.com/edit/{{ config('app.branch') }}/content/{{ $post->slug }}.md">edit this post on GitHub</a>.
+                </p>
+            </div>
+        </footer>
+    </article>
+@endcomponent
