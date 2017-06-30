@@ -14,21 +14,23 @@
     </div>
     <div class="container -wide">
         <section class="blogroll">
-            @foreach($blogs as $category => $items)
-                <section 
-                    class="blogroll__category"
-                    style="grid-area: {{ str_slug($category, '_') }}">
-                    <h2 class="blogroll__title">{{ $category }}</h2>
-                    <ul>
-                        @foreach($items as $item)
-                            <li class="blogroll__item">
-                                <a href="{{ $item->url }}" class="slider-link">{{ $item->name }}</a>
-                                <span class="blogroll__item__description">{{ $item->description }}</span>
-                            </li>
-                        @endforeach
-                    </ul>
-                </section>
-            @endforeach
+            <div class="row">
+                @foreach($blogs as $category => $items)
+                    <div class="column -third">
+                        <section class="blogroll__category">
+                            <h2 class="blogroll__title">{{ $category }}</h2>
+                            <ul>
+                                @foreach($items as $item)
+                                    <li class="blogroll__item">
+                                        <a href="{{ $item->url }}" class="slider-link">{{ $item->name }}</a>
+                                        <span class="blogroll__item__description">{{ $item->description }}</span>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </section>
+                    </div>
+                @endforeach
+            </div>
         </section>
     </div>
     <div class="container">

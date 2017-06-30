@@ -1,56 +1,5 @@
-/* Flexbox fallback */
-.blogroll {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .blogroll__category {
-    margin-left: var(--half-grid-gutter);
-    margin-right: var(--half-grid-gutter);
-    flex-basis: calc(33.33% - var(--grid-gutter));
-}
-
-@media(--medium) {
-    .blogroll__category {
-        margin-left: 0;
-        margin-right: 0;
-        flex-basis: 100%;
-    }
-}
-
-/* Grid layout */
-
-.blogroll {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: var(--grid-gutter);
-    grid-template-areas:
-        "laravel_php javascript css_frontend"
-        "laravel_php javascript other";
-}
-
-@media(--medium) {
-    .blogroll {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "laravel_php javascript"
-            "css_frontend other";
-    }
-}
-
-@media(--small) {
-    .blogroll {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "laravel_php"
-            "javascript"
-            "css_frontend"
-            "other";
-    }
-}
-
-.blogroll__category {
-    margin-bottom: var(--baseline);
+    margin-bottom: var(--double-baseline);
 }
 
 .blogroll__title {
@@ -59,17 +8,7 @@
     font-size: var(--font-size-s);
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: var(--baseline);
-}
-
-.blogroll__title:after {
-    content: '';
-    position: absolute;
-    bottom: -14px;
-    left: 0;
-    width: 2em;
-    height: 1px;
-    background-color: var(--light-gray);
+    margin-bottom: var(--three-quarter-baseline);
 }
 
 .blogroll__item {
