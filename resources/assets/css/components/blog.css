@@ -70,3 +70,19 @@
 .blog__excerpt__readmore:hover {
     opacity: .8;
 }
+
+.blog__paginator {
+    display: flex;
+    margin-bottom: var(--baseline);
+    font-size: var(--font-size-s);
+    color: var(--light-text-color);
+    text-decoration: underline;
+}
+
+.blog__paginator__newer {
+    margin-right: auto;
+}
+
+.blog__paginator__older {
+    margin-left: auto;
+}

@@ -50,7 +50,8 @@ class ContentRepository
             })
             ->sort(function ($a, $b) {
                 return $a->date->getTimeStamp() < $b->date->getTimeStamp();
-            });
+            })
+            ->values();
     }
 
     public function post(string $slug)

@@ -23,7 +23,7 @@
         </header>
     </div>
     <div class="container -pull-out">
-        @foreach($posts as $post)
+        @foreach($paginator as $post)
             <article class="blog__excerpt">
                 <a href="{{ $post->url }}" class="blog__excerpt__date">
                     <time datetime="{{ $post->date->format('Y-m-d') }}">
@@ -55,6 +55,9 @@
                 @endif
             </article>
         @endforeach
+    </div>
+    <div class="container">
+        @include('blog.partials.paginator')
         @include('partials.footer')
     </div>
 @endcomponent
