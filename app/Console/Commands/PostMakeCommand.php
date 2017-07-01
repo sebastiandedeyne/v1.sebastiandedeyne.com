@@ -12,7 +12,7 @@ class PostMakeCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:post {title}';
+    protected $signature = 'make:post {title} {--article}';
 
     /**
      * The console command description.
@@ -31,9 +31,11 @@ class PostMakeCommand extends Command
         $title = $this->input->getArgument('title');
         $slug = strtolower(str_replace(' ', '-', $title));
         $date = Carbon::now();
+        $type = $this->input->getOption('article') ? 'article' : 'plain';
 
         $contents = file_get_contents(__DIR__.'/stubs/post.stub');
         $contents = str_replace('$title', $title, $contents);
+        $contents = str_replace('$type', $type, $contents);
         $contents = str_replace('$date', $date->format('Y-m-d'), $contents);
 
         $directory = base_path("content/posts/{$date->year}");

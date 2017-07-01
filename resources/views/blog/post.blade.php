@@ -36,6 +36,11 @@
                 <div class="post-contents">
                     {!! $post->contents !!}
                 </div>
+                @if($post->external_url)
+                    <a href="{{ $post->external_url }}" target="sebdd" class="post-excerpt__readmore">
+                        Read the full story {{ $post->external_location }}
+                    </a>
+                @endif
             </div>
         </section>
         <footer class="post__footer">

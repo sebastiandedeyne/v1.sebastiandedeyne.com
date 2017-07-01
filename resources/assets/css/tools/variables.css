@@ -33,3 +33,7 @@
 
     --transition-curve: cubic-bezier(0, 0, 0, 1);
 }
+
+@custom-media --large (max-width: 1200px);
+@custom-media --medium (max-width: 800px);
+@custom-media --small (max-width: 600px);

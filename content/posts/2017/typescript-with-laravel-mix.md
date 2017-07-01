@@ -1,4 +1,5 @@
 ---
+type: article
 title: TypeScript With Laravel Mix
 date: 2017-05-16
 era: Laravel 5.4

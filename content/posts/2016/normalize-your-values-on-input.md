@@ -1,4 +1,5 @@
 ---
+type: article
 title: Normalize Your Values on Input
 date: 2016-03-09
 era: PHP 7.0

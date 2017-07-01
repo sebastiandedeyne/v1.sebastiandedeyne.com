@@ -1,10 +1,11 @@
 .card {
-    @apply --white-box;
-
     display: block;
     position: relative;
     height: 100%;
     padding: var(--half-baseline) 1.4rem var(--half-baseline);
+    background-color: white;
+    border-radius: 1px;
+    border: 1px solid var(--light-gray);
     text-decoration: none;
     color: inherit;
     transition: all .2s ease-out;

@@ -1,4 +1,5 @@
 ---
+type: article
 title: The List Function & Practical Uses of Array Destructuring in PHP
 date: 2017-05-15
 era: PHP 7.1

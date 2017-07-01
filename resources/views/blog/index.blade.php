@@ -7,22 +7,27 @@
         </h1>
         @foreach($posts as $post)
             <article class="post-excerpt">
-                <aside class="post-excerpt__date">
-                    {{ $post->date->format('d/m/Y') }}
-                </aside>
+                <time datetime="{{ $post->date->format('Y-m-d') }}" class="post-excerpt__date">
+                    {{ $post->date->format('F jS, Y') }}
+                </time>
                 <h2 class="post-excerpt__title">
-                    <a href="{{ $post->url }}">{{ $post->title }}</a>
+                    <a href="{{ $post->url }}" class="post-excerpt__title__link">
+                        {{ $post->title }}
+                    </a>
                 </h2>
-                <section class="post-contents">
-                    @if($post->type === 'article')
-                        <p>{{ $post->description }}</p>
-                    @else
-                        <p>Lorem ipsum</p>
-                    @endif
-                </section>
                 @if($post->type === 'article')
+                    <section class="post-contents">
+                        <p>{{ $post->description }}</p>
+                    </section>
                     <a href="{{ $post->url }}" class="post-excerpt__readmore">
-                        Read full article...
+                        Read more
+                    </a>
+                @else
+                    <section class="post-contents">
+                        {!! $post->contents !!}
+                    </section>
+                    <a href="{{ $post->external_url }}" target="sebdd" class="post-excerpt__readmore">
+                        Read the full story {{ $post->external_location }}
                     </a>
                 @endif
             </article>

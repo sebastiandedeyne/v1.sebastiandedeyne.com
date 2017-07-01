@@ -1,4 +1,5 @@
 ---
+type: article
 title: Dealing With Templates in Vue.js 2.0
 date: 2016-12-21
 era: Vue 2.0

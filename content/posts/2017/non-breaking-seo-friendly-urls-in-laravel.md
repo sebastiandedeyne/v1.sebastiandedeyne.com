@@ -1,4 +1,5 @@
 ---
+type: article
 title: Non-breaking, SEO Friendly Urls in Laravel
 date: 2017-02-21
 era: Laravel 5.4

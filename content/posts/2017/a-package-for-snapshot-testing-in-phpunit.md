@@ -1,4 +1,5 @@
 ---
+type: article
 title: A Package for Snapshot Testing in PHPUnit
 date: 2017-03-27
 era: PHPUnit 5.7+

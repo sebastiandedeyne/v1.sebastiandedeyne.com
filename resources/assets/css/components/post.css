@@ -12,6 +12,7 @@
     font-family: var(--header-font);
     font-size: var(--font-size-xl);
     line-height: var(--one-and-a-half-baseline);
+    color: var(--dark-text-color);
 }
 
 .post__header__meta {
@@ -28,6 +29,8 @@
     background-color: white;
     color: var(--dark-text-color);
     padding: var(--double-baseline) 0 var(--one-and-a-half-baseline);
+    border-top: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
 }
 
 .post__footer {

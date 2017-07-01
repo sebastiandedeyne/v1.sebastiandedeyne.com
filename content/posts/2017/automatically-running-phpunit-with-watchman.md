@@ -1,4 +1,5 @@
 ---
+type: article
 title: Automatically Running PHPUnit With Watchman
 date: 2017-04-12
 canonical_source: Hacker Noon

@@ -1,4 +1,5 @@
 ---
+type: article
 title: Using a Database for Localization in Laravel
 date: 2016-05-31
 era: Laravel 5.2

@@ -1,4 +1,5 @@
 ---
+type: article
 title: Exposing Multiple Vue Components as a Plugin
 date: 2017-06-28
 era: Vue 2.0

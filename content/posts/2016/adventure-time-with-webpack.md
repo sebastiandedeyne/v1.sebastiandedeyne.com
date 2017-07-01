@@ -1,4 +1,5 @@
 ---
+type: article
 title: Adventure Time With Webpack
 date: 2016-02-04
 era: Webpack 1.12

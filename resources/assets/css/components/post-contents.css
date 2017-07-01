@@ -56,10 +56,10 @@
 }
 
 .post-contents pre code {
-    @apply --pull-out;
-
     padding: var(--baseline);
     padding-right: var(--half-baseline);
+    margin-left: -.3em;
+    margin-right: -.3em;
     display: block;
     border-radius: 1px;
     border: 1px solid color(var(--light-gray) blackness(5%));
@@ -80,11 +80,13 @@
 }
 
 .post-contents blockquote {
-    @apply --pull-out;
-    @apply --white-box;
-
     padding: var(--baseline);
+    margin-left: -.3em;
+    margin-right: -.3em;
     margin-bottom: var(--baseline);
+    background-color: white;
+    border-radius: 1px;
+    border: 1px solid var(--light-gray);
 }
 
 .post-contents blockquote p {
@@ -98,9 +100,7 @@
 }
 
 .post-contents hr {
-    @apply --pull-out;
-    margin-top: var(--double-baseline);
-    margin-bottom: var(--double-baseline);
+    margin: var(--double-baseline) -.3em;
     border: none;
     border-bottom: 1px solid var(--light-gray);
 }

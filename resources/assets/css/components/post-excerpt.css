@@ -1,5 +1,6 @@
 .post-excerpt {
     background-color: white;
+    color: var(--dark-text-color);
     border-radius: 1px;
     border: 1px solid var(--light-gray);
     padding: var(--baseline);
@@ -14,7 +15,16 @@
 .post-excerpt__title {
     font-family: var(--header-font);
     font-size: var(--font-size-l);
-    margin-bottom: var(--half-baseline);
+    color: var(--dark-text-color);
+    margin-bottom: var(--baseline);
+}
+
+.post-excerpt__title__link {
+    transition: .2s ease-in-out opacity;
+}
+
+.post-excerpt__title__link:hover {
+    opacity: .8;
 }
 
 .post-excerpt__readmore {
@@ -23,4 +33,12 @@
     font-weight: bold;
     text-transform: uppercase;
     font-size: var(--font-size-s);
+}
+
+.post-excerpt__readmore {
+    transition: .2s ease-in-out opacity;
+}
+
+.post-excerpt__readmore:hover {
+    opacity: .8;
 }

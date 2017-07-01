@@ -2,6 +2,7 @@
 
 namespace App\Content;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Collection;
 use League\Flysystem\Adapter\Local;
@@ -47,12 +48,12 @@ class ContentRepository
 
                 return $this->post($slug);
             })
-            ->sort(function (Post $a, Post $b) {
+            ->sort(function ($a, $b) {
                 return $a->date->getTimeStamp() < $b->date->getTimeStamp();
             });
     }
 
-    public function post(string $slug): Post
+    public function post(string $slug)
     {
         $rawFile = $this->read('posts/'.$slug.'.md');
 
@@ -60,10 +61,24 @@ class ContentRepository
             throw new ModelNotFoundException("Post `{$slug}` not found");
         }
 
-        return Post::create(
-            $this->frontMatterParser->parse($rawFile),
-            $slug
-        );
+        $document = $this->frontMatterParser->parse($rawFile);
+
+        return (object) [
+            'canonical_source' => $document->matter('canonical_source', ''),
+            'canonical_url' => $document->matter('canonical_url', ''),
+            'contents' => markdown($document->body()),
+            'date' => $document->matter('date') ? 
+                Carbon::createFromTimestamp($document->matter('date')) : 
+                Carbon::parse('1992-02-01'),
+            'description' => $document->matter('description', ''),
+            'era' => $document->matter('era', ''),
+            'external_url' => $document->matter('external_url', ''),
+            'external_location' => $document->matter('external_location', ''),
+            'slug' => $slug,
+            'title' => $document->matter('title', ''),
+            'type' => $document->matter('type', 'plain'),
+            'url' => action('BlogController@post', $slug),
+        ];
     }
 
     public function articles(): Collection
@@ -73,16 +88,12 @@ class ContentRepository
 
     public function openSource(): Collection
     {
-        return $this->yaml('open-source.yaml')
-            ->map([Project::class, 'create'])
-            ->sortBy('name');
+        return $this->yaml('open-source.yaml')->sortBy('name');
     }
 
     public function blogroll(): Collection
     {
-        return $this->yaml('blogroll.yaml')
-            ->map([BlogrollItem::class, 'create'])
-            ->sortBy('name');
+        return $this->yaml('blogroll.yaml')->sortBy('name');
     }
 
     public function feed(): Collection
@@ -94,7 +105,9 @@ class ContentRepository
     {
         return collect($this->yamlParser->parse(
             $this->read($path)
-        ));
+        ))->map(function ($array) {
+            return (object) $array;
+        });
     }
 
     private function read(string $path): string
