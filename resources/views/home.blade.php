@@ -1,6 +1,6 @@
 @component('layouts.page')
     <div class="container">
-        <h1 class="h1">
+        <h1 class="h1 h-margin-bottom">
             Sebastian De Deyne
         </h1>
         <section class="textblock h-margin-bottom">

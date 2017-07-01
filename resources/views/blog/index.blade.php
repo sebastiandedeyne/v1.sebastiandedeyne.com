@@ -2,16 +2,39 @@
     'title' => 'Blog',
 ])
     <div class="container">
-        <h1 class="h1">
-            Blog
-        </h1>
+        <header class="blog__header">
+            <section class="blog__header__h1">
+                <h1 class="h1">
+                    Blog
+                </h1>
+            </section>
+            <ul class="blog__header__nav">
+                <li class="blog__header__nav__item">
+                    <a href="{{ url('blogroll') }}">
+                        <span class="icon -star -s" title="Blogroll"></span>
+                    </a>
+                </li>
+                <li class="blog__header__nav__item">
+                    <a href="{{ url('feed') }}" data-turbolinks="false">
+                        <span class="icon -rss -s" title="RSS"></span>
+                    </a>
+                </li>
+            </ul>
+        </header>
+    </div>
+    <div class="container -pull-out">
         @foreach($posts as $post)
-            <article class="post-excerpt">
-                <time datetime="{{ $post->date->format('Y-m-d') }}" class="post-excerpt__date">
-                    {{ $post->date->format('F jS, Y') }}
-                </time>
-                <h2 class="post-excerpt__title">
-                    <a href="{{ $post->url }}" class="post-excerpt__title__link">
+            <article class="blog__excerpt">
+                <a href="{{ $post->url }}" class="blog__excerpt__date">
+                    <time datetime="{{ $post->date->format('Y-m-d') }}">
+                        {{ $post->date->format('F jS, Y') }}
+                    </time>
+                </a>
+                <h2 class="blog__excerpt__title">
+                    <a 
+                        href="{{ $post->external_url ?: $post->url }}" 
+                        @if($post->external_url) target="sebdd" @endif
+                        class="blog__excerpt__title__link">
                         {{ $post->title }}
                     </a>
                 </h2>
@@ -19,14 +42,14 @@
                     <section class="post-contents">
                         <p>{{ $post->description }}</p>
                     </section>
-                    <a href="{{ $post->url }}" class="post-excerpt__readmore">
+                    <a href="{{ $post->url }}" class="blog__excerpt__readmore">
                         Read more
                     </a>
                 @else
                     <section class="post-contents">
                         {!! $post->contents !!}
                     </section>
-                    <a href="{{ $post->external_url }}" target="sebdd" class="post-excerpt__readmore">
+                    <a href="{{ $post->external_url }}" target="sebdd" class="blog__excerpt__readmore">
                         Read the full story {{ $post->external_location }}
                     </a>
                 @endif

@@ -2,7 +2,7 @@
     <header class="header">
         <a href="{{ url('/') }}" class="header__logotype"></a>
         <nav class="header__nav">
-            <ul>
+            <ul class="header__nav">
                 <li class="header__nav__item @if(request()->url() === url('/')) -active @endif">
                     <a href="{{ url('/') }}">Home</a>
                 </li>

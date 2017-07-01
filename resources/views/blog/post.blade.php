@@ -37,7 +37,7 @@
                     {!! $post->contents !!}
                 </div>
                 @if($post->external_url)
-                    <a href="{{ $post->external_url }}" target="sebdd" class="post-excerpt__readmore">
+                    <a href="{{ $post->external_url }}" target="sebdd" class="post__body__readmore">
                         Read the full story {{ $post->external_location }}
                     </a>
                 @endif
@@ -45,10 +45,11 @@
         </section>
         <footer class="post__footer">
             <div class="container container--narrow">
-                <p class="post__footer__p">© 2014 - {{ carbon()->format('Y') }} <a class="post__footer__link -subtle" href="{{ url('about') }}">Sebastian De Deyne</a></p>
                 <p class="post__footer__p">
-                    I'm a web developer from Ghent working at <a class="post__footer__link" href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, Belgium.
-                    <br>
+                    © {{ carbon()->format('Y') }}
+                    <a class="post__footer__link -subtle" href="{{ url('about') }}">Sebastian De Deyne</a>
+                </p>
+                <p class="post__footer__p">
                     If you've got any comments, feedback or just want to chat you can get in touch on <a class="post__footer__link" href="https://twitter.com/sebdedeyne" target="sebdd">Twitter</a> or via <a class="post__footer__link" href="mailto:sebastiandedeyne@gmail.com">e-mail</a>. If you catch a mistake or notice something that could be improved, feel free to <a class="post__footer__link" target="sebdd" href="https://github.com/sebastiandedeyne/sebastiandedeyne.com/edit/{{ config('app.branch') }}/content/{{ $post->slug }}.md">edit this post on GitHub</a>.
                 </p>
             </div>

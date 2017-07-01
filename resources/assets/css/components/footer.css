@@ -1,15 +1,17 @@
 .footer {
+    display: flex;
     position: relative;
     padding-bottom: 1.2rem;
     font-size: .7rem;
     color: var(--light-text-color);
 }
 
-.footer__link {
-    color: inherit;
-    text-decoration: underline;
+.footer__rss {
+    opacity: .5;
+    margin-left: auto;
+    transition: .2s ease-in-out opacity;
 }
 
-.footer__link.-subtle {
-    text-decoration: none;
+.footer__rss:hover {
+    opacity: 1;
 }

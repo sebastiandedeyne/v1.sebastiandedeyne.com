@@ -2,7 +2,7 @@
     'title' => 'About',
 ])
     <div class="container">
-        <h1 class="h1">
+        <h1 class="h1 h-margin-bottom">
             About
         </h1>
         <section class="textblock h-margin-bottom">

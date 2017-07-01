@@ -3,7 +3,7 @@
 ])
     <div class="container">
         <div class="h-double-margin-bottom">
-            <h1 class="h1">
+            <h1 class="h1 h-margin-bottom">
                 Open Source
             </h1>
             <div class="textblock">

@@ -28,7 +28,12 @@
     transition: .2s ease-in-out color;
 }
 
+.header__nav__item:last-child {
+    margin-right: 0;
+}
+
 .header__nav__item:hover,
 .header__nav__item.-active {
     color: var(--text-color);
 }
+

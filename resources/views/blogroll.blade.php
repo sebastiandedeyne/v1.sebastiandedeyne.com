@@ -2,12 +2,11 @@
     'title' => 'Blogroll',
 ])
     <div class="container">
-        <section class="intro">
-            <a href="{{ url('/') }}" class="intro__logotype logotype"></a>
-            <h1 class="intro__title">
-                Blogroll
-            </h1>
-            <p class="intro__text -small">
+        <h1 class="h1 h-margin-bottom">
+            Blogroll
+        </h1>
+        <section class="textblock h-double-margin-bottom">
+            <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, iste cupiditate non vel commodi nulla incidunt, deleniti ea expedita ullam! Perspiciatis placeat natus officiis vero aut provident, accusamus impedit dolor!
             </p>
         </section>

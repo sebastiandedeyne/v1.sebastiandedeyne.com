@@ -1,7 +1,7 @@
 .button {
     display: inline-flex;
-    height: var(--one-and-a-half-baseline);
     align-items: center;
+    height: var(--one-and-a-half-baseline);
     background-color: white;
     border-radius: 5px;
     padding: 0 .66em;

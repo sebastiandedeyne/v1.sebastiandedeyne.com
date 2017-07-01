@@ -33,6 +33,20 @@
     border-bottom: 1px solid var(--light-gray);
 }
 
+.post__body__readmore {
+    display: inline-block;
+    margin-bottom: var(--baseline);
+    color: var(--red);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: var(--font-size-s);
+    transition: .2s ease-in-out opacity;
+}
+
+.post__body__readmore:hover {
+    opacity: .8;
+}
+
 .post__footer {
     font-size: var(--font-size-s);
     line-height: var(--three-quarter-baseline);

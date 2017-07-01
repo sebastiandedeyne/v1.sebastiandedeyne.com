@@ -1,6 +1,6 @@
 ---
+type: external
 title: Inline Validation Is Problematic
-type: plain
 external_url: https://medium.com/simple-human/inline-validation-is-problematic-399dd01d436f
 external_location: in Adam's Medium post
 date: 2017-06-30

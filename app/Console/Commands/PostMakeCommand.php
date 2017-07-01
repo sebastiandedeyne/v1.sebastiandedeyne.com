@@ -31,7 +31,7 @@ class PostMakeCommand extends Command
         $title = $this->input->getArgument('title');
         $slug = strtolower(str_replace(' ', '-', $title));
         $date = Carbon::now();
-        $type = $this->input->getOption('article') ? 'article' : 'plain';
+        $type = $this->input->getOption('external') ? 'external' : 'article';
 
         $contents = file_get_contents(__DIR__.'/stubs/post.stub');
         $contents = str_replace('$title', $title, $contents);

@@ -1,14 +1,19 @@
 .icon {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-.icon.-small {
-    width: 18px;
-    height: 18px;
+.icon.-s {
+    width: 14px;
+    height: 14px;
+}
+
+.icon.-xs {
+    width: 10px;
+    height: 10px;
 }
 
 .icon.-elixir { background-image: url('../svg/elixir'); }
@@ -17,5 +22,7 @@
 .icon.-javascript { background-image: url('../svg/javascript'); }
 .icon.-laravel { background-image: url('../svg/laravel'); }
 .icon.-php { background-image: url('../svg/php'); }
+.icon.-rss { background-image: url('../svg/rss'); }
+.icon.-star { background-image: url('../svg/star'); }
 .icon.-twitter { background-image: url('../svg/twitter'); }
 .icon.-typescript { background-image: url('../svg/typescript'); }

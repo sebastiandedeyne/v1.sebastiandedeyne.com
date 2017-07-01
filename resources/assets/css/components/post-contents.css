@@ -80,16 +80,27 @@
 }
 
 .post-contents blockquote {
-    padding: var(--baseline);
-    margin-left: -.3em;
-    margin-right: -.3em;
+    position: relative;
+    padding-left: var(--one-and-a-half-baseline);
+    padding-right: var(--baseline);
     margin-bottom: var(--baseline);
-    background-color: white;
-    border-radius: 1px;
-    border: 1px solid var(--light-gray);
+}
+
+.post-contents blockquote:before {
+    content: '“';
+    position: absolute;
+    left: 0;
+    top: 24px;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 80px;
+    color: var(--light-gray);
 }
 
 .post-contents blockquote p {
+    position: relative;
+    z-index: 2;
+    font-style: italic;
     margin-bottom: 0;
 }
 

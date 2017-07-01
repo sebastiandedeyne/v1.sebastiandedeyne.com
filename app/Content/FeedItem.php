@@ -6,23 +6,26 @@ use Carbon\Carbon;
 
 class FeedItem implements \Spatie\Feed\FeedItem
 {
-    private $title, $updated, $summary, $url;
+    private $id, $title, $updated, $summary, $url;
 
     public static function fromPost($post)
     {
         $item = new self();
 
+        $item->id = $post->url;
         $item->title = $post->title;
         $item->updated = $post->date;
         $item->summary = $post->contents;
-        $item->url = $post->url;
+        $item->url = $post->type === 'external' ?
+            $post->external_url :
+            $post->url;
 
         return $item;
     }
 
     public function getFeedItemId(): string
     {
-        return $this->url;
+        return $this->id;
     }
 
     public function getFeedItemTitle(): string
