@@ -18,6 +18,16 @@
     line-height: 1;
 }
 
+@media(--small) {
+    .header__nav__list {
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: right;
+    }
+}
+
 .header__nav__item {
     display: inline;
     margin-right: 1.4rem;
@@ -37,3 +47,8 @@
     color: var(--text-color);
 }
 
+@media(--small) {
+    .header__nav__item {
+        margin-right: 0;
+    }
+}

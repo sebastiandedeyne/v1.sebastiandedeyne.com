@@ -30,6 +30,7 @@
     border-radius: 1px;
     border: 1px solid var(--light-gray);
     padding: var(--baseline);
+    margin-bottom: var(--baseline);
 }
 
 @media(--medium) {
