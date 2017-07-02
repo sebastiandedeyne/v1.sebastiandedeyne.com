@@ -84,7 +84,7 @@ class ContentRepository
 
     public function articles(): Collection
     {
-        return $this->posts();
+        return $this->posts()->where('type', 'article');
     }
 
     public function openSource(): Collection
