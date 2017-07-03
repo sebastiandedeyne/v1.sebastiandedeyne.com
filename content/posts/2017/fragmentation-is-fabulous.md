@@ -2,7 +2,7 @@
 type: external
 title: Fragmentation is Fabulous
 external_url: https://twitter.com/sebmck/status/879282797915119616
-external_location: in Sebastian McKenzie's Twitter thread
+external_location: on @sebmck's Twitter
 date: 2017-07-04
 ---
 
