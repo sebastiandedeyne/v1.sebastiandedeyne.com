@@ -85,6 +85,10 @@
     margin-bottom: var(--baseline);
 }
 
+@media(--small) {
+    padding-right: 0;
+}
+
 .post-contents blockquote:before {
     content: '“';
     position: absolute;
