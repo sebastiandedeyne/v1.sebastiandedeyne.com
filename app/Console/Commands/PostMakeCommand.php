@@ -29,7 +29,7 @@ class PostMakeCommand extends Command
     public function handle()
     {
         $title = $this->input->getArgument('title');
-        $slug = strtolower(str_replace(' ', '-', $title));
+        $slug = strtolower(str_slug($title));
         $date = Carbon::now();
         $type = $this->input->getOption('external') ? 'external' : 'article';
 
