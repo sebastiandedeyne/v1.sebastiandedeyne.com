@@ -12,7 +12,7 @@ class PostMakeCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:post {title} {--article}';
+    protected $signature = 'make:post {title} {--external}';
 
     /**
      * The console command description.
