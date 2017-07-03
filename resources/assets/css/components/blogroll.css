@@ -21,7 +21,7 @@
 
 .blogroll__item__description {
     display: block;
-    max-width: 20em;
+    max-width: 18em;
     font-style: italic;
     color: var(--light-text-color);
     font-size: var(--font-size-s);

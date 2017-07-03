@@ -20,11 +20,6 @@
     color: var(--light-text-color);
 }
 
-.post__header__meta__link {
-    color: inherit;
-    text-decoration: underline;
-}
-
 .post__body {
     background-color: white;
     color: var(--dark-text-color);

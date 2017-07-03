@@ -7,10 +7,13 @@
         </h1>
         <section class="textblock h-margin-bottom">
             <p>
-                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, where I mainly build stuff with PHP (Laravel) JavaScript (Vue.js & React) and CSS.
+                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd" class="h-link-invisible">Spatie</a> in Antwerp.
             </p>
             <p>
-                In my spare time I like to tinker on open source side projects, play around with other languages like Elixir and Go, and improve my cooking skills.
+                I build things with PHP, JavaScript and CSS. Specifically, Laravel, Vue.js and some occasional React. I enjoy learning other frameworks, libraries and languages. Even if I don't plan on using something in the near future, researching a foreign concept can serve as a great inspiration to solve problems in my familiar tech stack.
+            </p>
+            <p>
+                I'm also a big open source proponent. Even if something isn't meant to be consumed by others, sharing code and knowledge is beneficial to all involved.
             </p>
         </section>
         <section class="h-double-margin-bottom">

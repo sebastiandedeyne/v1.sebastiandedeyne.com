@@ -7,3 +7,9 @@
     font-weight: 500;
     margin-bottom: var(--baseline);
 }
+
+.article-list__more {
+    font-size: var(--font-size-s);
+    color: var(--light-text-color);
+    text-decoration: underline;
+}

@@ -8,7 +8,7 @@
             </h1>
             <div class="textblock">
                 <p>
-                    A selection of open source projects I've authored or actively contributed to.
+                    A selection of open source projects I've authored or actively contributed to.<br>
                     There's a bigger list on my <a href="https://github.com/sebastiandedeyne">GitHub profile</a>.
                 </p>
             </div>

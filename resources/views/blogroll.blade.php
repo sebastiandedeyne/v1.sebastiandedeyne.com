@@ -7,7 +7,10 @@
         </h1>
         <section class="textblock h-double-margin-bottom">
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, iste cupiditate non vel commodi nulla incidunt, deleniti ea expedita ullam! Perspiciatis placeat natus officiis vero aut provident, accusamus impedit dolor!
+                I remember spending hours browsing music blogs back in the heyday of Hypem. Every blog had a sidebar back then, and in that sidebar there was often a blogroll.
+            </p>
+            <p>
+                This is an ode to the blogroll, where I tend to keep a list of the blogs and publications of which I never miss a post.
             </p>
         </section>
     </div>
