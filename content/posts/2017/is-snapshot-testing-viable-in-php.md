@@ -1,0 +1,13 @@
+---
+type: external
+title: Is Snapshot Testing Viable in PHP?
+date: 2017-07-03
+external_url: https://www.sitepoint.com/snapshot-testing-viable-php/
+external_location: on SitePoint
+---
+
+Christopher Pitt wrote a pretty comprehensive article on one of our latest packages, which is one of my favorite packages I've written at [Spatie](https://spatie.be) to date, phpunit-snapshot-assertions.
+
+> Ah-ha moments are beautiful and rare in programming. Every so often, we’re fortunate enough to discover some trick or facet of a system that forever changes how we think of it. For me, that’s what snapshot testing is.
+
+You can check out the package on [GitHub](https://github.com/spatie/phpunit-snapshot-assertions)!

@@ -1,9 +1,9 @@
 ---
 type: external
 title: Fragmentation is Fabulous
+date: 2017-07-03
 external_url: https://twitter.com/sebmck/status/879282797915119616
 external_location: on @sebmck's Twitter
-date: 2017-07-04
 ---
 
 In a recent Twitter thread, [Sebastian McKenzie](https://twitter.com/sebmck) ([Yarn](https://yarnpkg.com/en/) and [Babel](https://babeljs.io/) author) shared his thoughts on the current state of open source. This tweet stood out for me (and he later ironically dubbed it his *"most thoughtleader tweet ever"*):
