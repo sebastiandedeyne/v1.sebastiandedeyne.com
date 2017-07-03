@@ -1,7 +1,7 @@
 ---
 type: external
 title: Is Snapshot Testing Viable in PHP?
-date: 2017-07-03
+date: 2017-07-04
 external_url: https://www.sitepoint.com/snapshot-testing-viable-php/
 external_location: on SitePoint
 ---
