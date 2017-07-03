@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
     entry: {
@@ -7,7 +8,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/public',
-        filename: '[name].js',
+        filename: '[name]-[hash].js',
     },
     module: {
         loaders: [
@@ -30,6 +31,10 @@ module.exports = {
         extensions: ['.js', '.css', '.svg'],
     },
     plugins: [
-        new ExtractTextPlugin('[name].css'),
+        new ExtractTextPlugin('[name]-[hash].css'),
+        new ManifestPlugin({
+            fileName: 'mix-manifest.json',
+            basePath: '/',
+        }),
     ],
 };

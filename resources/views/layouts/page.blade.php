@@ -17,9 +17,9 @@
         @include('layouts.partials.favicons')
 
         <link href="https://fonts.googleapis.com/css?family=Alegreya|Fira+Sans:400,400i,500,700" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/css/site.css">
+        <link rel="stylesheet" type="text/css" href=" {{ mix('css/site.css') }}">
 
-        <script src="/js/site.js" defer></script>
+        <script src="{{ mix('js/site.js') }}" defer></script>
 
         @stack('head')
     </head>
