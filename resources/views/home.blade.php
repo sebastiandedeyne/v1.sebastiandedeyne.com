@@ -3,9 +3,9 @@
         <h1 class="h1 h-margin-bottom">
             Sebastian De Deyne
         </h1>
-        <section class="textblock h-margin-bottom">
+        <section class="textblock h-triple-padding-right h-margin-bottom">
             <p>
-                I'm a web developer from Ghent working at <a href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp, Belgium.
+                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd" class="h-link-invisible">Spatie</a> in Antwerp, where I mainly build stuff with PHP, JavaScript, and CSS.
             </p>
         </section>
         <section class="h-double-margin-bottom">

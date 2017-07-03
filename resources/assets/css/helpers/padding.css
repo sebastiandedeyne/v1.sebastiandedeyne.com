@@ -1,0 +1,19 @@
+.h-padding-top { padding-top: var(--baseline) !important; }
+.h-half-padding-top { padding-top: var(--half-baseline) !important; }
+.h-double-padding-top { padding-top: var(--double-baseline) !important; }
+.h-triple-padding-top { padding-top: var(--triple-baseline) !important; }
+
+.h-padding-right { padding-right: var(--grid-gutter) !important; }
+.h-half-padding-right { padding-right: var(--half-grid-gutter) !important; }
+.h-double-padding-right { padding-right: var(--double-grid-gutter) !important; }
+.h-triple-padding-right { padding-right: var(--triple-grid-gutter) !important; }
+
+.h-padding-bottom { padding-bottom: var(--baseline) !important; }
+.h-half-padding-bottom { padding-bottom: var(--half-baseline) !important; }
+.h-double-padding-bottom { padding-bottom: var(--double-baseline) !important; }
+.h-triple-padding-bottom { padding-bottom: var(--triple-baseline) !important; }
+
+.h-padding-left { padding-left: var(--grid-gutter) !important; }
+.h-half-padding-left { padding-left: var(--half-grid-gutter) !important; }
+.h-double-padding-left { padding-left: var(--double-grid-gutter) !important; }
+.h-triple-padding-left { padding-left: var(--triple-grid-gutter) !important; }
