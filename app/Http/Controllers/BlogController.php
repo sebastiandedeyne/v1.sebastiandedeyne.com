@@ -10,14 +10,14 @@ class BlogController extends Controller
 {
     public function index(ContentRepository $contentRepository)
     {
-        $paginator = $this->paginate($contentRepository->posts(), 1);
+        $paginator = $contentRepository->posts()->simplePaginate(5);
 
         return view('blog.index', ['paginator' => $paginator]);
     }
 
     public function page($page, ContentRepository $contentRepository)
     {
-        $paginator = $this->paginate($contentRepository->posts(), $page);
+        $paginator = $contentRepository->posts()->simplePaginate(5, 'page', $page);
 
         return view('blog.index', ['paginator' => $paginator]);
     }
@@ -27,19 +27,5 @@ class BlogController extends Controller
         $post = $contentRepository->post($slug);
 
         return view('blog.post', ['post' => $post]);
-    }
-
-    private function paginate($posts, $page)
-    {
-        $perPage = 20;
-        $offset = $page * $perPage - $perPage;
-
-        return new LengthAwarePaginator(
-            $posts->slice($offset, $perPage), 
-            $posts->count(), 
-            $perPage, 
-            $page, 
-            ['path' => url('posts')]
-        );
     }
 }

@@ -179,6 +179,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Spatie\CollectionMacros\CollectionMacroServiceProvider::class,
         Spatie\ResponseCache\ResponseCacheServiceProvider::class,
         Spatie\Tail\TailServiceProvider::class,
 
