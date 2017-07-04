@@ -19,10 +19,10 @@
                 @if($post->date)
                     <aside class="post__header__meta">
                         @if($post->canonical_source && $post->canonical_url)
-                            Originally published on {{ $post->date->format('Y-m-d') }} by Sebastian De Deyne
+                            Originally published on <time datetime="{{ $post->date->format('Y-m-d') }}">{{ $post->date->format('F jS, Y') }}</time> by Sebastian De Deyne
                             on <a href="{{ $post->canonical_url }}" class="post__header__meta__link">{{ $post->canonical_source }}</a>
                         @else
-                            Published on {{ $post->date->format('j F Y') }} by Sebastian De Deyne
+                            Published on <time datetime="{{ $post->date->format('Y-m-d') }}">{{ $post->date->format('F jS, Y') }}</time> by Sebastian De Deyne
                         @endif
                         @if($post->era)
                             — Written for {{ $post->era }}
