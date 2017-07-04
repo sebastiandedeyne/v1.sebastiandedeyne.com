@@ -34,24 +34,26 @@ class ContentRepository
 
     public function posts(): Collection
     {
-        return collect($this->filesystem->listContents('posts'))
-            ->filter(function (array $item) {
-                return $item['type'] === 'dir';
-            })
-            ->flatMap(function (array $item) {
-                return $this->filesystem->listContents($item['path']);
-            })
-            ->pluck('path')
-            ->map(function(string $path) {
-                $slug = str_replace_first('posts/', '', $path);
-                $slug = str_replace_last('.md', '', $slug);
+        return Cache::rememberForever('posts', function () {
+            return collect($this->filesystem->listContents('posts'))
+                ->filter(function (array $item) {
+                    return $item['type'] === 'dir';
+                })
+                ->flatMap(function (array $item) {
+                    return $this->filesystem->listContents($item['path']);
+                })
+                ->pluck('path')
+                ->map(function(string $path) {
+                    $slug = str_replace_first('posts/', '', $path);
+                    $slug = str_replace_last('.md', '', $slug);
 
-                return $this->post($slug);
-            })
-            ->sort(function ($a, $b) {
-                return $a->date->getTimeStamp() < $b->date->getTimeStamp();
-            })
-            ->values();
+                    return $this->post($slug);
+                })
+                ->sort(function ($a, $b) {
+                    return $a->date->getTimeStamp() < $b->date->getTimeStamp();
+                })
+                ->values();
+        });
     }
 
     public function post(string $slug)
@@ -68,8 +70,8 @@ class ContentRepository
             'canonical_source' => $document->matter('canonical_source', ''),
             'canonical_url' => $document->matter('canonical_url', ''),
             'contents' => markdown($document->body()),
-            'date' => $document->matter('date') ? 
-                Carbon::createFromTimestamp($document->matter('date')) : 
+            'date' => $document->matter('date') ?
+                Carbon::createFromTimestamp($document->matter('date')) :
                 Carbon::parse('1992-02-01'),
             'description' => $document->matter('description', ''),
             'era' => $document->matter('era', ''),
