@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.4.2 (15855) - http://www.bohemiancoding.com/sketch -->
-    <title>star</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="star" sketch:type="MSArtboardGroup" fill="#4D4D4D">
-            <path d="M10,0 C4.4771525,-3.38176876e-16 6.76353751e-16,4.4771525 0,10 C-6.76353751e-16,15.5228475 4.4771525,20 10,20 C12.6521649,20 15.195704,18.9464316 17.0710678,17.0710678 C18.9464316,15.195704 20,12.6521649 20,10 C20,4.4771525 15.5228475,3.38176876e-16 10,0 L10,0 Z M10,2.21405031 L11.8745422,7.37823477 L17.3651887,7.56515508 L13.0330656,10.9437562 L14.5519258,16.2234496 L10,13.1473543 L5.44807422,16.2234496 L6.96693438,10.9437562 L2.63481141,7.56515508 L8.12545781,7.37823477 L10,2.21405031 L10,2.21405031 Z" id="Shape" sketch:type="MSShapeGroup"></path>
-        </g>
-    </g>
-</svg>
+<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>star</title><path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10c2.652 0 5.196-1.054 7.07-2.93C18.947 15.197 20 12.653 20 10c0-5.523-4.477-10-10-10zm0 2.214l1.875 5.164 5.49.187-4.332 3.38 1.52 5.278L10 13.147l-4.552 3.076 1.52-5.28-4.333-3.378 5.49-.187L10 2.214z" fill="#4D4D4D" fill-rule="evenodd"/></svg>

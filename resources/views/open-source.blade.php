@@ -21,7 +21,9 @@
                     <a href="{{ $project->url }}" target="sebdd" class="card">
                         <h2 class="card__title">
                             <span class="card__title__icon">
-                                <span class="icon -{{ $project->type }}"></span>
+                                <span class="icon">
+                                    {{ svg($project->type) }}
+                                </span>
                             </span>
                             {{ $project->name }}
                         </h2>

@@ -11,12 +11,16 @@
             <ul class="blog__header__nav">
                 <li class="blog__header__nav__item">
                     <a href="{{ url('blogroll') }}">
-                        <span class="icon -star -s" title="Blogroll"></span>
+                        <span class="icon -s" title="Blogroll">
+                            {{ svg('star') }}
+                        </span>
                     </a>
                 </li>
                 <li class="blog__header__nav__item">
                     <a href="{{ url('feed') }}" data-turbolinks="false">
-                        <span class="icon -rss -s" title="RSS"></span>
+                        <span class="icon -s" title="RSS">
+                            {{ svg('rss') }}
+                        </span>
                     </a>
                 </li>
             </ul>
@@ -31,8 +35,8 @@
                     </time>
                 </a>
                 <h2 class="blog__excerpt__title">
-                    <a 
-                        href="{{ $post->external_url ?: $post->url }}" 
+                    <a
+                        href="{{ $post->external_url ?: $post->url }}"
                         @if($post->external_url) target="sebdd" @endif
                         class="blog__excerpt__title__link">
                         {{ $post->title }}
