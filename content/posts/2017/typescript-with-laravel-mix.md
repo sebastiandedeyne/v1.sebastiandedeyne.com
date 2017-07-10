@@ -7,6 +7,10 @@ era: Laravel 5.4
 description: "In a recent Spatie project we decided to give TypeScript a shot for the business critical part of a new application. TypeScript provides static analysis to reduce the chance of introducing bugs, to have self-documenting code, and to improve our tooling (autocompletion!)"
 ---
 
+Since writing this post, TypeScript has become [officially supported](https://github.com/JeffreyWay/laravel-mix/pull/812) in Laravel Mix (version `0.12` and up). There's still some informative stuff in here if you're new to TypeScript, but use the official method if you're on a newer version of Mix!
+
+---
+
 In a recent [Spatie](https://spatie.be) project we decided to give [TypeScript](https://typescriptlang.org) a shot for the business critical part of a new application. TypeScript provides static analysis to reduce the chance of introducing bugs, to have self-documenting code, and to improve our tooling (autocompletion!)
 
 We've been happily using [Laravel Mix](https://laravel.com/docs/5.4/mix) since it's release with Laravel 5.4. Luckily, extending Mix isn't too hard with some webpack knowledge. One of my favorite features of webpack is the ability to import a module in your application without caring about what kind of file it actually is. As long as you've configured an appropriate loader, you could import anything from a plain old JavaScript file to an animated gif. This means that if we want to support TypeScript with Laravel Mix, we don't need to change any configuration, we only need to add the ability to bundle TypeScript files.
