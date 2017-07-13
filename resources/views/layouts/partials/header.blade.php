@@ -1,6 +1,8 @@
 <div class="container">
     <header class="header">
-        <a href="{{ url('/') }}" class="header__logotype"></a>
+        <a href="{{ url('/') }}" class="header__logotype">
+            {{ svg('logotype') }}
+        </a>
         <nav class="header__nav">
             <ul class="header__nav__list">
                 <li class="header__nav__item @if(request()->url() === url('/')) -active @endif">
