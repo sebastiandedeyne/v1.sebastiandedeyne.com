@@ -20,11 +20,11 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract(['css-loader', 'postcss-loader']),
-            }
+            },
         ],
     },
     resolve: {
-        extensions: ['.js', '.css', '.svg'],
+        extensions: ['.js', '.css'],
     },
     plugins: [
         new ExtractTextPlugin('[name]-[hash].css'),
