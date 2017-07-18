@@ -4,10 +4,10 @@ title: Using Registered Event Listeners as Conditionals in Vue
 date: 2017-07-18
 era: Vue 2.4
 
-description: "Today I was writing a generic form component that needed an optional back button. Since the form component is generic, the back button could point to anything.\n\n I decided to use a component event, so the parent can listen to a `back` event and do it's own thing. Also: The back button isn't always necessary, so I needed some sort of prop to decide if it should be rendered."
+description: "Today I was writing a form component that needed an optional back button. Since the form component is generic, the back button could point to anything.\n\n I decided to use a component event, so the parent can listen to a `back` event and do it's own thing. Also: The back button isn't always necessary, so I needed some sort of prop to decide if it should be rendered."
 ---
 
-Today I was writing a generic form component that needed an optional back button. Since the form component is generic, the back button could point to anything. 
+Today I was writing a form component that needed an optional back button. Since the form component is generic, the back button could point to anything. 
 
 I decided to use a [component event](https://vuejs.org/v2/guide/components.html#Custom-Events), so the parent can listen to a `back` event and do it's own thing. Also: The back button isn't always necessary, so I needed some sort of prop to decide if it should be rendered.
 
