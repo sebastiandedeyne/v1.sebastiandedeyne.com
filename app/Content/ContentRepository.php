@@ -74,7 +74,7 @@ class ContentRepository
             'date' => $document->matter('date') ?
                 Carbon::createFromTimestamp($document->matter('date')) :
                 Carbon::parse('1992-02-01'),
-            'description' => $document->matter('description', ''),
+            'description' => markdown($document->matter('description', '')),
             'era' => $document->matter('era', ''),
             'external_url' => $document->matter('external_url', ''),
             'external_location' => $document->matter('external_location', ''),

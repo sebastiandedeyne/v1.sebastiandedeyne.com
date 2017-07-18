@@ -1,10 +1,9 @@
 :root {
-    --typographic-scale: 1.5;
-    --font-size: 18px;
-    --font-size-l: 25px;
-    --font-size-xl: 34px;
+    --font-size: 17px;
+    --font-size-l: 24px;
+    --font-size-xl: 32px;
     --font-size-s: 14px;
-    --baseline: 32px;
+    --baseline: 29px;
     --double-baseline: calc(var(--baseline) * 2);
     --triple-baseline: calc(var(--baseline) * 3);
     --half-baseline: calc(var(--baseline) * .5);

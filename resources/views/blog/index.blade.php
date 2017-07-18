@@ -44,7 +44,7 @@
                 </h2>
                 @if($post->type === 'article')
                     <section class="post-contents">
-                        <p>{{ $post->description }}</p>
+                        <p>{!! $post->description !!}</p>
                     </section>
                     <a href="{{ $post->url }}" class="blog__excerpt__readmore">
                         Read more
