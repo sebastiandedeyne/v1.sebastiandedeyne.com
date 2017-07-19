@@ -65,7 +65,7 @@ Let's clean up our component public API with this in mind.
     export default {
         computed: {
             showBackButton() {
-                return this.$listeners.hasOwnProperty('back');
+                return !! this.$listeners.back;
             },
         },
     }
