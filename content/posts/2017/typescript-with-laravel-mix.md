@@ -7,7 +7,7 @@ era: Laravel 5.4
 description: "In a recent Spatie project we decided to give TypeScript a shot for the business critical part of a new application. TypeScript provides static analysis to reduce the chance of introducing bugs, to have self-documenting code, and to improve our tooling (autocompletion!)"
 ---
 
-Since writing this post, TypeScript has become [officially supported](https://github.com/JeffreyWay/laravel-mix/pull/812) in Laravel Mix (version `0.12` and up). There's still some informative stuff in here if you're new to TypeScript, but use the official method if you're on a newer version of Mix!
+*Since writing this post, TypeScript has become [officially supported](https://github.com/JeffreyWay/laravel-mix/pull/812) in Laravel Mix (version `0.12` and up). There's still some informative stuff in here if you're new to TypeScript, but use the official method if you're on a newer version of Mix!*
 
 ---
 
