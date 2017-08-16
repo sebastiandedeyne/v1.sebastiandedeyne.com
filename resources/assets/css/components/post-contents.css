@@ -126,3 +126,7 @@
     color: var(--light-text-color);
     margin-bottom: var(--baseline);
 }
+
+.post-contents aside a {
+    background-color: transparent;
+}
