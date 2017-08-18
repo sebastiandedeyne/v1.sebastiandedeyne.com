@@ -10,14 +10,14 @@ class BlogController extends Controller
 {
     public function index(ContentRepository $contentRepository)
     {
-        $paginator = $contentRepository->posts()->simplePaginate(5);
+        $paginator = $contentRepository->posts()->simplePaginate(20);
 
         return view('blog.index', ['paginator' => $paginator]);
     }
 
     public function page($page, ContentRepository $contentRepository)
     {
-        $paginator = $contentRepository->posts()->simplePaginate(5, 'page', $page);
+        $paginator = $contentRepository->posts()->simplePaginate(20, 'page', $page);
 
         return view('blog.index', ['paginator' => $paginator]);
     }
