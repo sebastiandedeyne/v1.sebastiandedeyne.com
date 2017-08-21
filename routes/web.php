@@ -2,11 +2,14 @@
 
 Route::feeds();
 
-Route::get('/', 'HomeController')->name('home');
-Route::get('/about', 'AboutController');
-Route::get('/open-source', 'OpenSourceController');
-Route::get('/blogroll', 'BlogrollController');
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/posts', 'BlogController@index');
-Route::get('/posts/page/{page}', 'BlogController@page');
-Route::get('/posts/{slug}', 'BlogController@post')->where('slug', '(.*)');
+Route::get('/about', 'AboutController@index')->name('about');
+
+Route::get('/open-source', 'OpenSourceController@index')->name('openSource');
+
+Route::get('/blogroll', 'BlogrollController@index')->name('blogroll');
+
+Route::get('/posts', 'PostsController@index')->name('posts.index');
+Route::get('/posts/page/{page}', 'PostsController@page');
+Route::get('/posts/{slug}', 'PostsController@show')->name('posts.show')->where('slug', '(.*)');

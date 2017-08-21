@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Content\ContentRepository;
+use App\Content\Blogroll;
 
 class BlogrollController
 {
-    public function __invoke(ContentRepository $contentRepository)
+    public function index(Blogroll $blogroll)
     {
-        $blogs = $contentRepository->blogroll()->groupBy('category');
-
-        return view('blogroll', ['blogs' => $blogs]);
+        return view('blogroll.index', [
+            'items' => $blogroll->items()->groupBy('category'),
+        ]);
     }
 }

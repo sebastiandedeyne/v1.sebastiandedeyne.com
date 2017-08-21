@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Content\ContentRepository;
+use App\Content\Posts;
 use Illuminate\Routing\Controller;
 
-class HomeController extends Controller
+class HomeController
 {
-    public function __invoke(ContentRepository $contentRepository)
+    public function index(Posts $posts)
     {
-        $articles = $contentRepository->articles()->groupBy(function ($article) {
-            return $article->date->format('Y');
+        $posts = $posts->all()->groupBy(function ($post) {
+            return $post->date->format('Y');
         });
 
-        return view('home', ['articles' => $articles]);
+        return view('home', [
+            'posts' => $posts,
+        ]);
     }
 }

@@ -16,9 +16,7 @@ class FeedItem implements \Spatie\Feed\FeedItem
         $item->title = $post->title;
         $item->updated = $post->date;
         $item->summary = $post->contents;
-        $item->url = $post->type === 'external' ?
-            $post->external_url :
-            $post->url;
+        $item->url = $post->url;
 
         return $item;
     }

@@ -17,7 +17,7 @@
     <div class="container -wide">
         <section class="blogroll">
             <div class="row">
-                @foreach($blogs as $category => $items)
+                @foreach($items as $category => $items)
                     <div class="column -third">
                         <section class="blogroll__category">
                             <h2 class="blogroll__title">{{ $category }}</h2>

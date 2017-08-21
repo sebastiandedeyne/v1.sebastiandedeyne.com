@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Content\ContentRepository;
-use Illuminate\Routing\Controller;
+use App\Content\OpenSource;
 
-class OpenSourceController extends Controller
+class OpenSourceController
 {
-    public function __invoke(ContentRepository $contentRepository)
+    public function index(OpenSource $openSource)
     {
-        return view('open-source')
-            ->withProjects($contentRepository->openSource());
+        return view('openSource.index', [
+            'projects' => $openSource->projects(),
+        ]);
     }
 }

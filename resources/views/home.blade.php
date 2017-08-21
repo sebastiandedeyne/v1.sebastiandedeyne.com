@@ -12,27 +12,27 @@
         <section class="h-double-margin-bottom">
             @include('partials.social')
         </section>
-        <section class="article-list">
-            <h2 class="article-list__title">Articles</h2>
-            @foreach($articles as $year => $articles)
+        <section class="post-list">
+            <h2 class="post-list__title">Articles</h2>
+            @foreach($posts as $year => $postsInYear)
                 <section class="list-group">
                     <h2 class="list-group__title">
                         {{ $year }}
                     </h2>
                     <ul>
-                        @foreach($articles as $article)
+                        @foreach($postsInYear as $post)
                             <li class="list-group__item">
-                                <a class="list-group__link" href="{{ $article->url }}">
-                                    {{ $article->title }}
+                                <a class="list-group__link" href="{{ $post->url }}">
+                                    {{ $post->title }}
                                 </a>
                             </li>
                         @endforeach
                     </ul>
                 </section>
             @endforeach
-            <a href="{{ url('posts') }}" class="article-list__more">
+            {{--<a href="{{ url('posts') }}" class="post-list__more">
                 Psst! There's more on the blog!
-            </a>
+            </a>--}}
         </section>
         @include('partials.footer')
     </div>

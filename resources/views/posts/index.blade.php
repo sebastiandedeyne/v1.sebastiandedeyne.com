@@ -35,33 +35,21 @@
                     </time>
                 </a>
                 <h2 class="blog__excerpt__title">
-                    <a
-                        href="{{ $post->external_url ?: $post->url }}"
-                        @if($post->external_url) target="sebdd" @endif
-                        class="blog__excerpt__title__link">
+                    <a href="{{ $post->url }}" class="blog__excerpt__title__link">
                         {{ $post->title }}
                     </a>
                 </h2>
-                @if($post->type === 'article')
-                    <section class="post-contents">
-                        <p>{!! $post->description !!}</p>
-                    </section>
-                    <a href="{{ $post->url }}" class="blog__excerpt__readmore">
-                        Read more
-                    </a>
-                @else
-                    <section class="post-contents">
-                        {!! $post->contents !!}
-                    </section>
-                    <a href="{{ $post->external_url }}" target="sebdd" class="blog__excerpt__readmore">
-                        Read the full story {{ $post->external_location }}
-                    </a>
-                @endif
+                <section class="post-contents">
+                    {!! $post->summary !!}
+                </section>
+                <a href="{{ $post->read_more_url }}" target="sebdd" class="blog__excerpt__readmore">
+                    {{ $post->read_more_text ?? 'Read more' }}
+                </a>
             </article>
         @endforeach
     </div>
     <div class="container">
-        @include('blog.partials.paginator')
+        @include('posts.partials.paginator')
         @include('partials.footer')
     </div>
 @endcomponent
