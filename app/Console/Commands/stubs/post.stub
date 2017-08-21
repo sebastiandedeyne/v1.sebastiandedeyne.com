@@ -1,7 +1,9 @@
 ---
-type: $type
 title: $title
-date: $date
-
-description: ""
+subtitle:
+original_publication_name:
+original_publication_url:
+read_more_text:
+read_more_url:
+summary:
 ---

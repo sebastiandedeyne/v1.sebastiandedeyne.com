@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Carbon\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Storage;
 
 class PostMakeCommand extends Command
 {
@@ -12,7 +13,7 @@ class PostMakeCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:post {title} {--external}';
+    protected $signature = 'make:post {title}';
 
     /**
      * The console command description.
@@ -31,17 +32,13 @@ class PostMakeCommand extends Command
         $title = $this->input->getArgument('title');
         $slug = strtolower(str_slug($title));
         $date = Carbon::now();
-        $type = $this->input->getOption('external') ? 'external' : 'article';
 
         $contents = file_get_contents(__DIR__.'/stubs/post.stub');
         $contents = str_replace('$title', $title, $contents);
-        $contents = str_replace('$type', $type, $contents);
-        $contents = str_replace('$date', $date->format('Y-m-d'), $contents);
 
-        $directory = base_path("content/posts/{$date->year}");
+        $path = 'posts/'.$date->format('Y-m-d').'.'.$slug.'.md';
 
-        @mkdir($directory);
-        file_put_contents($directory.'/'.$slug.'.md', $contents);
+        Storage::disk('content')->put($path, $contents);
 
         $this->info("Post created successfully.");
     }
