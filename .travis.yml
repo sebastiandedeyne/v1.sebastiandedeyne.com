@@ -1,0 +1,20 @@
+language: php
+dist: trusty
+
+php:
+  - 7.1
+
+cache:
+  yarn: true
+  directories:
+    - $HOME/.composer/cache/files
+
+before_script:
+  - composer install --prefer-dist
+  - nvm install node
+  - npm install -g yarn
+  - yarn
+  - yarn build
+
+script:
+ - ./vendor/bin/phpunit
