@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Tests\Analysis;
 
 use GrahamCampbell\Analyzer\AnalysisTrait;
 use PHPUnit\Framework\TestCase;
@@ -12,7 +12,7 @@ class AnalysisTest extends TestCase
     public function getPaths()
     {
         return [
-            __DIR__.'/../app',
+            __DIR__.'/../../app',
         ];
     }
 }

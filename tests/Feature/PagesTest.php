@@ -1,11 +1,11 @@
 <?php
 
-namespace Tests\Smoke;
+namespace Tests\Features;
 
 use Illuminate\Foundation\Testing\TestCase;
 use Tests\CreatesApplication;
 
-class PageTest extends TestCase
+class PagesTest extends TestCase
 {
     use CreatesApplication;
 
