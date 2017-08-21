@@ -3,10 +3,10 @@
 namespace App\Exceptions;
 
 use Exception;
-use HttpException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Foundation\Http\Exceptions\MaintenanceModeException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class Handler extends ExceptionHandler
 {

@@ -2,8 +2,13 @@
 
 namespace Tests\Smoke;
 
-class SmokeTest extends TestCase
+use Illuminate\Foundation\Testing\TestCase;
+use Tests\CreatesApplication;
+
+class PageTest extends TestCase
 {
+    use CreatesApplication;
+
     public function test_it_displays_the_home_page()
     {
         $this->get('/')->assertStatus(200);

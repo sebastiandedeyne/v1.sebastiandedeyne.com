@@ -14,9 +14,10 @@
         "spatie/laravel-responsecache": "^1.1",
         "spatie/laravel-robots-middleware": "^1.0",
         "spatie/laravel-tail": "^1.2",
-        "spatie/yaml-front-matter": "2.0.0-rc.2"
+        "spatie/yaml-front-matter": "^2.0.0"
     },
     "require-dev": {
+        "graham-campbell/analyzer": "^1.1",
         "phpunit/phpunit": "~5.0",
         "spatie/laravel-artisan-dd": "^1.1"
     },
