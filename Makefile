@@ -10,16 +10,12 @@ deploy:
 
 	# Composer
 	cd $(RELEASE_DIR) && \
-		composer install --no-interaction --prefer-dist
+		composer install --no-dev --no-interaction --prefer-dist
 
 	# Yarn
 	cd $(RELEASE_DIR) && \
 		yarn && \
 		yarn build
-
-	# Test
-	cd $(RELEASE_DIR) && \
-		./vendor/bin/phpunit --testsuite "Smoke Tests"
 
 	# Optimize
 	cd $(RELEASE_DIR) && \
