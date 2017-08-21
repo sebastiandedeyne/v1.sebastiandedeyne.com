@@ -36,7 +36,7 @@
                 </div>
                 @if($post->read_more_text)
                     <a href="{{ $post->read_more_url }}" target="sebdd" class="post__body__readmore">
-                        Read the full story {{ $post->read_more_text }}
+                        {{ $post->read_more_text }}
                     </a>
                 @endif
             </div>
