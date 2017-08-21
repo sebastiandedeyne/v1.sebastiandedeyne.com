@@ -20,10 +20,10 @@ class PostsController
         ]);
     }
 
-    public function show($slug, Posts $posts)
+    public function show($year, $slug, Posts $posts)
     {
         return view('posts.show', [
-            'post' => $posts->find($slug),
+            'post' => $posts->find($year, $slug),
         ]);
     }
 }

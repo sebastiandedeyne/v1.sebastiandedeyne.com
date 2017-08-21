@@ -23,10 +23,10 @@ class Posts
         });
     }
 
-    public function find($slug)
+    public function find($year, $slug)
     {
-        return $this->all()->first(function ($post) use ($slug) {
-            return $post->slug === $slug;
+        return $this->all()->first(function ($post) use ($year, $slug) {
+            return $post->date->year == $year && $post->slug == $slug;
         }, function () {
             abort(404);
         });
@@ -51,13 +51,14 @@ class Posts
                 $filename = str_replace_first('posts/', '', $path);
                 [$date, $slug, $extension] = explode('.', $filename, 3);
 
+                $date = Carbon::createFromFormat('Y-m-d', $date);
                 $document = YamlFrontMatter::parse($disk->get($path));
 
                 return (object) [
                     'path' => $path,
-                    'date' => Carbon::createFromFormat('Y-m-d', $date),
+                    'date' => $date,
                     'slug' => $slug,
-                    'url' => route('posts.show', $slug),
+                    'url' => route('posts.show', [$date->format('Y'), $slug]),
                     'title' => $document->title,
                     'subtitle' => $document->subtitle,
                     'original_publication_name' => $document->original_publication_name,
