@@ -15,6 +15,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('errors.generic', ErrorComposer::class);
+        //
+    }
+
+    /**
+     * Register the application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
     }
 }

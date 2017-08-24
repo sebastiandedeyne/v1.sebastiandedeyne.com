@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Sebastian De Deyne',
+    'name' => env('APP_NAME', 'Laravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://sebastiandedeyne.com'),
+    'url' => env('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -178,9 +178,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Spatie\CollectionMacros\CollectionMacroServiceProvider::class,
-        Spatie\ResponseCache\ResponseCacheServiceProvider::class,
-        Spatie\Tail\TailServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -192,12 +189,6 @@ return [
         // App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        /*
-         * Special cases...
-         */
-
-        // Needs to come after the RouteServiceProvider
-        Spatie\Feed\FeedServiceProvider::class,
     ],
 
     /*
