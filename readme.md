@@ -10,7 +10,6 @@ I'm open sourcing this because I don't see any reason not to.
 - Content is stored in markdown files with front matter, which are parsed with my own [`spatie/yaml-front-matter`](https://github.com/spatie/yaml-front-matter) package
 - This site's pretty fast thanks to [`spatie/laravel-responsecache`](https://github.com/spatie/laravel-responsecache), [Turbolinks](https://github.com/turbolinks/turbolinks) and various other optimizations like http2, gzip, and the right headers for caching
 - Assets are built with [Webpack](https://webpack.js.org). JavaScript is transpiled with [Babel](https://babeljs.io/), CSS with [cssnext](http://cssnext.io/)
-- I included a little service worker for some basic offline experience
 - I'm using a Makefile for zero downtime deployments, which runs in the background whenever I push something to master
 - The live site is hosted on a [Digital Ocean](https://digitalocean.com) droplet, provisioned with [Laravel Forge](https://forge.laravel.com)
 
