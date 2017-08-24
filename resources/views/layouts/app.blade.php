@@ -24,7 +24,9 @@
         @stack('head')
     </head>
     <body>
-        @include('layouts.partials.header')
+        @if($header ?? true)
+            @include('layouts.partials.header')
+        @endif
 
         {{ $slot }}
 

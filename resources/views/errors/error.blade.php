@@ -1,14 +1,15 @@
 @php
     $showHomeLink = $showHomeLink ?? request()->path() !== '/';
 
-    $message = $message ?? array_random([
+    $title = $title ?? array_random([
         '¯\_(ツ)_/¯', 'Awkward.', 'Bantha fodder.', 'Hmmm...', 'Oh no!',
         'Peculiar.', 'Uh oh.', 'Whoops!',
     ]);
 @endphp
 
-@component('layouts.page', [
+@component('layouts.app', [
     'title' => $title,
+    'header' => false,
 ])
     <section class="error">
         <h1 class="error__title">
