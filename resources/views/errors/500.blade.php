@@ -1,3 +1,3 @@
 @include('errors.error', [
-    'title' => 'This page doesn\'t work.',
+    'message' => 'This page doesn\'t work.',
 ])
