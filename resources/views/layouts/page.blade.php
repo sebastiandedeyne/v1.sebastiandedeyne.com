@@ -12,7 +12,7 @@
 
         <title>{{ isset($title) ? ($title . ' — Sebastian De Deyne') : 'Sebastian De Deyne' }}</title>
 
-        @include('laravel-feed::feed-links')
+        @include('feed::links')
 
         @include('layouts.partials.favicons')
 

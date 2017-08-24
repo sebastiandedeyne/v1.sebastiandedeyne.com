@@ -35,7 +35,16 @@ class Posts
     public function feed()
     {
         return Cache::rememberForever('content:posts.feed', function () {
-            return $this->all()->map([FeedItem::class, 'fromPost']);
+            return $this->all()->map(function ($post) {
+                return [
+                    'id' => $post->url,
+                    'title' => $post->title,
+                    'updated' => $post->date,
+                    'summary' => $post->contents,
+                    'link' => $post->url,
+                    'author' => 'Sebastian De Deyne',
+                ];
+            });
         });
     }
 
