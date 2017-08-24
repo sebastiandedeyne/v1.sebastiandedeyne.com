@@ -1,3 +1,12 @@
+@php
+    $showHomeLink = $showHomeLink ?? request()->path() !== '/';
+
+    $message = $message ?? array_random([
+        '¯\_(ツ)_/¯', 'Awkward.', 'Bantha fodder.', 'Hmmm...', 'Oh no!',
+        'Peculiar.', 'Uh oh.', 'Whoops!',
+    ]);
+@endphp
+
 @component('layouts.page', [
     'title' => $title,
 ])
@@ -8,7 +17,7 @@
         <p class="error__message">
             {{ $message }}
         </p>
-        @unless(Request::path() === '/')
+        @if($showHomeLink)
             <a href="{{ url('/') }}" class="button">
                 Go home
             </a>
