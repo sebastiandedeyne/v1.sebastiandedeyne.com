@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\HtmlString;
+use League\CommonMark\CommonMarkConverter;
 
 function carbon()
 {
@@ -9,7 +10,7 @@ function carbon()
 
 function markdown($markdown)
 {
-    return app(\League\CommonMark\CommonMarkConverter::class)->convertToHtml($markdown);
+    return app(CommonMarkConverter::class)->convertToHtml($markdown);
 }
 
 function svg($filename)
