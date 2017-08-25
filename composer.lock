@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "811d20681e19b15a43e75948ec0b3ec8",
-    "content-hash": "13a5a381fe045de34b0e7a13d7703036",
+    "hash": "a4949bcf1d8967a995037c53c8302b5f",
+    "content-hash": "e9d19b10cf7ef29b847b35f94bee005f",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -290,12 +290,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "53e35165356c08656a63b23fd6622259c130814a"
+                "reference": "3217b92443ae8ede1daaeec588a1d62d641beb3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/53e35165356c08656a63b23fd6622259c130814a",
-                "reference": "53e35165356c08656a63b23fd6622259c130814a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/3217b92443ae8ede1daaeec588a1d62d641beb3a",
+                "reference": "3217b92443ae8ede1daaeec588a1d62d641beb3a",
                 "shasum": ""
             },
             "require": {
@@ -414,7 +414,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-08-24 21:12:42"
+            "time": "2017-08-24 22:31:53"
         },
         {
             "name": "league/commonmark",
@@ -1089,12 +1089,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-feed.git",
-                "reference": "b0407c028e7473013286e1ff8808d66f8ca82df1"
+                "reference": "420ff20f546bbc5f171850de16e4599bfef1b162"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/b0407c028e7473013286e1ff8808d66f8ca82df1",
-                "reference": "b0407c028e7473013286e1ff8808d66f8ca82df1",
+                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/420ff20f546bbc5f171850de16e4599bfef1b162",
+                "reference": "420ff20f546bbc5f171850de16e4599bfef1b162",
                 "shasum": ""
             },
             "require": {
@@ -1152,7 +1152,7 @@
                 "rss",
                 "spatie"
             ],
-            "time": "2017-08-24 21:54:21"
+            "time": "2017-08-25 07:09:46"
         },
         {
             "name": "spatie/laravel-responsecache",
