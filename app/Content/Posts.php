@@ -57,10 +57,12 @@ class Posts
                 return ends_with($path, '.md');
             })
             ->map(function ($path) use ($disk) {
-                $filename = str_replace_first('posts/', '', $path);
+                $filename = str_after($path, 'posts/');
+
                 [$date, $slug, $extension] = explode('.', $filename, 3);
 
                 $date = Carbon::createFromFormat('Y-m-d', $date);
+
                 $document = YamlFrontMatter::parse($disk->get($path));
 
                 return (object) [
