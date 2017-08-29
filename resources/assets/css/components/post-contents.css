@@ -100,7 +100,7 @@
     color: var(--light-gray);
 }
 
-.post-contents blockquote p {
+.post-contents blockquote * {
     position: relative;
     z-index: 2;
     font-style: italic;
