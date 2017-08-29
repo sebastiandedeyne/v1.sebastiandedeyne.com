@@ -1023,12 +1023,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-collection-macros.git",
-                "reference": "9ca5e2f4dc1f227ff4de47c2f2487d2638cf2098"
+                "reference": "db6e35925aa703593c3c2034d00bcb92ef42d222"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-collection-macros/zipball/9ca5e2f4dc1f227ff4de47c2f2487d2638cf2098",
-                "reference": "9ca5e2f4dc1f227ff4de47c2f2487d2638cf2098",
+                "url": "https://api.github.com/repos/spatie/laravel-collection-macros/zipball/db6e35925aa703593c3c2034d00bcb92ef42d222",
+                "reference": "db6e35925aa703593c3c2034d00bcb92ef42d222",
                 "shasum": ""
             },
             "require": {
@@ -1081,7 +1081,7 @@
                 "laravel-collection-macros",
                 "spatie"
             ],
-            "time": "2017-08-29 10:40:21"
+            "time": "2017-08-29 20:35:44"
         },
         {
             "name": "spatie/laravel-feed",
