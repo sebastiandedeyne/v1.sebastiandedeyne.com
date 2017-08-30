@@ -1156,16 +1156,16 @@
         },
         {
             "name": "spatie/laravel-responsecache",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-responsecache.git",
-                "reference": "91ece494629094e9a6b8fa3f6f81890638988b6c"
+                "reference": "ba18210c3c42d0eb5ddf805bf55e20eb435e6206"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-responsecache/zipball/91ece494629094e9a6b8fa3f6f81890638988b6c",
-                "reference": "91ece494629094e9a6b8fa3f6f81890638988b6c",
+                "url": "https://api.github.com/repos/spatie/laravel-responsecache/zipball/ba18210c3c42d0eb5ddf805bf55e20eb435e6206",
+                "reference": "ba18210c3c42d0eb5ddf805bf55e20eb435e6206",
                 "shasum": ""
             },
             "require": {
@@ -1221,7 +1221,7 @@
                 "response",
                 "spatie"
             ],
-            "time": "2017-08-30 16:05:14"
+            "time": "2017-08-30 16:30:30"
         },
         {
             "name": "spatie/laravel-robots-middleware",
