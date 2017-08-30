@@ -20,7 +20,7 @@ deploy:
 	# Optimize
 	cd $(RELEASE_DIR) && \
 		php artisan cache:clear && \
-		php artisan responsecache:clear && \
+		php artisan responsecache:flush && \
 		php artisan optimize && \
 		php artisan config:cache && \
 		php artisan route:cache
