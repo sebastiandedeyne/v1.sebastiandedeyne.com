@@ -35,7 +35,16 @@ class Posts
     public function feed()
     {
         return Cache::rememberForever('content:posts.feed', function () {
-            return $this->all()->map([FeedItem::class, 'fromPost']);
+            return $this->all()->map(function ($post) {
+                return [
+                    'id' => $post->url,
+                    'title' => $post->title,
+                    'updated' => $post->date,
+                    'summary' => $post->contents,
+                    'link' => $post->url,
+                    'author' => 'Sebastian De Deyne',
+                ];
+            });
         });
     }
 
@@ -48,10 +57,12 @@ class Posts
                 return ends_with($path, '.md');
             })
             ->map(function ($path) use ($disk) {
-                $filename = str_replace_first('posts/', '', $path);
+                $filename = str_after($path, 'posts/');
+
                 [$date, $slug, $extension] = explode('.', $filename, 3);
 
                 $date = Carbon::createFromFormat('Y-m-d', $date);
+
                 $document = YamlFrontMatter::parse($disk->get($path));
 
                 return (object) [

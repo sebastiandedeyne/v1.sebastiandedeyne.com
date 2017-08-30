@@ -13,7 +13,7 @@ class HomeController
             return $post->date->format('Y');
         });
 
-        return view('home', [
+        return view('home.index', [
             'posts' => $posts,
         ]);
     }

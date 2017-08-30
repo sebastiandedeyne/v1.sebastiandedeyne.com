@@ -1,12 +1,5 @@
-@component('layouts.page', [
+@include('errors.error', [
     'title' => 'Be Right Back!',
+    'message' => 'Just doing some quick maintenance.',
+    'showHomeLink' => false,
 ])
-    <section class="error">
-        <h1 class="error__title">
-            Be Right Back!
-        </h1>
-        <p class="error__message">
-            Just doing some quick maintenance.
-        </p>
-    </section>
-@endcomponent

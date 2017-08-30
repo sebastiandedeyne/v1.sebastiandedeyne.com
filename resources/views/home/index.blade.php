@@ -1,4 +1,4 @@
-@component('layouts.page')
+@component('layouts.app')
     <div class="container">
         <h1 class="h1 h-margin-bottom">
             Sebastian De Deyne

@@ -12,7 +12,7 @@
 
         <title>{{ isset($title) ? ($title . ' — Sebastian De Deyne') : 'Sebastian De Deyne' }}</title>
 
-        @include('laravel-feed::feed-links')
+        @include('feed::links')
 
         @include('layouts.partials.favicons')
 
@@ -24,7 +24,9 @@
         @stack('head')
     </head>
     <body>
-        @include('layouts.partials.header')
+        @if($header ?? true)
+            @include('layouts.partials.header')
+        @endif
 
         {{ $slot }}
 

@@ -2,7 +2,7 @@
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 @endpush
 
-@component('layouts.page', [
+@component('layouts.app', [
     'title' => $post->title,
 ])
     <article class="post">

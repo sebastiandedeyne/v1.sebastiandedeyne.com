@@ -1,4 +1,4 @@
-@component('layouts.page', [
+@component('layouts.app', [
     'title' => 'Blogroll',
 ])
     <div class="container">
