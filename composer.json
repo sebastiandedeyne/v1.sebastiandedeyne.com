@@ -9,13 +9,13 @@
     "type": "project",
     "require": {
         "php": ">=7.1",
-        "laravel/framework": "dev-master",
+        "laravel/framework": "5.5.*",
         "league/commonmark": "^0.15.0",
-        "spatie/laravel-collection-macros": "dev-laravel-55",
-        "spatie/laravel-feed": "v2.x-dev",
-        "spatie/laravel-responsecache": "dev-laravel-55",
+        "spatie/laravel-collection-macros": "^3.0",
+        "spatie/laravel-feed": "^2.0",
+        "spatie/laravel-responsecache": "^4.0",
         "spatie/laravel-robots-middleware": "^1.0",
-        "spatie/laravel-tail": "dev-laravel-55",
+        "spatie/laravel-tail": "^2.0",
         "spatie/yaml-front-matter": "^2.0.0",
         "fideloper/proxy": "~3.3"
     },
@@ -55,7 +55,5 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

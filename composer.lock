@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a4949bcf1d8967a995037c53c8302b5f",
-    "content-hash": "e9d19b10cf7ef29b847b35f94bee005f",
+    "hash": "a9196631afffd3ef7e97edca03e243e4",
+    "content-hash": "c3eeb5ad06e0a23b10ad03d1c84e9fd0",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -286,16 +286,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "dev-master",
+            "version": "v5.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "21f4d19c8413a6688603a73ca341c1de162ec1ee"
+                "reference": "bd352a0d2ca93775fce8ef02365b03fc4fb8cbb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/21f4d19c8413a6688603a73ca341c1de162ec1ee",
-                "reference": "21f4d19c8413a6688603a73ca341c1de162ec1ee",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/bd352a0d2ca93775fce8ef02365b03fc4fb8cbb0",
+                "reference": "bd352a0d2ca93775fce8ef02365b03fc4fb8cbb0",
                 "shasum": ""
             },
             "require": {
@@ -414,7 +414,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-08-29 19:22:34"
+            "time": "2017-08-30 09:25:30"
         },
         {
             "name": "league/commonmark",
@@ -1019,29 +1019,29 @@
         },
         {
             "name": "spatie/laravel-collection-macros",
-            "version": "dev-laravel-55",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-collection-macros.git",
-                "reference": "db6e35925aa703593c3c2034d00bcb92ef42d222"
+                "reference": "8b09fd9f526db1723fedd3cc51ac31e394e6b86b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-collection-macros/zipball/db6e35925aa703593c3c2034d00bcb92ef42d222",
-                "reference": "db6e35925aa703593c3c2034d00bcb92ef42d222",
+                "url": "https://api.github.com/repos/spatie/laravel-collection-macros/zipball/8b09fd9f526db1723fedd3cc51ac31e394e6b86b",
+                "reference": "8b09fd9f526db1723fedd3cc51ac31e394e6b86b",
                 "shasum": ""
             },
             "require": {
-                "illuminate/pagination": "5.5.x-dev",
-                "illuminate/support": "5.5.x-dev",
-                "illuminate/validation": "5.5.x-dev",
-                "illuminate/view": "5.5.x-dev",
+                "illuminate/pagination": "~5.5.0",
+                "illuminate/support": "~5.5.0",
+                "illuminate/validation": "~5.5.0",
+                "illuminate/view": "~5.5.0",
                 "php": "^7.0"
             },
             "require-dev": {
                 "mockery/mockery": "^0.9.5",
-                "orchestra/database": "3.5.x-dev",
-                "orchestra/testbench": "3.5.x-dev",
+                "orchestra/database": "~3.5.0",
+                "orchestra/testbench": "~3.5.0",
                 "phpunit/phpunit": "^6.2"
             },
             "type": "library",
@@ -1081,29 +1081,29 @@
                 "laravel-collection-macros",
                 "spatie"
             ],
-            "time": "2017-08-29 20:35:44"
+            "time": "2017-08-30 12:42:27"
         },
         {
             "name": "spatie/laravel-feed",
-            "version": "v2.x-dev",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-feed.git",
-                "reference": "3e7af86ebbe1f1a7c3adb06a927e8947c90baf90"
+                "reference": "e92e556f880555c1a5cf4c8cc7de21ca1b093985"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/3e7af86ebbe1f1a7c3adb06a927e8947c90baf90",
-                "reference": "3e7af86ebbe1f1a7c3adb06a927e8947c90baf90",
+                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/e92e556f880555c1a5cf4c8cc7de21ca1b093985",
+                "reference": "e92e556f880555c1a5cf4c8cc7de21ca1b093985",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "5.5.x-dev",
+                "illuminate/support": "~5.5.0",
                 "nesbot/carbon": "^1.0",
                 "php": "^7.0"
             },
             "require-dev": {
-                "orchestra/testbench": "3.5.x-dev",
+                "orchestra/testbench": "~3.5.0",
                 "phpunit/phpunit": "^6.0",
                 "spatie/phpunit-snapshot-assertions": "^1.0"
             },
@@ -1152,35 +1152,35 @@
                 "rss",
                 "spatie"
             ],
-            "time": "2017-08-28 06:46:14"
+            "time": "2017-08-30 12:24:39"
         },
         {
             "name": "spatie/laravel-responsecache",
-            "version": "dev-laravel-55",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-responsecache.git",
-                "reference": "25aa1b4e3a450430f2e16aae935117e62ed40d70"
+                "reference": "91ece494629094e9a6b8fa3f6f81890638988b6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-responsecache/zipball/25aa1b4e3a450430f2e16aae935117e62ed40d70",
-                "reference": "25aa1b4e3a450430f2e16aae935117e62ed40d70",
+                "url": "https://api.github.com/repos/spatie/laravel-responsecache/zipball/91ece494629094e9a6b8fa3f6f81890638988b6c",
+                "reference": "91ece494629094e9a6b8fa3f6f81890638988b6c",
                 "shasum": ""
             },
             "require": {
-                "illuminate/cache": "5.5.x-dev",
-                "illuminate/config": "5.5.x-dev",
-                "illuminate/console": "5.5.x-dev",
-                "illuminate/contracts": "5.5.x-dev",
-                "illuminate/http": "5.5.x-dev",
-                "illuminate/support": "5.5.x-dev",
+                "illuminate/cache": "~5.5.0",
+                "illuminate/config": "~5.5.0",
+                "illuminate/console": "~5.5.0",
+                "illuminate/contracts": "~5.5.0",
+                "illuminate/http": "~5.5.0",
+                "illuminate/support": "~5.5.0",
                 "nesbot/carbon": "~1.19",
                 "php": "^7.0"
             },
             "require-dev": {
                 "mockery/mockery": "^0.9.9",
-                "orchestra/testbench": "3.5.x-dev",
+                "orchestra/testbench": "~3.5.0",
                 "phpunit/phpunit": "^6.2"
             },
             "type": "library",
@@ -1221,7 +1221,7 @@
                 "response",
                 "spatie"
             ],
-            "time": "2017-08-24 09:37:06"
+            "time": "2017-08-30 16:05:14"
         },
         {
             "name": "spatie/laravel-robots-middleware",
@@ -1275,21 +1275,21 @@
         },
         {
             "name": "spatie/laravel-tail",
-            "version": "dev-laravel-55",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-tail.git",
-                "reference": "1c425c23d612650ab5054120b690f79f4c460734"
+                "reference": "e89a850c753d807061fb76194a99d4570f233566"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-tail/zipball/1c425c23d612650ab5054120b690f79f4c460734",
-                "reference": "1c425c23d612650ab5054120b690f79f4c460734",
+                "url": "https://api.github.com/repos/spatie/laravel-tail/zipball/e89a850c753d807061fb76194a99d4570f233566",
+                "reference": "e89a850c753d807061fb76194a99d4570f233566",
                 "shasum": ""
             },
             "require": {
-                "illuminate/console": "5.5.x-dev",
-                "illuminate/support": "5.5.x-dev",
+                "illuminate/console": "~5.5.0",
+                "illuminate/support": "~5.5.0",
                 "php": "^7.0",
                 "symfony/process": "^3.3"
             },
@@ -1327,7 +1327,7 @@
                 "log",
                 "tail"
             ],
-            "time": "2017-08-23 18:35:46"
+            "time": "2017-08-30 15:06:57"
         },
         {
             "name": "spatie/yaml-front-matter",
@@ -3954,15 +3954,9 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "laravel/framework": 20,
-        "spatie/laravel-collection-macros": 20,
-        "spatie/laravel-feed": 20,
-        "spatie/laravel-responsecache": 20,
-        "spatie/laravel-tail": 20
-    },
-    "prefer-stable": true,
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.1"
