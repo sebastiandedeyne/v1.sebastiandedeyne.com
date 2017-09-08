@@ -23,9 +23,9 @@
             <h2 class="textblock__subtitle">Background</h2>
             <ul>
                 <li>Developer at Spatie, Antwerp since 2015</li>
-                <li>Freelance design & dev as 1/3 of Made By Monkey, Ghent (2012-2015)</li>
+                <li>Freelance design & dev, Ghent (2012-2015)</li>
                 <li>Internship at SumoCoders, Ghent (2014)</li>
-                <li>Bachelor's degree in graphical and digital media<br> (Arteveldehogeschool 2015)</li>
+                <li>Bachelor's degree in graphical and digital media<br> (Artevelde University College Ghent 2015)</li>
             </ul>
             <h2 class="textblock__subtitle">Colophon</h2>
             <p>This website is powered by <a href="https://laravel.com/" target="sebdd">Laravel</a> and served from <a href="https://www.digitalocean.com/" target="sebdd">Digital Ocean</a>. The source code is hosted on <a href="https://github.com/sebastiandedeyne/sebastiandedeyne.com" target="sebdd">GitHub</a>.</p>
