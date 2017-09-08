@@ -24,6 +24,11 @@ class PagesTest extends TestCase
         $this->get('/open-source')->assertStatus(200);
     }
 
+    public function test_it_displays_the_posts_page()
+    {
+        $this->get('/posts')->assertStatus(200);
+    }
+
     public function test_it_displays_a_post_page()
     {
         $this->get('/posts/2016/adventure-time-with-webpack')->assertStatus(200);
