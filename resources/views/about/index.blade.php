@@ -20,9 +20,9 @@
             @include('partials.social')
         </section>
         <section class="textblock h-double-margin-bottom">
-            <h2 class="textblock__subtitle">Experience</h2>
+            <h2 class="textblock__subtitle">Background</h2>
             <ul>
-                <li>Developer at Spatie, Antwerp (2015- <span class="shruggie">¯\_(ツ)_/¯</span>)</li>
+                <li>Developer at Spatie, Antwerp since 2015</li>
                 <li>Freelance design & dev as 1/3 of Made By Monkey, Ghent (2012-2015)</li>
                 <li>Internship at SumoCoders, Ghent (2014)</li>
                 <li>Bachelor's degree in graphical and digital media<br> (Arteveldehogeschool 2015)</li>
