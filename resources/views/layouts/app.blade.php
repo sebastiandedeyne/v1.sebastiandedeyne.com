@@ -16,10 +16,12 @@
 
         @include('layouts.partials.favicons')
 
+        <link rel="preconnect" href="https://fonts.gstatic.com/">
+
         <link href="https://fonts.googleapis.com/css?family=Alegreya|Fira+Sans:400,400i,500,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href=" {{ mix('css/site.css') }}">
 
-        <script src="{{ mix('js/site.js') }}" defer></script>
+        <script defer src="{{ mix('js/site.js') }}"></script>
 
         @stack('head')
     </head>
