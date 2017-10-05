@@ -16,11 +16,9 @@ class OpenSource
                 Storage::disk('content')->get('open-source.yaml')
             );
 
-            return collect($projects)
-                ->map(function ($project) {
-                    return (object) $project;
-                })
-                ->sortBy('name');
+            return collect($projects)->map(function ($project) {
+                return (object) $project;
+            });
         });
     }
 }
