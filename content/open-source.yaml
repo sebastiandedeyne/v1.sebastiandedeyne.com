@@ -1,8 +1,8 @@
 -
-  name: email-concealer-cli
-  url: https://github.com/spatie/email-concealer-cli
-  description: CLI tool for concealing e-mails in a file by replacing their domain
-  type: php
+  name: hyper_ex
+  url: https://github.com/spatie/hyper_ex
+  description: HyperScript clone written in Elixir
+  type: elixir
 -
   name: menu
   url: https://github.com/spatie/menu
@@ -23,12 +23,12 @@
   url: https://github.com/spatie/laravel-menu
   description: Fluent html menu generator for Laravel applications
   type: laravel
-- 
+-
   name: opening-hours
   url: https://github.com/spatie/opening-hours
   description: Define and query a set of business hours
   type: php
-- 
+-
   name: regex
   url: https://github.com/spatie/regex
   description: A sane interface for php's built in preg functions
