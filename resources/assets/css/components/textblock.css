@@ -20,6 +20,5 @@
 }
 
 .textblock a {
-    background-color: var(--light-gray);
-    border-bottom: 1px solid var(--light-text-color);
+    box-shadow: inset 0 -0.333em 0 0 var(--light-gray);
 }
