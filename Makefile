@@ -17,19 +17,19 @@ deploy:
 		yarn && \
 		yarn build
 
-	# Optimize
+	# Bless
+	rm -f current
+	ln -s $(RELEASE_DIR) current
+	ln -s $(RELEASE_DIR)/../../.env $(RELEASE_DIR)/.env
+	sudo service php7.1-fpm restart
+
+    # Optimize
 	cd $(RELEASE_DIR) && \
 		php artisan cache:clear && \
 		php artisan responsecache:flush && \
 		php artisan optimize && \
 		php artisan config:cache && \
 		php artisan route:cache
-
-	# Bless
-	rm -f current
-	ln -s $(RELEASE_DIR) current
-	ln -s $(RELEASE_DIR)/../../.env $(RELEASE_DIR)/.env
-	sudo service php7.1-fpm restart
 
 	# Cleanup
 	ls -dt releases/* | tail -n +3 | xargs -d "\n" rm -rf;
