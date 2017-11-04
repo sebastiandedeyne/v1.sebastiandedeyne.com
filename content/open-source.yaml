@@ -24,15 +24,15 @@
   description: Project natural shadows under elements
   type: typescript
 -
-  name: menu
-  url: https://github.com/spatie/menu
-  description: Fluent html menu generator for PHP applications
-  type: php
--
   name: opening-hours
   url: https://github.com/spatie/opening-hours
   description: Define and query a set of business hours
   type: php
+-
+  name: phoenix_extra_generators
+  url: https://github.com/sebastiandedeyne/phoenix_extra_generators
+  description: Extra generator commands for Phoenix
+  type: elixir
 -
   name: phpunit-snapshot-assertions
   url: https://github.com/spatie/phpunit-snapshot-assertions
