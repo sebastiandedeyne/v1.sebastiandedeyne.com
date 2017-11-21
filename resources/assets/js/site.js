@@ -6,7 +6,3 @@ Turbolinks.start();
 document.addEventListener('turbolinks:load', () => {
     Highlight.start();
 });
-
-document.addEventListener('touchstart', () => {
-    document.documentElement.classList.add('touch');
-});
