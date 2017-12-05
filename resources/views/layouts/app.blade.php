@@ -19,8 +19,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com/">
 
         <link href="https://fonts.googleapis.com/css?family=Alegreya|Fira+Sans:400,400i,500,700" rel="stylesheet">
-
-        <style>{!! file_get_contents(public_path(mix('css/site.css'))) !!}</style>
+        <link rel="stylesheet" type="text/css" href="{{ mix('css/site.css') }}">
 
         <script defer src="{{ mix('js/site.js') }}"></script>
 
