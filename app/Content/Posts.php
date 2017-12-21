@@ -3,22 +3,20 @@
 namespace App\Content;
 
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Storage;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 
-class Posts
+class Posts extends Provider
 {
     public function all()
     {
-        return Cache::rememberForever('content:posts.all', function () {
+        return $this->cache('posts.all', function () {
             return $this->gather();
         });
     }
 
     public function paginate($perPage = 15, $pageName = 'page', $page = null)
     {
-        return Cache::rememberForever('content:posts.paginate.'.request('page', 1), function () use ($perPage, $pageName, $page) {
+        return $this->cache('posts.paginate.'.request('page', 1), function () use ($perPage, $pageName, $page) {
             return $this->all()->simplePaginate($perPage, $pageName, $page);
         });
     }
@@ -34,7 +32,7 @@ class Posts
 
     public function feed()
     {
-        return Cache::rememberForever('content:posts.feed', function () {
+        return $this->cache('posts.feed', function () {
             return $this->all()->map(function ($post) {
                 return [
                     'id' => $post->url,
@@ -50,20 +48,18 @@ class Posts
 
     private function gather()
     {
-        $disk = Storage::disk('content');
-
-        return collect($disk->files('posts'))
+        return collect($this->disk->files('posts'))
             ->filter(function ($path) {
                 return ends_with($path, '.md');
             })
-            ->map(function ($path) use ($disk) {
+            ->map(function ($path) {
                 $filename = str_after($path, 'posts/');
 
                 [$date, $slug, $extension] = explode('.', $filename, 3);
 
                 $date = Carbon::createFromFormat('Y-m-d', $date);
 
-                $document = YamlFrontMatter::parse($disk->get($path));
+                $document = YamlFrontMatter::parse($this->disk->get($path));
 
                 return (object) [
                     'path' => $path,

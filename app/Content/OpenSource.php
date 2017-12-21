@@ -2,19 +2,15 @@
 
 namespace App\Content;
 
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Yaml\Yaml;
+use Illuminate\Support\Collection;
 
-class OpenSource
+class OpenSource extends Provider
 {
-    public function projects()
+    public function projects(): Collection
     {
-        return Cache::rememberForever('content:openSource.projects', function () {
-            $projects = Yaml::parse(
-                Storage::disk('content')->get('open-source.yaml')
-            );
+        return $this->cache('openSource.projects', function () {
+            $projects = Yaml::parse($this->disk->get('open-source.yaml'));
 
             return collect($projects)->map(function ($project) {
                 return (object) $project;

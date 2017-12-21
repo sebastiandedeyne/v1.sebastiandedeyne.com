@@ -2,19 +2,15 @@
 
 namespace App\Content;
 
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Yaml\Yaml;
+use Illuminate\Support\Collection;
 
-class Blogroll
+class Blogroll extends Provider
 {
-    public function items()
+    public function items(): Collection
     {
-        return Cache::rememberForever('content:blogroll.items', function () {
-            $items = Yaml::parse(
-                Storage::disk('content')->get('blogroll.yaml')
-            );
+        return $this->cache('blogroll.items', function () {
+            $items = Yaml::parse($this->disk->get('blogroll.yaml'));
 
             return collect($items)
                 ->map(function ($item) {
