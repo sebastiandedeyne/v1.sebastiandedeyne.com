@@ -36,10 +36,10 @@ class PostMakeCommand extends Command
         $contents = file_get_contents(__DIR__.'/stubs/post.stub');
         $contents = str_replace('$title', $title, $contents);
 
-        $path = 'posts/'.$date->format('Y-m-d').'.'.$slug.'.md';
+        $path = "posts/{$date->format('Y-m-d')}.{$slug}.md";
 
         Storage::disk('content')->put($path, $contents);
 
-        $this->info("Post created successfully.");
+        $this->info('Post created successfully.');
     }
 }

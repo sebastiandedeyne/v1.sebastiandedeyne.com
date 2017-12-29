@@ -18,6 +18,7 @@
     "postcss-cssnext": "^2.9.0",
     "postcss-easy-import": "^2.0.0",
     "postcss-loader": "^1.2.2",
+    "tailwindcss": "^0.4.0",
     "turbolinks": "^5.0.0",
     "webpack": "^2.2.0",
     "webpack-manifest-plugin": "^1.1.0"
