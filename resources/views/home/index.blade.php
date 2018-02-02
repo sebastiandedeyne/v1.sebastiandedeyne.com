@@ -30,9 +30,6 @@
                     </ul>
                 </section>
             @endforeach
-            {{--<a href="{{ url('posts') }}" class="post-list__more">
-                Psst! There's more on the blog!
-            </a>--}}
         </section>
         @include('partials.footer')
     </div>
