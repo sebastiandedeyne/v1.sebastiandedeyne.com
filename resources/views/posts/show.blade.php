@@ -4,7 +4,7 @@
 
 @component('layouts.app', [
     'title' => $post->title,
-    'description' => $post->summary,
+    'description' => strip_tags($post->summary),
 ])
     <article class="post">
         <header class="post__header">
