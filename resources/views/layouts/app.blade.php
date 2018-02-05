@@ -7,6 +7,9 @@
         <meta name="description" content="{{ $description ?? 'I\'m a web developer working at Spatie in Antwerp, Belgium.' }}">
         <meta name="author" content="Sebastian De Deyne">
 
+        <meta property="og:title" content="{{ $title ?? 'Sebastian De Deyne' }}">
+        <meta property="og:description" content="{{ $description ?? 'I\'m a web developer working at Spatie in Antwerp, Belgium.' }}">
+
         <title>{{ isset($title) ? ($title . ' — Sebastian De Deyne') : 'Sebastian De Deyne' }}</title>
 
         @include('feed::links')
