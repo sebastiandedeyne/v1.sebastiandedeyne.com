@@ -1,9 +1,8 @@
 :root {
-    --font-size: 17px;
-    --font-size-l: 24px;
-    --font-size-xl: 32px;
-    --font-size-s: 14px;
-    --baseline: 29px;
+    --font-size: 18px;
+    --font-size-l: 25px;
+    --font-size-s: 16px;
+    --baseline: 31px;
     --double-baseline: calc(var(--baseline) * 2);
     --triple-baseline: calc(var(--baseline) * 3);
     --half-baseline: calc(var(--baseline) * .5);
@@ -21,7 +20,7 @@
     --body-font: 'Source Sans Pro', system, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     --mono-font: 'Source Code Pro', 'Lucida Console', 'Lucida Sans Typewriter', monospace;
 
-    --grid-container: 760px;
+    --grid-container: 660px;
     --wide-grid-container: 1200px;
 
     --grid-gutter: var(--baseline);

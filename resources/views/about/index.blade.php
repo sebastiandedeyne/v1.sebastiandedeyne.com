@@ -10,7 +10,10 @@
                 I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd" class="h-link-invisible">Spatie</a> in Antwerp.
             </p>
             <p>
-                I build things with PHP, JavaScript and CSS. Specifically, Laravel, Vue.js and some occasional React. I enjoy learning other frameworks, libraries and languages. Even if I don't plan on using something in the near future, research and experimentation with a foreign concept can serve as a great inspiration to solve problems in my familiar tech stack.
+                I build things with PHP, JavaScript and CSS. Specifically, Laravel, Vue.js and some occasional React.
+            </p>
+            <p>
+                I enjoy learning other frameworks, libraries and languages. Even if I don't plan on using something in the near future, research and experimentation with a foreign concept can serve as a great inspiration to solve problems in my familiar tech stack.
             </p>
             <p>
                 I'm also a big open source proponent. Even if something isn't meant to be consumed by others, sharing code and knowledge is beneficial to all involved.
