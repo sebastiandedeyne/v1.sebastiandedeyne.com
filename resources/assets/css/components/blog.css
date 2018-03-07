@@ -26,7 +26,6 @@
 
 .blog__excerpt {
     background-color: white;
-    color: var(--dark-text-color);
     border-radius: 1px;
     border: 1px solid var(--light-gray);
     padding: var(--baseline);
@@ -34,8 +33,10 @@
 }
 
 @media(--medium) {
-    border-left: none;
-    border-right: none;
+    .blog__excerpt {
+        border-left: none;
+        border-right: none;
+    }
 }
 
 .blog__excerpt__date {
@@ -44,10 +45,10 @@
 }
 
 .blog__excerpt__title {
-    font-family: var(--header-font);
     font-size: var(--font-size-l);
-    color: var(--dark-text-color);
+    font-weight: 700;
     margin-bottom: var(--baseline);
+    line-height: 1;
 }
 
 .blog__excerpt__title__link {

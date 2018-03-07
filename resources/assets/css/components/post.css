@@ -2,27 +2,13 @@
     padding-bottom: var(--double-baseline);
 }
 
-.post__header__logotype {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: var(--baseline);
-}
-
-.post__header__title {
-    font-family: var(--header-font);
-    font-size: var(--font-size-xl);
-    line-height: var(--one-and-a-half-baseline);
-    color: var(--dark-text-color);
-}
-
 .post__header__meta {
-    font-family: var(--header-font);
     color: var(--light-text-color);
+    font-size: var(--font-size-s);
 }
 
 .post__body {
     background-color: white;
-    color: var(--dark-text-color);
     padding: var(--double-baseline) 0 var(--one-and-a-half-baseline);
     border-top: 1px solid var(--light-gray);
     border-bottom: 1px solid var(--light-gray);

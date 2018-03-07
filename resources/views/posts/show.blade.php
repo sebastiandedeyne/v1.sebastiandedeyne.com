@@ -9,10 +9,7 @@
     <article class="post">
         <header class="post__header">
             <div class="container">
-                <div class="post__header__logotype">
-                    <a href="{{ url('/') }}" class="logotype"></a>
-                </div>
-                <h1 class="post__header__title">
+                <h1 class="h1">
                     {{ $post->title }}
                 </h1>
                 @if($post->date)
