@@ -10,15 +10,12 @@
     font-size: var(--font-size-l);
     margin-top: var(--double-baseline);
     margin-bottom: var(--baseline);
-    color: var(--text-color);
     font-weight: 700;
 }
 
 .post-contents h3 {
     font-weight: 700;
     margin-bottom: var(--baseline);
-    text-transform: uppercase;
-    letter-spacing: 0.015em;
 }
 
 .post-contents p {
@@ -59,7 +56,7 @@
 }
 
 .post-contents pre code {
-    padding: var(--baseline);
+    padding: var(--three-quarter-baseline);
     padding-right: var(--half-baseline);
     margin-left: -.3em;
     margin-right: -.3em;
@@ -68,6 +65,8 @@
     border: 1px solid color(var(--light-gray) blackness(5%));
     background: var(--body-background);
     box-shadow: 1px 2px 0 #fbf8f8;
+    font-size: .85em;
+    line-height: 1.6;
 }
 
 @media(--small) {
