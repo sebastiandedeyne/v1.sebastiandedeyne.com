@@ -19,8 +19,8 @@
     yarn --frozen-lockfile --silent
     yarn production
 
-    rm -f current
-	ln -s {{ $releaseDir }} current
+    rm -f {{ $root }}/current
+	ln -s {{ $releaseDir }} {{ $root }}/current
 	ln -s {{ $releaseDir }}/../../.env {{ $releaseDir }}/.env
 	sudo service php7.1-fpm restart
 
