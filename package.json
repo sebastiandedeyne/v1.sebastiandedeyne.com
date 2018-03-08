@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "webpack --hide-modules --progress",
     "watch": "webpack --watch --hide-modules --progress",
-    "build": "webpack -p --hide-modules"
+    "production": "webpack -p --hide-modules"
   },
   "dependencies": {
     "babel-core": "^6.24.1",

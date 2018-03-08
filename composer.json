@@ -20,9 +20,10 @@
         "fideloper/proxy": "~3.3"
     },
     "require-dev": {
+        "filp/whoops": "~2.0",
         "graham-campbell/analyzer": "^1.1",
-        "phpunit/phpunit": "~6.0",
-        "filp/whoops": "~2.0"
+        "laravel/envoy": "^1.4",
+        "phpunit/phpunit": "~6.0"
     },
     "autoload": {
         "classmap": [
@@ -37,6 +38,12 @@
         }
     },
     "scripts": {
+        "deploy": [
+            "php ./vendor/bin/envoy run deploy"
+        ],
+        "deploy-dev": [
+            "php ./vendor/bin/envoy run deploy --dev"
+        ],
         "post-root-package-install": [
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
