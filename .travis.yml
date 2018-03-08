@@ -13,8 +13,8 @@ before_script:
   - composer install --prefer-dist
   - nvm install node
   - npm install -g yarn
-  - yarn
-  - yarn build
+  - yarn --frozen-lockfile
+  - yarn production
 
 script:
  - ./vendor/bin/phpunit
