@@ -1,4 +1,9 @@
 -
+  name: guidelines.spatie.be
+  url: https://github.com/spatie/guidelines.spatie.be
+  description: Coding & workflow guidelines site for Spatie
+  type: laravel
+-
   name: hyper_ex
   url: https://github.com/spatie/hyper_ex
   description: HyperScript clone written in Elixir
@@ -14,15 +19,20 @@
   description: Fluent html menu generator for Laravel applications
   type: laravel
 -
+  name: laravel-mix-purgecss
+  url: https://github.com/spatie/laravel-mix-purgecss
+  description: Zero-config Purgecss for Laravel Mix
+  type: javascript
+-
+  name: laravel-server-side-rendering
+  url: https://github.com/spatie/laravel-server-side-rendering
+  description: Server side rendering JavaScript in a Laravel application
+  type: php
+-
   name: laravel/framework
   url: https://github.com/laravel/framework/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Amerged%20author%3Asebastiandedeyne%20
   description: Various contributions to the Laravel framework
   type: laravel
--
-  name: lightbulb
-  url: https://github.com/sebastiandedeyne/lightbulb
-  description: Project natural shadows under elements
-  type: typescript
 -
   name: opening-hours
   url: https://github.com/spatie/opening-hours
@@ -39,20 +49,25 @@
   description: Test without writing actual test cases
   type: php
 -
+  name: plug_response_cache
+  url: https://github.com/sebastiandedeyne/plug_response_cache
+  description: A highly-configurable plug to cache entire responses
+  type: elixir
+-
   name: regex
   url: https://github.com/spatie/regex
   description: A sane interface for php's built in preg functions
+  type: php
+-
+  name: server-side-rendering
+  url: https://github.com/spatie/server-side-rendering
+  description: Server side rendering JavaScript in a PHP application
   type: php
 -
   name: schema-org
   url: https://github.com/spatie/schema-org
   description: Fluent Schema.org json+ld builder that gets generated from the spec
   type: php
--
-  name: spatie-dom
-  url: https://github.com/spatie/spatie-dom
-  description: A small DOM querying and manipulation library
-  type: javascript
 -
   name: yaml_front_matter
   url: https://github.com/sebastiandedeyne/yaml_front_matter
