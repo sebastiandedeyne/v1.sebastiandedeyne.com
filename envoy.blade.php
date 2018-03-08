@@ -26,9 +26,18 @@
 
     php artisan cache:clear
     php artisan responsecache:flush
-    php artisan optimize
     php artisan config:cache
     php artisan route:cache
 
     ls -dt {{ $root }}/releases/* | tail -n +3 | xargs -d "\n" rm -rf;
+@endtask
+
+@task('quick-deploy', ['on' => 'web'])
+    cd $(ls -dt {{ $root }}/releases/* | head -n 1)
+    git pull
+
+    php artisan cache:clear
+    php artisan responsecache:flush
+    php artisan config:cache
+    php artisan route:cache
 @endtask

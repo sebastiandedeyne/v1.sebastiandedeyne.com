@@ -41,8 +41,14 @@
         "deploy": [
             "php ./vendor/bin/envoy run deploy"
         ],
+        "quick-deploy": [
+            "php ./vendor/bin/envoy run quick-deploy"
+        ],
         "deploy-dev": [
             "php ./vendor/bin/envoy run deploy --dev"
+        ],
+        "quick-deploy-dev": [
+            "php ./vendor/bin/envoy run quick-deploy --dev"
         ],
         "post-root-package-install": [
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
