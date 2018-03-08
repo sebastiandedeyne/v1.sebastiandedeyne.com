@@ -5,7 +5,7 @@
         <a href="{{ url('about') }}">Sebastian De Deyne</a>
     </div>
     <a href="{{ url('feed') }}" data-turbolinks="false" class="footer__rss">
-        <span class="icon -xs" title="RSS">
+        <span class="icon -s" title="RSS">
             {{ svg('rss') }}
         </span>
     </a>
