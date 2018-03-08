@@ -27,7 +27,7 @@
   name: laravel-server-side-rendering
   url: https://github.com/spatie/laravel-server-side-rendering
   description: Server side rendering JavaScript in a Laravel application
-  type: php
+  type: laravel
 -
   name: laravel/framework
   url: https://github.com/laravel/framework/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Amerged%20author%3Asebastiandedeyne%20
