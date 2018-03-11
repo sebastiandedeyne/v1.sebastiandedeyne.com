@@ -60,6 +60,11 @@ return [
             'root' => base_path('content'),
         ],
 
+        'posts' => [
+            'driver' => 'local',
+            'root' => base_path('content/posts'),
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_KEY'),
