@@ -9,21 +9,21 @@
     "type": "project",
     "require": {
         "php": ">=7.1",
-        "laravel/framework": "5.5.*",
+        "laravel/framework": "5.6.*",
         "league/commonmark": "^0.15.0",
         "spatie/laravel-collection-macros": "^3.0",
         "spatie/laravel-feed": "^2.0",
         "spatie/laravel-responsecache": "^4.0",
         "spatie/laravel-robots-middleware": "^1.0",
-        "spatie/laravel-tail": "^2.0",
+        "spatie/laravel-tail": "^3.0",
         "spatie/yaml-front-matter": "^2.0.0",
-        "fideloper/proxy": "~3.3"
+        "fideloper/proxy": "~4.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
         "graham-campbell/analyzer": "^1.1",
         "laravel/envoy": "^1.4",
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "~7.0"
     },
     "autoload": {
         "classmap": [
@@ -57,12 +57,10 @@
             "php artisan key:generate"
         ],
         "post-install-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php artisan optimize"
+            "Illuminate\\Foundation\\ComposerScripts::postInstall"
         ],
         "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan optimize"
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
         ]
     },
     "config": {
