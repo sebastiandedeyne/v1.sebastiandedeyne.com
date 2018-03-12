@@ -5,7 +5,7 @@
   type: laravel
 -
   name: hyper_ex
-  url: https://github.com/spatie/hyper_ex
+  url: https://github.com/sebastiandedeyne/hyper_ex
   description: HyperScript clone written in Elixir
   type: elixir
 -
