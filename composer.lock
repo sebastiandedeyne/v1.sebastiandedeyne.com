@@ -1084,26 +1084,26 @@
         },
         {
             "name": "spatie/laravel-feed",
-            "version": "2.0.0",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-feed.git",
-                "reference": "e92e556f880555c1a5cf4c8cc7de21ca1b093985"
+                "reference": "9f8d2adca406a1c050014aedf2203875c49bd248"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/e92e556f880555c1a5cf4c8cc7de21ca1b093985",
-                "reference": "e92e556f880555c1a5cf4c8cc7de21ca1b093985",
+                "url": "https://api.github.com/repos/spatie/laravel-feed/zipball/9f8d2adca406a1c050014aedf2203875c49bd248",
+                "reference": "9f8d2adca406a1c050014aedf2203875c49bd248",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "~5.5.0",
+                "illuminate/support": "~5.5.0|~5.6.0",
                 "nesbot/carbon": "^1.0",
                 "php": "^7.0"
             },
             "require-dev": {
-                "orchestra/testbench": "~3.5.0",
-                "phpunit/phpunit": "^6.0",
+                "orchestra/testbench": "~3.5.0|~3.6.0",
+                "phpunit/phpunit": "^6.0|^7.0",
                 "spatie/phpunit-snapshot-assertions": "^1.0"
             },
             "type": "library",
@@ -1151,7 +1151,7 @@
                 "rss",
                 "spatie"
             ],
-            "time": "2017-08-30T12:24:39+00:00"
+            "time": "2018-02-08T10:22:33+00:00"
         },
         {
             "name": "spatie/laravel-responsecache",
