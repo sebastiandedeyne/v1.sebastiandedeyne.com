@@ -3,19 +3,22 @@
 }
 
 .post-contents a {
+    color: var(--red);
     text-decoration: underline;
 }
 
 .post-contents h2 {
     font-size: var(--font-size-l);
     margin-top: var(--double-baseline);
-    margin-bottom: var(--baseline);
+    margin-bottom: var(--three-quarter-baseline);
+    padding-bottom: .2em;
     font-weight: 700;
+    border-bottom: 1px solid var(--light-gray);
 }
 
 .post-contents h3 {
     font-weight: 700;
-    margin-bottom: var(--baseline);
+    margin-bottom: var(--half-baseline);
 }
 
 .post-contents p {
@@ -65,7 +68,7 @@
     border: 1px solid color(var(--light-gray) blackness(5%));
     background: var(--body-background);
     box-shadow: 1px 2px 0 #fbf8f8;
-    font-size: .85em;
+    font-size: .8em;
     line-height: 1.6;
 }
 
