@@ -5,7 +5,7 @@
         </h1>
         <section class="textblock h-margin-bottom">
             <p>
-                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd" class="h-link-invisible">Spatie</a> in Antwerp. <br>
+                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="_blank" class="h-link-invisible">Spatie</a> in Antwerp. <br>
                 I build things with PHP, JavaScript, and CSS.
             </p>
         </section>

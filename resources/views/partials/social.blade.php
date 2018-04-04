@@ -4,7 +4,7 @@
         ['sebastiandedeyne', 'github', 'GitHub', 'https://github.com/sebastiandedeyne'],
         ['sebastiandedeyne@gmail.com', 'email', 'E-mail', 'mailto:sebastiandedeyne@gmail.com'],
     ] as [$name, $icon, $title, $url])
-        <a class="button -faded" href="{{ $url }}" target="sebdd">
+        <a class="button -faded" href="{{ $url }}" target="_blank">
             <span class="button__icon">
                 <span class="icon" title="{{ $title }}">
                     {{ svg($icon) }}

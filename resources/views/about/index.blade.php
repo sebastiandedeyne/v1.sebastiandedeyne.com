@@ -7,7 +7,7 @@
         </h1>
         <section class="textblock h-margin-bottom">
             <p>
-                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd" class="h-link-invisible">Spatie</a> in Antwerp.
+                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="_blank" class="h-link-invisible">Spatie</a> in Antwerp.
             </p>
             <p>
                 I build things with PHP, JavaScript and CSS. Specifically, Laravel, Vue.js and some occasional React.
@@ -31,7 +31,7 @@
                 <li>Bachelor's degree in graphical and digital media<br> (Artevelde University College Ghent 2015)</li>
             </ul>
             <h2 class="textblock__subtitle">Colophon</h2>
-            <p>This website is powered by <a href="https://laravel.com/" target="sebdd">Laravel</a> and served from <a href="https://www.digitalocean.com/" target="sebdd">Digital Ocean</a>. The source code is hosted on <a href="https://github.com/sebastiandedeyne/sebastiandedeyne.com" target="sebdd">GitHub</a>.</p>
+            <p>This website is powered by <a href="https://laravel.com/" target="_blank">Laravel</a> and served from <a href="https://www.digitalocean.com/" target="_blank">Digital Ocean</a>. The source code is hosted on <a href="https://github.com/sebastiandedeyne/sebastiandedeyne.com" target="_blank">GitHub</a>.</p>
         </section>
         @include('partials.footer')
     </div>

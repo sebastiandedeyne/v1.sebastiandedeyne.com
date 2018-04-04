@@ -42,7 +42,7 @@
                 <section class="post-contents">
                     {!! $post->summary !!}
                 </section>
-                <a href="{{ $post->read_more_url }}" target="sebdd" class="blog__excerpt__readmore">
+                <a href="{{ $post->read_more_url ?? $post->url }}" @if($post->read_more_url) target="_blank" @endif class="blog__excerpt__readmore">
                     {{ $post->read_more_text ?? 'Read more' }}
                 </a>
             </article>

@@ -18,7 +18,7 @@
         <div class="row">
             @foreach($projects as $project)
                 <div class="column -third h-margin-bottom">
-                    <a href="{{ $project->url }}" target="sebdd" class="card">
+                    <a href="{{ $project->url }}" target="_blank" class="card">
                         <h2 class="card__title">
                             <span class="card__title__icon">
                                 <span class="icon">

@@ -24,7 +24,7 @@
                             <ul>
                                 @foreach($items as $item)
                                     <li class="blogroll__item">
-                                        <a href="{{ $item->url }}" target="sebdd">{{ $item->name }}</a>
+                                        <a href="{{ $item->url }}" target="_blank">{{ $item->name }}</a>
                                         <span class="blogroll__item__description">{{ $item->description }}</span>
                                     </li>
                                 @endforeach
