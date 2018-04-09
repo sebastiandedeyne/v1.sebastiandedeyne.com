@@ -36,7 +36,7 @@
 .post-contents ul {
     margin-bottom: var(--baseline);
     list-style: disc;
-    margin-left: var(--half-baseline);
+    list-style-position: inside;
 }
 
 .post-contents ol {
