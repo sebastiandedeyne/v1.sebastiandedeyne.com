@@ -101,7 +101,7 @@
     content: '“';
     position: absolute;
     left: 0;
-    top: 24px;
+    top: 16px;
     z-index: 1;
     font-weight: bold;
     font-size: 80px;
@@ -112,7 +112,7 @@
     position: relative;
     z-index: 2;
     font-style: italic;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 .post-contents img {

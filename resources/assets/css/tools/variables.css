@@ -2,7 +2,7 @@
     --font-size: 18px;
     --font-size-l: 25px;
     --font-size-s: 16px;
-    --baseline: 31px;
+    --baseline: 30px;
     --double-baseline: calc(var(--baseline) * 2);
     --triple-baseline: calc(var(--baseline) * 3);
     --half-baseline: calc(var(--baseline) * .5);
