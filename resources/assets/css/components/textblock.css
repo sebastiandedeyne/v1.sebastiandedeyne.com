@@ -7,7 +7,7 @@
 
 .textblock ul {
     list-style: disc;
-    margin-left: 1em;
+    list-style-position: inside;
     margin-bottom: var(--baseline);
 }
 
