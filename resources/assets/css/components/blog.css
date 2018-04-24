@@ -45,7 +45,7 @@
 }
 
 .blog__excerpt__title {
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-xl);
     font-weight: 700;
     margin-bottom: var(--baseline);
     line-height: 1;

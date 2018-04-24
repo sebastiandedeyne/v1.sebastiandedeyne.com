@@ -1,6 +1,8 @@
 :root {
     --font-size: 18px;
-    --font-size-l: 25px;
+    --font-size-xl: 25px;
+    --font-size-l: 22px;
+    --ack: 22px;
     --font-size-s: 16px;
     --baseline: 30px;
     --double-baseline: calc(var(--baseline) * 2);

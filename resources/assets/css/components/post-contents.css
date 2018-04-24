@@ -10,10 +10,8 @@
 .post-contents h2 {
     font-size: var(--font-size-l);
     margin-top: var(--double-baseline);
-    margin-bottom: var(--three-quarter-baseline);
-    padding-bottom: .2em;
+    margin-bottom: var(--half-baseline);
     font-weight: 700;
-    border-bottom: 1px solid var(--light-gray);
 }
 
 .post-contents h3 {
