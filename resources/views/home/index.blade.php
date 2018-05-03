@@ -13,23 +13,16 @@
             @include('partials.social')
         </section>
         <section class="post-list">
-            <h2 class="post-list__title">Articles</h2>
-            @foreach($posts as $year => $postsInYear)
-                <section class="list-group">
-                    <h2 class="list-group__title">
-                        {{ $year }}
-                    </h2>
-                    <ul>
-                        @foreach($postsInYear as $post)
-                            <li class="list-group__item">
-                                <a class="list-group__link" href="{{ $post->url }}">
-                                    {{ $post->title }}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </section>
-            @endforeach
+            <h2 class="post-list__title">Posts</h2>
+            <ul>
+                @foreach($posts as $post)
+                    <li class="list-group__item">
+                        <a class="list-group__link" href="{{ $post->url }}">
+                            {{ $post->title }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
         </section>
         @include('partials.footer')
     </div>

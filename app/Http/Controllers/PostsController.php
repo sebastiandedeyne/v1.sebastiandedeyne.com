@@ -9,28 +9,28 @@ class PostsController
 {
     public function index(Sheets $sheets)
     {
-        $posts = $sheets->collection('posts')->all();
+        $posts = $sheets->collection('posts')->all()
+            ->sortByDesc(function ($post) {
+                return $post->date;
+            });
 
         return view('posts.index', [
-            'paginator' => $posts->paginate(20),
+            'posts' => $posts,
         ]);
     }
 
-    public function page($page, Sheets $sheets)
+    public function show(string $slug, Sheets $sheets)
     {
-        $posts = $sheets->collection('posts')->all();
+        $post = $sheets->collection('posts')->all()
+            ->where('slug', $slug)
+            ->first();
 
-        return view('posts.index', [
-            'paginator' => $posts->paginate(20, 'page', $page),
-        ]);
-    }
-
-    public function show($year, $slug, Sheets $sheets)
-    {
-        $posts = $sheets->collection('posts');
+        if (!$post) {
+            abort(404);
+        }
 
         return view('posts.show', [
-            'post' => $posts->find($year, $slug),
+            'post' => $post,
         ]);
     }
 }

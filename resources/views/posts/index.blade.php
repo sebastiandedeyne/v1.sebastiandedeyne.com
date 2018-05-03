@@ -27,29 +27,18 @@
         </header>
     </div>
     <div class="container -pull-out">
-        @foreach($paginator as $post)
-            <article class="blog__excerpt">
-                <a href="{{ $post->url }}" class="blog__excerpt__date">
+        @foreach($posts as $post)
+            <article>
+                <a href="{{ route('posts.show', $post->slug) }}">
+                    <h1>{{ $post->title }}</h1>
                     <time datetime="{{ $post->date->format('Y-m-d') }}">
                         {{ $post->date->format('F jS, Y') }}
                     </time>
-                </a>
-                <h2 class="blog__excerpt__title">
-                    <a href="{{ $post->url }}" class="blog__excerpt__title__link">
-                        {{ $post->title }}
-                    </a>
-                </h2>
-                <section class="post-contents">
-                    {!! $post->summary !!}
-                </section>
-                <a href="{{ $post->read_more_url ?? $post->url }}" @if($post->read_more_url) target="_blank" @endif class="blog__excerpt__readmore">
-                    {{ $post->read_more_text ?? 'Read more' }}
                 </a>
             </article>
         @endforeach
     </div>
     <div class="container">
-        @include('posts.partials.paginator')
         @include('partials.footer')
     </div>
 @endcomponent

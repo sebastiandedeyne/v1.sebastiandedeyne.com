@@ -55,14 +55,9 @@ return [
             'visibility' => 'public',
         ],
 
-        'content' => [
-            'driver' => 'local',
-            'root' => base_path('content'),
-        ],
-
         'posts' => [
             'driver' => 'local',
-            'root' => base_path('content/posts'),
+            'root' => base_path('posts'),
         ],
 
         's3' => [

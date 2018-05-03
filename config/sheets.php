@@ -3,7 +3,7 @@
 return [
     'collections' => [
         'posts' => [
-            'sheet_class' => App\Content\Post::class,
+            'path_parser' => Spatie\Sheets\PathParsers\SlugWithDateParser::class,
         ],
     ],
 ];
