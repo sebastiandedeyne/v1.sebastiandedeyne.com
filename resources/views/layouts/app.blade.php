@@ -21,6 +21,7 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
 
+        <link rel="prefetch" href="{{ mix('js/highlight.js') }}" as="script">
         <script defer src="{{ mix('js/app.js') }}"></script>
 
         @stack('head')
