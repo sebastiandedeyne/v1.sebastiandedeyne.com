@@ -19,9 +19,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com/">
 
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{{ mix('css/site.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
 
-        <script defer src="{{ mix('js/site.js') }}"></script>
+        <script defer src="{{ mix('js/app.js') }}"></script>
 
         @stack('head')
     </head>

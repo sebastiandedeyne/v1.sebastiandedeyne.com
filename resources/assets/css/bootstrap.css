@@ -1,0 +1,37 @@
+@tailwind preflight;
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+::selection {
+  @apply bg-grey-light;
+}
+
+::-moz-selection {
+  @apply bg-grey-light;
+}
+
+body {
+  @apply font-sans;
+  @apply leading-normal;
+  @apply text-base;
+  @apply text-grey-dark;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}

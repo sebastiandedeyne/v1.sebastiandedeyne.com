@@ -1,8 +1,0 @@
-.h-link-invisible,
-.h-link-invisible:hover,
-.h-link-invisible:focus {
-    background: none !important;
-    border: none !important;
-    color: inherit !important;
-    text-decoration: none !important;
-}

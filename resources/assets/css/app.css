@@ -1,0 +1,6 @@
+@import './bootstrap.css';
+
+@import './components/**/*.css';
+@import './vendor/**/*.css';
+
+@tailwind utilities;

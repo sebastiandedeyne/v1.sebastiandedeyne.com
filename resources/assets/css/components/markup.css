@@ -1,0 +1,128 @@
+.markup {
+  @apply font-serif;
+}
+
+.markup a {
+  @apply border-b;
+  @apply border-red;
+  @apply text-red;
+  text-decoration: none;
+}
+
+.markup h1 {
+  @apply font-sans;
+  @apply mb-12;
+  @apply text-2xl;
+  line-height: 1.3;
+  width: 80%;
+}
+
+.markup h2 {
+  @apply font-bold;
+  @apply font-sans;
+  @apply mb-4;
+  @apply mt-8;
+  @apply text-black;
+  @apply text-xl;
+}
+
+.markup h3 {
+  @apply mb-2;
+  @apply mt-6;
+  @apply text-lg;
+  font-weight: bold;
+}
+
+.markup p {
+  @apply mb-4;
+}
+
+.markup strong {
+  font-weight: bold;
+}
+
+.markup em {
+  font-style: italic;
+}
+
+.markup ul {
+  @apply mb-4;
+  list-style-position: inside;
+  list-style: disc;
+}
+
+.markup ol {
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+
+.markup code {
+  @apply bg-grey-lighter;
+  @apply border-grey-light;
+  @apply font-mono;
+  font-size: 0.9em;
+  font-style: normal !important;
+  padding: 0 0.2em;
+}
+
+.markup pre {
+  @apply my-6;
+}
+
+.markup pre + pre {
+  @apply -mt-4;
+}
+
+.markup pre code {
+  @apply p-4;
+  border: none;
+  display: block;
+  font-size: 0.8em;
+  line-height: 1.6;
+}
+
+.markup blockquote {
+  @apply mb-4;
+  @apply pl-4;
+  @apply pr-4;
+  position: relative;
+}
+
+.markup blockquote:before {
+  @apply text-grey-light;
+  content: '“';
+  font-size: 80px;
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+  top: 16px;
+  z-index: 1;
+}
+
+.markup blockquote * {
+  font-style: italic;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+.markup img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.markup hr {
+  @apply border-b;
+  @apply border-grey-light;
+  @apply my-8;
+  border: none;
+}
+
+.markup aside {
+  @apply font-sans;
+  @apply mb-4;
+  @apply text-grey;
+  @apply text-xs;
+  line-height: 0.75;
+}
