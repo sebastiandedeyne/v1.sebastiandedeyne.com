@@ -1,20 +1,34 @@
-<div class="container">
-    <header class="header">
-        <a href="{{ url('/') }}" class="header__logotype">
-            {{ svg('logotype') }}
+<header class="wrapper | flex items-end justify-between py-4">
+  <strong class="caps | font-bold">
+    <a class="text-red">
+      Sebastian De Deyne
+    </a>
+    @isset($breadcrumb)
+      <span class="text-grey font-normal">
+        <span class="inline-block mx-3">/</span>
+        <a href="{{ $breadcrumb['href'] }}">
+          {{ $breadcrumb['text'] }}
         </a>
-        <nav class="header__nav">
-            <ul class="header__nav__list">
-                <li class="header__nav__item @if(request()->url() === url('/')) -active @endif">
-                    <a href="{{ url('/') }}">Home</a>
-                </li>
-                <li class="header__nav__item @if(starts_with(request()->url(), url('posts'))) -active @endif">
-                    <a href="{{ url('posts') }}">Blog</a>
-                </li>
-                <li class="header__nav__item @if(starts_with(request()->url(), url('about'))) -active @endif">
-                    <a href="{{ url('about') }}">About</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-</div>
+      </span>
+    @endisset
+  </strong>
+  <nav class="text-grey text-xs">
+    <ul class="flex items-end">
+      <li class="ml-3">
+        <a href="{{ url('/') }}">
+          Home
+        </a>
+      </li>
+      <li class="ml-3">
+        <a href="{{ url('/posts') }}">
+          Posts
+        </a>
+      </li>
+      <li class="ml-3">
+        <a href="{{ url('/about') }}">
+          About
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

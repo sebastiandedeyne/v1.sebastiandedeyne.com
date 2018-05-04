@@ -196,12 +196,12 @@ module.exports = {
   */
 
   textSizes: {
-    'xs': '0.875rem',
-    'sm': '1.125',
-    'base': '1.25rem',
-    'lg': '1.25rem',
-    'xl': '1.75rem',
-    '2xl': '3.25rem',
+    'xs': '0.7rem',
+    'sm': '0.9rem',
+    'base': '1rem',
+    'lg': '1.05rem',
+    'xl': '1.4rem',
+    '2xl': '2.6rem',
   },
 
 

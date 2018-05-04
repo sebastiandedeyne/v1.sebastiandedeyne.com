@@ -1,7 +1,6 @@
 .wrapper {
   @apply px-4;
-  margin-left: auto;
-  margin-right: auto;
+  @apply mx-auto;
   max-width: 1000px;
   width: 100%;
 }

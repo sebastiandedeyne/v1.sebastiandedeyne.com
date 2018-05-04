@@ -10,7 +10,12 @@ mix
   .postCss('resources/assets/css/app.css', 'public/css', [
     require('postcss-easy-import')(),
     require('tailwindcss')('./tailwind.js'),
-    require('postcss-cssnext')({ browsers })
+    require('postcss-cssnext')({
+      browsers,
+      features: {
+        rem: false,
+      },
+    })
   ])
   .babelConfig({
     presets: [
