@@ -4,14 +4,16 @@
   </h2>
   <ul>
     @foreach($posts as $post)
-      <li class="mt-2">
+      <li class="mt-6">
         <a href="{{ route('posts.show', $post->slug) }}">
           <strong class="block font-normal text-lg">
             {{ $post->title }}
           </strong>
-          <time class="text-xs text-grey" datetime="{{ $post->date->format('Y-m-d') }}">
-            {{ $post->date->format('F jS, Y') }}
-          </time>
+          <p class="text-xs text-grey leading-none mt-1">
+            <time datetime="{{ $post->date->format('Y-m-d') }}">
+              {{ $post->date->format('F jS, Y') }}
+            </time>
+          </p>
         </a>
       </li>
     @endforeach

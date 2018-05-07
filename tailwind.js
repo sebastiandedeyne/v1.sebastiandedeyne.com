@@ -110,10 +110,7 @@ module.exports = {
   */
 
   screens: {
-    'sm': '576px',
-    'md': '768px',
-    'lg': '992px',
-    'xl': '1200px',
+    'sm': '450px',
   },
 
 
@@ -201,7 +198,7 @@ module.exports = {
     'base': '1rem',
     'lg': '1.05rem',
     'xl': '1.4rem',
-    '2xl': '2.6rem',
+    '2xl': '3rem',
   },
 
 
@@ -246,8 +243,8 @@ module.exports = {
 
   leading: {
     'none': 1,
-    'tight': 1.25,
-    'normal': 1.5,
+    'tight': 1.3,
+    'normal': 1.8,
     'loose': 2,
   },
 

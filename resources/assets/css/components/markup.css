@@ -1,7 +1,3 @@
-.markup {
-  @apply font-serif;
-}
-
 .markup a {
   @apply border-b;
   @apply border-red;

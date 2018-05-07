@@ -1,6 +1,0 @@
-.link,
-.has-links a {
-  @apply text-red;
-  @apply border-b;
-  @apply border-red;
-}

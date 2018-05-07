@@ -1,6 +1,6 @@
 .wrapper {
   @apply px-4;
   @apply mx-auto;
-  max-width: 1000px;
+  max-width: 960px;
   width: 100%;
 }

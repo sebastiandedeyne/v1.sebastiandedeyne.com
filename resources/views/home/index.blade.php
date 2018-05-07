@@ -1,6 +1,6 @@
 @component('layouts.app')
   <div class="wrapper">
-    <section class="has-links | w-2/3 mt-4 mx-auto mb-16 font-mono text-center">
+    <section class="markup | w-2/3 mx-auto mb-32 font-mono text-center">
       <p>
         I'm a web designer & developer from Ghent, working at
         <a href="https://spatie.be">Spatie</a>, Antwerp.
@@ -9,9 +9,16 @@
         I build websites, apps & other things with JavaScript, PHP, and CSS.
       </p>
     </section>
+
     @include('partials.postList', [
-      'title' => 'Recent posts',
+      'title' => 'Latest posts',
       'posts' => $posts,
     ])
+
+    <p class="markup | mt-8 text-xs">
+      <a href="{{ url('/posts') }}">
+        All posts
+      </a>
+    </p>
   </div>
 @endcomponent
