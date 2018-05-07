@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Content\Posts;
+use App\ViewComponents\Pages\Home;
+use App\ViewComponents\TestPage;
 use Illuminate\Routing\Controller;
 use Spatie\Sheets\Sheets;
 
@@ -16,8 +18,6 @@ class HomeController
             })
             ->take(5);
 
-        return view('home.index', [
-            'posts' => $posts,
-        ]);
+        return new Home($posts);
     }
 }

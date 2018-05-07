@@ -1,6 +1,6 @@
 <header class="wrapper | flex items-end justify-between pt-6 mb-24">
   <strong class="caps | font-mono font-bold">
-    <a class="text-red">
+    <a href="{{ url('/') }}" class="text-red">
       Sebastian De Deyne
     </a>
     @isset($breadcrumb)
