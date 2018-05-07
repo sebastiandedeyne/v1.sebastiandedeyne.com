@@ -22,20 +22,11 @@ class PostList extends Component
 
     public function render(Render $render)
     {
-        $posts = $this->posts->map(function ($post) use ($render) {
-            return $render('li', ['class' => 'mt-6'], [
-                $render('a', ['href' => route('posts.show', $post->slug)], [
-                    $render('strong', ['class' => 'block font-normal text-lg'], $post->title),
-                    $render('p', ['class' => 'text-xs text-grey leading-none mt-1'], [
-                        $render('time', ['datetime' => $post->date->format('Y-m-d')], $post->date->format('F jS, Y')),
-                    ]),
-                ]),
-            ]);
-        })->toArray();
-
         return $render('section', [], [
             $render('h2', ['class' => 'caps'], $this->title),
-            $render('ul', [], $posts),
+            $render('ul', [], $this->posts->map(function ($post) {
+                return new PostListItem($post);
+            })->toArray()),
         ]);
     }
 }
