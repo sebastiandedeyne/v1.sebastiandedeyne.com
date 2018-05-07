@@ -5,6 +5,7 @@ namespace App\ViewComponents\Components;
 use App\ViewComponents\Component;
 use App\ViewComponents\Render;
 use Illuminate\Support\Collection;
+use Spatie\Sheets\Sheet;
 
 class PostListItem extends Component
 {
@@ -17,7 +18,7 @@ class PostListItem extends Component
     /** @var string */
     private $url;
 
-    public function __construct(object $post)
+    public function __construct(Sheet $post)
     {
         $this->title = $post->title;
         $this->date = $post->date;
