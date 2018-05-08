@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "254562202b66f55f3b26f606cd03edbc",
+    "content-hash": "f7075f3d9b2f073126f667039afe92c9",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -647,16 +647,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.44",
+            "version": "1.0.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "168dbe519737221dc87d17385cde33073881fd02"
+                "reference": "a99f94e63b512d75f851b181afcdf0ee9ebef7e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/168dbe519737221dc87d17385cde33073881fd02",
-                "reference": "168dbe519737221dc87d17385cde33073881fd02",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a99f94e63b512d75f851b181afcdf0ee9ebef7e6",
+                "reference": "a99f94e63b512d75f851b181afcdf0ee9ebef7e6",
                 "shasum": ""
             },
             "require": {
@@ -727,7 +727,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2018-04-06T09:58:14+00:00"
+            "time": "2018-05-07T08:44:23+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2881,12 +2881,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/sheets.git",
-                "reference": "5c347ddcd0aa1ef41379e72f67c4f7b7fe14de91"
+                "reference": "fddccc71f832acb9190dfd248b86ca5fb7308387"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/sheets/zipball/5c347ddcd0aa1ef41379e72f67c4f7b7fe14de91",
-                "reference": "5c347ddcd0aa1ef41379e72f67c4f7b7fe14de91",
+                "url": "https://api.github.com/repos/spatie/sheets/zipball/fddccc71f832acb9190dfd248b86ca5fb7308387",
+                "reference": "fddccc71f832acb9190dfd248b86ca5fb7308387",
                 "shasum": ""
             },
             "require": {
@@ -2900,7 +2900,7 @@
             "require-dev": {
                 "illuminate/filesystem": "~5.6.0",
                 "larapack/dd": "^1.0",
-                "league/flysystem": "^1.0",
+                "league/flysystem": "^1.0.8",
                 "phpunit/phpunit": "^7.0"
             },
             "type": "library",
@@ -2910,14 +2910,17 @@
                         "Spatie\\Sheets\\SheetsServiceProvider"
                     ],
                     "aliases": {
-                        "Sheets": "Spatie\\Sheets\\SheetsFacade"
+                        "Sheets": "Spatie\\Sheets\\Facades\\Sheets"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Spatie\\Sheets\\": "src"
-                }
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
             },
             "autoload-dev": {
                 "psr-4": {
@@ -2950,10 +2953,10 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/sheets/tree/0.1.0",
+                "source": "https://github.com/spatie/sheets/tree/master",
                 "issues": "https://github.com/spatie/sheets/issues"
             },
-            "time": "2018-05-03T09:32:28+00:00"
+            "time": "2018-05-08T10:02:29+00:00"
         },
         {
             "name": "spatie/yaml-front-matter",
