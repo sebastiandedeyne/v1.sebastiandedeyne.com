@@ -18,10 +18,8 @@ hljs.registerLanguage('go', require('highlight.js/lib/languages/go'));
 hljs.registerLanguage('sql', require('highlight.js/lib/languages/sql'));
 hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'));
 
-export default {
-  init() {
-    [...document.querySelectorAll('.markup pre code')].forEach(
-      hljs.highlightBlock
-    );
-  }
+export default () => {
+  [...document.querySelectorAll('.markup pre code')].forEach(
+    hljs.highlightBlock
+  );
 };

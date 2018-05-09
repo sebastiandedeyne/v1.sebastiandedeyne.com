@@ -1,6 +1,6 @@
-<header class="wrapper | flex items-end justify-between pt-6 mb-24">
+<header class="header">
   <strong class="caps | font-mono font-bold">
-    <a class="text-red">
+    <a href="{{ route('home') }}" class="text-red">
       Sebastian De Deyne
     </a>
     @isset($breadcrumb)
@@ -15,17 +15,17 @@
   <nav class="text-grey text-xs">
     <ul class="flex items-end">
       <li class="ml-6">
-        <a href="{{ url('/') }}">
+        <a href="{{ route('home') }}">
           Home
         </a>
       </li>
       <li class="ml-6">
-        <a href="{{ url('/posts') }}">
+        <a href="{{ route('posts') }}">
           Posts
         </a>
       </li>
       <li class="ml-6">
-        <a href="{{ url('/about') }}">
+        <a href="{{ route('about') }}">
           About
         </a>
       </li>

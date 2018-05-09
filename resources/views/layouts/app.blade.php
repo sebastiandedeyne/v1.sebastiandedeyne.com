@@ -29,7 +29,9 @@
       'breadcrumb' => $breadcrumb ?? null,
     ])
 
-    {{ $slot }}
+    <div class="mt-28 mb-16">
+      {{ $slot }}
+    </div>
 
     @include('layouts.partials.footer')
 

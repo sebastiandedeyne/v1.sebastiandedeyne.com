@@ -1,7 +1,7 @@
 @component('layouts.app', [
   'title' => 'Posts',
   'breadcrumb' => [
-    'href' => url('/posts'),
+    'href' => route('posts'),
     'text' => 'Posts',
   ],
 ])

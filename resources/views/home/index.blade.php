@@ -1,12 +1,15 @@
 @component('layouts.app')
   <div class="wrapper">
-    <section class="markup | w-2/3 mx-auto mb-32 font-mono text-center">
-      <p>
-        I'm a web designer & developer from Ghent, working at
-        <a href="https://spatie.be">Spatie</a>, Antwerp.
+    <section class="w-4/5 text-lg mb-24 font-mono">
+      <p class="mb-4">
+        I'm a web designer / developer from Ghent, <br> employed at
+        <a href="https://spatie.be">Spatie</a> in Antwerp, Belgium.
       </p>
-      <p class="mt-2">
-        I build websites, apps & other things with JavaScript, PHP, and CSS.
+      <p class="mb-4">
+        I build websites and -apps with <br> JavaScript, PHP and CSS.
+      </p>
+      <p>
+        I try to blog and do talks every now and then too.
       </p>
     </section>
 
@@ -16,7 +19,7 @@
     ])
 
     <p class="markup | mt-8 text-xs">
-      <a href="{{ url('/posts') }}">
+      <a href="{{ route('posts') }}">
         All posts
       </a>
     </p>

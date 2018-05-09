@@ -64,6 +64,7 @@ let spacing = {
   '4': '1rem',
   '6': '1.5rem',
   '8': '2rem',
+  '10': '2.5rem',
   '12': '3rem',
   '16': '4rem',
   '20': '5rem',
@@ -197,7 +198,7 @@ module.exports = {
     'sm': '0.9rem',
     'base': '1rem',
     'lg': '1.05rem',
-    'xl': '1.4rem',
+    'xl': '1.2rem',
     '2xl': '3rem',
   },
 
@@ -243,7 +244,8 @@ module.exports = {
 
   leading: {
     'none': 1,
-    'tight': 1.3,
+    'tighter': 1.25,
+    'tight': 1.5,
     'normal': 1.8,
     'loose': 2,
   },

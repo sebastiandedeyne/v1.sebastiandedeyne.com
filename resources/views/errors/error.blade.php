@@ -19,7 +19,7 @@
             {{ $message }}
         </p>
         @if($showHomeLink)
-            <a href="{{ url('/') }}" class="button">
+            <a href="{{ route('home') }}" class="button">
                 Go home
             </a>
         @endunless

@@ -2,13 +2,13 @@
   'title' => $post->title,
   'description' => strip_tags($post->summary),
   'breadcrumb' => [
-    'href' => url('/posts'),
+    'href' => route('posts'),
     'text' => 'Posts',
   ],
 ])
   <article class="wrapper">
     <header class="mb-20">
-      <h1 class="w-2/3 leading-tight text-2xl">
+      <h1 class="w-2/3 leading-tighter text-2xl">
         {{ $post->title }}
       </h1>
       <aside class="mt-3 text-grey text-xs">
@@ -18,7 +18,7 @@
         </time>
       </aside>
     </header>
-    <section class="markup | w-4/5">
+    <section class="markup | font-serif w-4/5">
       {!! $post->contents !!}
     </section>
   </article>

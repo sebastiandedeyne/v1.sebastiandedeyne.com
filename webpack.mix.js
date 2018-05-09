@@ -13,8 +13,8 @@ mix
     require('postcss-cssnext')({
       browsers,
       features: {
-        rem: false,
-      },
+        rem: false
+      }
     })
   ])
   .babelConfig({
@@ -29,6 +29,12 @@ mix
       ]
     ],
     plugins: ['babel-plugin-syntax-dynamic-import']
+  })
+  .webpackConfig({
+    output: {
+      publicPath: '/',
+      chunkFilename: 'js/[name].js'
+    }
   })
   .purgeCss({
     whitelistPatterns: [/hljs/]
