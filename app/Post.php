@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\HtmlString;
 use Spatie\Sheets\Sheet;
 use Spatie\Sheets\Sheets;
@@ -31,7 +32,7 @@ class Post extends Sheet
         return route('posts.show', $this->slug);
     }
 
-    public static function feed(Sheets $sheets)
+    public static function feed(Sheets $sheets): Collection
     {
         return $sheets->collection('posts')->all()
             ->sortByDesc(function ($post) {
