@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Content\Posts;
 use Spatie\Sheets\Sheets;
 
 class PostsController
@@ -32,5 +31,10 @@ class PostsController
         return view('posts.show', [
             'post' => $post,
         ]);
+    }
+
+    public function redirectOldPost(string $year, string $slug)
+    {
+        return redirect()->action('PostsController@show', $slug);
     }
 }

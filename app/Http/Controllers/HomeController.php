@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Content\Posts;
 use Illuminate\Routing\Controller;
 use Spatie\Sheets\Sheets;
 
