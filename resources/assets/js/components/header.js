@@ -1,13 +1,19 @@
-const calculateOpacity = ({ scrollY, fadeOutPosition }) => {
+const calculateOpacityAndOffset = ({ scrollY, fadeOutPosition }) => {
   if (scrollY > fadeOutPosition) {
-    return 0;
+    return {
+      opacity: 0,
+      offset: fadeOutPosition * -1 / 2,
+    };
   }
 
-  return 1 - scrollY / fadeOutPosition;
+  return {
+    opacity: 1 - scrollY / fadeOutPosition,
+    offset: scrollY * -1 / 2,
+  };
 };
 
-const updateHeaderOpacity = ({ headerEl, fadeOutPosition }) => {
-  const opacity = calculateOpacity({
+const updateHeader = ({ headerEl, fadeOutPosition }) => {
+  const { opacity, offset } = calculateOpacityAndOffset({
     fadeOutPosition,
     scrollY: window.scrollY
   });
@@ -16,6 +22,7 @@ const updateHeaderOpacity = ({ headerEl, fadeOutPosition }) => {
 
   if (Math.abs(opacity - currentOpacity) > 0.01) {
     headerEl.style.opacity = opacity;
+    headerEl.style.transform = `translate3d(-50%, ${offset}px, 0)`;
     headerEl.style.display = opacity === 0 ? 'none' : '';
   }
 };
@@ -24,13 +31,13 @@ export default () => {
   const headerEl = document.querySelector('.header');
   const fadeOutPosition = headerEl.clientHeight * 0.75;
 
-  const updateHeaderOpacityLoop = () => {
+  const updateHeaderLoop = () => {
     window.requestAnimationFrame(() => {
-      updateHeaderOpacity({ headerEl, fadeOutPosition });
+      updateHeader({ headerEl, fadeOutPosition });
 
-      updateHeaderOpacityLoop();
+      updateHeaderLoop();
     });
   };
 
-  updateHeaderOpacityLoop();
+  updateHeaderLoop();
 };

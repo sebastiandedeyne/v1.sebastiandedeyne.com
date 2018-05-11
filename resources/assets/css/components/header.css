@@ -4,7 +4,7 @@
   @apply items-end;
   @apply justify-between;
   @apply pin-t;
-  @apply pt-3;
+  @apply pt-4;
   @apply px-4;
   left: 50%;
   max-width: 960px;

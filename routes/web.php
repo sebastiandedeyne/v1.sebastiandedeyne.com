@@ -5,9 +5,9 @@ Route::feeds();
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::view('/talks', 'talks.index')->name('talks');
-Route::view('/open-source', 'openSource.index')->name('openSource');
 Route::view('/about', 'about.index')->name('about');
 
 Route::get('/posts', 'PostsController@index')->name('posts');
 Route::get('/posts/{year}/{slug}', 'PostsController@redirectOldPost');
-Route::get('/posts/{slug}', 'PostsController@show')->name('posts.show')->where('slug', '(.*)');
+
+Route::get('/{slug}', 'PostsController@show')->name('posts.show')->where('slug', '(.*)');

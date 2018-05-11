@@ -5,7 +5,7 @@
   <ul>
     @foreach($posts as $post)
       <li class="mt-6">
-        <a href="{{ route('posts.show', $post->slug) }}">
+        <a href="{{ $post->url }}">
           <strong class="block font-normal text-lg">
             {{ $post->title }}
           </strong>
