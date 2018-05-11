@@ -31,7 +31,7 @@ class Post extends Sheet
         return route('posts.show', $this->slug);
     }
 
-    public function feed(Sheets $sheets)
+    public static function feed(Sheets $sheets)
     {
         return $sheets->collection('posts')->all()
             ->sortByDesc(function ($post) {
