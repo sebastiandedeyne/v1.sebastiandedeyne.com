@@ -2,8 +2,9 @@
 
 namespace App;
 
-use Spatie\Sheets\Sheet;
 use Illuminate\Support\HtmlString;
+use Spatie\Sheets\Sheet;
+use Spatie\Sheets\Sheets;
 
 class Post extends Sheet
 {
@@ -23,5 +24,29 @@ class Post extends Sheet
         }
 
         return str_limit($contents, 300) . '…';
+    }
+
+    public function getUrlAttribute(): string
+    {
+        return route('posts.show', $this->slug);
+    }
+
+    public function feed(Sheets $sheets)
+    {
+        return $sheets->collection('posts')->all()
+            ->sortByDesc(function ($post) {
+                return $post->date;
+            })
+            ->take(20)
+            ->map(function (self $post) {
+                return [
+                    'id' => $post->url,
+                    'title' => $post->title,
+                    'updated' => $post->date,
+                    'summary' => $post->contents,
+                    'link' => $post->url,
+                    'author' => 'Sebastian De Deyne',
+                ];
+            });
     }
 }
