@@ -19,22 +19,26 @@
     {{-- <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet"> --}}
 
-    <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
+    <style>{{ inline_mix('css/app.css') }}</style>
 
     <link rel="prefetch" href="{{ mix('js/highlight.js') }}" as="script">
-    <script defer src="{{ mix('js/app.js') }}"></script>
   </head>
-  <body>
+  <body @if($isHomePage ?? false) class="is-home" @endif>
     @include('layouts.partials.header', [
       'breadcrumb' => $breadcrumb ?? null,
     ])
 
-    <div class="mt-28 mb-16">
+    @if($isHomePage ?? false)
+      <div class="mb-16" style="margin-top: 19vw">
+    @else
+      <div class="mt-32 mb-16">
+    @endif
       {{ $slot }}
     </div>
 
     @include('layouts.partials.footer')
 
+    <script>{{ inline_mix('js/app.js') }}</script>
     @if(app()->environment('production'))
       @include('layouts.partials.analytics')
     @endif

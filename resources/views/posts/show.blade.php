@@ -16,6 +16,9 @@
         <time datetime="{{ $post->date->format('Y-m-d') }}">
           {{ $post->date->format('F jS, Y') }}
         </time>
+        @if($post->subtitle)
+          — {{ $post->subtitle }}
+        @endif
       </aside>
     </header>
     <section class="markup | font-serif w-4/5">

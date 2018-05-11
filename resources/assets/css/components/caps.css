@@ -1,6 +1,6 @@
 .caps {
   @apply text-grey;
   @apply text-xs;
-  @apply tracking-wide;
+  @apply tracking-wider;
   text-transform: uppercase;
 }

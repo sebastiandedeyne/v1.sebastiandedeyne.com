@@ -3,8 +3,6 @@ require('laravel-mix-purgecss');
 
 const browsers = ['>0.25%', 'not ie 11', 'not op_mini all'];
 
-mix.config.autoprefixer = false;
-
 mix
   .js('resources/assets/js/app.js', 'public/js')
   .postCss('resources/assets/css/app.css', 'public/css', [
@@ -17,6 +15,10 @@ mix
       }
     })
   ])
+  .options({
+    autoprefixer: false,
+    processCssUrls: false,
+  })
   .babelConfig({
     presets: [
       [
@@ -39,7 +41,3 @@ mix
   .purgeCss({
     whitelistPatterns: [/hljs/]
   });
-
-if (mix.inProduction()) {
-  mix.version();
-}

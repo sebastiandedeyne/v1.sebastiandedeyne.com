@@ -70,28 +70,48 @@
 }
 
 .markup blockquote {
-  @apply mb-4;
-  @apply pl-4;
-  @apply pr-4;
+  @apply bg-grey-lighter;
+  @apply my-12;
+  @apply px-8;
+  @apply pt-7;
+  @apply pb-6;
   position: relative;
+}
+
+.markup blockquote:before,
+.markup blockquote:after {
+  @apply text-grey-light;
+  font-size: 6rem;
+  font-weight: bold;
+  line-height: 1;
+  position: absolute;
+  z-index: 1;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .markup blockquote:before {
-  @apply text-grey-light;
   content: '“';
-  font-size: 80px;
-  font-weight: bold;
+  top: -1rem;
   left: 0;
-  position: absolute;
-  top: 16px;
-  z-index: 1;
 }
 
-.markup blockquote * {
-  font-style: italic;
-  line-height: 1.6;
+.markup blockquote:after {
+  content: '”';
+  bottom: -3.6rem;
+  right: 0;
+}
+
+.markup blockquote > * {
   position: relative;
   z-index: 2;
+}
+
+.markup blockquote > *:last-child {
+  margin-bottom: 0;
+}
+
+.markup blockquote code {
+  @apply bg-grey-light;
 }
 
 .markup img {

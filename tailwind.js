@@ -47,7 +47,8 @@ let colors = {
   'transparent': 'transparent',
 
   'black': '#222222',
-  'grey-dark': '#441a1a',
+  'grey-darker': '#353535',
+  'grey-dark': '#565656',
   'grey': '#747474',
   'grey-light': '#e8e8e8',
   'grey-lighter': '#f9f9f9',
@@ -63,6 +64,7 @@ let spacing = {
   '3': '0.75rem',
   '4': '1rem',
   '6': '1.5rem',
+  '7': '1.75rem',
   '8': '2rem',
   '10': '2.5rem',
   '12': '3rem',
@@ -266,7 +268,8 @@ module.exports = {
   tracking: {
     'tight': '-0.05em',
     'normal': '0',
-    'wide': '0.05em',
+    'wide': '0.03em',
+    'wider': '0.06em',
   },
 
 
