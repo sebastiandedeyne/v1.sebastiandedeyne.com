@@ -1,6 +1,6 @@
 @component('layouts.app', [
   'title' => $post->title,
-  'description' => strip_tags($post->summary),
+  'description' => $post->summary,
   'breadcrumb' => [
     'href' => route('posts'),
     'text' => 'Posts',
@@ -22,7 +22,7 @@
       </aside>
     </header>
     <section class="markup | font-serif w-4/5">
-      {!! $post->contents !!}
+      {{ $post->contents }}
     </section>
   </article>
 @endcomponent

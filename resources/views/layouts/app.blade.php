@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-    <meta name="description" content="{{ $description ?? 'I\'m a web developer working at Spatie in Antwerp, Belgium.' }}">
+    <meta name="description" content="{{ $description ?? 'Web designer & developer' }}">
     <meta name="author" content="Sebastian De Deyne">
 
     <meta property="og:title" content="{{ $title ?? 'Sebastian De Deyne' }}">
-    <meta property="og:description" content="{{ $description ?? 'I\'m a web developer working at Spatie in Antwerp, Belgium.' }}">
+    <meta property="og:description" content="{{ $description ?? 'Web designer & developer' }}">
 
     <title>{{ isset($title) ? ($title . ' — Sebastian De Deyne') : 'Sebastian De Deyne' }}</title>
 
