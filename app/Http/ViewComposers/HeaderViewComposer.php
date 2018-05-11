@@ -30,7 +30,7 @@ class HeaderViewComposer
         $menu
             ->addClass('flex items-end')
             ->addItemParentClass('ml-6')
-            ->setActiveClass('text-grey-darker')
+            ->setActiveClass('text-black')
             ->setActiveFromRequest();
 
         $view->with('menu', $menu);

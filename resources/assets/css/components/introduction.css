@@ -1,3 +1,10 @@
+.introduction {
+  @apply mb-32;
+  @apply font-serif;
+  @apply text-xl;
+  @apply tracking-wide;
+}
+
 .introduction strong {
   @apply text-red;
   @apply font-medium;

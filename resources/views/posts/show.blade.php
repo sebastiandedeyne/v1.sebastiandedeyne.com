@@ -21,7 +21,7 @@
         @endif
       </aside>
     </header>
-    <section class="markup | font-serif w-4/5">
+    <section class="markup has-sponsor | font-serif w-4/5">
       {{ $post->contents }}
     </section>
   </article>

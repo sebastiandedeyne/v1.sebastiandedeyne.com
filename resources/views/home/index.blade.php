@@ -2,7 +2,7 @@
   'isHomePage' => true,
 ])
   <div class="wrapper">
-    <section class="introduction | mb-32 font-serif text-xl tracking-wide text-grey-dark">
+    <section class="introduction">
       <p class="mb-4">
         <span class="bg-white">
           I'm a <strong>web designer</strong> and <strong>developer</strong> from Ghent,<br> employed at
