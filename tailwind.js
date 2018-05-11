@@ -55,6 +55,7 @@ let colors = {
   'white': '#ffffff',
 
   'red': '#c74f4f',
+  'red-dark': '#9a3e3e',
 }
 
 let spacing = {
