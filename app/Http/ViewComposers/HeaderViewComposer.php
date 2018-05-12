@@ -13,6 +13,7 @@ class HeaderViewComposer
         $menu = Menu::new()
             ->url(route('home'), 'Home')
             ->url(route('posts'), 'Posts')
+            ->url(route('newsletter'), 'Newsletter')
             ->url(route('talks'), 'Talks')
             ->url(route('about'), 'About')
             ->addClass('header-menu')
