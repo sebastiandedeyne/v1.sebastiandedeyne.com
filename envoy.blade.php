@@ -25,20 +25,26 @@
 
         cd {{ $releaseDir }}
 
+        echo "Running composer..."
         composer install --no-dev --no-interaction --prefer-dist --quiet
+
+        echo "Running yarn..."
         yarn --frozen-lockfile --silent
         yarn production
 
+        echo "Blessing new release..."
         rm -f {{ $root }}/current
         ln -s {{ $releaseDir }} {{ $root }}/current
         ln -s {{ $releaseDir }}/../../.env {{ $releaseDir }}/.env
         sudo service php7.1-fpm restart
 
+        echo "Optimizing..."
         php artisan cache:clear
         php artisan responsecache:flush
         php artisan config:cache
         php artisan route:cache
 
+        echo "Cleaning up old releases..."
         ls -dt {{ $root }}/releases/* | tail -n +3 | xargs -d "\n" rm -rf;
     @endif
 @endtask
