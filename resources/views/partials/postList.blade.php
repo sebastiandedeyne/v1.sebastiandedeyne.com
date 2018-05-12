@@ -1,9 +1,7 @@
 <section>
-  @isset($title)
-    <h2 class="caps">
-      {{ $title }}
-    </h2>
-  @endisset
+  <h2 class="caps">
+    {{ $title }}
+  </h2>
   <ul>
     @foreach($posts as $post)
       <li class="mt-6">

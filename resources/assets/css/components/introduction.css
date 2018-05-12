@@ -1,7 +1,6 @@
 .introduction {
   @apply font-serif;
   @apply mb-12;
-  @apply pt-8;
 
   @screen sm {
     @apply mb-20;
@@ -12,7 +11,6 @@
 
   @screen md {
     @apply mb-32;
-    padding-top: 19vw;
   }
 }
 

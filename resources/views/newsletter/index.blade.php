@@ -2,11 +2,11 @@
   'title' => 'Growing the Stack',
 ])
   <header>
-    <div class="w-32 mx-auto mb-8">
+    <div class="w-32 mx-auto mb-4 sm:mb-8">
       {{ svg('growingthestack') }}
     </div>
   </header>
-  <section class="markup | w-2/3 mx-auto">
+  <section class="markup | md:w-2/3 mx-auto">
     <p>
       <em><strong>Growing the Stack</strong></em> is a biweekly—as in, once
       every two weeks—newsletter about programming, design, and other related
@@ -32,9 +32,9 @@
       action="https://www.getrevue.co/profile/growingthestack/add_subscriber"
       method="POST"
       target="_blank"
-      class="-mx-4 my-8 p-6 pt-4 bg-green rounded"
+      class="-mx-4 my-4 sm:my-8 p-6 pt-4 bg-green sm:rounded"
     >
-      <p class="mb-2 text-sm text-center leading-tight px-16 text-green-darkest">
+      <p class="mb-2 text-sm text-center leading-tight sm:px-16 text-green-darkest">
         Subscribe now to receive <em>Growing the Stack</em> in your mailbox once
         every two weeks.
       </p>

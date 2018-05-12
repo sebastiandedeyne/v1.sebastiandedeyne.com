@@ -1,25 +1,35 @@
 @component('layouts.app', [
   'title' => 'About',
 ])
-  <section class="flex">
-    <aside class="font-mono leading-loose pr-4 text-grey text-xs">
-      <div class="mb-6 w-full bg-grey-light" style="padding-bottom: 130%"></div>
-      <p class="markup | mb-2">
-        <span>Twitter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <section class="sm:flex">
+    <aside class="font-mono leading-loose sm:pr-4 text-grey text-sm sm:text-xs mb-6 sm:mb-0">
+      <div class="w-full mb-6 relative hidden sm:block" style="padding-bottom: 100%">
+        <img
+          src="{{ url('images/me.jpg') }}"
+          alt="Me"
+          class="absolute rounded-full block w-full"
+        >
+      </div>
+      <p class="markup | flex justify-between">
+        <span>Twitter</span>
         <a href="https://twitter.com/sebdedeyne" title="Twitter">
-          @sebdedeyne</a>
-        <br />
-        <span>GitHub&nbsp;&nbsp;&nbsp;</span>
-        <a href="https://github.com/sebdedeyne" title="GitHub">
-          sebastiandedeyne</a>
+          @sebdedeyne
+        </a>
       </p>
-      <p class="markup">
+      <p class="markup | sm:mb-2 flex justify-between">
+        <span>GitHub</span>
+        <a href="https://github.com/sebdedeyne" title="GitHub">
+          sebastiandedeyne
+        </a>
+      </p>
+      <p class="markup | flex justify-between">
+        <span class="sm:hidden">E-mail</span>
         <a href="mailto:sebastiandedeyne@gmail.com" title="E-mail">
           sebastiandedeyne@gmail.com
         </a>
       </p>
     </aside>
-    <article class="flex-1 leading-normal pl-4 text-sm">
+    <article class="flex-1 leading-normal sm:pl-4 sm:text-sm">
       <h1 class="caps | mb-1">About</h1>
       <div class="markup | mb-8">
         <p>

@@ -33,12 +33,13 @@ body.is-home .header {
 
 .header-menu {
   @apply flex;
-  @apply items-end;
-  @apply mt-1;
+  @apply justify-center;
+  @apply mt-3;
   @apply text-grey ;
   @apply text-sm;
 
   @screen md {
+    @apply justify-end;
     @apply mt-0;
     @apply text-xs;
   }

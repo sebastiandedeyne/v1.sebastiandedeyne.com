@@ -12,7 +12,15 @@ const calculateOpacityAndOffset = ({ scrollY, fadeOutPosition }) => {
   };
 };
 
-const updateHeader = ({ headerEl, fadeOutPosition }) => {
+const updateHeader = ({ enabled, headerEl, fadeOutPosition }) => {
+  if (!enabled) {
+    headerEl.style.opacity = '';
+    headerEl.style.transform = '';
+    headerEl.style.display = '';
+
+    return;
+  }
+
   const { opacity, offset } = calculateOpacityAndOffset({
     fadeOutPosition,
     scrollY: window.scrollY
@@ -28,16 +36,16 @@ const updateHeader = ({ headerEl, fadeOutPosition }) => {
 };
 
 export default () => {
-  if (window.innerWidth < 750) {
-    return;
-  }
-
   const headerEl = document.querySelector('.header');
   const fadeOutPosition = headerEl.clientHeight * 0.75;
 
   const updateHeaderLoop = () => {
     window.requestAnimationFrame(() => {
-      updateHeader({ headerEl, fadeOutPosition });
+      updateHeader({
+        enabled: window.innerWidth >= 750,
+        headerEl,
+        fadeOutPosition,
+      });
 
       updateHeaderLoop();
     });

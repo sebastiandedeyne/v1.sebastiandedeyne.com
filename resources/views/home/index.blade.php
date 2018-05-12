@@ -1,27 +1,19 @@
-@component('layouts.app', [
-  'bodyClass' => 'is-home',
-  'withSpacing' => false,
-])
+@component('layouts.app')
   <div class="mb-8 md:mb-16">
     <section class="introduction">
       <p class="mb-4">
-        <span class="bg-white">
-          I'm a <strong>web designer</strong> and <strong>developer</strong> from Ghent,<br> employed at
-          <strong><a href="https://spatie.be">Spatie</a></strong> in Antwerp, Belgium.
-        </span>
+        I'm a <strong>web designer</strong> and <strong>developer</strong> from Ghent,<br> employed at
+        <strong><a href="https://spatie.be">Spatie</a></strong> in Antwerp, Belgium.
       </p>
       <p class="mb-4">
-        <span class="bg-white">
-          I build <strong>websites</strong> and <strong>applications</strong> with <br> <strong>JavaScript</strong>, <strong>PHP</strong>, <strong>HTML</strong> and <strong>CSS</strong>.
-        </span>
+        I build <strong>websites</strong> and <strong>applications</strong> with <br> <strong>JavaScript</strong>, <strong>PHP</strong>, <strong>HTML</strong> and <strong>CSS</strong>.
       </p>
       <p>
-        <span class="bg-white">
-          I try to <strong><a href="https://twitter.com/sebdedeyne">tweet</a></strong>,
-          <strong><a href="{{ route('posts') }}">blog</a></strong>
-          and do <strong><a href="{{ route('talks') }}">talks</a></strong>
-          every now and then too.
-        </span>
+        I try to <strong><a href="https://twitter.com/sebdedeyne">tweet</a></strong>,
+        <strong><a href="{{ route('posts') }}">blog</a></strong>,
+        curate a <strong><a href="{{ route('newsletter') }}">newsletter</a></strong>,
+        and do <strong>talks</strong>
+        every now and then too.
       </p>
     </section>
 

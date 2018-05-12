@@ -23,22 +23,14 @@
 
     <link rel="prefetch" href="{{ mix('js/highlight.js') }}" as="script">
   </head>
-  <body @isset($bodyClass) class="{{ $bodyClass }}"@endisset>
-    @include('layouts.partials.header', [
-      'breadcrumb' => $breadcrumb ?? null,
-    ])
-
-    @if($withSpacing ?? true)
-      <div class="wrapper | mt-6 md:mt-32 mb-8 md:mb-16">
+  <body>
+    <div class="flex flex-col min-h-screen">
+      @include('layouts.partials.header')
+      <div class="wrapper | flex-1 mt-6 md:mt-32 mb-8 md:mb-16">
         {{ $slot }}
       </div>
-    @else
-      <div class="wrapper">
-        {{ $slot }}
-      </div>
-    @endif
-
-    @include('layouts.partials.footer')
+      @include('layouts.partials.footer')
+    </div>
 
     <script>{{ inline_mix('js/app.js') }}</script>
     @if(app()->environment('production'))
