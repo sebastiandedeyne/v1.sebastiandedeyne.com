@@ -1,22 +1,64 @@
 @component('layouts.app', [
   'title' => 'Growing the Stack',
 ])
+  <header>
+    <div class="w-32 mx-auto mb-8">
+      {{ svg('growingthestack') }}
+    </div>
+  </header>
   <section class="markup | w-2/3 mx-auto">
     <p>
-      <strong class="text-red">Growing the Stack</strong> is a biweekly — as in, once every two weeks — newsletter about development, design, and other related topics.
+      <em><strong>Growing the Stack</strong></em> is a biweekly—as in, once
+      every two weeks—newsletter about programming, design, and other related
+      topics.
     </p>
     <p>
-      The newsletter isn't tied to any programming language or ecosystem. It won't keep you up to date with all the new & shiny tools out there.
+      The newsletter isn't tied to any programming language or ecosystem, and
+      it's not meant keep you up to date with all the new & shiny tools out
+      there.
     </p>
     <p>
-      It tries to bundle content that <em>inspires</em>. Content that triggers you to think about new concepts which might help you solve your next big project's problems.
+      It tries to bundle content that <em>inspires</em>. Content that triggers
+      you to think about new concepts which might help you solve your next big
+      project's problems.
     </p>
-    <form action="" class="-mx-4 my-8 p-4 bg-green rounded flex">
-      <input class="flex-1 px-4 py-2 rounded-sm mr-2" type="email" placeholder="sebastian@spatie.be">
-      <button class="px-4 rounded-sm bg-green-dark text-white" type="submit">Subscribe</button>
+    <p>
+      Quantity over quality. Editions will be sent <strong>every two weeks
+      </strong> on Tuesday. Each will contain <strong>three links</strong> about
+      programming, design, the web, the workplace, ethics, productivity, or
+      any other relatable subject.
+    </p>
+    <form
+      action="https://www.getrevue.co/profile/growingthestack/add_subscriber"
+      method="POST"
+      target="_blank"
+      class="-mx-4 my-8 p-6 pt-4 bg-green rounded"
+    >
+      <p class="mb-2 text-sm text-center leading-tight px-16 text-green-darkest">
+        Subscribe now to receive <em>Growing the Stack</em> in your mailbox once
+        every two weeks.
+      </p>
+      <div class="flex">
+        <input
+          type="email"
+          name="member[email]"
+          placeholder="{{ array_random(['charles', 'russel', 'roland', 'sean']) }}@barksdale.co"
+          class="flex-1 p-2 rounded-sm mr-2"
+          aria-label="E-mail"
+          required
+        >
+        <input
+          type="submit"
+          value="Subscribe"
+          name="member[subscribe]"
+          class="px-4 rounded-sm bg-green-dark text-white font-medium"
+        >
+      </div>
     </form>
     <p>
-      Quantity over quality. Editions will be sent every two weeks. Each will contain three links about programming, design, the web, the workplace, ethics, productivity, or anything else I deem interesting.
+      Not sure if this floats your boat? Previous editions are archived
+      <a href="https://www.getrevue.co/profile/growingthestack">on Revue</a>.
+      Have a look, and come back if you're in for more.
     </p>
   </section>
 @endcomponent

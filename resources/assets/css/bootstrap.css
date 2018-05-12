@@ -58,3 +58,8 @@ a {
 ul {
   list-style-type: none;
 }
+
+svg {
+  width: 100%;
+  height: auto;
+}

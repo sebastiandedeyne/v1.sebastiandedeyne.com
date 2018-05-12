@@ -41,7 +41,7 @@
 }
 
 .markup strong {
-  font-weight: bold;
+  @apply font-bold;
 }
 
 .markup em {
