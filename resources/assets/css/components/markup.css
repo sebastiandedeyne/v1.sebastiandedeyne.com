@@ -17,22 +17,22 @@
 .markup h2 {
   @apply font-bold;
   @apply leading-tight;
-  @apply mb-4;
-  @apply mt-8;
+  @apply mb-8;
+  @apply mt-12;
   @apply text-black;
   @apply text-lg;
+  @apply text-center;
 
   @screen md {
     @apply font-sans;
-    @apply text-xl;
   }
 }
 
 .markup h3 {
   @apply leading-tight;
-  @apply mb-2;
-  @apply mt-6;
-  @apply text-lg;
+  @apply mb-4;
+  @apply mt-8;
+  font-size: 1.1em;
   font-weight: bold;
 }
 
