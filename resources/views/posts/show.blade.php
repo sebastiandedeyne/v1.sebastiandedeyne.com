@@ -2,6 +2,10 @@
   'title' => $post->title,
   'description' => $post->summary,
 ])
+  @slot('head')
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+  @endslot
+
   <article>
     <header class="mt-10 mb-12 md:mb-20 text-center md:text-left">
       <h1 class="md:w-2/3 leading-tighter text-xl md:text-2xl px-4 sm:px-8 md:px-0">

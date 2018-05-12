@@ -35,7 +35,7 @@
       class="-mx-4 my-4 sm:my-8 p-6 pt-4 bg-green sm:rounded"
     >
       <p class="mb-2 text-sm text-center leading-tight sm:px-16 text-green-darkest">
-        Subscribe now to receive <em>Growing the Stack</em> in your mailbox once
+        Subscribe now and receive <em>Growing the Stack</em> in your mailbox once
         every two weeks.
       </p>
       <div class="flex">

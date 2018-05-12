@@ -48,14 +48,18 @@
   font-style: italic;
 }
 
-.markup ul {
+.markup ul,
+.markup ol {
   @apply mb-4;
-  list-style-position: inside;
+  @apply ml-4;
+  list-style-position: outside;
+}
+
+.markup ul {
   list-style-type: disc;
 }
 
 .markup ol {
-  list-style-position: inside;
   list-style-type: decimal;
 }
 
@@ -166,4 +170,8 @@
     @apply font-sans;
     @apply text-xs;
   }
+}
+
+.markup > *:last-child {
+  margin-bottom: 0;
 }
