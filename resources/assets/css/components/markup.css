@@ -1,0 +1,169 @@
+.markup a {
+  @apply underline;
+  @apply text-red;
+  display: inline-block;
+  transition: color 0.15s ease-in-out;
+  transform: translate3d(0, 0, 0);
+}
+
+.markup a:hover {
+  @apply text-red-dark;
+}
+
+.markup a:active {
+  transform: translate3d(0, 1px, 0);
+}
+
+.markup h2 {
+  @apply font-bold;
+  @apply leading-tight;
+  @apply mb-4;
+  @apply mt-8;
+  @apply text-black;
+  @apply text-lg;
+
+  @screen md {
+    @apply font-sans;
+    @apply text-xl;
+  }
+}
+
+.markup h3 {
+  @apply leading-tight;
+  @apply mb-2;
+  @apply mt-6;
+  @apply text-lg;
+  font-weight: bold;
+}
+
+.markup p {
+  @apply mb-4;
+}
+
+.markup strong {
+  @apply font-bold;
+}
+
+.markup em {
+  font-style: italic;
+}
+
+.markup ul {
+  @apply mb-4;
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+.markup ol {
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+
+.markup code {
+  @apply bg-grey-lighter;
+  @apply border-grey-light;
+  @apply font-mono;
+  font-size: 0.9em;
+  font-style: normal !important;
+  padding: 0 0.2em;
+}
+
+.markup pre {
+  @apply my-6;
+}
+
+.markup pre + pre {
+  @apply -mt-4;
+}
+
+.markup pre code {
+  @apply -mx-4;
+  @apply p-4;
+  border: none;
+  display: block;
+  font-size: 14px;
+  line-height: 26px;
+  overflow: auto;
+
+  @screen sm {
+    @apply mx-0;
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+.markup blockquote {
+  @apply -mx-4;
+  @apply bg-grey-lighter;
+  @apply my-12;
+  @apply pb-6;
+  @apply pt-7;
+  @apply px-4;
+  position: relative;
+
+  @screen sm {
+    @apply px-8;
+    @apply mx-0;
+  }
+}
+
+.markup blockquote:before,
+.markup blockquote:after {
+  @apply text-grey-light;
+  font-size: 6rem;
+  font-weight: bold;
+  line-height: 1;
+  position: absolute;
+  z-index: 1;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.markup blockquote:before {
+  content: '“';
+  top: -1rem;
+  left: 0;
+}
+
+.markup blockquote:after {
+  content: '”';
+  bottom: -3.6rem;
+  right: 0;
+}
+
+.markup blockquote > * {
+  position: relative;
+  z-index: 2;
+}
+
+.markup blockquote > *:last-child {
+  margin-bottom: 0;
+}
+
+.markup blockquote code {
+  @apply bg-grey-light;
+}
+
+.markup img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.markup hr {
+  @apply border-b;
+  @apply border-grey-light;
+  @apply mt-16;
+  @apply mb-12;
+}
+
+.markup aside {
+  @apply leading-tight;
+  @apply mb-4;
+  @apply text-grey;
+  @apply text-sm;
+
+  @screen md {
+    @apply font-sans;
+    @apply text-xs;
+  }
+}

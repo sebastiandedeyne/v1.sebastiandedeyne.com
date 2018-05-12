@@ -19,18 +19,22 @@ class PagesTest extends TestCase
         $this->get('/about')->assertStatus(200);
     }
 
-    public function test_it_displays_the_open_source_page()
+    public function test_it_displays_the_newsletter_page()
     {
-        $this->get('/open-source')->assertStatus(200);
+        $this->get('/newsletter')->assertStatus(200);
     }
 
     public function test_it_displays_the_posts_page()
     {
         $this->get('/posts')->assertStatus(200);
     }
-
     public function test_it_displays_a_post_page()
     {
-        $this->get('/posts/2016/adventure-time-with-webpack')->assertStatus(200);
+        $this->get('/adventure-time-with-webpack')->assertStatus(200);
+    }
+
+    public function test_it_redirects_old_post_pages()
+    {
+        $this->get('/posts/2016/adventure-time-with-webpack')->assertStatus(302);
     }
 }

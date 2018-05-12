@@ -1,0 +1,10 @@
+.caps {
+  @apply text-grey;
+  @apply text-sm;
+  @apply tracking-wider;
+  text-transform: uppercase;
+
+  @screen md {
+    @apply text-xs;
+  }
+}

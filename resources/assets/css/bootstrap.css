@@ -1,0 +1,65 @@
+@tailwind preflight;
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+::selection {
+  @apply bg-grey-light;
+}
+
+::-moz-selection {
+  @apply bg-grey-light;
+}
+
+html {
+  font-size: 16px;
+
+  @screen sm {
+    font-size: 18px;
+  }
+
+  @screen md {
+    font-size: 20px;
+  }
+}
+
+body {
+  @apply font-sans;
+  @apply leading-tight;
+  @apply text-base;
+  @apply text-grey-darker;
+
+  @screen sm {
+    @apply leading-normal;
+  }
+
+  @screen md {
+    &.is-home {
+      background-image: url('/images/spot.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+    }
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}

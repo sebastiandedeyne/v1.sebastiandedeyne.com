@@ -4,12 +4,10 @@ Route::feeds();
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/about', 'AboutController@index')->name('about');
+Route::view('/about', 'about.index')->name('about');
+Route::view('/newsletter', 'newsletter.index')->name('newsletter');
 
-Route::get('/open-source', 'OpenSourceController@index')->name('openSource');
+Route::get('/posts', 'PostsController@index')->name('posts');
+Route::get('/posts/{year}/{slug}', 'PostsController@redirectOldPost');
 
-Route::get('/blogroll', 'BlogrollController@index')->name('blogroll');
-
-Route::get('/posts', 'PostsController@index')->name('posts.index');
-Route::get('/posts/page/{page}', 'PostsController@page');
-Route::get('/posts/{year}/{slug}', 'PostsController@show')->name('posts.show')->where('slug', '(.*)');
+Route::get('/{slug}', 'PostsController@show')->name('posts.show')->where('slug', '(.*)');

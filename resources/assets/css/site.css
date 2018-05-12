@@ -1,8 +1,0 @@
-@import "tools/reset";
-@import "tools/variables";
-
-@import "elements/**/*.css";
-@import "components/**/*.css";
-@import "helpers/**/*.css";
-
-@import "vendor/**/*.css";

@@ -1,0 +1,41 @@
+.sponsor > * {
+  @apply bg-yellow;
+  @apply block;
+  @apply font-sans;
+  @apply leading-tight;
+  @apply my-8;
+  @apply p-4;
+  @apply relative;
+  @apply rounded;
+  @apply text-grey-dark;
+  @apply text-sm;
+}
+
+.sponsor .carbon-wrap {
+  @apply flex;
+}
+
+.sponsor .carbon-text {
+  @apply block;
+  @apply pb-4;
+  @apply ml-4;
+}
+
+.sponsor .carbon-text,
+.sponsor .carbon-text:hover {
+  @apply text-grey-dark;
+  text-decoration: none;
+}
+
+.sponsor .carbon-poweredby {
+  @apply absolute;
+  @apply text-xs;
+  bottom: 1rem;
+  left: calc(2rem + 130px);
+}
+
+.sponsor .carbon-poweredby,
+.sponsor .carbon-poweredby:hover {
+  @apply text-grey;
+  text-decoration: none;
+}

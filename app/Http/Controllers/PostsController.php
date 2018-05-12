@@ -2,28 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use App\Content\Posts;
+use Spatie\Sheets\Sheets;
 
 class PostsController
 {
-    public function index(Posts $posts)
+    public function index(Sheets $sheets)
     {
+        $posts = $sheets->collection('posts')->all()
+            ->sortByDesc(function ($post) {
+                return $post->date;
+            });
+
         return view('posts.index', [
-            'paginator' => $posts->paginate(20),
+            'posts' => $posts,
         ]);
     }
 
-    public function page($page, Posts $posts)
+    public function show(string $slug, Sheets $sheets)
     {
-        return view('posts.index', [
-            'paginator' => $posts->paginate(20, 'page', $page),
-        ]);
-    }
+        $post = $sheets->collection('posts')->all()
+            ->where('slug', $slug)
+            ->first();
 
-    public function show($year, $slug, Posts $posts)
-    {
+        if (!$post) {
+            abort(404);
+        }
+
         return view('posts.show', [
-            'post' => $posts->find($year, $slug),
+            'post' => $post,
         ]);
+    }
+
+    public function redirectOldPost(string $year, string $slug)
+    {
+        return redirect()->action('PostsController@show', $slug);
     }
 }

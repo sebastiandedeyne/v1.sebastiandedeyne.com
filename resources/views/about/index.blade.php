@@ -1,38 +1,65 @@
 @component('layouts.app', [
-    'title' => 'About',
+  'title' => 'About',
 ])
-    <div class="container">
-        <h1 class="h1 h-margin-bottom">
-            About
-        </h1>
-        <section class="textblock h-margin-bottom">
-            <p>
-                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="_blank" class="h-link-invisible">Spatie</a> in Antwerp.
-            </p>
-            <p>
-                I build things with PHP, JavaScript and CSS. Specifically, Laravel, Vue.js and some occasional React.
-            </p>
-            <p>
-                I enjoy learning other frameworks, libraries and languages. Even if I don't plan on using something in the near future, research and experimentation with a foreign concept can serve as a great inspiration to solve problems in my familiar tech stack.
-            </p>
-            <p>
-                I'm also a big open source proponent. Even if something isn't meant to be consumed by others, sharing code and knowledge is beneficial to all involved.
-            </p>
-        </section>
-        <section class="h-double-margin-bottom">
-            @include('partials.social')
-        </section>
-        <section class="textblock h-double-margin-bottom">
-            <h2 class="textblock__subtitle">Background</h2>
-            <ul>
-                <li>Developer at Spatie, Antwerp since 2015</li>
-                <li>Freelance design & dev, Ghent (2012-2015)</li>
-                <li>Internship at SumoCoders, Ghent (2014)</li>
-                <li>Bachelor's degree in graphical and digital media<br> (Artevelde University College Ghent 2015)</li>
-            </ul>
-            <h2 class="textblock__subtitle">Colophon</h2>
-            <p>This website is powered by <a href="https://laravel.com/" target="_blank">Laravel</a> and served from <a href="https://www.digitalocean.com/" target="_blank">Digital Ocean</a>. The source code is hosted on <a href="https://github.com/sebastiandedeyne/sebastiandedeyne.com" target="_blank">GitHub</a>.</p>
-        </section>
-        @include('partials.footer')
-    </div>
+  <section class="sm:flex">
+    <aside class="font-mono leading-loose sm:pr-4 text-grey text-sm sm:text-xs mb-6 sm:mb-0">
+      <div class="w-full mb-6 relative hidden sm:block" style="padding-bottom: 100%">
+        <img
+          src="{{ url('images/me.jpg') }}"
+          alt="Me"
+          class="absolute rounded-full block w-full"
+        >
+      </div>
+      <p class="markup | flex justify-between">
+        <span>Twitter</span>
+        <a href="https://twitter.com/sebdedeyne" title="Twitter">
+          @sebdedeyne
+        </a>
+      </p>
+      <p class="markup | sm:mb-2 flex justify-between">
+        <span>GitHub</span>
+        <a href="https://github.com/sebdedeyne" title="GitHub">
+          sebastiandedeyne
+        </a>
+      </p>
+      <p class="markup | flex justify-between">
+        <span class="sm:hidden">E-mail</span>
+        <a href="mailto:sebastiandedeyne@gmail.com" title="E-mail">
+          sebastiandedeyne@gmail.com
+        </a>
+      </p>
+    </aside>
+    <article class="flex-1 leading-normal sm:pl-4 sm:text-sm">
+      <h1 class="caps | mb-1">About</h1>
+      <div class="markup | mb-8">
+        <p>
+          I'm a web designer & developer from Ghent, working at
+          <a href="https://spatie.be">Spatie</a>, Antwerp.
+        </p>
+        <p>
+          I build websites, apps & other things with JavaScript, PHP, and CSS.
+        </p>
+        <p>
+          I enjoy learning other frameworks, libraries and languages. Even if I
+          don't plan on using something in the near future, research and
+          experimentation with a foreign concept can serve as a great
+          inspiration to solve problems in my familiar tech stack.
+        </p>
+        <p>
+          I'm also a big open source proponent. Even if something isn't meant to
+          be consumed by others, sharing code and knowledge is beneficial to all
+          involved.
+        </p>
+      </div>
+      <h2 class="caps">Colophon</h2>
+      <div class="markup">
+        <p>
+          This website is powered by
+          <a href="https://laravel.com">Laravel</a> and served from
+          <a href="https://digitalocean.com">Digital Ocean</a>. The source code
+          is hosted on <a href="https://github.com/sebastiandedeyne/sebastiandedeyne.com">GitHub</a>.
+        </p>
+      </div>
+    </article>
+  </section>
 @endcomponent

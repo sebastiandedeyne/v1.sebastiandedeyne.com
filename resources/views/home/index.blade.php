@@ -1,36 +1,31 @@
 @component('layouts.app')
-    <div class="container">
-        <h1 class="h1 h-margin-bottom">
-            Sebastian De Deyne
-        </h1>
-        <section class="textblock h-margin-bottom">
-            <p>
-                I'm a web developer from Ghent, working at <a href="https://spatie.be" target="_blank" class="h-link-invisible">Spatie</a> in Antwerp. <br>
-                I build things with PHP, JavaScript, and CSS.
-            </p>
-        </section>
-        <section class="h-double-margin-bottom">
-            @include('partials.social')
-        </section>
-        <section class="post-list">
-            <h2 class="post-list__title">Articles</h2>
-            @foreach($posts as $year => $postsInYear)
-                <section class="list-group">
-                    <h2 class="list-group__title">
-                        {{ $year }}
-                    </h2>
-                    <ul>
-                        @foreach($postsInYear as $post)
-                            <li class="list-group__item">
-                                <a class="list-group__link" href="{{ $post->url }}">
-                                    {{ $post->title }}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </section>
-            @endforeach
-        </section>
-        @include('partials.footer')
-    </div>
+  <div class="mb-8 md:mb-16">
+    <section class="introduction">
+      <p class="mb-4">
+        I'm a <strong>web designer</strong> and <strong>developer</strong> from Ghent,<br> employed at
+        <strong><a href="https://spatie.be">Spatie</a></strong> in Antwerp, Belgium.
+      </p>
+      <p class="mb-4">
+        I build <strong>websites</strong> and <strong>applications</strong> with <br> <strong>JavaScript</strong>, <strong>PHP</strong>, <strong>HTML</strong> and <strong>CSS</strong>.
+      </p>
+      <p>
+        I try to <strong><a href="https://twitter.com/sebdedeyne">tweet</a></strong>,
+        <strong><a href="{{ route('posts') }}">blog</a></strong>,
+        curate a <strong><a href="{{ route('newsletter') }}">newsletter</a></strong>,
+        and do <strong>talks</strong>
+        every now and then too.
+      </p>
+    </section>
+
+    @include('partials.postList', [
+      'title' => 'Latest posts',
+      'posts' => $posts,
+    ])
+
+    <p class="markup | mt-8 text-sm md:text-xs">
+      <a href="{{ route('posts') }}">
+        All posts
+      </a>
+    </p>
+  </div>
 @endcomponent

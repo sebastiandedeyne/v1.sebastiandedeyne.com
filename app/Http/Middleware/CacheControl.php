@@ -12,7 +12,9 @@ class CacheControl
         $response = $next($request);
 
         if (app()->environment('production')) {
-            $response->header('Cache-Control', 'max-age=1000, public');
+            $time = 24 * 60 * 60;
+
+            $response->header('Cache-Control', "max-age={$time}, public");
         }
 
         return $response;
