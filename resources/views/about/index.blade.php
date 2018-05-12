@@ -5,7 +5,7 @@
     'text' => 'About',
   ],
 ])
-  <section class="wrapper | flex">
+  <section class="flex">
     <aside class="font-mono leading-loose pr-4 text-grey text-xs">
       <div class="mb-6 w-full bg-grey-light" style="padding-bottom: 130%"></div>
       <p class="markup | mb-2">

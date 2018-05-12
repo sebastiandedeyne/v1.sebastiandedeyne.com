@@ -28,6 +28,10 @@ const updateHeader = ({ headerEl, fadeOutPosition }) => {
 };
 
 export default () => {
+  if (window.innerWidth < 750) {
+    return;
+  }
+
   const headerEl = document.querySelector('.header');
   const fadeOutPosition = headerEl.clientHeight * 0.75;
 

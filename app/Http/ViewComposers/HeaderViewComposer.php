@@ -15,9 +15,7 @@ class HeaderViewComposer
             ->url(route('posts'), 'Posts')
             ->url(route('talks'), 'Talks')
             ->url(route('about'), 'About')
-            ->addClass('flex items-end')
-            ->addItemParentClass('ml-6')
-            ->setActiveClass('text-black')
+            ->addClass('header-menu')
             ->setActiveFromRequest();
 
         $view->with('menu', $menu);

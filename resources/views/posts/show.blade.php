@@ -6,12 +6,12 @@
     'text' => 'Posts',
   ],
 ])
-  <article class="wrapper">
-    <header class="mb-20">
-      <h1 class="w-2/3 leading-tighter text-2xl">
+  <article>
+    <header class="mt-10 mb-12 md:mb-20 text-center">
+      <h1 class="md:w-2/3 leading-tighter text-xl md:text-2xl px-4 sm:px-8 md:px-0">
         {{ $post->title }}
       </h1>
-      <aside class="mt-3 text-grey text-xs">
+      <aside class="mt-1 md:mt-3 text-grey text-sm md:text-xs">
         Published
         <time datetime="{{ $post->date->format('Y-m-d') }}">
           {{ $post->date->format('F jS, Y') }}
@@ -21,7 +21,7 @@
         @endif
       </aside>
     </header>
-    <section class="markup has-sponsor | font-serif w-4/5">
+    <section class="markup has-sponsor | font-system md:font-serif md:w-4/5">
       {{ $post->contents }}
     </section>
   </article>

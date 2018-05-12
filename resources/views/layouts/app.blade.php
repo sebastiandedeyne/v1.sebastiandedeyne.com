@@ -23,18 +23,20 @@
 
     <link rel="prefetch" href="{{ mix('js/highlight.js') }}" as="script">
   </head>
-  <body @if($isHomePage ?? false) class="is-home" @endif>
+  <body @isset($bodyClass) class="{{ $bodyClass }}"@endisset>
     @include('layouts.partials.header', [
       'breadcrumb' => $breadcrumb ?? null,
     ])
 
-    @if($isHomePage ?? false)
-      <div class="mb-16" style="margin-top: 19vw">
+    @if($withSpacing ?? true)
+      <div class="wrapper | mt-6 md:mt-32 mb-8 md:mb-16">
+        {{ $slot }}
+      </div>
     @else
-      <div class="mt-32 mb-16">
+      <div class="wrapper">
+        {{ $slot }}
+      </div>
     @endif
-      {{ $slot }}
-    </div>
 
     @include('layouts.partials.footer')
 

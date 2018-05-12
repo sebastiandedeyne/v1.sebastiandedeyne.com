@@ -62,6 +62,7 @@ let colors = {
 
 let spacing = {
   'px': '1px',
+  '0': '0',
   '1': '0.25rem',
   '2': '0.5rem',
   '3': '0.75rem',
@@ -117,6 +118,7 @@ module.exports = {
 
   screens: {
     'sm': '450px',
+    'md': '750px',
   },
 
 
@@ -141,6 +143,19 @@ module.exports = {
   fonts: {
     'sans': [
       '"IBM Plex Sans"',
+      '-apple-system',
+      'BlinkMacSystemFont',
+      'Segoe UI',
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      'sans-serif',
+    ],
+    'system': [
       '-apple-system',
       'BlinkMacSystemFont',
       'Segoe UI',
@@ -202,8 +217,8 @@ module.exports = {
     'xs': '0.7rem',
     'sm': '0.9rem',
     'base': '1rem',
-    'lg': '1.05rem',
-    'xl': '1.2rem',
+    'lg': '1.35rem',
+    'xl': '2rem',
     '2xl': '3rem',
   },
 

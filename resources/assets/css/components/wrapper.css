@@ -3,4 +3,8 @@
   @apply mx-auto;
   max-width: 960px;
   width: 100%;
+
+  @screen md {
+    @apply px-8;
+  }
 }

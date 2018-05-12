@@ -1,7 +1,8 @@
 @component('layouts.app', [
-  'isHomePage' => true,
+  'bodyClass' => 'is-home',
+  'withSpacing' => false,
 ])
-  <div class="wrapper">
+  <div class="mb-8 md:mb-16">
     <section class="introduction">
       <p class="mb-4">
         <span class="bg-white">
@@ -29,7 +30,7 @@
       'posts' => $posts,
     ])
 
-    <p class="markup | mt-8 text-xs">
+    <p class="markup | mt-8 text-sm md:text-xs">
       <a href="{{ route('posts') }}">
         All posts
       </a>

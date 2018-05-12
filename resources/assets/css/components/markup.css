@@ -16,14 +16,20 @@
 
 .markup h2 {
   @apply font-bold;
-  @apply font-sans;
+  @apply leading-tight;
   @apply mb-4;
   @apply mt-8;
   @apply text-black;
-  @apply text-xl;
+  @apply text-lg;
+
+  @screen md {
+    @apply font-sans;
+    @apply text-xl;
+  }
 }
 
 .markup h3 {
+  @apply leading-tight;
   @apply mb-2;
   @apply mt-6;
   @apply text-lg;
@@ -71,20 +77,34 @@
 }
 
 .markup pre code {
+  @apply -mx-4;
   @apply p-4;
   border: none;
   display: block;
-  font-size: 15px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 26px;
+  overflow: auto;
+
+  @screen sm {
+    @apply mx-0;
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
 
 .markup blockquote {
+  @apply -mx-4;
   @apply bg-grey-lighter;
   @apply my-12;
-  @apply px-8;
-  @apply pt-7;
   @apply pb-6;
+  @apply pt-7;
+  @apply px-4;
   position: relative;
+
+  @screen sm {
+    @apply px-8;
+    @apply mx-0;
+  }
 }
 
 .markup blockquote:before,
@@ -137,9 +157,13 @@
 }
 
 .markup aside {
-  @apply font-sans;
   @apply leading-tight;
   @apply mb-4;
   @apply text-grey;
-  @apply text-xs;
+  @apply text-sm;
+
+  @screen md {
+    @apply font-sans;
+    @apply text-xs;
+  }
 }

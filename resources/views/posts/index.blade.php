@@ -5,10 +5,8 @@
     'text' => 'Posts',
   ],
 ])
-  <div class="wrapper">
-    @include('partials.postList', [
-      'title' => 'All posts',
-      'posts' => $posts,
-    ])
-  </div>
+  @include('partials.postList', [
+    'title' => 'All posts',
+    'posts' => $posts,
+  ])
 @endcomponent
