@@ -1,12 +1,14 @@
 <section>
-  <h2 class="caps">
-    {{ $title }}
-  </h2>
+  @isset($title)
+    <h2 class="caps">
+      {{ $title }}
+    </h2>
+  @endisset
   <ul>
     @foreach($posts as $post)
       <li class="mt-6">
         <a href="{{ $post->url }}">
-          <strong class="block font-normal leading-tight sm:text-lg">
+          <strong class="block font-normal leading-tight">
             {{ $post->title }}
           </strong>
           <p class="text-xs text-grey leading-tight sm:mt-1">

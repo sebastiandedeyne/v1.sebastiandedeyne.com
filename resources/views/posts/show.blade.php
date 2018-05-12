@@ -1,13 +1,9 @@
 @component('layouts.app', [
   'title' => $post->title,
   'description' => $post->summary,
-  'breadcrumb' => [
-    'href' => route('posts'),
-    'text' => 'Posts',
-  ],
 ])
   <article>
-    <header class="mt-10 mb-12 md:mb-20 text-center">
+    <header class="mt-10 mb-12 md:mb-20 text-center md:text-left">
       <h1 class="md:w-2/3 leading-tighter text-xl md:text-2xl px-4 sm:px-8 md:px-0">
         {{ $post->title }}
       </h1>

@@ -1,9 +1,5 @@
 @component('layouts.app', [
   'title' => 'About',
-  'breadcrumb' => [
-    'href' => route('about'),
-    'text' => 'About',
-  ],
 ])
   <section class="flex">
     <aside class="font-mono leading-loose pr-4 text-grey text-xs">
