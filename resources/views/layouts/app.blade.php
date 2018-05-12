@@ -17,7 +17,7 @@
     @include('layouts.partials.favicons')
 
     <style>{{ inline_mix('css/app.css') }}</style>
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,700,700i|IBM+Plex+Serif:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i|IBM+Plex+Serif:400,400i,500,700" rel="stylesheet">
 
     <link rel="prefetch" href="{{ mix('js/highlight.js') }}" as="script">
   </head>

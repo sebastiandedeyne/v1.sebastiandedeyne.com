@@ -1,27 +1,27 @@
 @php
-    $showHomeLink = $showHomeLink ?? request()->path() !== '/';
+  $showHomeLink = $showHomeLink ?? request()->path() !== '/';
 
-    $title = $title ?? array_random([
-        '¯\_(ツ)_/¯', 'Awkward.', 'Bantha fodder.', 'Hmmm...', 'Oh no!',
-        'Peculiar.', 'Uh oh.', 'Whoops!',
-    ]);
+  $title = $title ?? array_random([
+    '¯\_(ツ)_/¯', 'Awkward.', 'Bantha fodder.', 'Hmmm...', 'Oh no!',
+    'Peculiar.', 'Uh oh.', 'Whoops!',
+  ]);
 @endphp
 
 @component('layouts.app', [
-    'title' => $title,
-    'header' => false,
+  'title' => $title,
+  'header' => false,
 ])
-    <section class="error">
-        <h1 class="error__title">
-            {{ $title }}
-        </h1>
-        <p class="error__message">
-            {{ $message }}
-        </p>
-        @if($showHomeLink)
-            <a href="{{ route('home') }}" class="button">
-                Go home
-            </a>
-        @endunless
-    </section>
+  <div class="markup">
+    <h1 class="text-lg md:text-xl">
+      {{ $title }}
+    </h1>
+    <p>
+      {{ $message }}
+    </p>
+    @if($showHomeLink)
+      <a href="{{ route('home') }}">
+        Go home
+      </a>
+    @endunless
+  </div>
 @endcomponent
