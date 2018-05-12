@@ -1,9 +1,5 @@
 @component('layouts.app', [
   'title' => 'Growing the Stack',
-  'breadcrumb' => [
-    'href' => route('newsletter'),
-    'text' => 'Newsletter',
-  ],
 ])
   <section class="markup | w-2/3 mx-auto">
     <p>
