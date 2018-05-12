@@ -16,6 +16,7 @@ class HeaderViewComposer
             ->url(route('talks'), 'Talks')
             ->url(route('about'), 'About')
             ->addClass('header-menu')
+            ->setActiveClass('is-active')
             ->setActiveFromRequest();
 
         $view->with('menu', $menu);
