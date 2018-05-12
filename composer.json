@@ -22,7 +22,7 @@
         "spatie/laravel-responsecache": "^4.0",
         "spatie/laravel-robots-middleware": "^1.0",
         "spatie/laravel-tail": "^3.0",
-        "spatie/sheets": "dev-master"
+        "spatie/sheets": "^0.2.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

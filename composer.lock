@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "abaec6f629e31fc794ff4266b076eacb",
+    "content-hash": "441f46042a0302ebebfd6cafec2e9734",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -3012,16 +3012,16 @@
         },
         {
             "name": "spatie/sheets",
-            "version": "dev-master",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/sheets.git",
-                "reference": "4fb8e95b72f95c1bdc99cb5be10e342e4f53d683"
+                "reference": "fdf017a2d3c7b323d4ac05cd1d952c44bc582fa0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/sheets/zipball/4fb8e95b72f95c1bdc99cb5be10e342e4f53d683",
-                "reference": "4fb8e95b72f95c1bdc99cb5be10e342e4f53d683",
+                "url": "https://api.github.com/repos/spatie/sheets/zipball/fdf017a2d3c7b323d4ac05cd1d952c44bc582fa0",
+                "reference": "fdf017a2d3c7b323d4ac05cd1d952c44bc582fa0",
                 "shasum": ""
             },
             "require": {
@@ -3081,17 +3081,17 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Store & retrieve your static content in plain text files",
+            "description": ":package_description",
             "homepage": "https://github.com/spatie/sheets",
             "keywords": [
                 "sheets",
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/sheets/tree/master",
+                "source": "https://github.com/spatie/sheets/tree/0.2.1",
                 "issues": "https://github.com/spatie/sheets/issues"
             },
-            "time": "2018-05-09T11:38:03+00:00"
+            "time": "2018-05-08T12:08:15+00:00"
         },
         {
             "name": "spatie/url",
@@ -4569,9 +4569,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "spatie/sheets": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
