@@ -43,6 +43,7 @@
         php artisan responsecache:flush
         php artisan config:cache
         php artisan route:cache
+        php artisan warm
 
         echo "Cleaning up old releases..."
         ls -dt {{ $root }}/releases/* | tail -n +3 | xargs -d "\n" rm -rf;
