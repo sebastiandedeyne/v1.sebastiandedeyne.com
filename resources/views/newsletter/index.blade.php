@@ -18,9 +18,8 @@
       there.
     </p>
     <p>
-      It tries to bundle content that <em>inspires</em>. Content that triggers
-      you to think about new concepts which might help you solve your next big
-      project's problems.
+      It tries to bundle content that inspires. Content that triggers you to
+      think and tinker with new ideas.
     </p>
     <p>
       Quantity over quality. Editions will be sent <strong>every two weeks
