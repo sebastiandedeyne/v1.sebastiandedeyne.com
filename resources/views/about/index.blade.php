@@ -31,7 +31,7 @@
         </p>
       </div>
     </aside>
-    <article class="flex-1 leading-normal md:pl-4 md:text-sm">
+    <article class="flex-1 leading-normal md:pl-6 md:text-sm">
       <div class="markup | mb-4 md-mb-8">
         <p>
           I'm a web designer and developer from Ghent, employed at
@@ -41,7 +41,7 @@
         <p>
           I try to <a href="https://twitter.com/sebdedeyne">tweet</a>,
           <a href="{{ route('posts') }}">blog</a>,
-          curate a <a href="{{ route('newsletter') }}">newsletter</a>,
+          {{-- curate a <a href="{{ route('newsletter') }}">newsletter</a>, --}}
           and do talks
           every now and then too.
         </p>

@@ -10,7 +10,7 @@
     <p>
       I try to <strong><a href="https://twitter.com/sebdedeyne">tweet</a></strong>,
       <strong><a href="{{ route('posts') }}">blog</a></strong>,
-      curate a <strong><a href="{{ route('newsletter') }}">newsletter</a></strong>,
+      {{-- curate a <strong><a href="{{ route('newsletter') }}">newsletter</a></strong>, --}}
       and do <strong>talks</strong>
       every now and then too.
     </p>

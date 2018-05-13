@@ -27,7 +27,7 @@ class HeaderViewComposer
         $menu = Menu::new()
             ->route('home', 'Home')
             ->route('posts', 'Posts')
-            ->route('newsletter', 'Newsletter')
+            // ->route('newsletter', 'Newsletter')
             ->route('about', 'About')
             ->addClass('header-menu')
             ->setActiveClass('is-active')
