@@ -41,7 +41,7 @@
         <p>
           I try to <a href="https://twitter.com/sebdedeyne">tweet</a>,
           <a href="{{ route('posts') }}">blog</a>,
-          {{-- curate a <a href="{{ route('newsletter') }}">newsletter</a>, --}}
+          publish a <a href="{{ route('newsletter') }}">newsletter</a>,
           and do talks
           every now and then too.
         </p>

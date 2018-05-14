@@ -19,7 +19,7 @@
     </p>
     <p>
       It tries to bundle content that inspires. Content that triggers you to
-      think and tinker with new ideas.
+      consider and try out new ideas.
     </p>
     <p>
       Quantity over quality. Editions will be sent <strong>every two weeks
