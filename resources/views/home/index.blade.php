@@ -1,17 +1,18 @@
 @component('layouts.app')
-  <section class="introduction">
+  <section class="introduction markup">
     <p class="mb-4">
-      I'm a <strong>web designer</strong> and <strong>developer</strong> from Ghent,<br> employed at
-      <strong><a href="https://spatie.be">Spatie</a></strong> in Antwerp, Belgium.
+      I'm a <em>web designer</em> and <em>developer</em> from Ghent,<br> employed at
+      <a href="https://spatie.be">Spatie</a> in Antwerp, Belgium.
     </p>
     <p class="mb-4">
-      I build <strong>websites</strong> and <strong>applications</strong> with <br> <strong>JavaScript</strong>, <strong>PHP</strong>, <strong>HTML</strong> and <strong>CSS</strong>.
+      I build <em>websites</em> and <em>applications</em> with <br>
+      JavaScript, PHP, HTML and CSS.
     </p>
     <p>
-      I try to <strong><a href="https://twitter.com/sebdedeyne">tweet</a></strong>,
-      <strong><a href="{{ route('posts') }}">blog</a></strong>,
-      publish a <strong><a href="{{ route('newsletter') }}">newsletter</a></strong>,
-      and do <strong>talks</strong>
+      I <a href="https://twitter.com/sebdedeyne">tweet</a>,
+      <a href="{{ route('posts') }}">blog</a>,
+      publish a <a href="{{ route('newsletter') }}">newsletter</a>,
+      and do talks
       every now and then too.
     </p>
   </section>

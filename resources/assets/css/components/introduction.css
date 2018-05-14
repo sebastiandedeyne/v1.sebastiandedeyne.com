@@ -21,23 +21,3 @@
     @apply inline;
   }
 }
-
-.introduction strong {
-  @apply text-red;
-  @apply font-medium;
-}
-
-.introduction strong a {
-  @apply underline;
-  display: inline-block;
-  transition: color 0.15s ease-in-out;
-  transform: translate3d(0, 0, 0);
-}
-
-.introduction strong a:hover {
-  @apply text-red-dark;
-}
-
-.introduction strong a:active {
-  transform: translate3d(0, 1px, 0);
-}

@@ -50,7 +50,7 @@
           type="submit"
           value="Subscribe"
           name="member[subscribe]"
-          class="px-4 rounded-sm bg-green-dark text-white font-medium"
+          class="px-4 rounded-sm bg-green-dark text-white"
         >
       </div>
     </form>
