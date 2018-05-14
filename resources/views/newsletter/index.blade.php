@@ -22,7 +22,7 @@
       consider and try out new ideas.
     </p>
     <p>
-      Quantity over quality. Editions will be sent <strong>every two weeks
+      Quality over quantity. Editions will be sent <strong>every two weeks
       </strong> on Tuesday. Each will contain <strong>three links</strong> about
       programming, design, the web, the workplace, ethics, productivity, or
       any other relatable subject.
