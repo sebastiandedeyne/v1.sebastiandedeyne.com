@@ -21,7 +21,6 @@
   @apply mt-12;
   @apply text-black;
   @apply text-lg;
-  @apply text-center;
 
   @screen md {
     @apply font-sans;
