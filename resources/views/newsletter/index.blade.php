@@ -31,7 +31,7 @@
       action="https://www.getrevue.co/profile/growingthestack/add_subscriber"
       method="POST"
       target="_blank"
-      class="-mx-4 my-4 sm:my-8 p-6 pt-4 bg-green sm:rounded"
+      class="-mx-4 my-4 sm:my-8 p-6 pt-4 bg-green md:rounded"
     >
       <p class="mb-2 text-sm text-center leading-tight sm:px-16 text-green-darkest">
         Subscribe now and receive <em>Growing the Stack</em> in your mailbox once
