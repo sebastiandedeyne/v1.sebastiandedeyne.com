@@ -19,7 +19,7 @@
         </p>
         <p class="markup | md:mb-2 flex justify-between">
           <span>GitHub</span>
-          <a href="https://github.com/sebdedeyne" title="GitHub">
+          <a href="https://github.com/sebastiandedeyne" title="GitHub">
             sebastiandedeyne
           </a>
         </p>
