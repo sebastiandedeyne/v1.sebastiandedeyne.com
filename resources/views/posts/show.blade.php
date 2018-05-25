@@ -21,8 +21,10 @@
         @endif
       </aside>
     </header>
-    <section class="markup {{-- has-sponsor --}} | font-system md:font-serif md:w-4/5">
-      {{ $post->contents }}
-    </section>
+    <div class="md:w-4/5">
+      <section class="markup {{-- has-sponsor --}} | font-system md:font-serif">
+        {{ $post->contents }}
+      </section>
+    </div>
   </article>
 @endcomponent
