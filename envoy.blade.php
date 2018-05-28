@@ -14,9 +14,10 @@
         git pull
 
         php artisan cache:clear
-        php artisan responsecache:flush
+        php artisan page-cache:clear
         php artisan config:cache
         php artisan route:cache
+        php artisan warm
     @else
         echo "Deploying new release: {{ $releaseDir }}"
 
