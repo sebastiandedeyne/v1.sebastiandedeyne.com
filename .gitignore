@@ -3,6 +3,7 @@
 /public/js
 /public/storage
 /public/mix-manifest.json
+/public/page-cache
 /storage/*.key
 /vendor
 /.idea
