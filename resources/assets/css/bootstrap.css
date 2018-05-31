@@ -19,6 +19,12 @@
   @apply bg-grey-light;
 }
 
+@media (max-width: config('screens.sm')) {
+  * {
+    @apply font-system !important;
+  }
+}
+
 html {
   font-size: 16px;
 
