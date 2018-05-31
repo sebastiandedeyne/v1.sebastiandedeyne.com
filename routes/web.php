@@ -1,5 +1,7 @@
 <?php
 
+Route::feeds();
+
 Route::middleware('cache')->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
 
@@ -13,8 +15,6 @@ Route::middleware('cache')->group(function () {
 
     Route::get('/{slug}', 'PostsController@show')->name('posts.show')->where('slug', '(.*)');
 });
-
-Route::feeds();
 
 Route::domain('growingthestack.io')->group(function () {
     Route::redirect('{url}', 'sebastiandedeyne.com/newsletter')->where('url', '(.*)');
