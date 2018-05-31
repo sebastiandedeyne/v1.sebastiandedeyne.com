@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\HtmlString;
+use League\CommonMark\CommonMarkConverter;
 
 function inline_mix(string $path): HtmlString
 {
@@ -18,4 +19,22 @@ function svg($filename): HtmlString
     );
 
     return new HtmlString($contents);
+}
+
+function markdown(string $markdown): HtmlString
+{
+    return new HtmlString(
+        (new CommonMarkConverter())->convertToHtml($markdown)
+    );
+}
+
+function sanitize_indentation(string $string): string
+{
+    $lines = explode("\n", $string);
+
+    $lastLine = last($lines);
+    $sanitizedLastLine = ltrim($lastLine);
+    $indentSize = strlen($lastLine) - strlen($sanitizedLastLine);
+
+    return preg_replace('/\n\s{'.($indentSize + 1).'}/', "\n\n", $string);
 }

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Http\ViewComposers\HeaderViewComposer;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -16,6 +17,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer('layouts.partials.header', HeaderViewComposer::class);
+
+        Blade::component('partials.markdown');
     }
 
     /**
