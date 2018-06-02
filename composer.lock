@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "af77e0a19ecaa523a3ad80902a8aa281",
+    "content-hash": "38951490ff21ac8ba5f83062f9323c34",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -2957,65 +2957,6 @@
             "time": "2016-10-03T07:35:21+00:00"
         },
         {
-            "name": "silber/page-cache",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JosephSilber/page-cache.git",
-                "reference": "febea6a7230d7c87667fa70e32de0084c7b86d9b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JosephSilber/page-cache/zipball/febea6a7230d7c87667fa70e32de0084c7b86d9b",
-                "reference": "febea6a7230d7c87667fa70e32de0084c7b86d9b",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "5.0 - 5.6",
-                "illuminate/filesystem": "5.0 - 5.6",
-                "php": ">=5.5.9",
-                "symfony/http-foundation": "2.6 - 4"
-            },
-            "require-dev": {
-                "illuminate/container": "5.0 - 5.6",
-                "larapack/dd": "^1.1",
-                "mockery/mockery": "^0.9.5",
-                "phpunit/phpunit": "^4.8"
-            },
-            "suggest": {
-                "illuminate/console": "Allows clearing the cache via artisan"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Silber\\PageCache\\LaravelServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Silber\\PageCache\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Joseph Silber",
-                    "email": "contact@josephsilber.com"
-                }
-            ],
-            "description": "Caches responses as static files on disk for lightning fast page loads..",
-            "keywords": [
-                "cache",
-                "laravel"
-            ],
-            "time": "2018-04-23T12:36:42+00:00"
-        },
-        {
             "name": "spatie/browsershot",
             "version": "3.22.1",
             "source": {
@@ -3363,6 +3304,75 @@
                 "spatie"
             ],
             "time": "2018-02-08T13:12:46+00:00"
+        },
+        {
+            "name": "spatie/laravel-responsecache",
+            "version": "4.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-responsecache.git",
+                "reference": "7e4c1e9fe8edb1fb28ec2567cba0ce98a0ff07dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-responsecache/zipball/7e4c1e9fe8edb1fb28ec2567cba0ce98a0ff07dc",
+                "reference": "7e4c1e9fe8edb1fb28ec2567cba0ce98a0ff07dc",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/cache": "~5.5.0|~5.6.0",
+                "illuminate/config": "~5.5.0|~5.6.0",
+                "illuminate/console": "~5.5.0|~5.6.0",
+                "illuminate/contracts": "~5.5.0|~5.6.0",
+                "illuminate/http": "~5.5.0|~5.6.0",
+                "illuminate/support": "~5.5.0|~5.6.0",
+                "nesbot/carbon": "~1.19",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "~3.5.0|~3.6.0",
+                "phpunit/phpunit": "^6.2|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\ResponseCache\\ResponseCacheServiceProvider"
+                    ],
+                    "aliases": {
+                        "ResponseCache": "Spatie\\ResponseCache\\Facades\\ResponseCache"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\ResponseCache\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Speed up a Laravel application by caching the entire response",
+            "homepage": "https://github.com/spatie/laravel-responsecache",
+            "keywords": [
+                "cache",
+                "laravel",
+                "laravel-responsecache",
+                "performance",
+                "response",
+                "spatie"
+            ],
+            "time": "2018-04-30T09:20:50+00:00"
         },
         {
             "name": "spatie/laravel-tail",
