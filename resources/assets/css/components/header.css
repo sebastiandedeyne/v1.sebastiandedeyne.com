@@ -14,10 +14,6 @@
   }
 }
 
-body.is-home .header {
-  @apply border-none;
-}
-
 .header-nav {
   @apply flex;
   @apply flex-col;
