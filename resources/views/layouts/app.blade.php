@@ -32,6 +32,7 @@
     </div>
 
     <script>{{ inline_mix('js/app.js') }}</script>
+    @render('schema.webPage')
     @if(app()->environment('production'))
       @include('layouts.partials.analytics')
     @endif

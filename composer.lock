@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6dae8fb6fed82c6160be69c66c5494db",
+    "content-hash": "0a52c6ff4b0777cc985a35c269c36f2a",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -3576,6 +3576,59 @@
                 "spatie"
             ],
             "time": "2018-05-08T19:32:54+00:00"
+        },
+        {
+            "name": "spatie/schema-org",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/schema-org.git",
+                "reference": "f6eddddea63e8e5490ee6a7836ce578fb73b752e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/schema-org/zipball/f6eddddea63e8e5490ee6a7836ce578fb73b752e",
+                "reference": "f6eddddea63e8e5490ee6a7836ce578fb73b752e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "graham-campbell/analyzer": "^1.1",
+                "larapack/dd": "^1.1",
+                "league/flysystem": "^1.0",
+                "phpunit/phpunit": "^6.0",
+                "symfony/console": "^3.2",
+                "symfony/css-selector": "^3.2",
+                "symfony/dom-crawler": "^3.2",
+                "twig/twig": "^1.28"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\SchemaOrg\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fluent builder Schema.org types and ld+json generator",
+            "homepage": "https://github.com/spatie/schema-org",
+            "keywords": [
+                "schema-org",
+                "spatie"
+            ],
+            "time": "2018-06-08T10:53:06+00:00"
         },
         {
             "name": "spatie/sheets",
