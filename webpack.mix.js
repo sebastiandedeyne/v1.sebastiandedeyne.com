@@ -8,10 +8,10 @@ mix
   .postCss('resources/assets/css/app.css', 'public/css', [
     require('postcss-easy-import')(),
     require('tailwindcss')('./tailwind.js'),
-    require('postcss-cssnext')({
+    require('postcss-preset-env')({
       browsers,
       features: {
-        rem: false
+        'nesting-rules': true
       }
     })
   ])

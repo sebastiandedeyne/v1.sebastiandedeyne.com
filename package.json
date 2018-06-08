@@ -16,9 +16,9 @@
     "laravel-mix": "^2.0",
     "laravel-mix-purgecss": "^2.1.0",
     "postcss": "^5.0.19",
-    "postcss-cssnext": "^2.9.0",
     "postcss-easy-import": "^2.0.0",
     "postcss-loader": "^2.1.4",
+    "postcss-preset-env": "^5.1.0",
     "prettier": "^1.12.1",
     "tailwindcss": "^0.5.2"
   }

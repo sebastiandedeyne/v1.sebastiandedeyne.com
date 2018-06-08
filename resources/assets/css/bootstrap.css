@@ -46,14 +46,6 @@ body {
   @screen sm {
     @apply leading-normal;
   }
-
-  @screen md {
-    &.is-home {
-      background-image: url('/images/spot.jpg');
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-    }
-  }
 }
 
 a {
