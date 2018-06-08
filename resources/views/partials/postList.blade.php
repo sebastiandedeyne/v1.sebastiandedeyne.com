@@ -1,10 +1,10 @@
-<section>
+<section{!! isset($class) ? " class=\"{$class}\"" : '' !!}>
   <h2 class="caps">
     {{ $title }}
   </h2>
   <ul>
     @foreach($posts as $post)
-      <li class="mt-6">
+      <li class="mt-4">
         <a href="{{ $post->url }}">
           <strong class="block font-normal leading-tight">
             {{ $post->title }}

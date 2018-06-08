@@ -9,14 +9,22 @@ class HomeController
 {
     public function index(Sheets $sheets)
     {
-        $posts = $sheets->collection('posts')->all()
+        $featuredPosts = $sheets->collection('posts')->all()
+            ->where('featured', true)
+            ->sortByDesc(function ($post) {
+                return $post->date;
+            });
+
+        $latestPosts = $sheets->collection('posts')->all()
+            ->where('featured', false)
             ->sortByDesc(function ($post) {
                 return $post->date;
             })
             ->take(5);
 
         return view('home.index', [
-            'posts' => $posts,
+            'featuredPosts' => $featuredPosts,
+            'latestPosts' => $latestPosts,
         ]);
     }
 }

@@ -18,11 +18,18 @@
   </section>
 
   @include('partials.postList', [
-    'title' => 'Latest posts',
-    'posts' => $posts,
+    'title' => 'Featured posts',
+    'posts' => $featuredPosts,
+    'class' => 'mb-16',
   ])
 
-  <p class="markup | mt-8 text-sm md:text-xs">
+  @include('partials.postList', [
+    'title' => 'Latest posts',
+    'posts' => $latestPosts,
+    'class' => 'mb-8',
+  ])
+
+  <p class="markup | text-sm md:text-xs">
     <a href="{{ route('posts') }}">
       All posts
     </a>
