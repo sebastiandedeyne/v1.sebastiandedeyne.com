@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Spatie\Sheets\Sheets;
 
 class PostsController
@@ -18,16 +19,8 @@ class PostsController
         ]);
     }
 
-    public function show(string $slug, Sheets $sheets)
+    public function show(Post $post)
     {
-        $post = $sheets->collection('posts')->all()
-            ->where('slug', $slug)
-            ->first();
-
-        if (!$post) {
-            abort(404);
-        }
-
         return view('posts.show', [
             'post' => $post,
         ]);
