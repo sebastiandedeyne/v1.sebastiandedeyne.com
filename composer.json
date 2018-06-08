@@ -70,6 +70,9 @@
         ]
     },
     "config": {
+        "platform": {
+            "php": "7.1.17"
+        },
         "preferred-install": "dist",
         "sort-packages": true
     }
