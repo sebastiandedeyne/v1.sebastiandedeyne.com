@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\ViewComposers;
+namespace App\Http\ViewComponents;
 
-use Illuminate\Contracts\View\View;
+use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Router;
 use Spatie\Menu\Laravel\Link;
 use Spatie\Menu\Laravel\Menu;
-use Illuminate\Routing\Router;
-use Illuminate\Http\Request;
 
-class HeaderViewComposer
+class MainNav implements Htmlable
 {
     /** @var Illuminate\Routing\Router */
     private $router;
@@ -22,9 +22,9 @@ class HeaderViewComposer
         $this->request = $request;
     }
 
-    public function compose(View $view)
+    public function toHtml()
     {
-        $menu = Menu::new()
+        return Menu::new()
             ->route('home', 'Home')
             ->route('posts', 'Posts')
             ->route('newsletter', 'Newsletter')
@@ -41,7 +41,5 @@ class HeaderViewComposer
                 // Fall back to the default behaviour
                 return $link->determineActiveForUrl($this->request->url());
             });
-
-        $view->with('menu', $menu);
     }
 }

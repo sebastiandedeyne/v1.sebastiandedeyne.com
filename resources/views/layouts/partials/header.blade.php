@@ -5,6 +5,6 @@
         Sebastian De Deyne
       </a>
     </strong>
-    {{ $menu }}
+    @render('mainNav')
   </nav>
 </header>

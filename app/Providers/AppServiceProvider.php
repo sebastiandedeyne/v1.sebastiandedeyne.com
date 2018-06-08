@@ -16,8 +16,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('layouts.partials.header', HeaderViewComposer::class);
-
         Blade::component('partials.markdown');
     }
 
