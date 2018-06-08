@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Http\ViewComposers\HeaderViewComposer;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
