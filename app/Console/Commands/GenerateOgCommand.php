@@ -50,6 +50,7 @@ class GenerateOgCommand extends Command
                 ->setChromePath(env('CHROME_PATH', 'google-chrome'))
                 ->deviceScaleFactor(2)
                 ->windowSize(1200, 630)
+                ->waitUntilNetworkIdle()
                 ->save($image['path']);
 
             $this->info("Generated {$image['path']}");
