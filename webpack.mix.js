@@ -5,19 +5,20 @@ const browsers = ['>0.25%', 'not ie 11', 'not op_mini all'];
 
 mix
   .js('resources/assets/js/app.js', 'public/js')
-  .postCss('resources/assets/css/app.css', 'public/css', [
-    require('postcss-easy-import')(),
-    require('tailwindcss')('./tailwind.js'),
-    require('postcss-preset-env')({
-      browsers,
-      features: {
-        'nesting-rules': true
-      }
-    })
-  ])
+  .postCss('resources/assets/css/app.css', 'public/css')
   .options({
     autoprefixer: false,
     processCssUrls: false,
+    postCss: [
+      require('postcss-easy-import')(),
+      require('tailwindcss')('./tailwind.js'),
+      require('postcss-preset-env')({
+        browsers,
+        features: {
+          'nesting-rules': true
+        }
+      })
+    ],
   })
   .babelConfig({
     presets: [
