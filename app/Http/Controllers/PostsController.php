@@ -26,6 +26,13 @@ class PostsController
         ]);
     }
 
+    public function ogImage(Post $post)
+    {
+        return view('ogImage.index', [
+            'post' => $post,
+        ]);
+    }
+
     public function redirectOldPost(string $year, string $slug)
     {
         return redirect()->action('PostsController@show', $slug);
