@@ -47,6 +47,7 @@ class GenerateOgCommand extends Command
 
         $images->each(function (array $image) {
             Browsershot::url($image['url'])
+                ->setChromePath(env('CHROME_PATH', 'google-chrome'))
                 ->deviceScaleFactor(2)
                 ->windowSize(1200, 630)
                 ->save($image['path']);
