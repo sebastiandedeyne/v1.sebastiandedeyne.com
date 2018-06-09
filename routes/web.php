@@ -14,7 +14,9 @@ Route::get('posts/{year}/{slug}', 'PostsController@redirectOldPost');
 
 Route::get('{post}', 'PostsController@show')->name('posts.show');
 
-Route::get('{post}/og-image', 'OgImageController@show');
+Route::get('{post}/og-image', function (App\Post $post) {
+    return view('ogImage.index', ['post' => $post]);
+});
 
 Route::domain('growingthestack.io')->group(function () {
     Route::redirect('{url}', 'sebastiandedeyne.com/newsletter')->where('url', '(.*)');
