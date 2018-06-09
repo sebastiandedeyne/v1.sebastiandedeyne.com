@@ -28,7 +28,7 @@ class PostsController
 
     public function ogImage(Post $post)
     {
-        return view('ogImage.index', [
+        return view('posts.ogImage', [
             'post' => $post,
         ]);
     }

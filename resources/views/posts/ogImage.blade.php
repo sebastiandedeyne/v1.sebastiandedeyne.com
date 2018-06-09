@@ -14,12 +14,13 @@
       header {
         font-family: 'IBM Plex Sans';
         line-height: 1.2;
-        margin-left: 15vw;
-        margin-right: 28vw;
+        margin-left: 10vw;
+        margin-right: 15vw;
+        margin-top: -2.5vw;
       }
 
       h1 {
-        font-size: 5vw;
+        font-size: 9vw;
         font-weight: normal;
         margin-bottom: 3vw;
         margin-top: 0;
@@ -27,7 +28,7 @@
 
       span {
         color: #c74f4f;
-        font-size: 2.5vw;
+        font-size: 4vw;
       }
     </style>
   </head>
