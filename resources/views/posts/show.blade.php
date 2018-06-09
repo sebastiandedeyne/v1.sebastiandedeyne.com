@@ -1,7 +1,7 @@
 @component('layouts.app', [
   'title' => $post->title,
   'description' => $post->summary,
-  'image' => url("og/{$post->slug}.png}"),
+  'image' => url("og/{$post->slug}.png"),
 ])
   @slot('head')
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
