@@ -8,7 +8,11 @@
     <meta name="author" content="Sebastian De Deyne">
 
     <meta property="og:title" content="{{ $title ?? 'Sebastian De Deyne' }}">
-    <meta property="og:image" content="{{ $image ?? '' }}">
+    @isset($image)
+      <meta property="og:image" content="{{ $image }}">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+    @endisset
     <meta property="og:description" content="{{ $description ?? 'Web designer & developer' }}">
     <meta property="og:site_name" content="Sebastian De Deyne">
 
