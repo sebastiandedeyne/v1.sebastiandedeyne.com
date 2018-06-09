@@ -46,6 +46,9 @@
         php artisan route:cache
         php artisan warm
 
+        echo "Generating OG images..."
+        php artisan og:generate
+
         echo "Cleaning up old releases..."
         ls -dt {{ $root }}/releases/* | tail -n +3 | xargs -d "\n" rm -rf;
     @endif
