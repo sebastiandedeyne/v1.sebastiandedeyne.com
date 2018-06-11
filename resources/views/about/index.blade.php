@@ -3,7 +3,7 @@
 ])
   <div class="md:w-2/3 mx-auto mb-12 -mt-3 md:-mt-0">
     <header class="flex items-stretch mb-4 md:mb-10">
-      <aside class="flex items-center w-full md:w-2/3 pb-3 md:pt-3 border-b md:border-t">
+      <aside class="flex items-center w-full md:w-2/3 pb-3 md:pt-3 border-b">
         <div class="w-full leading-loose text-grey-dark text-sm md:text-xs">
           <p class="markup | flex justify-between">
             <span>Twitter</span>
