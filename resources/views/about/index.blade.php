@@ -1,13 +1,10 @@
 @component('layouts.app', [
   'title' => 'About',
 ])
-  <div class="md:w-2/3 mx-auto mb-12">
-    <header class="flex items-stretch mb-4 sm:mb-10">
-      <aside class="w-2/3 flex flex-col justify-between pb-3 border-b">
-        <strong class="caps | block font-normal text-sm">
-          Sebastian De Deyne
-        </strong>
-        <div class="leading-loose text-grey-dark text-sm md:text-xs">
+  <div class="md:w-2/3 mx-auto mb-12 -mt-3 md:-mt-0">
+    <header class="flex items-stretch mb-4 md:mb-10">
+      <aside class="flex items-center w-full md:w-2/3 pb-3 md:pt-3 border-b md:border-t">
+        <div class="w-full leading-loose text-grey-dark text-sm md:text-xs">
           <p class="markup | flex justify-between">
             <span>Twitter</span>
             <a href="https://twitter.com/sebdedeyne">
@@ -77,7 +74,7 @@
             {{ $title }}
           </a>
           <br>
-          <div class="text-grey-dark text-xs">
+          <div class="text-grey-dark md:text-xs">
             {{ $description }}
           </div>
         </li>
