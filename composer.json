@@ -18,6 +18,7 @@
         "fideloper/proxy": "~4.0",
         "laravel/framework": "5.6.*",
         "league/commonmark": "^0.17.5",
+        "predis/predis": "^1.1",
         "spatie/browsershot": "^3.22",
         "spatie/crawler": "^4.1",
         "spatie/laravel-feed": "^2.0",
