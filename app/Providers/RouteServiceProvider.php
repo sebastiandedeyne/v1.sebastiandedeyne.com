@@ -32,9 +32,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->collection('posts')->all()
                 ->first(function (Post $post) use ($slug) {
                     return $post->slug === $slug;
-                }, function () {
-                    abort(404);
-                });
+                }) ?? abort(404);
         });
     }
 
