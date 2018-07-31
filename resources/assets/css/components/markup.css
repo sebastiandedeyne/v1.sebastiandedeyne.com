@@ -181,6 +181,11 @@
   }
 }
 
+/* CodePen */
+.markup .cp_embed_wrapper {
+  @apply my-6;
+}
+
 .markup > *:last-child {
   margin-bottom: 0;
 }
