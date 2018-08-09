@@ -40,5 +40,5 @@ mix
     }
   })
   .purgeCss({
-    whitelistPatterns: [/hljs/]
+    whitelistPatterns: [/hljs/, /markup/]
   });

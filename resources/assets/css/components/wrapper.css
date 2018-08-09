@@ -1,8 +1,8 @@
 .wrapper {
-  @apply px-4;
+  @apply max-w-wrapper;
   @apply mx-auto;
-  max-width: 960px;
-  width: 100%;
+  @apply px-4;
+  @apply w-full;
 
   @screen md {
     @apply px-8;

@@ -274,7 +274,7 @@ module.exports = {
     'none': 1,
     'tighter': 1.25,
     'tight': 1.5,
-    'normal': 1.8,
+    'normal': 1.7,
     'loose': 2,
   },
 
@@ -553,6 +553,7 @@ module.exports = {
     '4xl': '90rem',
     '5xl': '100rem',
     'full': '100%',
+    'wrapper': '960px',
   },
 
 

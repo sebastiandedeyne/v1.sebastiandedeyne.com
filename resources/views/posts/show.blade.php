@@ -23,7 +23,7 @@
       </aside>
     </header>
     <div class="md:w-4/5">
-      <section class="markup {{-- has-sponsor --}} | font-serif">
+      <section class="markup">
         {{ $post->contents }}
       </section>
     </div>

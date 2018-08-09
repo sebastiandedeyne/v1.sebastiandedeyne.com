@@ -1,16 +1,16 @@
-.markup a {
-  @apply underline;
+.markup a:not(.undercover) {
+  @apply inline-block;
   @apply text-red;
-  display: inline-block;
+  @apply underline;
   transition: color 0.15s ease-in-out;
   transform: translate3d(0, 0, 0);
 }
 
-.markup a:hover {
+.markup a:not(.undercover):hover {
   @apply text-red-dark;
 }
 
-.markup a:active {
+.markup a:not(.undercover):active {
   transform: translate3d(0, 1px, 0);
 }
 
@@ -18,10 +18,6 @@
   @apply text-xl;
   @apply mt-0;
   @apply mb-4;
-
-  @screen md {
-    @apply font-sans;
-  }
 }
 
 .markup h2 {
@@ -31,18 +27,13 @@
   @apply mt-12;
   @apply text-black;
   @apply text-lg;
-
-  @screen md {
-    @apply font-sans;
-  }
 }
 
 .markup h3 {
+  @apply font-bold;
   @apply leading-tight;
   @apply mb-4;
   @apply mt-8;
-  font-size: 1.1em;
-  font-weight: bold;
 }
 
 .markup p {
@@ -54,7 +45,7 @@
 }
 
 .markup em {
-  font-style: italic;
+  @apply italic;
 }
 
 .markup ul,
@@ -157,9 +148,9 @@
 }
 
 .markup img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
+  @apply block;
+  @apply max-w-full;
+  @apply mx-auto;
 }
 
 .markup hr {
@@ -176,7 +167,6 @@
   @apply text-sm;
 
   @screen md {
-    @apply font-sans;
     @apply text-xs;
   }
 }
@@ -187,5 +177,5 @@
 }
 
 .markup > *:last-child {
-  margin-bottom: 0;
+  @apply mb-0;
 }

@@ -1,8 +1,6 @@
-// import sponsor from './components/sponsor';
 import header from './components/header';
 
 header();
-// sponsor();
 
 const needsCodeHighlights = !!document.querySelector('.markup pre code');
 

@@ -4,13 +4,13 @@
 
   @screen md {
     @apply fixed;
+    @apply max-w-wrapper;
     @apply pin-t;
     @apply pt-6;
     @apply px-8;
+    @apply w-full;
     left: 50%;
     transform: translate3d(-50%, 0, 0);
-    width: 100%;
-    max-width: 960px;
   }
 }
 
