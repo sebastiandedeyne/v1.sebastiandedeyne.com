@@ -85,7 +85,7 @@
       <p>
         This website is powered by
         <a href="https://laravel.com">Laravel</a>. The source code is hosted
-        and publically available on
+        and publicly available on
         <a href="https://github.com/sebastiandedeyne/sebastiandedeyne.com">GitHub</a>.
       </p>
     </div>
