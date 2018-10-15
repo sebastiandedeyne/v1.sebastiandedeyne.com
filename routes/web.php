@@ -5,7 +5,6 @@ Route::feeds();
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::view('about', 'about.index')->name('about');
-Route::view('newsletter', 'newsletter.index')->name('newsletter');
 
 Route::view('privacy', 'privacy.index')->name('privacy');
 
