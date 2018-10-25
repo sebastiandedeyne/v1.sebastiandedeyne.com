@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\ViewComponents\Schema;
+namespace App\Schema;
 
 use Spatie\SchemaOrg\Schema as Builder;
 use Illuminate\Contracts\Support\Htmlable;

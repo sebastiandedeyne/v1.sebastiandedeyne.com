@@ -1,8 +1,8 @@
 @component('layouts.app', [
-  'title' => 'Posts',
+    'title' => 'Posts',
 ])
   @include('partials.postList', [
-    'title' => 'All posts',
-    'posts' => $posts,
+      'title' => 'All posts',
+      'posts' => $posts,
   ])
 @endcomponent

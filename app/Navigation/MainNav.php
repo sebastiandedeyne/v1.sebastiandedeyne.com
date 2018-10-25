@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\ViewComponents;
+namespace App\Navigation;
 
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Http\Request;

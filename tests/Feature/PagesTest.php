@@ -19,11 +19,6 @@ class PagesTest extends TestCase
         $this->get('/about')->assertStatus(200);
     }
 
-    public function test_it_displays_the_newsletter_page()
-    {
-        $this->get('/newsletter')->assertStatus(200);
-    }
-
     public function test_it_displays_the_posts_page()
     {
         $this->get('/posts')->assertStatus(200);
