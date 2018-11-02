@@ -11,10 +11,6 @@ cache:
 
 before_script:
   - composer install --prefer-dist
-  - nvm install node
-  - npm install -g yarn
-  - yarn --frozen-lockfile
-  - yarn production
 
 script:
  - ./vendor/bin/phpunit
