@@ -97,12 +97,12 @@ body {
 .post-header {
     line-height: 1.2;
     margin-bottom: 3rem;
-    font-family: var(--mono);
 }
 
 .post-header h1 {
     font-weight: bold;
     font-size: 1.2rem;
+    font-family: var(--mono);
 }
 
 .post-header aside {
