@@ -1,0 +1,236 @@
+:root {
+    --text: #1f211f;
+    --text-light: #5e6669;
+    --text-lighter: #a7b3b7;
+    --text-highlight: #60b1b9;
+    --background: white;
+    --secondary-background: #f4f8fa;
+    --sans: Karla, system-ui, sans-serif;
+    --mono: Space Mono, system-ui;
+    --code: Source Code Pro, monospace;
+    --gutter: 1rem;
+}
+
+@media(min-width: 720px) {
+    :root {
+        --gutter: 3rem;
+    }
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+button {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+}
+
+html {
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+    font-family: var(--sans);
+    margin-bottom: 3rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    margin-bottom: 4rem;
+    font-size: 0.75rem;
+    color: var(--text-lighter);
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav li {
+    margin-left: 1rem;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    width: 100%;
+    max-width: 40rem;
+}
+
+.markup pre,
+.markup .cp_embed_wrapper {
+    margin-left: calc(var(--gutter) * -1);
+    margin-right: calc(var(--gutter) * -1);
+}
+
+.post:not(:last-child) {
+    margin-bottom: 6rem;
+}
+
+.post .post-header {
+    text-align: center;
+}
+
+.post-header {
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    font-family: var(--mono);
+}
+
+.post-header h1 {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.post-header aside {
+    margin-top: 0.33rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.markup > * {
+    margin-bottom: 1.5rem;
+}
+
+.markup h2 {
+    font-family: var(--mono);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+}
+
+.markup a {
+    color: var(--text-highlight);
+    text-decoration: underline;
+}
+
+.markup em {
+    font-style: italic;
+}
+
+.markup strong {
+    font-weight: bold;
+}
+
+.markup ul {
+    list-style: disc;
+    padding-left: 1rem;
+}
+
+.markup img {
+    display: block;
+}
+
+.markup code {
+    font-family: var(--code);
+    font-size: 0.85em;
+    background-color: var(--secondary-background);
+}
+
+.markup :not(pre) code {
+    background-color: var(--secondary-background);
+    color: var(--text-light);
+    display: inline-block;
+    padding: 0 0.4em;
+    border-radius: 4px;
+}
+
+.markup pre code {
+    display: block;
+    padding: 1rem;
+}
+
+/**
+ * GitHub Gist Theme
+ * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
+ */
+
+.hljs {
+    display: block;
+    background: white;
+    padding: 0.5em;
+    color: #333333;
+    overflow-x: auto;
+}
+
+.hljs-comment,
+.hljs-meta {
+    color: #969896;
+}
+
+.hljs-string,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-strong,
+.hljs-emphasis,
+.hljs-quote {
+    color: #df5000;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+    color: #a71d5d;
+}
+
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-attribute {
+    color: #0086b3;
+}
+
+.hljs-section,
+.hljs-name {
+    color: #63a35c;
+}
+
+.hljs-tag {
+    color: #333333;
+}
+
+.hljs-title,
+.hljs-attr,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+    color: #795da3;
+}
+
+.hljs-addition {
+    color: #55a532;
+    background-color: #eaffea;
+}
+
+.hljs-deletion {
+    color: #bd2c00;
+    background-color: #ffecec;
+}
+
+.hljs-link {
+    text-decoration: underline;
+}

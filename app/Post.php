@@ -14,17 +14,20 @@ class Post extends Sheet
         return new HtmlString($contents);
     }
 
-    public function getSummaryAttribute(): string
+    public function getHasSummaryAttribute(): bool
     {
-        $contents = $this->attributes['contents'];
-        $contents = strip_tags($contents);
-        $contents = str_replace("\n", ' ', $contents);
+        return ! empty($this->attributes['summary']);
+    }
 
-        if (strlen($contents) <= 300) {
-            return $contents;
+    public function getSummaryAttribute(): HtmlString
+    {
+        if (! $this->has_summary) {
+            return $this->contents;
         }
 
-        return str_limit($contents, 300) . '…';
+        $summary = markdown($this->attributes['summary']);
+
+        return new HtmlString($summary);
     }
 
     public function getUrlAttribute(): string

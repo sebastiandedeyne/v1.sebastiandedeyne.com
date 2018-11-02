@@ -17,7 +17,6 @@
         php artisan responsecache:clear
         php artisan config:cache
         php artisan route:cache
-        php artisan warm
     @else
         echo "Deploying new release: {{ $releaseDir }}"
 
@@ -28,10 +27,6 @@
 
         echo "Running composer..."
         composer install --no-dev --no-interaction --prefer-dist --quiet
-
-        echo "Running yarn..."
-        yarn --frozen-lockfile --silent
-        yarn production
 
         echo "Blessing new release..."
         rm -f {{ $root }}/current

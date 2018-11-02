@@ -3,10 +3,10 @@
 use Illuminate\Support\HtmlString;
 use League\CommonMark\CommonMarkConverter;
 
-function inline_mix(string $path): HtmlString
+function css(string $path): HtmlString
 {
     $contents = file_get_contents(
-        public_path(mix($path))
+        resource_path("css/{$path}")
     );
 
     return new HtmlString($contents);

@@ -14,13 +14,15 @@
         }
     ],
     "require": {
-        "php": ">=7.1",
+        "php": "^7.2",
         "fideloper/proxy": "~4.0",
         "laravel/framework": "5.7.*",
         "league/commonmark": "^0.17.5",
         "predis/predis": "^1.1",
         "spatie/browsershot": "^3.22",
         "spatie/crawler": "^4.1",
+        "spatie/laravel-blade-x": "^2.0",
+        "spatie/laravel-collection-macros": "^4.0",
         "spatie/laravel-feed": "^2.0",
         "spatie/laravel-menu": "^3.1",
         "spatie/laravel-responsecache": "^4.4",
@@ -73,9 +75,6 @@
         ]
     },
     "config": {
-        "platform": {
-            "php": "7.1.17"
-        },
         "preferred-install": "dist",
         "sort-packages": true
     }

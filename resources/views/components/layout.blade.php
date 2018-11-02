@@ -20,28 +20,35 @@
 
         @include('feed::links')
 
-        @include('layouts.partials.favicons')
+        @include('components.partials.favicons')
 
-        <style>{{ inline_mix('css/app.css') }}</style>
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i|IBM+Plex+Serif:400,400i,700"
-              rel="stylesheet">
-
-        <link rel="prefetch" href="{{ mix('js/highlight.js') }}" as="script">
-        <link rel="prefetch" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" as="style">
+        <style>{{ css('app.css') }}</style>
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700|Source+Code+Pro|Space+Mono:700" rel="stylesheet">
     </head>
-    <body>
-        <div class="flex flex-col min-h-screen">
-            @include('layouts.partials.header')
-            <div class="wrapper | flex-1 mt-6 md:mt-32 mb-8 md:mb-16">
+    <body class="dark">
+        <div class="container">
+            <nav class="nav">
+                <header>
+                    <a href="{{ url('') }}">Sebastian De Deyne</a>
+                </header>
+                <ul>
+                    <li><a href="{{ url('about') }}">About</a></li>
+                    <li><a href="https://twitter.com/sebdedeyne">Twitter</a></li>
+                    <li><a href="{{ url('feed') }}">RSS</a></li>
+                </ul>
+            </nav>
+            <main>
                 {{ $slot }}
-            </div>
-            @include('layouts.partials.footer')
+            </main>
         </div>
 
-        <script>{{ inline_mix('js/app.js') }}</script>
+        <script src="{{ url('js/highlight.min.js') }}"></script>
+        <script>hljs.initHighlightingOnLoad()</script>
+
         {{ app(App\Schema\WebPage::class) }}
+
         @if(app()->environment('production'))
-            @include('layouts.partials.analytics')
+            @include('components.partials.analytics')
         @endif
     </body>
 </html>
