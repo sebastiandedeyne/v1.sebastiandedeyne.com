@@ -32,14 +32,13 @@
         rm -f {{ $root }}/current
         ln -s {{ $releaseDir }} {{ $root }}/current
         ln -s {{ $releaseDir }}/../../.env {{ $releaseDir }}/.env
-        sudo service php7.1-fpm restart
+        sudo service php7.2-fpm restart
 
         echo "Optimizing..."
         php artisan cache:clear
         php artisan responsecache:clear
         php artisan config:cache
         php artisan route:cache
-        php artisan warm
 
         echo "Cleaning up old releases..."
         ls -dt {{ $root }}/releases/* | tail -n +3 | xargs -d "\n" rm -rf;
