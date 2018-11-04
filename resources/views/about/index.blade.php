@@ -7,7 +7,7 @@
         </p>
         <p>
             I try to <a href="https://twitter.com/sebdedeyne">tweet</a>,
-            <a href="{{ route('posts') }}">blog</a>,
+            <a href="{{ url('') }}">blog</a>,
             and do talks
             every now and then too.
         </p>
