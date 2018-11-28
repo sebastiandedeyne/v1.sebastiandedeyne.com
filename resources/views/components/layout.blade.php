@@ -42,9 +42,6 @@
             </main>
         </div>
 
-        <script src="{{ url('js/highlight.min.js') }}"></script>
-        <script>hljs.initHighlightingOnLoad()</script>
-
         {{ app(App\Schema\WebPage::class) }}
 
         @if(app()->environment('production'))
