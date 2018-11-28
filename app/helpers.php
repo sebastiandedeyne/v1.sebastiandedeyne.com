@@ -2,14 +2,15 @@
 
 use Illuminate\Support\HtmlString;
 use League\CommonMark\CommonMarkConverter;
+use MatthiasMullie\Minify;
 
 function css(string $path): HtmlString
 {
-    $contents = file_get_contents(
+    $minifier = new Minify\CSS(
         resource_path("css/{$path}")
     );
 
-    return new HtmlString($contents);
+    return new HtmlString($minifier->minify());
 }
 
 function markdown(string $html): HtmlString
