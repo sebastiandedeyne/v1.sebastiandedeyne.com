@@ -1,15 +1,13 @@
 @setup
-    $dev = $dev ?? false;
-    $quick = $quick ?? false;
-    $root = $dev ? '/home/forge/dev.sebastiandedeyne.com' : '/home/forge/sebastiandedeyne.com';
-    $branch = $dev ? 'dev' : 'master';
+    $root = '/home/forge/sebastiandedeyne.com';
+    $branch = 'master';
     $releaseDir = "{$root}/releases/".date('Y-m-d-His');
 @endsetup
 
 @servers(['web' => ['forge@sebastiandedeyne.com']])
 
 @task('deploy', ['on' => 'web'])
-    @if($quick)
+    @if($quick ?? false)
         cd $(ls -dt {{ $root }}/releases/* | head -n 1)
         git pull
 
@@ -20,7 +18,7 @@
     @else
         echo "Deploying new release: {{ $releaseDir }}"
 
-        mkdir -p releases
+        mkdir -p {{ $root }}/releases
         git clone -b {{ $branch }} git@github.com:sebastiandedeyne/sebastiandedeyne.com.git {{ $releaseDir }}
 
         cd {{ $releaseDir }}
