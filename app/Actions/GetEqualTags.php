@@ -7,14 +7,16 @@ use Illuminate\Support\Collection;
 
 class GetEqualTags
 {
-    public function __invoke(Collection $posts): Collection
+    public function __invoke(Post $post, Collection $posts): Collection
     {
         if ($posts->isEmpty()) {
-            return collect();
+            return $post->tags;
         }
 
-        return $posts->reduce(function (Collection $equalTags, Post $post) {
-            return $equalTags->intersect($post->tags);
-        }, $posts->first()->tags);
+        return $posts
+            ->pluck('tags')
+            ->flatten()
+            ->unique()
+            ->intersect($post->tags);
     }
 }

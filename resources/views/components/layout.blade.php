@@ -22,7 +22,7 @@
 
         @include('components.partials.favicons')
 
-        <style>{{ css(['global.css', 'markup.css', 'post.css', 'hljs.css']) }}</style>
+        <style>{{ styles() }}</style>
         <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700|Source+Code+Pro|Space+Mono:700" rel="stylesheet">
     </head>
     <body>
@@ -31,7 +31,7 @@
                 <header>
                     <a href="{{ url('') }}">Sebastian De Deyne</a>
                 </header>
-                <ul class="flex gap">
+                <ul>
                     <li><a href="{{ url('about') }}">About</a></li>
                     <li><a href="https://twitter.com/sebdedeyne">Twitter</a></li>
                     <li><a href="{{ url('feed') }}">RSS</a></li>

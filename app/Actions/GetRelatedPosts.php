@@ -35,13 +35,14 @@ class GetRelatedPosts
                 return data_set(
                     $relatedPost,
                     'equal_tags_count',
-                    ($this->getEqualTags)(collect([$post, $relatedPost]))
+                    ($this->getEqualTags)($post, collect([$relatedPost]))
+                        ->count()
                 );
             })
             ->where('equal_tags_count', '>', 0)
             ->sortByDesc('date')
             ->sortByDesc('equal_tags_count')
-            ->take(2)
+            ->take(3)
             ->values();
     }
 }

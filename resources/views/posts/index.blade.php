@@ -1,10 +1,8 @@
 <layout>
     @foreach($posts as $post)
-        <div class="post-wrapper">
+        <div class="pb-12{!! !$loop->last ? ' border-b mb-16' : null !!}">
             <post
-                :url="$post->link ?? $post->url"
-                :title="$post->title"
-                :date="$post->date"
+                :post="$post"
                 class="wrap"
             >
                 {{ $post->summary }}

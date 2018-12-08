@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
         BladeX::component('components.*');
 
         Collection::macro('enumerate', function (string $glue, string $lastGlue) {
-            if ($this->count() > 3) {
+            if ($this->count() < 3) {
                 return $this->implode($lastGlue);
             }
 

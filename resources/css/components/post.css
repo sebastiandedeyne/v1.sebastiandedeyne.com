@@ -1,19 +1,5 @@
-.post-wrapper {
-    padding-bottom: 4rem;
-}
-
-.post-wrapper:not(:last-child) {
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 4rem;
-}
-
-.post.single {
-    padding-bottom: 3rem;
-}
-
 .post-header {
     line-height: 1.2;
-    margin-bottom: 3rem;
     text-align: center;
 }
 
@@ -27,4 +13,10 @@
     color: var(--text-light);
     font-size: 0.9rem;
     margin-top: 0.33rem;
+}
+
+.post-related {
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    padding-top: 1.25rem;
 }
