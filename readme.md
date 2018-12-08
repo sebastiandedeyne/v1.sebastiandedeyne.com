@@ -1,6 +1,4 @@
-# My (Previous) Personal Website
-
-The previous iteration of sebastiandedeyne.com, built with Laravel. The current version uses GatsbyJS, and is also open sourced: https://github.com/sebastiandedeyne/sebastiandedeyne.com
+# My personal website
 
 ## Specs & Features
 
