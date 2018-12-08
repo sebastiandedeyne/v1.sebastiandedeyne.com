@@ -1,4 +1,4 @@
-<layout title="About">
+<layout title="About" wrap>
     <div class="markup">
         <p>
             I'm a web designer and developer from Ghent, employed at

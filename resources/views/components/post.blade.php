@@ -1,11 +1,11 @@
-<article class="post">
+<article class="post{!! isset($class) ? " {$class}" : null !!}">
     <header class="post-header">
-        <h1>
+        <h1 class="post-title">
             <a href="{{ $url }}">
                 {{ $title }}
             </a>
         </h1>
-        <aside>
+        <aside class="post-subtitle">
             <a href="{{ $url }}">
                 <time datetime="{{ $date->format('Y-m-d') }}">
                     {{ $date->format('F jS, Y') }}

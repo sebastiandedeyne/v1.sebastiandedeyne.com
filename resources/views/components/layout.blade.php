@@ -22,22 +22,22 @@
 
         @include('components.partials.favicons')
 
-        <style>{{ css('app.css') }}</style>
+        <style>{{ css(['global.css', 'markup.css', 'post.css', 'hljs.css']) }}</style>
         <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700|Source+Code+Pro|Space+Mono:700" rel="stylesheet">
     </head>
     <body>
         <div class="container">
-            <nav class="nav">
+            <nav class="nav wrap">
                 <header>
                     <a href="{{ url('') }}">Sebastian De Deyne</a>
                 </header>
-                <ul>
+                <ul class="flex gap">
                     <li><a href="{{ url('about') }}">About</a></li>
                     <li><a href="https://twitter.com/sebdedeyne">Twitter</a></li>
                     <li><a href="{{ url('feed') }}">RSS</a></li>
                 </ul>
             </nav>
-            <main>
+            <main{!! ($wrap ?? false) ? ' class="wrap"' : null !!}>
                 {{ $slot }}
             </main>
         </div>

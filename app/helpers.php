@@ -4,11 +4,13 @@ use Illuminate\Support\HtmlString;
 use League\CommonMark\CommonMarkConverter;
 use MatthiasMullie\Minify\CSS;
 
-function css(string $path): HtmlString
+function css(array $paths): HtmlString
 {
-    $minifier = new CSS(
-        resource_path("css/{$path}")
-    );
+    $minifier = new CSS();
+
+    foreach ($paths as $path) {
+        $minifier->add(resource_path("css/{$path}"));
+    }
 
     return new HtmlString($minifier->minify());
 }

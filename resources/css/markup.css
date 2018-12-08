@@ -1,0 +1,62 @@
+.markup > * {
+    margin-bottom: 1.5rem;
+}
+
+.markup h2 {
+    font-family: var(--mono);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+}
+
+.markup a {
+    color: var(--text-highlight);
+    text-decoration: underline;
+}
+
+.markup em {
+    font-style: italic;
+}
+
+.markup strong {
+    font-weight: bold;
+}
+
+.markup ul {
+    list-style: disc;
+    padding-left: 1rem;
+}
+
+.markup img {
+    display: block;
+}
+
+.markup blockquote {
+    padding: var(--gutter);
+    background-color: var(--secondary-background);
+    border-radius: 4px;
+}
+
+.markup > blockquote > *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.markup pre,
+.markup blockquote,
+.markup .cp_embed_wrapper {
+    margin-left: calc(var(--gutter) * -1);
+    margin-right: calc(var(--gutter) * -1);
+}
+
+.markup code {
+    font-family: var(--code);
+    font-size: 0.85em;
+}
+
+.markup :not(pre) > code {
+    background: var(--secondary-background);
+    border-radius: 4px;
+    color: inherit;
+    display: inline-block;
+    padding: 0 0.4em;
+}
