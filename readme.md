@@ -2,7 +2,7 @@
 
 ## Specs & Features
 
-- Built with [Laravel](https://laravel.com) 5.6
+- Built with [Laravel](https://laravel.com) 5.7
 - Content is stored in markdown files with front matter, which are parsed with my own [`spatie/sheets`](https://github.com/spatie/sheets) package
 - The site gets cached with the [`spatie/laravel-responsecache`](https://github.com/spatie/laravel-responsecache) package
 - There's no JavaScript, and CSS isn't preprocessed (it gets minified by PHP). This means I don't need any asset build pipeline

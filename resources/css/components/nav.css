@@ -1,0 +1,16 @@
+.nav {
+    color: var(--text-lighter);
+    display: flex;
+    font-size: 0.75rem;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    padding-top: 0.5rem;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav li:not(:last-child) {
+    margin-left: 1rem;
+}

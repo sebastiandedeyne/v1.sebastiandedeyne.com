@@ -35,6 +35,11 @@ class Post extends Sheet
         return route('posts.show', $this->slug);
     }
 
+    public function getTagsAttribute(): Collection
+    {
+        return collect($this->attributes['tags'] ?? []);
+    }
+
     public static function feed(Sheets $sheets): Collection
     {
         return $sheets->collection('posts')->all()

@@ -2,7 +2,7 @@
 
 Route::feeds();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'PostsController@index')->name('home');
 
 Route::view('about', 'about.index')->name('about');
 

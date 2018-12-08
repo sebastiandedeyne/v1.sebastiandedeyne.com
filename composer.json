@@ -32,6 +32,7 @@
         "filp/whoops": "~2.0",
         "graham-campbell/analyzer": "^1.1",
         "laravel/envoy": "^1.4",
+        "laravel/tinker": "^1.0",
         "phpunit/phpunit": "~7.0"
     },
     "autoload": {
