@@ -11,6 +11,6 @@
     display: flex;
 }
 
-.nav li:not(:last-child) {
+.nav li:not(:first-child) {
     margin-left: 1rem;
 }
