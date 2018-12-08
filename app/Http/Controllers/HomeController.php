@@ -11,9 +11,7 @@ class HomeController
         $posts = $sheets
             ->collection('posts')
             ->all()
-            ->sortByDesc(function ($post) {
-                return $post->date;
-            });
+            ->sortByDesc('date');
 
         return view('home.index', [
             'posts' => $posts,
