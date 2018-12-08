@@ -37,7 +37,7 @@ class PostsController
 
     public function redirectOldPostsIndex(Sheets $sheets)
     {
-        return redirect()->action([HomeController::class, 'index']);
+        return redirect()->action([self::class, 'index']);
     }
 
     public function redirectOldPost(string $year, string $slug)
