@@ -7,10 +7,7 @@
     ]);
 @endphp
 
-@component('layouts.app', [
-    'title' => $title,
-    'header' => false,
-])
+<layout :title="$title">
     <div class="markup">
         <h1 class="text-lg md:text-xl">
             {{ $title }}
@@ -24,4 +21,4 @@
             </a>
         @endunless
     </div>
-@endcomponent
+</layout>
