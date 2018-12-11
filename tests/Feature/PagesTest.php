@@ -28,4 +28,14 @@ class PagesTest extends TestCase
     {
         $this->get('/posts/2016/adventure-time-with-webpack')->assertStatus(302);
     }
+
+    public function test_it_displays_the_main_feed()
+    {
+        $this->get('/feed')->assertStatus(200);
+    }
+
+    public function test_it_displays_the_articles_feed()
+    {
+        $this->get('/articles.xml')->assertStatus(200);
+    }
 }

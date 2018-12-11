@@ -18,7 +18,7 @@
 
         <title>{{ isset($title) ? ($title . ' — Sebastian De Deyne') : 'Sebastian De Deyne' }}</title>
 
-        @include('feed::links')
+        <link rel="alternate" type="application/rss+xml" href="{{ url('feed') }}" title="Sebastian De Deyne">
 
         @include('components.partials.favicons')
 

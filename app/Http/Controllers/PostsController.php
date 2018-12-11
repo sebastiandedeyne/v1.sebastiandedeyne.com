@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Actions\GetAllPosts;
-use App\Actions\GetEqualTags;
-use App\Actions\GetRelatedPosts;
-use App\Post;
+use App\Posts\GetAllPosts;
+use App\Posts\GetEqualTags;
+use App\Posts\GetRelatedPosts;
+use App\Posts\Post;
 use Spatie\Sheets\Sheets;
 
 class PostsController

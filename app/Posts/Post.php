@@ -1,13 +1,14 @@
 <?php
 
-namespace App;
+namespace App\Posts;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\HtmlString;
+use Spatie\Feed\FeedItem;
+use Spatie\Feed\Feedable;
 use Spatie\Sheets\Sheet;
-use Spatie\Sheets\Sheets;
 
-class Post extends Sheet
+class Post extends Sheet implements Feedable
 {
     public function getContentsAttribute(string $contents): HtmlString
     {
@@ -40,22 +41,15 @@ class Post extends Sheet
         return collect($this->attributes['tags'] ?? []);
     }
 
-    public static function feed(Sheets $sheets): Collection
+    public function toFeedItem(): FeedItem
     {
-        return $sheets->collection('posts')->all()
-            ->sortByDesc(function ($post) {
-                return $post->date;
-            })
-            ->take(20)
-            ->map(function (self $post) {
-                return [
-                    'id' => $post->url,
-                    'title' => $post->title,
-                    'updated' => $post->date,
-                    'summary' => $post->contents,
-                    'link' => $post->url,
-                    'author' => 'Sebastian De Deyne',
-                ];
-            });
+        return new FeedItem([
+            'id' => $this->url,
+            'title' => $this->title,
+            'updated' => $this->date,
+            'summary' => $this->contents,
+            'link' => $this->url,
+            'author' => 'Sebastian De Deyne',
+        ]);
     }
 }

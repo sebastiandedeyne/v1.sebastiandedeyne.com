@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Post;
+use App\Posts\Post;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 use Spatie\Sheets\Sheets;

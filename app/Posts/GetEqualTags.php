@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Actions;
+namespace App\Posts;
 
-use App\Post;
+use App\Posts\Post;
 use Illuminate\Support\Collection;
 
 class GetEqualTags

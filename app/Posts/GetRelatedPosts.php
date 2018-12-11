@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Actions;
+namespace App\Posts;
 
-use App\Post;
+use App\Posts\Post;
 use Spatie\Sheets\Sheets;
 use Illuminate\Support\Collection;
 
@@ -11,7 +11,7 @@ class GetRelatedPosts
     /** @var \Illuminate\Support\Collection */
     private $posts;
 
-    /** @var \App\Actions\GetEqualTags */
+    /** @var \App\Posts\GetEqualTags */
     private $getEqualTags;
 
     public function __construct(Sheets $sheets, GetEqualTags $getEqualTags)
