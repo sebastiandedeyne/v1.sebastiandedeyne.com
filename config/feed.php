@@ -11,7 +11,7 @@ return [
         ],
         'articles' => [
             'items' => 'App\Posts\GetArticleFeedItems@__invoke',
-            'url' => '/articles.xml',
+            'url' => '/feed/articles',
             'title' => 'Sebastian De Deyne',
             'description' => 'Full-stack developer working at Spatie in Antwerp, Belgium. I write about php, javascript, and programming in general.',
         ],

@@ -36,6 +36,6 @@ class PagesTest extends TestCase
 
     public function test_it_displays_the_articles_feed()
     {
-        $this->get('/articles.xml')->assertStatus(200);
+        $this->get('/feed/articles')->assertStatus(200);
     }
 }
