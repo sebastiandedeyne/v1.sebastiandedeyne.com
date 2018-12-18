@@ -36,6 +36,7 @@
     color: var(--text-lighter);
     display: block;
     font-size: 0.85rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
     text-align: center;
 }
