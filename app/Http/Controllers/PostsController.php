@@ -25,7 +25,13 @@ class PostsController
         $relatedPosts = $getRelatedPosts($post);
         $tagsMatchingRelatedPosts = $getEqualTags($post, $relatedPosts)
             ->map(function (string $tag) {
-                return trans("tags.{$tag}");
+                $formattedTag = trans("tags.{$tag}");
+
+                if ($formattedTag === "tags.{$tag}") {
+                    return $tag;
+                }
+
+                return $formattedTag;
             });
 
         return view('posts.show', [
