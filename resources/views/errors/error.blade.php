@@ -8,17 +8,19 @@
 @endphp
 
 <layout :title="$title">
-    <div class="markup">
-        <h1 class="text-lg md:text-xl">
+    <div class="wrap">
+        <h1 class="font-mono">
             {{ $title }}
         </h1>
-        <p>
+        <p class="mb-12">
             {{ $message }}
         </p>
         @if($showHomeLink)
-            <a href="{{ route('home') }}">
-                Go home
-            </a>
+            <p class="markup">
+                <a href="{{ route('home') }}">
+                    Go home
+                </a>
+            </p>
         @endunless
     </div>
 </layout>
