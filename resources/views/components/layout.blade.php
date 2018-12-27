@@ -23,7 +23,6 @@
         @include('components.partials.favicons')
 
         <style>{{ styles() }}</style>
-        <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700|Source+Code+Pro|Space+Mono:700" rel="stylesheet">
     </head>
     <body>
         <div class="container">

@@ -18,6 +18,7 @@ function css(array $paths): HtmlString
 function styles(): HtmlString
 {
     return css([
+        'fonts.css',
         'global.css',
         'components/*.css',
         'utilities.css',
