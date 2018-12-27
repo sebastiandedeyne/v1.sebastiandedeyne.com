@@ -2,8 +2,8 @@
     $showHomeLink = $showHomeLink ?? request()->path() !== '/';
 
     $title = $title ?? array_random([
-      '¯\_(ツ)_/¯', 'Awkward.', 'Bantha fodder.', 'Hmmm...', 'Oh no!',
-      'Peculiar.', 'Uh oh.', 'Whoops!',
+        '¯\_(ツ)_/¯', 'Awkward.', 'Bantha fodder.', 'Hmmm...', 'Oh no!',
+        'Peculiar.', 'Uh oh.', 'Whoops!',
     ]);
 @endphp
 
