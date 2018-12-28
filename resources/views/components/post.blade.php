@@ -11,6 +11,9 @@
                     {{ $post->date->format('F jS, Y') }}
                 </time>
             </a>
+            @if($post->subtitle)
+            — <strong>{{ $post->subtitle }}</strong>
+            @endif
         </aside>
     </header>
 
