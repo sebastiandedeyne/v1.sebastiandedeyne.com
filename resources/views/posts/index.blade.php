@@ -1,10 +1,7 @@
 <layout>
-    @foreach($posts as $post)
-        <div class="pb-12{!! !$loop->last ? ' border-b mb-16' : null !!}">
-            <post
-                :post="$post"
-                class="wrap"
-            >
+    <div class="wrap">
+        @foreach($posts as $post)
+            <post :post="$post">
                 {{ $post->summary }}
                 @if($post->has_summary)
                     <p>
@@ -14,6 +11,6 @@
                     </p>
                 @endif
             </post>
-        </div>
-    @endforeach
+        @endforeach
+    </div>
 </layout>

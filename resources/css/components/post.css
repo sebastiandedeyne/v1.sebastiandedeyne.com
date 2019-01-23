@@ -1,6 +1,36 @@
+.post {
+    margin-bottom: 8rem;
+    position: relative;
+}
+
+.post:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4.5rem;
+    height: 1rem;
+    z-index: -1;
+    background:repeating-linear-gradient(
+        45deg,
+        var(--border-color),
+        var(--border-color) 1px,
+        transparent 1px,
+        transparent 9px
+        ),repeating-linear-gradient(
+        -45deg,
+        var(--border-color),
+        var(--border-color) 1px,
+        transparent 1px,
+        transparent 9px
+        );
+}
+
 .post-header {
-    line-height: 1.2;
+    line-height: 1.5rem;
     text-align: center;
+    background: white;
+    margin-bottom: 3rem;
 }
 
 .post-title {
@@ -16,7 +46,5 @@
 }
 
 .post-related {
-    border-top: 1px solid var(--border-color);
     font-size: 0.9rem;
-    padding-top: 1.25rem;
 }

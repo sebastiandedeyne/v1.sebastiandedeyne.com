@@ -1,5 +1,5 @@
 <article class="post{!! isset($class) ? " {$class}" : null !!}">
-    <header class="post-header mb-12">
+    <header class="post-header">
         <h1 class="post-title">
             <a href="{{ ($permalink ?? false) ? $post->url : ($post->link ?? $post->url) }}">
                 {{ $post->title }}

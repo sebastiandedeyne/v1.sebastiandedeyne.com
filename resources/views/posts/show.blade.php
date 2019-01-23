@@ -1,5 +1,5 @@
 <layout :title="$post->title">
-    <div class="pb-12 wrap">
+    <div class="pb-16 wrap">
         <post :post="$post">
             {{ $post->contents }}
         </post>

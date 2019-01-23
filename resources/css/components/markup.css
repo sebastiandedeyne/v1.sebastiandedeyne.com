@@ -33,7 +33,7 @@
 }
 
 .markup img + em {
-    color: var(--text-lighter);
+    color: var(--text-light);
     display: block;
     font-size: 0.85rem;
     margin-top: 1rem;
