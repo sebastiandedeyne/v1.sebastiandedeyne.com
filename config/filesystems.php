@@ -60,6 +60,11 @@ return [
             'root' => base_path('posts'),
         ],
 
+        'export' => [
+            'driver' => 'local',
+            'root' => base_path('dist'),
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_KEY'),

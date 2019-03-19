@@ -1,0 +1,6 @@
+[settings]
+ID = "cf995aa3-753d-4c58-a4f9-c2e7a7636d5f"
+
+[build]
+base = "dist/"
+publish = "dist/"
