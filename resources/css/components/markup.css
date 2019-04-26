@@ -71,3 +71,9 @@
     display: inline-block;
     padding: 0 0.4em;
 }
+
+.markup aside {
+    font-size: 0.75rem;
+    padding: calc(var(--gutter) / 2);
+    border: 2px solid var(--secondary-background);
+}
