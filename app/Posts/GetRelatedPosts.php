@@ -31,6 +31,7 @@ class GetRelatedPosts
 
         return $this->posts
             ->where('slug', '!==', $post->slug)
+            ->reject->draft
             ->map(function (Post $relatedPost) use ($post) {
                 return data_set(
                     $relatedPost,

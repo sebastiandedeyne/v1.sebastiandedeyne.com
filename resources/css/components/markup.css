@@ -9,6 +9,12 @@
     margin-top: 3rem;
 }
 
+.markup h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 3rem;
+}
+
 .markup a {
     color: var(--text-highlight);
     text-decoration: underline;
@@ -32,8 +38,18 @@
     max-width: calc(100% + var(--gutter) * 2);
 }
 
+.markup img.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.markup img.bordered {
+    border: 2px solid var(--secondary-background);
+}
+
 .markup figcaption,
-.markup img + em {
+.markup img + em,
+.markup pre + em {
     color: var(--text-light);
     display: block;
     font-size: 0.85rem;
@@ -75,6 +91,7 @@
 
 .markup aside {
     font-size: 0.75rem;
-    padding: calc(var(--gutter) / 2);
-    border: 2px solid var(--secondary-background);
+    color: var(--text-light);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }

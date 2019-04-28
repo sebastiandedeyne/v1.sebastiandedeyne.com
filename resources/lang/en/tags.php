@@ -26,5 +26,6 @@ return [
     'typescript' => 'TypeScript',
     'ux' => 'UX',
     'vue' => 'Vue.js',
+    'web' => 'the web',
     'webpack' => 'Webpack',
 ];

@@ -2,7 +2,6 @@
 
 namespace App\Posts;
 
-use App\Posts\Post;
 use Spatie\Sheets\Sheets;
 use Illuminate\Support\Collection;
 
@@ -21,6 +20,7 @@ class GetAllPosts
         return $this->sheets
             ->collection('posts')
             ->all()
+            ->reject->draft
             ->sortByDesc('date');
     }
 }

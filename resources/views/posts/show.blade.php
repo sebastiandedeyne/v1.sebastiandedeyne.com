@@ -6,13 +6,23 @@
     </div>
     @if($relatedPosts->count())
         <section class="post-related">
-            <div class="wrap markup">
-                <p class="mb-2">
-                    <em>More about {{ $tagsMatchingRelatedPosts->enumerate(', ', ' and ') }}:</em>
+            <div class="wrap">
+                <p class="post-related-label">
+                    More about {{ $tagsMatchingRelatedPosts->enumerate(', ', ' and ') }}:
                 </p>
-                <ul>
+                <ul class="post-related-list">
                     @foreach($relatedPosts as $post)
-                        <li><a href="{{ $post->url }}">{{ $post->title }}</a></li>
+                        <li>
+                            <a href="{{ $post->url }}" class="post-related-title">
+                                {{ $post->title }}
+                            </a>
+                            <br>
+                            <a href="{{ $post->url }}" class="post-related-date">
+                                <time datetime="{{ $post->date->format('Y-m-d') }}">
+                                    {{ $post->date->format('F jS, Y') }}
+                                </time>
+                            </a>
+                        </li>
                     @endforeach
                 </ul>
             </div>

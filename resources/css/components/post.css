@@ -4,25 +4,26 @@
 }
 
 .post:after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
     bottom: -4.5rem;
     height: 1rem;
     z-index: -1;
-    background:repeating-linear-gradient(
-        45deg,
-        var(--border-color),
-        var(--border-color) 1px,
-        transparent 1px,
-        transparent 9px
-        ),repeating-linear-gradient(
-        -45deg,
-        var(--border-color),
-        var(--border-color) 1px,
-        transparent 1px,
-        transparent 9px
+    background: repeating-linear-gradient(
+            45deg,
+            var(--border-color),
+            var(--border-color) 1px,
+            transparent 1px,
+            transparent 9px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            var(--border-color),
+            var(--border-color) 1px,
+            transparent 1px,
+            transparent 9px
         );
 }
 
@@ -47,4 +48,29 @@
 
 .post-related {
     font-size: 0.9rem;
+    margin-bottom: var(--gutter);
+}
+
+.post-related-label {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.post-related-list {
+    margin-top: 1rem;
+}
+
+.post-related-list li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.post-related-title {
+    font-family: var(--mono);
+    font-weight: bold;
+}
+
+.post-related-date {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 0.33rem;
 }
