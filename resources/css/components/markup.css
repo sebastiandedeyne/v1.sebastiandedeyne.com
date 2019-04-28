@@ -32,6 +32,7 @@
     max-width: calc(100% + var(--gutter) * 2);
 }
 
+.markup figcaption,
 .markup img + em {
     color: var(--text-light);
     display: block;

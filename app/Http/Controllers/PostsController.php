@@ -13,7 +13,7 @@ class PostsController
     public function index(GetAllPosts $getAllPosts)
     {
         return view('posts.index', [
-            'posts' => $getAllPosts(),
+            'posts' => $getAllPosts()->paginate(),
         ]);
     }
 
