@@ -16,10 +16,6 @@ class CacheControl
             return $response;
         }
 
-        if (! Auth::check()) {
-            return $response;
-        }
-
         if ($request->method() !== 'GET') {
             return $response;
         }
