@@ -4,25 +4,20 @@ use Illuminate\Support\HtmlString;
 use League\CommonMark\CommonMarkConverter;
 use MatthiasMullie\Minify\CSS;
 
-function css(array $paths): HtmlString
-{
-    $minifier = new CSS();
-
-    foreach ($paths as $path) {
-        $minifier->add(glob(resource_path("css/{$path}")));
-    }
-
-    return new HtmlString($minifier->minify());
-}
-
 function styles(): HtmlString
 {
-    return css([
+    $paths = array_map(function (string $path) {
+        return glob(resource_path("css/{$path}"));
+    }, [
         'fonts.css',
         'global.css',
         'components/*.css',
         'utilities.css',
     ]);
+
+    return new HtmlString(
+        (new CSS())->add($paths)->minify()
+    );
 }
 
 function markdown(string $html): HtmlString
