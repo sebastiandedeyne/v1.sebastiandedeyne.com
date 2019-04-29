@@ -8,7 +8,7 @@
     --sans: Karla, system-ui, sans-serif;
     --mono: Space Mono, system-ui;
     --code: IBM Plex Mono, monospace;
-    --gutter: 1rem;
+    --gutter: 1.5rem;
 }
 
 @media (min-width: 720px) {
