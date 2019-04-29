@@ -35,10 +35,10 @@
 }
 
 @font-face {
-    font-family: "Source Code Pro";
+    font-family: "Fira Code";
     font-style: normal;
     font-weight: 400;
-    src: local("Source Code Pro"), local("SourceCodePro-Regular"),
-        url("/fonts/source-code-pro-v8-latin-regular.woff2") format("woff2"),
-        url("/fonts/source-code-pro-v8-latin-regular.woff") format("woff");
+    src: local("Fira Code"),
+        url("/fonts/fira-code-regular.woff2") format("woff2"),
+        url("/fonts/fira-code-regular.woff") format("woff");
 }
