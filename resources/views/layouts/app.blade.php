@@ -37,7 +37,7 @@
                 </ul>
             </nav>
             <main {!! ($wrap ?? false) ? 'class="wrap"' : null !!}>
-                @yield('main')
+                {{ $slot }}
             </main>
         </div>
 

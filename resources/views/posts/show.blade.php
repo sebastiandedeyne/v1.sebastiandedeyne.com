@@ -1,6 +1,4 @@
-@extends('layouts.app', ['title' => $post->title])
-
-@section('main')
+@component('layouts.app', ['title' => $post->title])
     <div class="pb-16 wrap">
         @component('components.post', ['post' => $post])
             {{ $post->contents }}
@@ -30,4 +28,4 @@
             </div>
         </section>
     @endif
-@endsection
+@endcomponent

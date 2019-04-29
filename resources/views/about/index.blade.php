@@ -1,6 +1,4 @@
-@extends('layouts.app', ['title' => 'About', 'wrap' => true])
-
-@section('main')
+@component('layouts.app', ['title' => 'About', 'wrap' => true])
     <div class="markup">
         <p>
             I'm a web designer and developer from Ghent, employed at
@@ -50,4 +48,4 @@
             <a href="https://github.com/sebastiandedeyne/sebastiandedeyne.com">GitHub</a>.
         </p>
     </div>
-@endsection
+@endcomponent

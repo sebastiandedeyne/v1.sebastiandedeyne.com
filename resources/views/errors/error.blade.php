@@ -1,6 +1,4 @@
-@extends('layouts.app', ['title' => $title])
-
-@section('main')
+@component('layouts.app', ['title' => $title])
     @php
         $showHomeLink = $showHomeLink ?? request()->path() !== '/';
 
@@ -25,4 +23,4 @@
             </p>
         @endunless
     </div>
-@endsection
+@endcomponent

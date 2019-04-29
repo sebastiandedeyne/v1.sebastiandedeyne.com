@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('main')
+@component('layouts.app')
     <div class="wrap">
         @foreach($posts as $post)
             @component('components.post', ['post' => $post])
@@ -17,4 +15,4 @@
 
         {{ $posts->links() }}
     </div>
-@endsection
+@endcomponent
