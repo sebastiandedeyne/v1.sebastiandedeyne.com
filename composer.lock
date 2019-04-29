@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "15933550f3512e2aafa7863bded76d9e",
+    "content-hash": "9f6703105a464cdf622fc55fb1fdc279",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -3083,92 +3083,6 @@
                 "spatie"
             ],
             "time": "2019-02-08T08:50:45+00:00"
-        },
-        {
-            "name": "spatie/laravel-blade-x",
-            "version": "2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-blade-x.git",
-                "reference": "db4f3dfd1f5f3d05ca3f4a688cdd708129a652f4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-blade-x/zipball/db4f3dfd1f5f3d05ca3f4a688cdd708129a652f4",
-                "reference": "db4f3dfd1f5f3d05ca3f4a688cdd708129a652f4",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/view": "~5.8.0",
-                "php": "^7.2"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.8.0",
-                "phpunit/phpunit": "^8.0",
-                "spatie/phpunit-snapshot-assertions": "^2.1"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Spatie\\BladeX\\BladeXServiceProvider"
-                    ],
-                    "aliases": {
-                        "BladeX": "Spatie\\BladeX\\Facades\\BladeX"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\BladeX\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian De Deyne",
-                    "email": "sebastian@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Alex Vanderbist",
-                    "email": "alex@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Brent Roose",
-                    "email": "brent@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Ruben Van Assche",
-                    "email": "ruben@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Supercharged Blade components",
-            "homepage": "https://github.com/spatie/laravel-blade-x",
-            "keywords": [
-                "blade",
-                "components",
-                "html",
-                "laravel-blade-x",
-                "spatie"
-            ],
-            "time": "2019-02-27T16:32:52+00:00"
         },
         {
             "name": "spatie/laravel-collection-macros",
