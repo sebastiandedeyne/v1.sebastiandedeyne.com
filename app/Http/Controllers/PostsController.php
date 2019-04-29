@@ -2,28 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Posts\GetAllPosts;
-use App\Posts\GetEqualTags;
-use App\Posts\GetRelatedPosts;
 use App\Posts\Post;
-use Spatie\Sheets\Sheets;
+use App\Posts\PostRepository;
 
 class PostsController
 {
-    public function index(GetAllPosts $getAllPosts)
+    /** @var \App\Posts\PostRepository */
+    private $postRepository;
+
+    public function __construct(PostRepository $postRepository)
+    {
+        $this->postRepository = $postRepository;
+    }
+
+    public function index()
     {
         return view('posts.index', [
-            'posts' => $getAllPosts()->paginate(),
+            'posts' => $this->postRepository
+                ->getAllPosts()
+                ->paginate(),
         ]);
     }
 
-    public function show(
-        Post $post,
-        GetRelatedPosts $getRelatedPosts,
-        GetEqualTags $getEqualTags
-    ) {
-        $relatedPosts = $getRelatedPosts($post);
-        $tagsMatchingRelatedPosts = $getEqualTags($post, $relatedPosts)
+    public function show(Post $post) {
+        $relatedPosts = $this->postRepository->getRelatedPosts($post);
+
+        $tagsMatchingRelatedPosts = $this->postRepository
+            ->intersectTags($post, ...$relatedPosts)
             ->map(function (string $tag) {
                 $formattedTag = trans("tags.{$tag}");
 
@@ -41,7 +46,7 @@ class PostsController
         ]);
     }
 
-    public function redirectOldPostsIndex(Sheets $sheets)
+    public function redirectOldPostsIndex()
     {
         return redirect()->action([self::class, 'index']);
     }

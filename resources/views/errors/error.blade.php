@@ -1,13 +1,15 @@
-@php
-    $showHomeLink = $showHomeLink ?? request()->path() !== '/';
+@extends('layouts.app', ['title' => $title])
 
-    $title = $title ?? array_random([
-        '¯\_(ツ)_/¯', 'Awkward.', 'Bantha fodder.', 'Hmmm...', 'Oh no!',
-        'Peculiar.', 'Uh oh.', 'Whoops!',
-    ]);
-@endphp
+@section('main')
+    @php
+        $showHomeLink = $showHomeLink ?? request()->path() !== '/';
 
-<layout :title="$title">
+        $title = $title ?? array_random([
+            '¯\_(ツ)_/¯', 'Awkward.', 'Bantha fodder.', 'Hmmm...', 'Oh no!',
+            'Peculiar.', 'Uh oh.', 'Whoops!',
+        ]);
+    @endphp
+
     <div class="wrap">
         <h1 class="font-mono">
             {{ $title }}
@@ -23,4 +25,4 @@
             </p>
         @endunless
     </div>
-</layout>
+@endsection

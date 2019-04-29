@@ -1,14 +1,16 @@
-<layout :title="$post->title">
+@extends('layouts.app', ['title' => $post->title])
+
+@section('main')
     <div class="pb-16 wrap">
-        <post :post="$post">
+        @component('components.post', ['post' => $post])
             {{ $post->contents }}
-        </post>
+        @endcomponent
     </div>
     @if($relatedPosts->count())
         <section class="post-related">
             <div class="wrap">
                 <p class="post-related-label">
-                    More about {{ $tagsMatchingRelatedPosts->enumerate(', ', ' and ') }}:
+                    More about {{ $tagsMatchingRelatedPosts->join(', ', ' and ') }}:
                 </p>
                 <ul class="post-related-list">
                     @foreach($relatedPosts as $post)
@@ -28,4 +30,4 @@
             </div>
         </section>
     @endif
-</layout>
+@endsection

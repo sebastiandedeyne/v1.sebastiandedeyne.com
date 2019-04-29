@@ -1,7 +1,9 @@
-<layout>
+@extends('layouts.app')
+
+@section('main')
     <div class="wrap">
         @foreach($posts as $post)
-            <post :post="$post">
+            @component('components.post', ['post' => $post])
                 {{ $post->summary }}
                 @if($post->has_summary)
                     <p>
@@ -10,9 +12,9 @@
                         </a>
                     </p>
                 @endif
-            </post>
+            @endcomponent
         @endforeach
 
         {{ $posts->links() }}
     </div>
-</layout>
+@endsection

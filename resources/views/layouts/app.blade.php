@@ -20,7 +20,7 @@
 
         <link rel="alternate" type="application/rss+xml" href="{{ url('feed') }}" title="Sebastian De Deyne">
 
-        @include('components.partials.favicons')
+        @include('layouts.partials.favicons')
 
         <style>{{ styles() }}</style>
     </head>
@@ -36,15 +36,15 @@
                     <li><a href="{{ url('feed') }}">RSS</a></li>
                 </ul>
             </nav>
-            <main{!! ($wrap ?? false) ? ' class="wrap"' : null !!}>
-                {{ $slot }}
+            <main {!! ($wrap ?? false) ? 'class="wrap"' : null !!}>
+                @yield('main')
             </main>
         </div>
 
         {{ app(App\Schema\WebPage::class) }}
 
         @if(app()->environment('production'))
-            @include('components.partials.analytics')
+            @include('layouts.partials.analytics')
         @endif
     </body>
 </html>
