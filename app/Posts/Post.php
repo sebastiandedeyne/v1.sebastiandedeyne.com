@@ -17,18 +17,14 @@ class Post extends Sheet implements Feedable
 
     public function getHasSummaryAttribute(): bool
     {
-        return ! empty($this->attributes['summary']);
+        return count(preg_split('/^<!--\s*more\s*-->\s*$/im', $this->contents, 2)) > 1;
     }
 
     public function getSummaryAttribute(): HtmlString
     {
-        if (! $this->has_summary) {
-            return $this->contents;
-        }
+        [$summary] = preg_split('/^<!--\s*more\s*-->\s*$/im', $this->contents, 2);
 
-        $summary = markdown($this->attributes['summary']);
-
-        return new HtmlString($summary);
+        return markdown($summary);
     }
 
     public function getUrlAttribute(): string
