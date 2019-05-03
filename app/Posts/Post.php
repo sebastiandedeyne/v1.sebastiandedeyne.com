@@ -32,6 +32,11 @@ class Post extends Sheet implements Feedable
         return route('posts.show', $this->slug);
     }
 
+    public function getLinkDomainAttribute(): string
+    {
+        return parse_url($this->link)['host'] ?? '';
+    }
+
     public function getTagsAttribute(): Collection
     {
         return collect($this->attributes['tags'] ?? []);

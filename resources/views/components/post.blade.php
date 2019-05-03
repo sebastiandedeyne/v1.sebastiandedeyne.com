@@ -11,9 +11,19 @@
                     {{ $post->date->format('F jS, Y') }}
                 </time>
             </a>
-            @if($post->subtitle)
-            — <strong>{{ $post->subtitle }}</strong>
-            @endif
+                @if($post->link)
+                    —
+                    <a href="{{ $post->link }}">
+                        {{ $post->link_domain }}
+                    </a>
+                @endif
+                @if($post->subtitle)
+                    —
+                    <a href="{{ $post->url }}">
+                        {{ $post->subtitle }}
+                    </a>
+                @endif
+            </a>
         </aside>
     </header>
 
