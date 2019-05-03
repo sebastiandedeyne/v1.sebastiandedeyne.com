@@ -1,0 +1,26 @@
+.carbon {
+    height: 12rem;
+    color: var(--text-lighter);
+    font-size: 0.75rem;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    margin: 0 var(--gutter);
+}
+
+.carbon-wrap {
+    text-align: left;
+    display: flex;
+    background-color: var(--secondary-background);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    height: 7.625rem;
+}
+
+.carbon-wrap img {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.carbon-poweredby {
+}

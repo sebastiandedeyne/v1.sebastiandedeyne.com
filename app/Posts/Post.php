@@ -15,6 +15,30 @@ class Post extends Sheet implements Feedable
         return new HtmlString($contents);
     }
 
+    public function getCarbonizedContentsAttribute(): HtmlString
+    {
+        $blockTags = 'aside|figure|p|pre|ul';
+
+        $iteration = 0;
+
+        $carbonizedContents = preg_replace_callback(
+            "/<\/({$blockTags})>$/m",
+            function (array $matches) use (&$iteration) {
+                [$closingTag, $tagName] = $matches;
+
+                $iteration++;
+
+                return $iteration === 2
+                    ? "</{$tagName}></section><div class=\"carbon\"></div><section class=\"markup\">"
+                    : $closingTag;
+            },
+            $this->attributes['contents'],
+            2
+        );
+
+        return new HtmlString($carbonizedContents);
+    }
+
     public function getHasSummaryAttribute(): bool
     {
         return count(preg_split('/^<!--\s*more\s*-->\s*$/im', $this->contents, 2)) > 1;

@@ -43,6 +43,8 @@
 
         {{ app(App\Schema\WebPage::class) }}
 
+        @include('layouts.partials.carbon')
+
         @if(app()->environment('production'))
             @include('layouts.partials.analytics')
         @endif

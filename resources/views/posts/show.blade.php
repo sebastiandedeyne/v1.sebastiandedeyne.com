@@ -1,7 +1,9 @@
 @component('layouts.app', ['title' => $post->title])
     <div class="pb-16 wrap">
-        @component('components.post', ['post' => $post])
-            {{ $post->contents }}
+        @component('components.post', [
+            'post' => $post,
+        ])
+            {{ $post->carbonized_contents }}
         @endcomponent
     </div>
     @if($relatedPosts->count())
