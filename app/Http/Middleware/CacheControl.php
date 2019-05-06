@@ -19,7 +19,7 @@ class CacheControl
             return $response;
         }
 
-        $response->headers->add(['Cache-Control' => 'max-age=1000, public']);
+        $response->headers->add(['Cache-Control' => 'max-age=300, public']);
 
         return $response;
     }
