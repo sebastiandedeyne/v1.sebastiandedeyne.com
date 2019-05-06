@@ -2,6 +2,13 @@
     margin-bottom: 1.5rem;
 }
 
+.markup h1 {
+    font-family: var(--mono);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 .markup h2 {
     font-family: var(--mono);
     font-weight: bold;

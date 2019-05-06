@@ -1,5 +1,6 @@
 @component('layouts.app', ['title' => 'About', 'wrap' => true])
     <div class="markup">
+        <h1>About</h1>
         <p>
             I'm a web designer and developer from Ghent, employed at
             <a href="https://spatie.be">Spatie</a> in Antwerp, Belgium. I build

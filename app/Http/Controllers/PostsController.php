@@ -24,6 +24,18 @@ class PostsController
         ]);
     }
 
+    public function articles()
+    {
+        return view('posts.index', [
+            'posts' => $this->postRepository
+                ->getAllPosts()
+                ->reject(function (Post $post) {
+                    return $post->link;
+                })
+                ->paginate(),
+        ]);
+    }
+
     public function show(Post $post) {
         $relatedPosts = $this->postRepository->getRelatedPosts($post);
 

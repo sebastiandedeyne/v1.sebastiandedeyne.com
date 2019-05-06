@@ -31,7 +31,8 @@
                     <a href="{{ url('') }}">Sebastian De Deyne</a>
                 </header>
                 <ul>
-                    <li><a href="{{ url('about') }}">About</a></li>
+                    <li><a href="{{ route('articles') }}">Articles</a></li>
+                    <li><a href="{{ route('about') }}">About</a></li>
                     <li><a href="https://twitter.com/sebdedeyne">Twitter</a></li>
                     <li><a href="{{ url('feed') }}">RSS</a></li>
                 </ul>

@@ -24,6 +24,14 @@ class PostRepository
             ->sortByDesc('date');
     }
 
+    public function getAllArticles(): Collection
+    {
+        return $this->getAllPosts()
+            ->reject(function (Post $post) {
+                return $post->link;
+            });
+    }
+
     public function getRelatedPosts(Post $post): Collection
     {
         if ($post->tags->isEmpty()) {
@@ -67,10 +75,6 @@ class PostRepository
 
     public function getArticleFeedItems(): Collection
     {
-        return $this->getAllPosts()
-            ->reject(function (Post $post) {
-                return $post->link;
-            })
-            ->take(20);
+        return $this->getAllArticles()->take(20);
     }
 }
