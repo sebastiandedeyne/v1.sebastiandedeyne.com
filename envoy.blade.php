@@ -34,7 +34,6 @@
 
         echo "Optimizing..."
         php artisan cache:clear
-        php artisan page-cache:clear
         php artisan config:cache
         php artisan route:cache
 
