@@ -17,6 +17,7 @@ return [
     'phpunit' => 'PHPUnit',
     'podcasts' => 'podcasts',
     'programming' => 'programming',
+    'react' => 'React',
     'seo' => 'SEO',
     'spatie' => 'Spatie',
     'ssr' => 'SSR',
