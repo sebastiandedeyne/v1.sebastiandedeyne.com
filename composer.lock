@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "971d9accc74d3c5095061b4024456b2b",
+    "content-hash": "0b6527085c8d881b49bd1e76073f367d",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -3033,6 +3033,65 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03T07:35:21+00:00"
+        },
+        {
+            "name": "silber/page-cache",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JosephSilber/page-cache.git",
+                "reference": "32f9754d0beb99717e1257844a76f6a073027da3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JosephSilber/page-cache/zipball/32f9754d0beb99717e1257844a76f6a073027da3",
+                "reference": "32f9754d0beb99717e1257844a76f6a073027da3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "5.0 - 5.8",
+                "illuminate/filesystem": "5.0 - 5.8",
+                "php": ">=5.5.9",
+                "symfony/http-foundation": "2.6 - 4"
+            },
+            "require-dev": {
+                "illuminate/container": "5.0 - 5.8",
+                "larapack/dd": "^1.1",
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^4.8"
+            },
+            "suggest": {
+                "illuminate/console": "Allows clearing the cache via artisan"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Silber\\PageCache\\LaravelServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Silber\\PageCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joseph Silber",
+                    "email": "contact@josephsilber.com"
+                }
+            ],
+            "description": "Caches responses as static files on disk for lightning fast page loads..",
+            "keywords": [
+                "cache",
+                "laravel"
+            ],
+            "time": "2019-02-27T14:02:19+00:00"
         },
         {
             "name": "spatie/commonmark-highlighter",

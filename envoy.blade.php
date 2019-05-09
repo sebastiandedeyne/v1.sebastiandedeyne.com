@@ -12,7 +12,7 @@
         git pull
 
         php artisan cache:clear
-        php artisan responsecache:clear
+        php artisan page-cache:clear
         php artisan config:cache
         php artisan route:cache
     @else
@@ -34,7 +34,7 @@
 
         echo "Optimizing..."
         php artisan cache:clear
-        php artisan responsecache:clear
+        php artisan page-cache:clear
         php artisan config:cache
         php artisan route:cache
 
