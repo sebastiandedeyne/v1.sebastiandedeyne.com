@@ -4,24 +4,32 @@ namespace App\Posts;
 
 use Illuminate\Support\Collection;
 use Spatie\Sheets\Sheets;
+use Illuminate\Cache\Repository;
 
 class PostRepository
 {
     /** @var \Spatie\Sheets\Sheets */
     private $sheets;
 
-    public function __construct(Sheets $sheets)
+    /** @var \Illuminate\Cache\Repository */
+    private $cache;
+
+    public function __construct(Sheets $sheets, Repository $cache)
     {
         $this->sheets = $sheets;
+
+        $this->cache = $cache;
     }
 
     public function getAllPosts(): Collection
     {
-        return $this->sheets
-            ->collection('posts')
-            ->all()
-            ->reject->draft
-            ->sortByDesc('date');
+        return $this->cache->rememberForever('posts.all', function () {
+            return $this->sheets
+                ->collection('posts')
+                ->all()
+                ->reject->draft
+                ->sortByDesc('date');
+        });
     }
 
     public function getAllArticles(): Collection
